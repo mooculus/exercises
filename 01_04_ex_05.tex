@@ -1,0 +1,76 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Calculate limits from a graph (or state that the limit does not exist).}
+\outcome{Explain the relationship between one-sided and two-sided limits.}
+\outcome{Distinguish between limit values and function values.}
+\outcome{Identify when a limit does not exist.}
+
+
+
+\tag{limit} 
+
+% BADBAD
+% How should I do hints for this?
+% Can we have multiple questions 
+% within a single question?
+
+
+% BADBAD DNE answer
+
+Let $f$ be defined on the interval $\left[0,2\right]$, and no where else, whose graph is:
+\begin{center}
+\noindent\begin{minipage}[t]{.5\linewidth}
+ \begin{tikzpicture}
+	\begin{axis}
+	[ymin=-0.2,ymax=2.2, axis lines=center,xlabel=$x$,ylabel=$y$,every axis y 
+	label/.style={at=(current axis.above origin),anchor=south},every axis x label/.style={at=(current axis.right of origin),anchor=west},
+	domain=-1:2,
+	ytick={0.5,1,1.5,2},
+	yticklabels={$0.5$,$1$,$1.5$,$2$},
+	xtick={0.5,1.0,1.5,2},
+	xticklabels={$0.5$,$1$,$1.5$,$2$},
+	ymajorgrids=true,
+	grid = major
+	]
+	\addplot[domain=0:2,very thick,smooth,samples=600]
+	{(!(\x>1))*(\x+1)+(\x>1)*(!(\x>2))*(2*(\x-2)^2};
+	\addplot[domain=-0.2:2.1, smooth, very thin, samples=100,color=black]
+	{0};
+	\draw[very thin,color=black] (axis cs:0,-0.2) -- (axis cs:0,2);
+	\draw[fill=black] (axis cs:0,1) circle [radius=2pt];
+	\draw[fill=black] (axis cs:2,0) circle [radius=2pt];
+	\draw[fill=black] (axis cs:1,1) circle [radius=2pt];
+	\draw[fill=white] (axis cs:1,2) circle [radius=2pt];
+	\end{axis}
+       \end{tikzpicture}
+\end{minipage}
+\end{center}
+
+
+Find
+\noindent\begin{minipage}[t]{.5\linewidth}
+\begin{enumerate}
+\item		$\lim_{x\to 1^-} f(x)\begin{prompt} = \answer{2}\end{prompt}$
+\item		$\lim_{x\to 1^+} f(x)\begin{prompt} = \answer{2}\end{prompt}$
+\item		$\lim_{x\to 1} f(x)\begin{prompt} = \answer{2}\end{prompt}$
+\end{enumerate}
+\end{minipage}
+\noindent\begin{minipage}[t]{.5\linewidth}
+\begin{enumerate}\addtocounter{enumi}{3}
+\item		$f({1})\begin{prompt} = \answer{1}\end{prompt}$
+\item		$\lim_{x\to 0^-} f(x)\begin{prompt} = \answer{DNE}\end{prompt}$
+\item		$\lim_{x\to 0^+} f(x)\begin{prompt} = \answer{1}\end{prompt}$
+\end{enumerate}
+\end{minipage}
+
+\end{exercise}
+\end{document}

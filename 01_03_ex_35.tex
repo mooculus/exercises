@@ -1,0 +1,42 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Calculate limits using the limit laws.}
+\outcome{Calculate limits of the form 0/0.}
+\outcome{Calculate limits using the Squeeze Theorem.}
+
+\tag{limit} 
+\tag{indeterminate form}
+\tag{discontinuous}
+
+% BADBAD 
+
+It is a well known fact that $\lim_{x\to\infty}\left({\left({1+\frac{1}{x}}\right)^{x}}\right)=\lim_{x\to0}\left({(1+x)^{1/x}}\right)=e$.
+Find 
+\[
+\lim_{x\to0}\left({\frac{\ln(1+x)}{x}}\right)
+\begin{prompt}
+= \answer{1}.
+\end{prompt}
+\]
+
+
+\begin{hint}
+Recall that $\lim_{x\to\infty}\left({\left({1+\frac{1}{x}}\right)^{x}}\right)=e$ and, equivalently, $\lim_{x\to0}\left({(1+x)^{1/x}}\right)=e$. Observe that we can rewrite this in a more illuminating way as $\frac{\ln(1+x)}{x}=x^{-1}\ln(1+x)$. Apply some properties of logarithms to this.
+\end{hint}
+\begin{hint}
+We know, from the properties of logarithms, that $b\ln(a)=\ln({a^b})$ when $a>0$. Hence, $x^{-1}\ln(1+x)=\ln({(1+x)^{1/x}})$ for $x>-1$ (and, of course, $x^{-1}=\frac{1}{x}$). Hence, $\ln({(1+x)^{1/x}})=\frac{\ln(1+x)}{x}$ when $x\ne0$. So $\lim_{x\to0}\left(\ln({(1+x)^{1/x}})\right)=\lim_{x\to0}\left(\frac{\ln(1+x)}{x}\right)$. Recall that $\ln(x)$ is continuous everywhere besides $x=0$. What can you say about $\lim_{x\to0}\ln({(1+x)^{1/x}})$?
+\end{hint}
+\begin{hint}
+Let $y=(1+x)^{1/x}$. Then, since $\lim_{x\to0}\left({(1+x)^{1/x}}\right)=e$, and $\ln(x)$ is continuous at $e$, it follows that $\lim_{x\to0}\left({\ln({(1+x)^{1/x}}})\right)=\lim_{y\to e}\left({\ln(y)}\right)=1$ and, hence, that $\lim_{x\to0}\left({\frac{\ln(1+x)}{x}}\right)=1$.
+\end{hint}
+\end{exercise}
+\end{document}

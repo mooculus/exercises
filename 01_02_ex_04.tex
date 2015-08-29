@@ -1,0 +1,41 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{State the precise definition of a limit.}
+\outcome{Understand the concept of a limit.}
+
+\tag{limit}
+\tag{formal definition of the limit}
+
+Let $f(x)=3-x$. Let $\epsilon>0$ be given. Verify that
+\[
+\lim_{x\to5}f(x)=-2
+\]
+by finding a suitable choice for $\delta>0$ such that if $\left|{x-5}\right|<\delta$, then $\left|{f(x)-({-2})}\right|<\epsilon$. Choose $\delta\begin{prompt} = \answer{\epsilon}.\end{prompt}$
+
+ \begin{hint}
+ Observe that $\left|{f(x)-({-2})}\right|=\left|{3-x-({-2})}\right|$ and $\left|{3-x-({-2})}\right|=\left|{5-x}\right|$. How should we choose $\delta>0$ such that if $0<\left|{x-5}\right|<\delta$, then $\left|{5-x}\right|<\epsilon$?
+ \end{hint}
+ \begin{hint}
+ Saying that $\left|{5-x}\right|<\epsilon$ is equivalent to saying that the quantity $\left({5-x}\right)$ satisfies $-\epsilon<\left({5-x}\right)<\epsilon$. Multiplying by a negative number reverses the direction of the inequalities (if you don't remember this, convince yourself of it).
+ 
+ Therefore, upon multiplication of both sides of $-\epsilon<\left({5-x}\right)$ by $-1$, we have $\left({-1\cdot\left({-\epsilon}\right)}\right)>\left({-1\cdot\left({5-x}\right)}\right)$, which is simply $\epsilon>\left({x-5}\right)$. Similarly, the statement $\left({5-x}\right)<\epsilon$, upon multiplication of both sides by $-1$ becomes $\left({-1\cdot\left({5-x}\right)}\right)>\left({-1\cdot\left({\epsilon}\right)}\right)$ which is simply $\left({x-5}\right)>-\epsilon$.
+ \end{hint}
+ \begin{hint}
+ Combining the statements that $\epsilon>\left({x-5}\right)$ and $\left({x-5}\right)>-\epsilon$, we see they say that $-\epsilon<\left({x-5}\right)<\epsilon$. Thus, if $-\epsilon<\left({5-x}\right)<\epsilon$, then $-\epsilon<\left({x-5}\right)<\epsilon$, and if $-\epsilon<\left({x-5}\right)<\epsilon$, then $-\epsilon<\left({5-x}\right)<\epsilon$. This makes sense, because, in fact, $\left|{x-5}\right|=\left|{5-x}\right|$ for any real number $x$. 
+ 
+ Thus, we can recast the question as follows. How should we choose $\delta>0$ such that if $0<\left|{x-5}\right|<\delta$, then $\left|{x-5}\right|<\epsilon$?
+ \end{hint}
+ \begin{hint}
+ Choose $\delta=\epsilon$. We see that this choice gives us the desired result. Namely, if $0<\left|{x-5}\right|<\epsilon$, then $\left|{5-x}\right|<\epsilon$. This follows because, from what we have shown, if $\left|{x-5}\right|<\epsilon$, then $\left|{5-x}\right|<\epsilon$.
+ \end{hint}
+\end{exercise}
+\end{document}

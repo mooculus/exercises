@@ -1,0 +1,33 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Calculate limits using the limit laws.}
+\outcome{Calculate limits using the Squeeze Theorem.}
+
+\tag{limit} 
+\tag{continuous}
+
+Find 
+\[
+\lim_{x\to1}f(x)
+\begin{prompt}
+= \answer{1}.
+\end{prompt}
+\]
+given that $3x-2\le f(x)\le x^3$.
+\begin{hint}
+Use the Squeeze Theorem on the two bounds for $f(x)$. Observe that $\lim_{x\to1}\left({3x-2}\right)=3\cdot\lim_{x\to1}(x)-\lim_{x\to1}\left({2}\right)=1$ and $\lim_{x\to1}\left({x^3}\right)=\left({\lim_{x\to1}(x)}\right)^{3}=1$. 
+\end{hint}
+\begin{hint}
+Since we are given that $3x-2\le f(x)\le x^3$, and we have seen that $\lim_{x\to1}\left({3x-2}\right)=\lim_{x\to1}\left({x^3}\right)=1$, it follows by the Squeeze Theorem that $\lim_{x\to1}f(x)=1$.
+\end{hint}
+\end{exercise}
+\end{document}

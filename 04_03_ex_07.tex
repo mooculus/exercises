@@ -1,0 +1,37 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Interpret an optimization problem as the procedure used to make a system or design as effective or functional as possible.}
+\outcome{Set up an optimization problem by identifying the objective function and appropriate constraints.}
+\outcome{Solve optimization problems by finding the appropriate absolute extremum.}
+\outcome{Solve basic word problems involving maxima or minima.}
+
+\tag{extrema}
+\tag{constrained optimization}
+\tag{first derivative test}
+\tag{second derivative test}
+
+Find the absolute maximum of the area of a right triangle with a hypotenuse of length $1$. \[\answer{\frac{1}{4}}\]
+\begin{hint}
+Recall that the area of a triangle, $A$, is given by $A=\frac{1}{2}bh$ where $b$ is the base of the triangle and $h$ is its height.
+\end{hint}
+\begin{hint}
+We are given that the hypotenuse, $r$, satisfies $r=1$. But for a right triangle, we also know (by the Pythagorean theorem) that $r^2=b^2+h^2$.
+\end{hint}
+\begin{hint}
+Since $r^2=r=1$ (since $r^2=1^2=1$) and $r^2=b^2+h^2$, we have that $b^2+h^2=1$. 
+\end{hint}
+\begin{hint}
+Solving for $b$, we have that $b=\sqrt{1-h^2}$, so the area is now a function of $h$ alone as $A=\frac{1}{2}h\sqrt{1-h^2}$. Finding the critical points, we have that $\frac{d}{dh}(\frac{1}{2}h\sqrt{1-h^2})$ when $h=\pm\frac{1}{\sqrt{2}}$, but the height of a triangle is obviously positive, so $h=\frac{1}{\sqrt{2}}$. This is a maximum since the second derivative test tells us that $\left.\frac{d^2}{dh^2}(\frac{1}{2}h\sqrt{1-h^2})\right|_{h=1/\sqrt{2}}=-2$ which is less than $0$. By inspection, this is an absolute maximum. Hence, the area is maximized for $h=\frac{1}{\sqrt{2}}$ and, consequently, $b=\frac{1}{\sqrt{2}}$ with $A=\frac{1}{4}$.
+\end{hint}
+
+\end{exercise}
+\end{document}

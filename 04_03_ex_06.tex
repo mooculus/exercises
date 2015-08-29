@@ -1,0 +1,40 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Interpret an optimization problem as the procedure used to make a system or design as effective or functional as possible.}
+\outcome{Set up an optimization problem by identifying the objective function and appropriate constraints.}
+\outcome{Solve optimization problems by finding the appropriate absolute extremum.}
+\outcome{Solve basic word problems involving maxima or minima.}
+
+\tag{extrema}
+\tag{constrained optimization}
+\tag{first derivative test}
+\tag{second derivative test}
+
+Find the absolute maximum of a sum of two numbers, each of which is in $[0,300]$ whose product is $500$.\[\answer{\frac{905}{3}}\]
+
+\begin{hint}
+If the two numbers are $x$ and $y$, then $xy=500$, so $y=\frac{500}{x}$, so we are left with the job of finding the absolute maximum of $x+\frac{500}{x}$ subject to the constraint that $x$ lie in $[0,300]$ (since $\frac{500}{x}\le300$ for all $x$ in $[0,300]$, we needn't worry that $y$ lies outside of $[0,300]$).
+\end{hint}
+\begin{hint}
+The only critical point of $x+\frac{500}{x}$ that lies in $[0,300]$ is a minimum. Since $[0,300]$ is a closed interval (i.e., it contains its endpoints), what can you say about where the maximum of $x+\frac{500}{x}$ must occur?
+\end{hint}
+\begin{hint}
+Recall that extrema can occur at critical points or at the endpoints of a closed interval, such as $[0,300]$. 
+\end{hint}
+\begin{hint}
+If $xy=500$, then $x$ cannot be $0$, so check the other endpoint.
+\end{hint}
+\begin{hint}
+If $x=300$, then $300+\frac{500}{300}=\frac{905}{3}$ must be the maximum. Indeed, it is the absolute maximum, for if $x<300$, then clearly $x+\frac{500}{x}<\frac{905}{3}$.
+\end{hint}
+\end{exercise}
+\end{document}

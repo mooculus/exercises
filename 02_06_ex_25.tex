@@ -1,0 +1,38 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\tag{derivative}
+
+\outcome{Solve equations for $\frac{dy}{dx}$.}
+\outcome{Implicitly differentiate expressions.}
+\outcome{Find the equation of the tangent line for curves that are not graphs of functions.}
+
+
+Find the lines tangent to the implicit function, $y$, satisfying the implicit equation $(x^2+y^2-4)^3=108y^2$ at $(0,4)$ and $(2,-\sqrt[4]{108})$.
+
+\begin{enumerate}
+\item At $(0,4)$, the tangent line is given by $y\begin{prompt} = \answer{4}\end{prompt}$.
+\item At $(2,-\sqrt[4]{108})$ the tangent line is given by $y\begin{prompt} = \answer{\frac{-2\left(108\right)^{3/4}}{(\sqrt{108}-6)(\sqrt{108}+6)}(x-2)+\sqrt[4]{108}}\end{prompt}$.
+\end{enumerate}
+
+%%
+%% \begin{hint}
+%% Let $y$ be a function of $x$, $y(x)$. Then the chain rule tells us, for any function $f(y)$, that $\frac{d}{dx}f(y)=\left(\frac{d}{dy}\left(f(y)\right)\right)\left(\frac{dy}{dx}\right)$. Indeed, the chain rule will help you take the derivative of $(x^2+y^2-4)^3=108y^2$ with respect to $x$ without expanding $(x^2+y^2-4)^3$.
+%% \end{hint}
+%% \begin{hint}
+%% Moving over $108y^2$, we take the derivative $\frac{d}{dx}\left((x^2+y^2-4)^3-108y^2\right)=0$. The chain rule tells use that $\frac{d}{dx}\left((x^2+y^2-4)^3\right)=3(x^2+y^2-4)^2\frac{d}{dx}(x^2+y^2-4)=3(x^2+y^2-4)^2(2x+2y\frac{dy}{dx})$. Finally, $\frac{d}{dx}(-108y^2)=-216y\frac{dy}{dx}$. Putting this together, we have $6\left((x^2+y^2-4)^{2}(x+y\frac{dy}{dx})-36y\frac{dy}{dx}\right)=0$. Dividing by $6$ and collecting $\frac{dy}{dx}$, we have that this is $y\frac{dy}{dx}\left((x^2+y^2-4)^2-36\right)+x(x^2+y^2-4)^2=0$. Hence, $\frac{dy}{dx}=-\frac{x}{y}\frac{(x^2+y^2-4)^2}{(x^2+y^2-4)^2-36}$.
+%% \end{hint}
+%% \begin{hint}
+%% Plugging in $x=0$ and $y=4$, $\frac{dy}{dx}=0$, so the tangent line is $y=4$. Similarly, plugging in 
+%% \end{hint}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,38 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Calculate limits using the limit laws.}
+\outcome{Calculate limits using the Squeeze Theorem.}
+
+\tag{limit} 
+\tag{continuous}
+
+% BADBAD
+% I believe the author meant \lim_{x\to3^{-}} (i.e., 3^-) instead of 3^+. 
+% As discussed (e.g., that we don't expect them to know that \sqrt{x} is continuous at x=0)
+% I have extended the interval from [0,3] to [0,5] and let the limit be x\to3 
+
+Find 
+\[
+\lim_{x\to3}f(x)
+\begin{prompt}
+= \answer{9}.
+\end{prompt}
+\]
+given, on the interval $\left[0,5\right]$, that $6x-9\le f(x)\le x^2$.
+\begin{hint}
+Use the Squeeze Theorem on the two bounds for $f(x)$. Observe that $\lim_{x\to3}\left({6x-9}\right)=6\cdot\lim_{x\to3}(x)-\lim_{x\to3}\left({9}\right)=9$ and $\lim_{x\to3}\left({x^2}\right)=\left({\lim_{x\to3}(x)}\right)^2=9$.
+\end{hint}
+\begin{hint}
+Since we are given that $6x-9\le f(x)\le x^2$ on $\left[0,5\right]$, and we have seen that $\lim_{x\to3}\left({6x-3}\right)=\lim_{x\to3}\left({x^2}\right)=9$, it follows by the Squeeze Theorem that $\lim_{x\to3}f(x)=9$.
+\end{hint}
+\end{exercise}
+\end{document}

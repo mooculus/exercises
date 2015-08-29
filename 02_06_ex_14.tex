@@ -1,0 +1,40 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\tag{derivative}
+
+\outcome{Solve equations for $\frac{dy}{dx}$.}
+\outcome{Implicitly differentiate expressions.}
+
+%% BADBAD 
+%% the actual problem has function e^2*x^2+2^y=5 but that doesn't 
+%% make any sense with the answer he gives, he /must/ mean
+%% e^x*x^2
+%% I give the hint to show my work
+
+Find the derivative $\frac{dy}{dx}$ if $x^2e^{x}+2^y=5$.
+
+\[
+\frac{dy}{dx}
+\begin{prompt}
+= \answer{-\frac{x(x+2)e^{x}}{2^{y}\ln(2)}}
+\end{prompt}
+\]
+
+\begin{hint}
+Let $y$ be a function of $x$, $y(x)$. Then the chain rule tells us, for any function $f(y)$, that $\frac{d}{dx}f(y)=\left(\frac{d}{dy}\left(f(y)\right)\right)\left(\frac{dy}{dx}\right)$. 
+\end{hint}
+\begin{hint}
+We see that $\frac{d}{dx}(x^2e^x+2^y)=\frac{d}{dx}5=0$. So $2xe^x+x^2e^x+2^y\ln(2)\frac{dy}{dx}=0$. Collecting terms and solving for $\frac{dy}{dx}$, we have $-\frac{x(x+2)e^x}{2^{y}\ln(2)}$.
+\end{hint}
+
+\end{exercise}
+\end{document}

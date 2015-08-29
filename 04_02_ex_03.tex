@@ -1,0 +1,36 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Solve basic related rates word problems.}
+\outcome{Identify word problems as related rates problems.}
+\outcome{Understand the process of solving related rates problems.}
+
+\tag{related rates}
+
+Water flows onto a flat surface at a rate of $5$cm$^3$/s forming a circular puddle $10$mm deep. How fast is the radius growing when the radius is:
+\begin{enumerate}
+\item		$1$cm? \[\answer{\frac{5}{2\pi}}\,cm/s\]
+\item		$10$cm? \[\answer{\frac{1}{4\pi}}\,cm/s\]
+\item		$100$cm? \[\answer{\frac{1}{40\pi}}\,cm/s\]
+
+\end{enumerate}
+
+\begin{hint}
+Recall that $1$ millimeter is $\frac{1}{10}$ centimeters, so $10$mm is $1$cm. Hence, the volume of the puddle as a function of time is $V(t)=\pi r^2$ where $r$ is the radius of the puddle as a function of time. What is the derivative of $V(t)$ with respect to $t$. What about the derivative of $r^2$ with respect to $t$, given that $r$ is a function of time?
+\end{hint}
+\begin{hint}
+The derivative as a function of time is $5=\pi(2r\frac{dr}{dt})$ since $\frac{dV}{dt}=5$cm$^3$/s.
+\end{hint}
+\begin{hint}
+Then $\frac{dr}{dt}=\frac{5}{2r\pi}$. For any value of $r$, we can find $\frac{dr}{dt}$ by plugging in that value.
+\end{hint}
+\end{exercise}
+\end{document}

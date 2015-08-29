@@ -1,0 +1,44 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Estimate limits using nearby values.}
+\outcome{Estimating limits numerically and possible errors to this method.}
+
+\tag{limit}
+\tag{derivative}
+
+% The r@{.}l aligns everything at a common decimal point by constructing two columns and 
+% aligning them together at that decimal point to create the effect that only a single column is
+% there. It's a quick fix to a very minor blemish in the source.
+
+% We need the multicolumn{2}{c} to align the 'h' over the center of the two columns we have     
+% made, since we cannot just change the number of columns midway through our construction. 
+% By indicating that there are 2 columns we are merging, TeX understands our construction.
+
+% I have to  put extra columns into this one, else the RHS doesn't line up quite right. Better way to 
+% do this?
+
+
+
+Let $f(x) =\ln(x)$ and $a=5$. Observe the table of values for $\frac{f(a+h)-f(a)}{h}$:
+\begin{center}
+ \begin{tabular}{r@{.}lc@{\hspace{30pt}}r@{.}l}
+  \multicolumn{2}{c}{$h$} & \multicolumn{3}{c}{$\frac{f(a+h)-f(a)}{h}$}\\ \hline 
+  $-0$ & $1$ & & $0$ & $202027$  \\
+  $-0$ & $01$ & & $0$ & $2002$ \\
+  $0$ & $01$ & & $0$ & $1998$ \\
+  $0$ & $1$ & & $0$ & $198026$
+ \end{tabular}
+\end{center}
+The limit as $h\to 0$ is approximately $\begin{prompt}\answer{0.2}\end{prompt}$.
+
+\end{exercise}
+\end{document}

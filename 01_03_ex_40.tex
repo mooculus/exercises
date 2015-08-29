@@ -1,0 +1,38 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Calculate limits using the limit laws.}
+\outcome{Calculate limits of the form 0/0.}
+\outcome{Calculate limits using the Squeeze Theorem.}
+
+\tag{limit} 
+\tag{indeterminate form}
+\tag{discontinuous}
+
+
+
+Find 
+\[
+\lim_{x\to0}\left({\sin(x)\cos({\frac{1}{x^2}}})\right)
+\begin{prompt}
+= \answer{0}.
+\end{prompt}
+\]
+
+\begin{hint}
+For $x\ne0$, $-1\le\cos({\frac{1}{x^2}})\le1$. Therefore, multiplying the inequality by $\sin(x)$, we have that $-\sin(x)\le\sin(x)\cos({\frac{1}{x^2}})\le\sin(x)$. Apply the Squeeze Theorem to this inequality.
+\end{hint}
+\begin{hint}
+Since $\lim_{x\to0}\left({-\sin(x)}\right)=\lim_{x\to0}\left({\sin(x)}\right)=0$, by the Squeeze Theorem, it follows that $\lim_{x\to0}\left({\sin(x)\cos({\frac{1}{x^2}}})\right)=0$.
+\end{hint}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,44 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Interpret an optimization problem as the procedure used to make a system or design as effective or functional as possible.}
+\outcome{Set up an optimization problem by identifying the objective function and appropriate constraints.}
+\outcome{Solve optimization problems by finding the appropriate absolute extremum.}
+\outcome{Solve basic word problems involving maxima or minima.}
+
+\tag{extrema}
+\tag{constrained optimization}
+\tag{first derivative test}
+\tag{second derivative test}
+
+Find the absolute maximum product of two numbers (not necessarily integers) whose sum is $100$. Write DNE is no absolute maximum exists. \[\answer{2500}\]
+
+
+\begin{hint}
+We want to find the absolute maximum the product of two numbers (call them $x$ and $y$). Thus, we want to maximize $xy$ subject to the constraint that $x+y=100$.
+\end{hint}
+\begin{hint}
+Solving for $y$, we see that $y=100-x$. Then $xy=-x^2+100x$. We must find the absolute maximum of this product. 
+\end{hint}
+\begin{hint}
+If there is an absolute maximum, then, since $-x^2+100x$ is defined everywhere, the absolute maximum must occur where there is a local maximum. Hence, we find the critical points of $-x^2+100x$: $\frac{d}{dx}(-x^2+100x)=0$ and $\frac{d}{dx}(-x^2+100x)=100-2x$, hence, solving for $x$ in $100-2x=0$, we have $x=50$. So $x=50$ and $y=50$.
+
+But is this a maximum or a minimum? By the second derivative test, $\frac{d^2}{dx^2}(-x^2+100x)=-2$ and $-2<0$, so this is a maximum. We see by inspection that it is an absolute maximum because the function does not attain a larger value.
+
+Thus, $xy$ is maximized with $xy=2500$. 
+\end{hint}
+
+
+
+
+
+\end{exercise}
+\end{document}

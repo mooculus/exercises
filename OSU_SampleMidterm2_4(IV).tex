@@ -1,0 +1,42 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\tag{derivative}
+
+\outcome{Take derivatives of compositions of functions using the chain rule.}
+\outcome{Recognize a composition of functions.}
+The \textbf{derivative} of the function $f$ is given and a table of values for $g(x)$ and $g'(x)$ is shown below.
+
+Suppose that $g$ is a one-to-one function and $g^{-1}(x)$ is its inverse.
+\[
+f'(x)=\frac{x}{x^2+1},\hskip 1cm
+\begin{tchart}{c|c|c}
+x & g(x) & g'(x)\\ \hline
+1 & 2 & 4\\ \hline
+2 & 3 & 5\\ \hline
+3 & 4 & 1
+\end{tchart}
+\]
+
+$\frac{d}{dx}f(g(x))$ at $x=1$ is
+\begin{prompt}
+\begin{multipleChoice}
+\choice{$2$}
+\choice{$\frac{2}{5}$}
+\choice[correct]{$\frac{8}{5}$}
+\choice{$1$}
+\choice{$0$}
+\choice{None of the previous answers}
+\end{multipleChoice}
+\end{prompt}
+
+\end{exercise}
+\end{document}

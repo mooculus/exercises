@@ -1,0 +1,36 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\tag{derivative}
+\tag{linear approximation}
+\tag{approximation}
+
+
+\outcome{Understand the derivative as a function related to the original function.}
+\outcome{Find the linear approximation to a function at a point and use it to approximate the function value.}
+
+
+Given $H(0)=17$ and $H(2)=29$, approximate $H'(2)$ by linear approximation.
+\[
+H'(2)
+\begin{prompt}
+\approx \answer{6}
+\end{prompt}
+\]
+
+\begin{hint}
+We are given that $H(2)=29$ and $H(0)=17$. Recall that the line tangent to $H$ at $x=x_0$ is given by $y=H(x_0)+H'(x_0)(x-x_0)$. This is the linear approximation to $H$ at $x=x_0$. With this, we have an approximation $H(x)\approx H(x_0)+H'(x_0)(x-x_0)$ for each $x$. How might you choose $x$ and $x_0$ to relate what you know about $H(0)$ and $H(2)$ to $H'(2)$?
+\end{hint}
+\begin{hint}
+The linear approximation for $H$ at $x=2$ is $y=H(2)+H'(2)(x-2)$. We can approximate the point $H(0)$ by letting the $x$ in $H(2)+H'(2)(x-2)$ be $0$, then $H(0)\approx H(2)-2H'(2)$. Hence, $H'(2)\approx\frac{1}{2}\left(H(2)-H(0)\right)$ and we know that $H(2)-H(0)=29-17=12$. Dividing by $2$, we obtain $H'(2)\approx6$.
+\end{hint}
+\end{exercise}
+\end{document}

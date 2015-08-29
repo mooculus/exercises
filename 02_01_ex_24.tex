@@ -1,0 +1,55 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\tag{derivative}
+
+\outcome{Estimate the slope of the tangent line graphically.}
+\outcome{Understand the derivative as a function related to the original function.}
+\outcome{Combine derivative rules to take derivatives of more complicated functions.}
+
+%% BADBAD approximation?
+
+
+The graph of $f(x)=x^2-1$ is shown. 
+	\begin{enumerate}
+	\item		Use the graph to approximate the slope of the tangent line to $f$ at $(-1,0)$ and $(1,0)$.
+	 \begin{enumerate}[label=\emph{(\roman*)}]
+	  \item	 At $(-1,0)$, the slope of the tangent line to $f$ is approximately $\begin{prompt}\answer{-2}\end{prompt}$.
+	  \item	 At $(1,0)$, the slope of the tangent line to $f$ is approximately $\begin{prompt}\answer{2}\end{prompt}$.
+	 \end{enumerate}
+	\item		Using the definition of the derivative, find $\ddx f(x)\begin{prompt} = \answer{2x}\end{prompt}$.
+	\item		Find the slope of the tangent line at the points $(-1,0)$, $(0,-1)$ and $(2,3)$.
+	\begin{enumerate}[label=\emph{(\roman*)}]
+	  \item	 At $(-1,0)$, the slope of the tangent line to $f$ is exactly $\begin{prompt}\answer{-2}\end{prompt}$.
+	  \item	 At $(1,0)$, the slope of the tangent line to $f$ is exactly $\begin{prompt}\answer{2}\end{prompt}$.
+	  \item	 At $(2,3)$, the slope of the tangent line to $f$ is exactly $\begin{prompt}\answer{4}\end{prompt}$.
+	 \end{enumerate}
+	\end{enumerate}
+
+\begin{center}
+\noindent\begin{minipage}[t]{.5\linewidth}
+ \begin{tikzpicture}
+	\begin{axis}
+	[ymin=-1.3,ymax=3.3, axis lines=center,xlabel=$x$,ylabel=$y$,every axis y 
+	label/.style={at=(current axis.above origin),anchor=south},every axis x label/.style={at=(current axis.right of origin),anchor=west},
+	domain=-2:2,
+	ymajorgrids=true,
+	grid = major
+	]
+	\addplot[domain=-2:2,very thick,smooth,samples=500]
+	{pow(\x,2)-1};
+	\end{axis}
+       \end{tikzpicture}
+\end{minipage}
+\end{center}
+
+\end{exercise}
+\end{document}

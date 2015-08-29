@@ -1,0 +1,34 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Calculate limits of the form 0/0.}
+\outcome{Distinguish between limit values and function values.}
+
+\tag{limit} 
+\tag{indeterminate form}
+
+You are given the following information: 
+	\begin{enumerate}[label=\emph{(\roman*)}]
+	\item		$\lim_{x\to 1} f(x) = 0$
+	\item		$\lim_{x\to 1} g(x) = 0$
+	\item		$\lim_{x\to 1} \frac{f(x)}{g(x)} = 2$
+	\end{enumerate}
+What can be said about the relative sizes of $f(x)$ and $g(x)$ as $x$ approaches $1$?	
+\begin{prompt}
+ \begin{multipleChoice}
+  \choice{As $x$ is near $1$, both $f(x)$ and $g(x)$ are approximately $0$, but nothing else.}
+  \choice[correct]{As $x$ is near $1$, both $f(x)$ and $g(x)$ are approximately $0$, but $f(x)$ is approximately $2\cdot g(x)$.}
+  \choice{Nothing.}
+  \choice{There is a removable discontinuity in $\frac{f(x)}{g(x)}$ at $x=1$.}
+ \end{multipleChoice}
+\end{prompt}
+\end{exercise}
+\end{document}

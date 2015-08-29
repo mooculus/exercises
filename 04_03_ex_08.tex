@@ -1,0 +1,49 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Interpret an optimization problem as the procedure used to make a system or design as effective or functional as possible.}
+\outcome{Set up an optimization problem by identifying the objective function and appropriate constraints.}
+\outcome{Solve optimization problems by finding the appropriate absolute extremum.}
+\outcome{Solve basic word problems involving maxima or minima.}
+
+\tag{extrema}
+\tag{constrained optimization}
+\tag{first derivative test}
+\tag{second derivative test}
+
+%% BADBAD
+%% In general, this problem is not solvable in the full generality with which it was presented
+%% Since the author's solution implies that 2 pens were built, I'm putting in an
+%% assumption leading to that. 
+%% Otherwise we have issues with the method Lagrange multipliers not even yielding
+%% a solution with integral numbers of pens 
+%% Method of Lagrange yields x=y=125, m=n=2/3 and lambda=125/3 
+%% Lamba value might be wrong but the rest is right
+
+A rancher has $1000$ feet of fencing with which to construct $2$ adjacent, equally sized, rectangular pens. What dimensions should these pens have to maximize absolutely the enclosed area, assuming the ranchers uses all $1000$ feet of fencing?
+\begin{enumerate}
+\item		If $x$ is the longest side of the pen, then \[x=\answer{500/3}\,ft.\]
+\item		If $y$ is the shorter side of the pen, then \[y=\answer{125}\,ft.\]
+\begin{hint}
+If the pens are adjacent in a line, then each pen shares two sides with the ones next to it except for the pens on the end of our line.
+\end{hint}
+\begin{hint}
+If we build pens whose width is $x$ feet and length is $y$ feet, then the first pen uses $2x+2y$ feet of fencing. Building the second pen along the edge of the first pen whose length is $x$ feet, we use a total of $(2x+2y)+(x+2y)=3x+4y$ feet of fencing which we demand satisfy $3x+4y=1000$. Given this constraint, maximize the total area enclosed, $2xy$.
+\end{hint}
+\begin{hint}
+Solving for $y$, we have $y=\frac{1}{4}(1000-3x)$. The critical points of the area, $2x\left(\frac{1}{4}(1000-3x)\right)=-\frac{3}{2}x^2+500x$ and $\frac{d}{dx}(-\frac{3}{2}x^2+500x)=0$ when $x=\frac{500}{3}$. This is 
+\end{hint}
+\begin{hint}
+Solving for $y$ in $(2+n)x+2ny=1000$ we find $y=\frac{1000-2x-nx}{2n}$, so the area enclosed can be written as $-\frac{1}{2}(n+2)x^2+500x$. Treating $n$ as a constant, the critical points of this function are at $\frac{500}{2+n}$ and the second derivative test indicates that it is a local maximum. We should suspect that $x=\frac{500}{2+n}$. Then the area enclosed $-\frac{1}{2}(n+2)x^2+500x$ can be written as $\frac{125000}{2+n}$. Maximizing this with respect to $n$,  
+\end{hint}
+
+\end{exercise}
+\end{document}

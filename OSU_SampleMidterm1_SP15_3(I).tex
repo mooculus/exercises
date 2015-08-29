@@ -1,0 +1,47 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Matthew Carr}
+%% BADBAD
+%% From https://math.osu.edu/sites/math.osu.edu/files/Math1151_SampleMidterm1_SP15.pdf
+%% License?
+%% Acknowledgement?
+\license{BADBAD}
+\acknowledgement{BADBAD}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Calculate limits using the limit laws.}
+\outcome{Calculate limits of piecewise functions.}
+\outcome{Evaluate the limit as x approaches a point where there is a vertical asymptote.}
+\outcome{Calculate the limit as x approaches $\pm\infty$ of common functions algebraically.}
+
+\tag{limits}
+Let
+\[
+g(x)=\begin{cases}
+-2e^{x} & \text{if }x<0\\
+\frac{x+6}{x-3} & \text{if }x\ge0.
+\end{cases}
+\]
+Find
+\noindent\begin{minipage}[t]{.5\linewidth}
+\begin{enumerate}
+\item		$\lim_{x\to 0^{-}} g(x)\begin{prompt} = \answer{-2}\end{prompt}$
+\item		$\lim_{x\to 0^+} g(x)\begin{prompt} = \answer{-2}\end{prompt}$
+\item		$\lim_{x\to 3^{-}} g(x)\begin{prompt} = \answer{-\infty}\end{prompt}$
+\end{enumerate}
+\end{minipage}
+\noindent\begin{minipage}[t]{.5\linewidth}
+\begin{enumerate}\addtocounter{enumi}{3}
+\item		$\lim_{x\to 3^{+}} g(x)\begin{prompt} = \answer{\infty}\end{prompt}$
+\item		$\lim_{x\to -\infty} g(x)\begin{prompt} = \answer{0}\end{prompt}$
+\item		$\lim_{x\to +\infty} g(x)\begin{prompt} = \answer{1}\end{prompt}$
+\end{enumerate}
+\end{minipage}
+
+
+\end{exercise}
+\end{document}

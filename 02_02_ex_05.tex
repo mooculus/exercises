@@ -1,0 +1,36 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\tag{derivative}
+\tag{linear approximation}
+\tag{approximation}
+
+
+\outcome{Understand the derivative as a function related to the original function.}\outcome{Find the linear approximation to a function at a point and use it to approximate the function value.}
+
+
+
+Given $P(100)=-67$ and $P'(100)=5$, approximate $P(110)$ by linear approximation.
+\[
+P(110)
+\begin{prompt}
+\approx \answer{-17}
+\end{prompt}
+\]
+
+\begin{hint}
+We are given that $P'(100)=5$, so the derivative of $P$ at $x=100$ exists. Recall that the line tangent to $P$ at $x=100$ is given by $y=P(100)+P'(100)(x-100)$. This is the linear approximation to $P$ at $x=100$.
+\end{hint}
+\begin{hint}
+At $x=110$, $P$ is approximated by the linear approximation above, hence, $P(100)+P'(100)(110-100)=-67+5(10)=-67+50=-17$.
+\end{hint}
+\end{exercise}
+\end{document}

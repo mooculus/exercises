@@ -1,0 +1,40 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Matthew Carr}
+%% BADBAD
+%% From https://math.osu.edu/sites/math.osu.edu/files/Math1151_SampleMidterm1_SP15.pdf
+%% License?
+%% Acknowledgement?
+\license{BADBAD}
+\acknowledgement{BADBAD}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Calculate limits using the limit laws.}
+\outcome{Calculate limits of the form 0/0.}
+
+\tag{limits}
+
+Find
+\[
+\lim_{x\to5}\left(\frac{\sqrt{x-4}-1}{x-5}\right)
+\begin{prompt}
+= \answer{6}
+\end{prompt}
+\]
+
+\begin{hint}
+Multiply the numerator and denominator by the conjugate of $\sqrt{x-4}-1$, namely, $\sqrt{x-4}+1$.
+\end{hint}
+\begin{hint}
+$(\sqrt{x-4}-1)(\sqrt{x-4}+1)=x-4-1=x-5$. So $\frac{\sqrt{x-4}-1}{x-5}\cdot\frac{\sqrt{x-4}+1}{\sqrt{x-4}+1}=\frac{x-5}{(x-5)(\sqrt{x-4}+1)}=\frac{1}{\sqrt{x-4}+1}$.
+\end{hint}
+\begin{hint}
+Then $\lim_{x\to5}\frac{1}{\sqrt{x-4}+1}=\frac{1}{2}$.
+\end{hint}
+
+\end{exercise}
+\end{document}

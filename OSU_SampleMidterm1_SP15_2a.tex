@@ -1,0 +1,42 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Matthew Carr}
+%% BADBAD
+%% From https://math.osu.edu/sites/math.osu.edu/files/Math1151_SampleMidterm1_SP15.pdf
+%% License?
+%% Acknowledgement?
+\license{BADBAD}
+\acknowledgement{BADBAD}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Calculate limits using the limit laws.}
+\outcome{Calculate limits of the form 0/0.}
+
+\tag{limits}
+
+Find
+\[
+\lim_{x\to5^{+}}\left(\frac{x^2-4x-5}{\left|x-5\right|}\right)
+\begin{prompt}
+= \answer{6}
+\end{prompt}
+\]
+
+\begin{hint}
+Factor the numerator by solving $x^2-4x-5=0$.
+\end{hint}
+\begin{hint}
+We find $x^2-4x-5=0$ has solutions (given by the quadratic equation) $x=5$ and $x=-1$, hence, $\frac{x^2-4x-5}{\left|x-5\right|}=\frac{(x-5)(x+1)}{\left|x-5\right|}$. What can you say about this?
+\end{hint}
+\begin{hint}
+$\frac{(x-5)(x+1)}{\left|x-5\right|}=\left(\frac{(x-5)}{\left|x-5\right|}\right)(x+1)$ and when $x>5$, $\frac{(x-5)}{\left|x-5\right|}=1$. 
+\end{hint}
+\begin{hint}
+We wish to compute $\lim_{x\to5^{+}}\left(\frac{x^2-4x-5}{\left|x-5\right|}\right)$ which we have written as $\lim_{x\to5^{+}}\left(\left(\frac{x-5}{\left|x-5\right|}\right)(x+1)\right)$. Approaching from the right, $\lim_{x\to5^{+}}\frac{(x-5)}{\left|x-5\right|}=1$, and $\lim_{x\to5^{+}}\left(x+1\right)=6$. So $\lim_{x\to5^{+}}\left(\frac{x^2-4x-5}{\left|x-5\right|}\right)=6$.
+\end{hint}
+\end{exercise}
+\end{document}

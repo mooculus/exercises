@@ -1,0 +1,36 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Calculate limits using the limit laws.}
+\outcome{Calculate limits of the form 0/0.}
+\outcome{Calculate limits using the Squeeze Theorem.}
+
+\tag{limit} 
+\tag{indeterminate form}
+\tag{discontinuous}
+
+Find 
+\[
+\lim_{x\to0}\left({\frac{\sin(5x)}{8x}}\right)
+\begin{prompt}
+= \answer{5/8}.
+\end{prompt}
+\]
+
+\begin{hint}
+Recall that $\lim_{x\to0}\left({\frac{\sin(x)}{x}}\right)=1$. Multiplying $\frac{\sin(5x)}{8x}$ by a clever form of $1$, namely, $\frac{5}{5}$, gives us $\frac{5}{8}\cdot\left({\frac{\sin(5x)}{5x}}\right)=\frac{\sin(5x)}{8x}$. Thus, $\lim_{x\to0}\left({\frac{5}{8}\cdot\left({\frac{\sin(5x)}{5x}}\right)}\right)=\lim_{x\to0}\left({\frac{\sin(5x)}{8x}}\right)$. What can you say about $\lim_{x\to0}\left({\frac{5}{8}\cdot\left({\frac{\sin(5x)}{5x}}\right)}\right)$?
+\end{hint}
+\begin{hint}
+Let $y=5x$. Then since $\lim_{x\to0}\left({\frac{5}{8}\cdot\left({\frac{\sin(5x)}{5x}}\right)}\right)=\lim_{y\to0}\left({\frac{5}{8}\cdot\left({\frac{\sin(y)}{y}}\right)}\right)$, and we know that $\lim_{y\to0}\left({\frac{\sin(y)}{y}}\right)=1$, applying the limit laws yields $\lim_{y\to0}\left({\frac{5}{8}\cdot\left({\frac{\sin(y)}{y}}\right)}\right)=\frac{5}{8}\cdot\lim_{y\to0}\left({\frac{\sin(y)}{y}}\right)=\frac{5}{8}$.
+\end{hint}
+
+\end{exercise}
+\end{document}

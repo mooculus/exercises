@@ -1,0 +1,35 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Matthew Carr}
+%% BADBAD
+%% From OSU 1151 Sample Exams
+%% License?
+%% Acknowledgement?
+\license{BADBAD}
+\acknowledgement{BADBAD}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Calculate limits using the limit laws.}
+\outcome{Calculate limits of the form 0/0.}
+
+Find
+\[
+\lim_{x\to0}\left(\frac{\cos^{2}(x)-1}{\cos(x)-1}\right)
+\begin{prompt}
+= \answer{2}
+\end{prompt}
+\]
+
+\begin{hint}
+Recall that for any two numbers, $a$ and $b$,  $a^2-b^2=(a-b)(a+b)$. Factor the numerator of the expression in this manner.
+\end{hint}
+\begin{hint}
+$\cos^{2}(x)-1=(\cos(x)-1)(\cos(x)+1)$ so $\frac{(\cos(x)-1)(\cos(x)+1)}{\cos(x)-1}=\cos(x)+1$ for $x\ne2\pi{n}$ for any integer $n$ (notice that if $x=2\pi n$, then $\cos(2\pi n)-1=0$ in the denominator) and $\lim_{x\to0}\left(\frac{\cos^{2}(x)-1}{\cos(x)-1}\right)=\lim_{x\to0}\left(\cos(x)+1\right)$ and this is $\lim_{x\to0}\left(\cos(x)\right)+\lim_{x\to0}\left(1\right)=2$.
+
+\end{hint}
+\end{exercise}
+\end{document}

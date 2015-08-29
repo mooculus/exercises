@@ -1,0 +1,39 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Add up a large number of terms quickly using sigma notation.}
+\outcome{Compute left, right, and midpoint Riemann Sums with many rectangles.}
+\outcome{Use limits of Riemann sums to find the exact area under a curve.}
+\outcome{Understand how Riemann sums are used to find exact area.}
+\outcome{Understand the relationship between area under a curve and sums of rectangles.}
+\outcome{Approximate area under a curve.}
+\outcome{Understand how the area under a curve is related to the antiderivative.}
+
+%% BADBAD
+%% Original Author has answers as 20/3 but I can't get that
+%% I've done it the correct (I hope) way
+
+\tag{sum}
+\tag{Riemann sum}
+\tag{integral}
+
+Answer the following, given that it is a well known fact that  $\sum_{k=1}^{m}k=\frac{m(m+1)}{2}$.
+\begin{enumerate}
+\item		Find the right Riemann Sum for $n$ equally spaced rectangles approximating $\int_{-10}^{10}5-x\d x$ \[\int_{-10}^{10}5-x\d x\approx\answer{100-\frac{200}{n}}\]
+\item		The limit as $n\to\infty$ of your answer to part (a) is: \[\answer{100}\]
+\item		Does the answer to part (b) agree with the value of the integral $\int_{-10}^{10}5-x\d x$? 
+\begin{multipleChoice}
+\choice[correct]{Yes}
+\choice{No}
+\end{multipleChoice}
+\end{enumerate}
+\end{exercise}
+\end{document}

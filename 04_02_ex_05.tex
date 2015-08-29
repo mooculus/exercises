@@ -1,0 +1,47 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Solve basic related rates word problems.}
+\outcome{Identify word problems as related rates problems.}
+\outcome{Understand the process of solving related rates problems.}
+
+\tag{related rates}
+
+Radar guns measure the rate of distance change between the gun and the object it is measuring. For instance, a reading of ``$55$mph'' means the object is moving away from the gun at a rate of $55$ miles per hour, whereas a measurement of ``$-25$mph'' would mean that the object is approaching the gun at a rate of $25$ miles per hour.
+
+If the radar gun is moving (say, attached to a police car) then radar readouts are only immediately understandable if the gun and the object it is measuring are moving along the same line. For instance, if a police officer is traveling $60$mph and measures the speed of a car ahead of him and gets a readout of $15$mph, he knows that the car ahead of him is moving away at a rate of $15$ miles an hour (i.e., the car's speed relative to him), meaning the car is traveling $75$mph.
+
+
+Now, suppose an officer is driving due north at $50$mph and sees a car moving due west. Using his radar gun, he measures a reading of $-80$mph. By using landmarks, he believes both he and the other car are $1/2$ mile from the intersection of their two roads.
+
+What speed, $s$, is the other car traveling at?
+\[
+s=\answer{80\sqrt{2}-50}
+\]
+\begin{hint}
+Draw a picture and remember that \textbf{speed} is the absolute value of \textbf{velocity}. Recall that the radar gun measures the rate of change in the distance between the two cars. If $r(t)$ measures the distance between them, then $r(t)$ is the hypotenuse of the right triangle formed between $x(t)$ (the function of time measuring the distance of the other car from the intersection of the roads) and $y(t)$ (the function of time measuring the distance of the police car from the intersection of the roads). 
+\end{hint}
+\begin{hint}
+The relative speed between the vehicles is given by $\frac{dr}{dt}$. If $r=\sqrt{x(t)^2+y(t)^2}$ where $x(t)$ is the position of the other car as a function of time and $y(t)$ is the position of the police car as a function of time, what is $\frac{dr}{dt}$? What are $x(t)$ and $x'(t)$? What are $y(t)$ and $y'(t)$? How does this help? 
+\end{hint}
+\begin{hint}
+By the chain rule, $\frac{dr}{dt}=\frac{x(t)\frac{dx}{dt}+y(t)\frac{dy}{dt}}{\sqrt{x(t)^2+y(t)^2}}$. What are $x(t)$,$x'(t)$, $y(t)$ and $y'(t)$ as functions of time?
+\end{hint}
+\begin{hint}
+We see that $x(t)=-st+\frac{1}{2}$, $\frac{dx}{dt}=-s$, $y(t)=50t-\frac{1}{2}$ and $\frac{dy}{dt}=50$ where $t$, for convenience, is time measured in hours. So $\frac{dr}{dt}=\frac{2(s^2+2500) t-s-50}{\sqrt{4(s^2+2500) t^2-4 (s+50) t+2}}$.
+\end{hint}
+\begin{hint}
+At $t=0$, which is the time at which the radar measured the other car's velocity, we have $\frac{dr}{dt}=\frac{-50-s}{\sqrt{2}}$ and we know this is equal to $-80$, so we simply solve for $s$ and obtain $s=80\sqrt{2}-50$.\\
+
+A physical interpretation of this is to imagine that the cars are spheres rolling towards each other in outer space. If you rode in the police sphere, you wouldn't know that you were moving since, in outer space, our ride is smooth and there are no land marks to determine that we are, in fact, moving. Observing the other sphere, we should see it moving in the $x$-direction at $-s$mph and in the $y$-direction at $-50$mph (this last fact follows because the police car was moving, on earth, at $50$mph towards the other car, so in the situation in outer space, we would interpret the other sphere to be moving towards us at $-50$mph). At $t=0$, we point our radar at an angle $\theta=\pi/4$ towards the other car which is moving at an angle $\arctan(\frac{s}{50})$. The direction of the $x(t)$-component of the velocity of the other sphere in the direction of the $x(t)$-component of the radar gun's angle is $\sqrt{50^2+s^2}\cos(\arctan(\frac{s}{50}))\cos(\pi/4)=\frac{1}{\sqrt{2}}\sqrt{50^2+s^2}\cos(\arctan(\frac{s}{50}))$ and the direction of the $y(t)$-component of the velocity of the other sphere in the direction of the $y(t)$-component of the radar gun's angle is $\sqrt{50^2+s^2}\sin(\arctan(\frac{s}{50}))\sin(\pi/4)=\frac{1}{\sqrt{2}}\sqrt{50^2+s^2}\cos(\arctan(\frac{s}{50}))$. Then the speed of the other sphere along the direction of the radar gun's angle is the sum of these two components, so $80=\frac{1}{\sqrt{2}}\sqrt{50^2+s^2}\left(\cos(\arctan(\frac{s}{50}))+\sin(\arctan(\frac{s}{50}))\right)$ but a simple trigonometric calculation tells us that $\cos(\arctan(\frac{s}{50}))=\frac{50}{\sqrt{50^2+s^2}}$ and $\sin(\arctan(\frac{s}{50}))=\frac{s}{\sqrt{50^2+s^2}}$, so their sum is $\frac{50+s}{\sqrt{50^2+s^2}}$, hence, simplifying our expression, we have $80=\frac{50+s}{\sqrt{2}}$, and so we find that the \textbf{speed}, $s$ is $s=80\sqrt{2}-50$. And no calculus was involved! What we used here is called a \textbf{dot product}, which you will learn more about should you continue to take courses in mathematics.
+\end{hint}
+\end{exercise}
+\end{document}

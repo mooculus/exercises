@@ -1,0 +1,35 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Calculate limits using the limit laws.}
+\outcome{Calculate limits of the form 0/0.}
+\outcome{Calculate limits using the Squeeze Theorem.}
+
+\tag{limit} 
+\tag{indeterminate form}
+\tag{discontinuous}
+
+Find 
+\[
+\lim_{x\to0}\left({x\sin\left({\frac{1}{x}}\right)}\right)
+\begin{prompt}
+= \answer{0}.
+\end{prompt}
+\]
+
+\begin{hint}
+Notice that $-x\le x\sin({\frac{1}{x}})\le{x}$ for all $x>0$ (emphatically, $x\ne0$) and $x\le x\sin({\frac{1}{x}})\le{-x}$ for all $x<0$ (again, emphatically, $x\ne0$). This can be restated as $-\left|{x}\right|\le x\sin({\frac{1}{x}})\le\left|{x}\right|$ for $x\ne0$. Our statement follows because $-1\le\sin({\frac{1}{x}})\le1$ for all $x\ne0$, hence, we obtained our inequality by multiplying by $x$. Apply the Squeeze Theorem to the inequality.
+\end{hint}
+\begin{hint}
+We see that $\lim_{x\to0}\left({-x}\right)=\lim_{x\to0}(x)=0$. It follows, by the Squeeze Theorem, that $\lim_{x\to0}\left({x\sin({\frac{1}{x}}})\right)=0$.
+\end{hint}
+\end{exercise}
+\end{document}

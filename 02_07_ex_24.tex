@@ -1,0 +1,33 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\tag{inverse function}
+\tag{derivative}
+
+\outcome{Define and work with inverse functions.}
+\outcome{Understand how the derivative of an inverse function relates to the original derivative.}
+\outcome{Find derivatives of inverse functions in general.}
+\outcome{Recall the meaning and properties of inverse trig functions.}
+\outcome{Recognize a composition of functions.}
+\outcome{Take derivatives of compositions of functions using the chain rule.}
+\outcome{Take derivatives which involve inverse trigonometric functions.}
+
+
+Let $f(x)=\sin(\arcsin(x))$.
+\begin{enumerate}
+\item Simplify the function $f$ based on what you know about inverse trigonometric functions. \[f(x)\begin{prompt} = \answer{x}\end{prompt}.\]
+\item Find the derivative of $f$ based on your simplification. \[f'(x)\begin{prompt} = \answer{1}\end{prompt}.\]
+\item Using the chain rule and your knowledge of derivatives of trigonometric functions, write down an expression for $f'$ without simplifying your answer. \[f'(x)\begin{prompt} = \answer{\cos(\arccos(x))\frac{1}{\sqrt{1-x^2}}}\end{prompt}.\]
+\item Based on the fact that both answers you gave for $f'$ must be equal, find \[\cos(\arcsin(x))\begin{prompt} = \answer{\sqrt{1-x^2}}\end{prompt}.\]
+\end{enumerate}
+
+\end{exercise}
+\end{document}

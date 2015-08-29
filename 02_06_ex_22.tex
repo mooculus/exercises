@@ -1,0 +1,36 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\tag{derivative}
+
+\outcome{Solve equations for $\frac{dy}{dx}$.}
+\outcome{Implicitly differentiate expressions.}
+
+
+Find the derivative $\frac{dy}{dx}$ if $\ln(x^2+xy+y^2)=1$.
+
+\[
+\frac{dy}{dx}
+\begin{prompt}
+= \answer{-\frac{2x+y}{2y+x}}
+\end{prompt}
+\]
+
+\begin{hint}
+Let $y$ be a function of $x$, $y(x)$. Then the chain rule tells us, for any function $f(y)$, that $\frac{d}{dx}f(y)=\left(\frac{d}{dy}\left(f(y)\right)\right)\left(\frac{dy}{dx}\right)$. 
+\end{hint}
+
+\begin{hint}
+Applying the chain rule to the expression $\frac{d}{dx}(\ln(x^2+xy+y^2))=\frac{d}{dx}(1)=0$, we obtain $\frac{\frac{d}{dx}(x^2+xy+y^2)}{x^2+xy+y^2}=\frac{2x+y+x\frac{dy}{dx}+2y\frac{dy}{dx}}{x^2+xy+y^2}=0$. Solving for $\frac{dy}{dx}$, we obtain $\frac{dy}{dx}=-\frac{2x+y}{2y+x}$.
+\end{hint}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,49 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Identify the relationships between the function and its first and second derivatives.}
+
+%% BADBAD
+%% Original question did not include 'twice differentiable'
+%% I included this so to make the relation between the function
+%% And it's first and second derivative clear
+%% Also, I'm not aware if they know the definition
+%% for concave and convex function in general
+
+\tag{concavity}
+\tag{derivative}
+
+True or False?
+\begin{quote}
+It is possible for a twice differentiable function to be \textbf{increasing} and \textbf{concave down} on $(0,\infty)$ with a horizontal asymptote of $y=1$.
+\end{quote}
+\begin{prompt}
+\begin{multipleChoice}
+\choice[correct]{True}
+\choice{False}
+\end{multipleChoice}
+\end{prompt}
+
+\begin{hint}
+Consider the graph of $f(x)=\frac{2}{\pi}\arctan(x)$. This should either provide a confirmation of your suspicion or a counter example. Notice that $\left|f(x)\right|\le1$, so $f(x)$ has a horizontal asymptote at $y=1$.
+\end{hint}
+\begin{hint}
+$f(x)$ is increasing. Recalling the derivative of the inverse tangent function, $f'(x)=\frac{1}{1+x^2}$, so $f'(x)>0$ for all $x$, in particular, for all $x$ in the interval $(0,\infty)$, so $f(x)$ is increasing on $(0,\infty)$.
+\end{hint}
+
+\begin{hint}
+$f(x)$ is concave down. By the chain rule and the quotient rule, $f''(x)=-\frac{2x}{(1+x^2)^2}$ which is less than $0$ \emph{precisely} on $(0,\infty)$. So $f(x)$ is concave down.
+
+Thus, $f$ is an example which demonstrates that it is possible for a function to be increasing (i.e., the first derivative is positive) and 
+\end{hint}
+
+\end{exercise}
+\end{document}

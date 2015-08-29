@@ -1,0 +1,62 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Solve basic related rates word problems.}
+\outcome{Identify word problems as related rates problems.}
+\outcome{Understand the process of solving related rates problems.}
+
+\tag{related rates}
+
+A jet is flying at $500$mph with an elevation of $10,000$ft in a straight-line that will take it directly over an observer watching the plane. (Recall that there are $5,280$ft in a mile).
+
+With what speed, $\alpha$, must the observe be able to turn, in radians per second, to accurately watch the jet when it is:
+\begin{enumerate}
+\item		$1$ mile away from directly above the observer? \[\alpha=\answer{\frac{6875}{119886}}\,rad/s\]
+\item		$1/5$ mile away from directly above the observer? \[\alpha=\answer{\frac{171875}{2369886}}\,rad/s\]
+\item		Directly overhead? \[\alpha=\answer{\frac{11}{150}}\,rad/s\]
+\end{enumerate}
+
+\begin{hint}
+Draw a right triangle with the horizontal leg representing the distance the jet is from being directly over the observer. Let $\theta(t)$ be the angle between the hypotenuse and the horizontal leg of the triangle as a function of time. Find an expression for $\tau(t)=\frac{d\theta}{dt}$ from which you can calculate $\alpha$ for some value of $t$ in $\tau(t)$
+\end{hint}
+\begin{hint}
+We want radians per second, so we must convert all speeds into `per second' units. $500$mph is $500/{60}$ miles per minute and $500/{60^2}$ miles per second. In terms of feet, this is $\frac{500\cdot5280}{60^2}=\frac{2200}{3}$ft/s. 
+\end{hint}
+\begin{hint}
+Let $x(t)$ be the function of time measuring the distance the jet is from being directly over the observer (i.e., the length of the horizontal leg of your right triangle). Find an expression for $x(t)$ in each case and recall that the vertical leg is fixed at $10,000$ft.
+\end{hint}
+\begin{hint}
+In the first case, $x(t)=-\frac{2200}{3}t+5280$, in the second, $x(t)=-\frac{2200}{3}t+1056$, and in the third $x(t)=-\frac{2200}{3}t$. This is all the information needed to find $\theta(t)$ and, hence, $\tau(t)=\frac{d\theta}{dt}$.
+\end{hint}
+\begin{hint}
+Clearly, $\theta(t)=\arctan(\frac{y}{x(t)})$ where $y$ is the vertical leg of the right triangle. Recall that $\frac{d}{dx}(\arctan(\frac{1}{x}))=-\frac{1}{1+x^2}$.
+
+In the first case, $\theta(t)=\frac{10000}{-2200t/3+5280}$, hence, $\tau(t)=\frac{41250}{605 t (5 t-72)+719316}$. At $t=0$, when the jet is precisely $1$ mile away from being over the head of the observer, $\alpha=\tau(0)=\frac{6875}{119886}$rad/s. 
+
+In the second case, $\theta(t)=\frac{10000}{-2200t/3+1056}$, hence, $\tau(t)=\frac{1031250}{3025 t (25 t-72)+14219316}. At $t=0$, when the jet is precisely $1/5$ mile away from being over the head of the observer, $\alpha=\tau(0)=\frac{171875}{2369886}$.
+
+Finally, in the third case, notice that $\arctan(\frac{10000}{-2200t/3}$ is not defined at $t=0$. There are two ways to circumvent this problem.
+
+Let $X(t)=-\frac{2200}{3}t+h$ for some number $h>0$, and let $\theta(t)=\arctan(\frac{10000}{X(t)})$. Then $\theta(0)$ is defined, and $\tau(t)=\frac{66000000}{(3 h-2200 t)^2+900000000}$. In the limit that $h\to0$, we see that $\lim_{h\to0}(\tau(0))=\frac{11}{150}$.
+\end{hint}
+
+
+
+
+
+
+
+
+
+
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass{ximera}
+
+\input{preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Compute basic antiderivatives.}
+\outcome{Use integral notation for both antiderivatives and definite integrals.}
+\outcome{Undo the Chain Rule.}
+\outcome{Calculate indefinite integrals (antiderivatives) using basic substitution.}
+
+%% BADBAD 
+%% Absolute values here?
+
+\tag{antiderivatives}
+\tag{integral}
+\tag{substitution}
+
+Find the indefinite integral of $\frac{x^2+5 x-2}{x^2-10 x+32}$ with respect to $x$.
+
+\[
+\int \frac{x^2+5 x-2}{x^2-10 x+32}\d x=\answer{\frac{15}{2} \ln|x^2-10 x+32|+x+\frac{41\arctan(\frac{x-5}{\sqrt{7}})}{\sqrt{7}}+C}
+\]
+
+%%\begin{hint}
+%%Notice that  $(x^2-10x+32)+(15x-34)=x^2+5x-2$, so we can rewrite the integrand as $1+\frac{15x-34}{x^2-10 x+32}$.
+%%\end{hint}
+%%\begin{hint}
+%%Complete the square for $x^2-10 x+32$ (i.e., find constants, $a$, $b$, and $c$ such that $x^2-10 x+32=a(x-b)^2+c$. What does this suggest as a choice for substitution?
+%%\end{hint}
+%%\begin{hint}
+%%Clearly $a=1$. Expanding the rest and setting the result equal to $x^2-10x+32$, we have $b^2+c=32$ and $-2b=-10$, so $b=5$ and $c=7$. This suggests that we choose $u=x-5$.
+%%\end{hint}
+%%\begin{hint}
+%%In particular, $du=dx$ and $x=u+5$, so we can rewrite $1+\frac{15x-34}{x^2-10 x+32}$ as $1+\frac{41+15u}{u^2+7}=1+\frac{41}{u^2+7}+\frac{15u}{u^2+7}$. Now make the usual trigonometric substitution and integrate.
+%%\end{hint}
+%%\begin{hint}
+%%Let $u=\sqrt{7}\tan(\theta)$, then $du=\sqrt{7}\sec^2(\theta)d\theta$ and so we are left with $\int\left(1+\frac{41}{u^2+7}+\frac{15u}{u^2+7})\d u=\int\frac{48}{\sqrt{7}}+15\tan(\theta)+\sqrt{7}\tan^2(\theta)\d \theta$. Since $\tan^2(\theta)=\sec^2(\theta)+1$, we know the integral of each of these and we combine them to $\frac{48 \theta }{\sqrt{7}}-15 \ln(\cos(\theta))-\sqrt{7}\theta+\sqrt{7} \tan(\theta)$ and since $u=\sqrt{7}\tan(\theta)$, it follows that $\theta=\arctan(\frac{u}{\sqrt{7}})$ and since $u=x-5$, this is $\theta=\arctan(\frac{x-5}{\sqrt{7}})$.
+%%\end{hint}
+\end{exercise}
+\end{document}
