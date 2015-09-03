@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     11576,        280]
-NotebookOptionsPosition[     11203,        262]
-NotebookOutlinePosition[     11561,        278]
-CellTagsIndexPosition[     11518,        275]
+NotebookDataLength[     11707,        282]
+NotebookOptionsPosition[     11333,        264]
+NotebookOutlinePosition[     11692,        280]
+CellTagsIndexPosition[     11649,        277]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,6 +21,8 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SeedRandom", "[", "1", "]"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"LaTeX", "[", "x_", "]"}], ":=", 
@@ -219,7 +221,7 @@ form zero over zero.}\n\\\\tag{limit}\n\\\\tag{indeterminate form}\n\
    3.650244995318503*^9}, 3.6502808388133497`*^9, 3.650280903294174*^9, {
    3.650281733243767*^9, 3.650281804282493*^9}, {3.6502818427320623`*^9, 
    3.6502820324312067`*^9}, {3.6502820834581203`*^9, 3.650282191588335*^9}, 
-   3.65028226282106*^9}],
+   3.65028226282106*^9, {3.650290260424748*^9, 3.6502902614152203`*^9}}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
 author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
@@ -260,8 +262,8 @@ Cell[BoxData[
   3.6502435245708437`*^9}, {3.650244179818222*^9, 3.650244188522778*^9}, {
   3.650282208740053*^9, 3.6502822141316023`*^9}}]
 },
-WindowSize->{959, 1020},
-WindowMargins->{{960, Automatic}, {Automatic, 0}},
+WindowSize->{959, 1018},
+WindowMargins->{{950, Automatic}, {Automatic, -8}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
@@ -278,10 +280,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 8611, 199, 759, "Input"],
-Cell[9193, 223, 1368, 20, 407, "Output"]
+Cell[579, 22, 8741, 201, 781, "Input"],
+Cell[9323, 225, 1368, 20, 407, "Output"]
 }, Open  ]],
-Cell[10576, 246, 623, 14, 32, "Input"]
+Cell[10706, 248, 623, 14, 32, "Input"]
 }
 ]
 *)
