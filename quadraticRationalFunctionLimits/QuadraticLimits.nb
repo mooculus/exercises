@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     10203,        238]
-NotebookOptionsPosition[      9832,        220]
-NotebookOutlinePosition[     10189,        236]
-CellTagsIndexPosition[     10146,        233]
+NotebookDataLength[     10281,        240]
+NotebookOptionsPosition[      9910,        222]
+NotebookOutlinePosition[     10267,        238]
+CellTagsIndexPosition[     10224,        235]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -199,7 +199,8 @@ or the denominator.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\"\
    3.650243170722159*^9, 3.650243211502778*^9, 3.650243476541616*^9, {
    3.650244119093915*^9, 3.650244139714717*^9}, 3.650244170465603*^9, 
    3.650245227069167*^9, 3.650277274509276*^9, {3.650290658374156*^9, 
-   3.65029066452113*^9}, 3.650290702119557*^9, 3.6503011260253687`*^9}]
+   3.65029066452113*^9}, 3.650290702119557*^9, 3.6503011260253687`*^9, 
+   3.650301837272789*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -212,11 +213,12 @@ Cell[BoxData[
        RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.tex\>\""}], ",", 
       "code", ",", "\"\<Text\>\""}], "]"}], ",", 
     RowBox[{"{", 
-     RowBox[{"i", ",", "2"}], "}"}]}], "]"}], ";"}]], "Input",
+     RowBox[{"i", ",", "20"}], "}"}]}], "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.650243247135182*^9, 3.650243308322151*^9}, {
   3.650243357322897*^9, 3.6502433903735037`*^9}, {3.650243429166459*^9, 
   3.6502435245708437`*^9}, {3.650244179818222*^9, 3.650244188522778*^9}, {
-  3.6503011119054737`*^9, 3.650301112187138*^9}}]
+  3.6503011119054737`*^9, 3.650301112187138*^9}, {3.650301841650695*^9, 
+  3.6503018417454557`*^9}}]
 },
 WindowSize->{1920, 1020},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -237,9 +239,9 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[579, 22, 7250, 158, 693, "Input"],
-Cell[7832, 182, 1365, 19, 439, "Output"]
+Cell[7832, 182, 1391, 20, 407, "Output"]
 }, Open  ]],
-Cell[9212, 204, 616, 14, 32, "Input"]
+Cell[9238, 205, 668, 15, 32, "Input"]
 }
 ]
 *)
