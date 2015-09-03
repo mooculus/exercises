@@ -1,0 +1,293 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     12586,        284]
+NotebookOptionsPosition[     12287,        269]
+NotebookOutlinePosition[     12644,        285]
+CellTagsIndexPosition[     12601,        282]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"RandomSeed", "[", "1", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LaTeX", "[", "x_", "]"}], ":=", 
+   RowBox[{"ToString", "[", 
+    RowBox[{"TeXForm", "[", "x", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LaTeX", "[", "Sin", "]"}], "=", "\"\<\\\\sin\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LaTeX", "[", "Cos", "]"}], "=", "\"\<\\\\cos\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LaTeX", "[", "ArcTan", "]"}], "=", 
+   RowBox[{"RandomChoice", "[", 
+    RowBox[{"{", 
+     RowBox[{"\"\<\\\\arctan\>\"", ",", "\"\<\\\\tan^{-1}\>\""}], "}"}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LaTeX", "[", "ArcCot", "]"}], "=", 
+   RowBox[{"RandomChoice", "[", 
+    RowBox[{"{", 
+     RowBox[{"\"\<\\\\arccot\>\"", ",", "\"\<\\\\cot^{-1}\>\""}], "}"}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"code", ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"wildFunction", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{"Sin", ",", "Cos", ",", "ArcTan", ",", "ArcCot", ",", 
+          RowBox[{"Function", "[", 
+           RowBox[{"E", "^", 
+            RowBox[{"Sin", "[", "#", "]"}]}], "]"}], ",", 
+          RowBox[{"Function", "[", 
+           RowBox[{"E", "^", 
+            RowBox[{"Cos", "[", "#", "]"}]}], "]"}], ",", 
+          RowBox[{"Function", "[", 
+           RowBox[{"E", "^", 
+            RowBox[{"ArcTan", "[", "#", "]"}]}], "]"}], ",", 
+          RowBox[{"Function", "[", 
+           RowBox[{"E", "^", 
+            RowBox[{"ArcCot", "[", "#", "]"}]}], "]"}], ",", 
+          RowBox[{"Function", "[", 
+           RowBox[{"2", "^", 
+            RowBox[{"Sin", "[", "#", "]"}]}], "]"}], ",", 
+          RowBox[{"Function", "[", 
+           RowBox[{"2", "^", 
+            RowBox[{"Cos", "[", "#", "]"}]}], "]"}], ",", 
+          RowBox[{"Function", "[", 
+           RowBox[{"2", "^", 
+            RowBox[{"ArcTan", "[", "#", "]"}]}], "]"}], ",", 
+          RowBox[{"Function", "[", 
+           RowBox[{"2", "^", 
+            RowBox[{"ArcCot", "[", "#", "]"}]}], "]"}]}], "}"}], "]"}]}], ";",
+       "\[IndentingNewLine]", 
+      RowBox[{"boundingFunction", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{"Sin", ",", "ArcTan", ",", 
+          RowBox[{"Function", "[", "#", "]"}], ",", 
+          RowBox[{"Function", "[", 
+           RowBox[{"#", "^", "2"}], "]"}], ",", 
+          RowBox[{"Function", "[", 
+           RowBox[{"#", "^", "3"}], "]"}], ",", "Sqrt", ",", 
+          RowBox[{"Function", "[", 
+           RowBox[{"#", "^", 
+            RowBox[{"(", 
+             RowBox[{"1", "/", "3"}], ")"}]}], "]"}]}], "}"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"variable", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{
+         "x", ",", "z", ",", "t", ",", "n", ",", "k", ",", "w", ",", "u", ",",
+           "v"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"konstant", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", 
+          RowBox[{"-", "2"}], ",", 
+          RowBox[{"-", "3"}], ",", "Pi", ",", "1", ",", "2", ",", "3"}], 
+         "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"realFunction", "[", "x_", "]"}], "=", 
+       RowBox[{
+        RowBox[{"boundingFunction", "[", "x", "]"}], "*", 
+        RowBox[{"wildFunction", "[", 
+         RowBox[{"konstant", "/", "x"}], "]"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"upperFunction", "[", "x_", "]"}], "=", 
+       RowBox[{
+        RowBox[{"Rationalize", "[", 
+         RowBox[{"MaxValue", "[", 
+          RowBox[{
+           RowBox[{"wildFunction", "[", "x", "]"}], ",", "x"}], "]"}], "]"}], 
+        
+        RowBox[{"Abs", "[", 
+         RowBox[{"boundingFunction", "[", "x", "]"}], "]"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"lowerFunction", "[", "x_", "]"}], "=", 
+       RowBox[{
+        RowBox[{"Rationalize", "[", 
+         RowBox[{"MinValue", "[", 
+          RowBox[{
+           RowBox[{"wildFunction", "[", "x", "]"}], ",", "x"}], "]"}], "]"}], 
+        
+        RowBox[{"Abs", "[", 
+         RowBox[{"boundingFunction", "[", "x", "]"}], "]"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"answer", "=", 
+       RowBox[{"Limit", "[", 
+        RowBox[{
+         RowBox[{"realFunction", "[", "x", "]"}], ",", 
+         RowBox[{"x", "\[Rule]", "0"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"StringJoin", "[", 
+       RowBox[{
+       "\"\<\\\\documentclass{ximera}\n\\\\input{preamble.tex}\n\
+\\\\author{Bart Snapp}\n\\\\license{Creative Commons 3.0 By-NC}\n\
+\\\\begin{document}\n\\\\begin{exercise}\n\n\\\\outcome{Understand the \
+Squeeze Theorem and how it can be used to find limit values.}\n\
+\\\\outcome{Calculate limits using the Squeeze Theorem.}\n\\\\tag{limit}\n\
+\\\\tag{squeeze theorem}\n\nConsider:\n\\\\[\\n\\\\lim_{\>\"", ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", 
+        "\"\<\\\\to 0} \\\\left(\>\"", ",", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{"realFunction", "[", "variable", "]"}], "]"}], ",", 
+        "\"\<\\\\right)\n\\\\]\nA good way to compute this limit would be to \
+use \\\\wordChoice{\\\\choice{limit laws}\\\\choice{indeterminate \
+forms}\\\\choice[correct]{the Squeeze Theorem}\\\\choice{the Intermediate \
+Value Theorem}}.\n\\\\begin{exercise}\nList two functions $g$ and $h$ such \
+that\n\\\\[\ng(\>\"", ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<)\\\\le \>\"", ",", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{"realFunction", "[", "variable", "]"}], "]"}], ",", 
+        "\"\< \\\\le h(\>\"", ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", 
+        "\"\<)\n\\\\]\nfor all $\>\"", ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", 
+        "\"\<$ on some interval containing $\>\"", ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", 
+        "\"\<=0$.\n\\\\[\ng(\>\"", ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<)=\\\\answer{\>\"",
+         ",", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{"lowerFunction", "[", "variable", "]"}], "]"}], ",", 
+        "\"\<}\\\\qquad h(\>\"", ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", 
+        "\"\<) =\\\\answer{\>\"", ",", " ", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{"upperFunction", "[", "variable", "]"}], "]"}], ",", 
+        "\"\<}\n\\\\]\n\\\\begin{exercise}\nCompute:\n\\[\n\\lim_{\>\"", ",", 
+        
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\< \\\\to 0}\>\"", 
+        ",", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{"lowerFunction", "[", "variable", "]"}], "]"}], ",", 
+        "\"\< = \\answer{0}\\\\qquad \\lim_{\>\"", ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<\\\\to 0}\>\"", 
+        ",", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{"upperFunction", "[", "variable", "]"}], "]"}], ",", 
+        "\"\< = \\\\answer{0}\n\\]\n\\\\begin{exercise}\nBy the Squeeze \
+Theorem:\n\\\\[\\n\\\\lim_{\>\"", ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", 
+        "\"\<\\\\to 0} \\\\left(\>\"", ",", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{"realFunction", "[", "variable", "]"}], "]"}], ",", 
+        "\"\<\\\\right) = \\\\answer{\>\"", ",", 
+        RowBox[{"LaTeX", "[", "answer", "]"}], ",", 
+        "\"\<}\n\\\\]\n\\\\end{exercise}\n\\\\end{exercise}\n\
+\\\\end{exercise}\n\\\\end{exercise}\n\\\\end{document}\>\""}], "]"}]}]}], 
+    "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"StringJoin", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{"code", ",", 
+    RowBox[{"{", "2", "}"}]}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.596822797404059*^9, 3.596822804542852*^9}, {
+   3.5968826810601063`*^9, 3.5968826817983427`*^9}, {3.597068159626274*^9, 
+   3.59706815983995*^9}, {3.598285044339224*^9, 3.598285051576729*^9}, {
+   3.6491840542782373`*^9, 3.6491843130532722`*^9}, {3.649184355831109*^9, 
+   3.6491845329190483`*^9}, {3.649184600958383*^9, 3.649184601525992*^9}, {
+   3.649184926244669*^9, 3.649185000845984*^9}, {3.649185086948194*^9, 
+   3.6491851266619797`*^9}, {3.6491851698973494`*^9, 3.649185232056341*^9}, {
+   3.649185284984262*^9, 3.649185315685734*^9}, {3.649695722483925*^9, 
+   3.6496957228182983`*^9}, {3.650239727639044*^9, 3.650239785469083*^9}, {
+   3.6502398393357973`*^9, 3.650239879978263*^9}, {3.650239910621757*^9, 
+   3.650239918751099*^9}, {3.650239969187818*^9, 3.65024003821836*^9}, {
+   3.650240070160635*^9, 3.650240114874547*^9}, {3.65024016914121*^9, 
+   3.6502402140374317`*^9}, {3.650240252090557*^9, 3.6502402532573853`*^9}, {
+   3.650240305111455*^9, 3.6502403504202538`*^9}, {3.650240540728094*^9, 
+   3.650240600207924*^9}, {3.650240633748528*^9, 3.6502406422739973`*^9}, {
+   3.6502406772650146`*^9, 3.6502407134374847`*^9}, {3.650240759424238*^9, 
+   3.650240788325815*^9}, {3.6502409398356752`*^9, 3.650240951213749*^9}, {
+   3.650241021123671*^9, 3.6502410390827627`*^9}, {3.6502411558020372`*^9, 
+   3.6502411574950533`*^9}, {3.650241281437385*^9, 3.6502412913806*^9}, {
+   3.650241391770602*^9, 3.650241471238296*^9}, {3.650241508600918*^9, 
+   3.6502416329440527`*^9}, {3.65024311800169*^9, 3.650243118826358*^9}, {
+   3.6502432104583397`*^9, 3.6502432105964746`*^9}, {3.65024357625863*^9, 
+   3.650243614286467*^9}, {3.650243657585082*^9, 3.650243752124509*^9}, {
+   3.650244003936206*^9, 3.650244165880848*^9}, {3.6502443745247307`*^9, 
+   3.6502444862907753`*^9}, 3.650244915264084*^9, {3.650244964092853*^9, 
+   3.650244995318503*^9}, {3.6502463153828697`*^9, 3.650246426085161*^9}, {
+   3.650246481316742*^9, 3.6502466844603024`*^9}, {3.650246736115058*^9, 
+   3.650246956658516*^9}, {3.650247179966916*^9, 3.6502473717039022`*^9}, {
+   3.650247431156645*^9, 3.650247432757926*^9}, {3.650247695850621*^9, 
+   3.650247810980888*^9}, {3.650291207207272*^9, 3.65029121126582*^9}, {
+   3.650291266352735*^9, 3.650291345980987*^9}, {3.6502932941601753`*^9, 
+   3.65029343946313*^9}, {3.6502934909892406`*^9, 3.65029351052984*^9}, {
+   3.6502942254785223`*^9, 3.650294231270027*^9}, {3.650294292189644*^9, 
+   3.650294307963718*^9}, {3.650294349468705*^9, 3.65029435467109*^9}, {
+   3.650294843253726*^9, 3.650294888645742*^9}, {3.650294926424716*^9, 
+   3.65029500517743*^9}, 3.650295036187853*^9, {3.650295107080048*^9, 
+   3.650295185804564*^9}, {3.65029521945212*^9, 3.65029540662246*^9}, {
+   3.650295551118874*^9, 3.6502955619506893`*^9}, 3.6502956236246347`*^9, {
+   3.650295694471307*^9, 3.650295698728323*^9}, {3.650295808272828*^9, 
+   3.650295808526581*^9}, {3.6502958388491697`*^9, 3.650295861758136*^9}, {
+   3.650295953401759*^9, 3.6502959674333878`*^9}, {3.6502960734556637`*^9, 
+   3.65029607804496*^9}},
+ EmphasizeSyntaxErrors->True],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Do", "[", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+      RowBox[{"\"\<squeezeTheorem\>\"", "<>", 
+       RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.tex\>\""}], ",", 
+      "code", ",", "\"\<Text\>\""}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "2"}], "}"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.650243247135182*^9, 3.650243308322151*^9}, {
+  3.650243357322897*^9, 3.6502433903735037`*^9}, {3.650243429166459*^9, 
+  3.6502435245708437`*^9}, {3.650244179818222*^9, 3.650244188522778*^9}, {
+  3.650295579974926*^9, 3.650295584369331*^9}}]
+},
+WindowSize->{1920, 1047},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+ShowSelection->True,
+FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 11109, 231, 1265, "Input"],
+Cell[11669, 253, 614, 14, 32, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
