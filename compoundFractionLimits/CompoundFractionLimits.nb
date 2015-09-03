@@ -1,0 +1,289 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     11576,        280]
+NotebookOptionsPosition[     11203,        262]
+NotebookOutlinePosition[     11561,        278]
+CellTagsIndexPosition[     11518,        275]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"LaTeX", "[", "x_", "]"}], ":=", 
+   RowBox[{"ToString", "[", 
+    RowBox[{"TeXForm", "[", "x", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"code", ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"func", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{
+         "a", ",", "b", ",", "c", ",", "f", ",", "g", ",", "s", ",", "p", ",",
+           "r", ",", "y", ",", "A", ",", "B", ",", "C", ",", "F", ",", "G", 
+          ",", "P", ",", "R", ",", "Y"}], "}"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"variable", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{
+         "x", ",", "z", ",", "t", ",", "n", ",", "k", ",", "w", ",", "u", ",",
+           "v", ",", "\[Theta]", ",", "\[Psi]"}], "}"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"r1", " ", "=", " ", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "5"}], ",", 
+          RowBox[{"-", "4"}], ",", 
+          RowBox[{"-", "3"}], ",", 
+          RowBox[{"-", "2"}], ",", 
+          RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
+          "5"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"r2", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"Complement", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "5"}], ",", 
+            RowBox[{"-", "4"}], ",", 
+            RowBox[{"-", "3"}], ",", 
+            RowBox[{"-", "2"}], ",", 
+            RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
+            "5"}], "}"}], ",", 
+          RowBox[{"{", "r1", "}"}]}], "]"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"r3", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"Complement", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "5"}], ",", 
+            RowBox[{"-", "4"}], ",", 
+            RowBox[{"-", "3"}], ",", 
+            RowBox[{"-", "2"}], ",", 
+            RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
+            "5"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"r1", ",", "r2"}], "}"}]}], "]"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"k1", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "3"}], ",", 
+          RowBox[{"-", "2"}], ",", 
+          RowBox[{"-", "1"}], ",", 
+          RowBox[{"-", "1"}], ",", 
+          RowBox[{"-", "1"}], ",", "1", ",", "1", ",", "1", ",", "1", ",", 
+          "2", ",", "3"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"k2", "=", 
+       RowBox[{"k1", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"r1", "-", "r3"}], ")"}], "/", 
+         RowBox[{"(", 
+          RowBox[{"r1", "-", "r2"}], ")"}]}]}]}], ";", "\[IndentingNewLine]", 
+      
+      RowBox[{"switch", "=", 
+       RowBox[{"Random", "[", "Integer", "]"}]}], ";", "\[IndentingNewLine]", 
+      
+      RowBox[{
+       RowBox[{"fNumerator", "[", "x_", "]"}], "=", 
+       RowBox[{
+        RowBox[{"switch", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"k1", "/", 
+            RowBox[{"(", 
+             RowBox[{"x", "-", "r2"}], ")"}]}], " ", "-", 
+           RowBox[{"k2", "/", 
+            RowBox[{"(", 
+             RowBox[{"x", "-", "r3"}], ")"}]}]}], ")"}]}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "switch"}], "+", "1"}], ")"}], "*", 
+         RowBox[{"(", 
+          RowBox[{"x", "-", "r1"}], ")"}]}]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"fDenominator", "[", "x_", "]"}], "=", 
+       RowBox[{
+        RowBox[{"switch", "*", 
+         RowBox[{"(", 
+          RowBox[{"x", "-", "r1"}], ")"}]}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "switch"}], "+", "1"}], ")"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"k1", "/", 
+            RowBox[{"(", 
+             RowBox[{"x", "-", "r2"}], ")"}]}], " ", "-", 
+           RowBox[{"k2", "/", 
+            RowBox[{"(", 
+             RowBox[{"x", "-", "r3"}], ")"}]}]}], ")"}]}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"answer", "=", 
+       RowBox[{"Limit", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"fNumerator", "[", "x", "]"}], "/", 
+          RowBox[{"fDenominator", "[", "x", "]"}]}], ",", 
+         RowBox[{"x", "\[Rule]", "r1"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"StringJoin", "[", 
+       RowBox[{
+       "\"\<\\\\documentclass{ximera}\n\\\\input{preamble.tex}\n\
+\\\\author{Bart Snapp}\n\\\\license{Creative Commons 3.0 By-NC}\n\
+\\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Calculate limits of the \
+form zero over zero.}\n\\\\tag{limit}\n\\\\tag{indeterminate form}\n\
+\\n\\\\[\\n\\\\lim_{\>\"", ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<\\\\to \>\"", ",", 
+        
+        RowBox[{"LaTeX", "[", "r1", "]"}], ",", "\"\< } \\\\frac{\>\"", ",", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{"Expand", "[", 
+          RowBox[{"fNumerator", "[", "variable", "]"}], "]"}], "]"}], ",", 
+        "\"\<}{\>\"", ",", " ", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{"Expand", "[", 
+          RowBox[{"fDenominator", "[", "variable", "]"}], "]"}], "]"}], ",", 
+        "\"\<} = \\\\answer{\>\"", ",", 
+        RowBox[{"LaTeX", "[", "answer", "]"}], ",", 
+        "\"\<}\n\\\\]\n\\\\begin{hint}\nMultiply by $\\\\frac{\>\"", ",", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"variable", " ", "-", "r2"}], ")"}], 
+          RowBox[{"(", 
+           RowBox[{"variable", "-", "r3"}], ")"}]}], "]"}], ",", "\"\<}{\>\"",
+         ",", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"variable", " ", "-", "r2"}], ")"}], 
+          RowBox[{"(", 
+           RowBox[{"variable", "-", "r3"}], ")"}]}], "]"}], ",", 
+        "\"\<}$.\n\\\\end{hint}\n\\\\end{exercise}\n\\\\end{document}\>\""}], 
+       "]"}]}]}], "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"StringJoin", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{"code", ",", 
+    RowBox[{"{", "1", "}"}]}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.596822797404059*^9, 3.596822804542852*^9}, {
+   3.5968826810601063`*^9, 3.5968826817983427`*^9}, {3.597068159626274*^9, 
+   3.59706815983995*^9}, {3.598285044339224*^9, 3.598285051576729*^9}, {
+   3.6491840542782373`*^9, 3.6491843130532722`*^9}, {3.649184355831109*^9, 
+   3.6491845329190483`*^9}, {3.649184600958383*^9, 3.649184601525992*^9}, {
+   3.649184926244669*^9, 3.649185000845984*^9}, {3.649185086948194*^9, 
+   3.6491851266619797`*^9}, {3.6491851698973494`*^9, 3.649185232056341*^9}, {
+   3.649185284984262*^9, 3.649185315685734*^9}, {3.649695722483925*^9, 
+   3.6496957228182983`*^9}, {3.650239727639044*^9, 3.650239785469083*^9}, {
+   3.6502398393357973`*^9, 3.650239879978263*^9}, {3.650239910621757*^9, 
+   3.650239918751099*^9}, {3.650239969187818*^9, 3.65024003821836*^9}, {
+   3.650240070160635*^9, 3.650240114874547*^9}, {3.65024016914121*^9, 
+   3.6502402140374317`*^9}, {3.650240252090557*^9, 3.6502402532573853`*^9}, {
+   3.650240305111455*^9, 3.6502403504202538`*^9}, {3.650240540728094*^9, 
+   3.650240600207924*^9}, {3.650240633748528*^9, 3.6502406422739973`*^9}, {
+   3.6502406772650146`*^9, 3.6502407134374847`*^9}, {3.650240759424238*^9, 
+   3.650240788325815*^9}, {3.6502409398356752`*^9, 3.650240951213749*^9}, {
+   3.650241021123671*^9, 3.6502410390827627`*^9}, {3.6502411558020372`*^9, 
+   3.6502411574950533`*^9}, {3.650241281437385*^9, 3.6502412913806*^9}, {
+   3.650241391770602*^9, 3.650241471238296*^9}, {3.650241508600918*^9, 
+   3.6502416329440527`*^9}, {3.65024311800169*^9, 3.650243118826358*^9}, {
+   3.6502432104583397`*^9, 3.6502432105964746`*^9}, {3.65024357625863*^9, 
+   3.650243614286467*^9}, {3.650243657585082*^9, 3.650243752124509*^9}, {
+   3.650244003936206*^9, 3.650244165880848*^9}, {3.6502443745247307`*^9, 
+   3.6502444862907753`*^9}, 3.650244915264084*^9, {3.650244964092853*^9, 
+   3.650244995318503*^9}, 3.6502808388133497`*^9, 3.650280903294174*^9, {
+   3.650281733243767*^9, 3.650281804282493*^9}, {3.6502818427320623`*^9, 
+   3.6502820324312067`*^9}, {3.6502820834581203`*^9, 3.650282191588335*^9}, 
+   3.65028226282106*^9}],
+
+Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
+author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
+By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
+limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
+form}\\n\\n\\\\[\\n\\\\lim_{n\\\\to -1 } \
+\\\\frac{n+1}{\\\\frac{1}{n-4}-\\\\frac{4}{5 (n-3)}} = \
+\\\\answer{100}\\n\\\\]\\n\\\\begin{hint}\\nMultiply by $\\\\frac{(n-4) \
+(n-3)}{(n-4) (n-3)}$.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\
+\"\>"], "Output",
+ CellChangeTimes->{
+  3.6502406017498407`*^9, 3.650240646847403*^9, {3.6502406973167973`*^9, 
+   3.6502407275496597`*^9}, {3.650240767454872*^9, 3.6502407974985933`*^9}, 
+   3.6502409546875963`*^9, {3.650241023993775*^9, 3.650241039950452*^9}, {
+   3.650241160328504*^9, 3.650241168771027*^9}, 3.6502412016178627`*^9, {
+   3.650241284202512*^9, 3.6502413101919537`*^9}, {3.6502414032613087`*^9, 
+   3.65024142639841*^9}, {3.6502414600679092`*^9, 3.650241511710767*^9}, {
+   3.650241614740303*^9, 3.650241651102047*^9}, 3.6502431192739964`*^9, 
+   3.650243170722159*^9, 3.650243211502778*^9, 3.650243476541616*^9, {
+   3.650244119093915*^9, 3.650244139714717*^9}, 3.650244170465603*^9, 
+   3.650245227069167*^9, 3.650277274509276*^9, 3.6502820421774397`*^9, 
+   3.6502821973993683`*^9, 3.650282266315496*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Do", "[", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+      RowBox[{"\"\<compoundFractionLimit\>\"", "<>", 
+       RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.tex\>\""}], ",", 
+      "code", ",", "\"\<Text\>\""}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "2"}], "}"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.650243247135182*^9, 3.650243308322151*^9}, {
+  3.650243357322897*^9, 3.6502433903735037`*^9}, {3.650243429166459*^9, 
+  3.6502435245708437`*^9}, {3.650244179818222*^9, 3.650244188522778*^9}, {
+  3.650282208740053*^9, 3.6502822141316023`*^9}}]
+},
+WindowSize->{959, 1020},
+WindowMargins->{{960, Automatic}, {Automatic, 0}},
+ShowSelection->True,
+FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 8611, 199, 759, "Input"],
+Cell[9193, 223, 1368, 20, 407, "Output"]
+}, Open  ]],
+Cell[10576, 246, 623, 14, 32, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
