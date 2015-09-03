@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     14650,        303]
-NotebookOptionsPosition[     14277,        285]
-NotebookOutlinePosition[     14634,        301]
-CellTagsIndexPosition[     14591,        298]
+NotebookDataLength[     10203,        238]
+NotebookOptionsPosition[      9832,        220]
+NotebookOutlinePosition[     10189,        236]
+CellTagsIndexPosition[     10146,        233]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -150,7 +150,7 @@ the denominator.\n\\\\end{hint}\n\\\\end{exercise}\n\\\\end{document}\>\""}],
  RowBox[{"StringJoin", "[", 
   RowBox[{"Table", "[", 
    RowBox[{"code", ",", 
-    RowBox[{"{", "10", "}"}]}], "]"}], "]"}]}], "Input",
+    RowBox[{"{", "1", "}"}]}], "]"}], "]"}]}], "Input",
  CellChangeTimes->{{3.596822797404059*^9, 3.596822804542852*^9}, {
    3.5968826810601063`*^9, 3.5968826817983427`*^9}, {3.597068159626274*^9, 
    3.59706815983995*^9}, {3.598285044339224*^9, 3.598285051576729*^9}, {
@@ -178,7 +178,7 @@ the denominator.\n\\\\end{hint}\n\\\\end{exercise}\n\\\\end{document}\>\""}],
    3.6502444862907753`*^9}, 3.650244915264084*^9, {3.650244964092853*^9, 
    3.650244995318503*^9}, {3.650290243092153*^9, 3.6502902475056763`*^9}, {
    3.6502906239619703`*^9, 3.650290664177299*^9}, {3.650290701052876*^9, 
-   3.650290701236167*^9}}],
+   3.650290701236167*^9}, 3.650301124644281*^9}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
 author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
@@ -186,74 +186,8 @@ By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
 limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
 form}\\n\\n\\\\[\\n\\\\lim_{x\\\\to -4 } \\\\frac{x+4}{-x^2-9 x-20} = \
 \\\\answer{-1}\\n\\\\]\\n\\\\begin{hint}\\nTry to factor either the numerator \
-or the denominator.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\\\
-\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\
-\\\\license{Creative Commons 3.0 \
-By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
-limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\n\\n\\\\[\\n\\\\lim_{v\\\\to -5 } \\\\frac{v^2+6 v+5}{v+5} = \
-\\\\answer{-4}\\n\\\\]\\n\\\\begin{hint}\\nTry to factor either the numerator \
-or the denominator.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\\\
-\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\
-\\\\license{Creative Commons 3.0 \
-By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
-limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\n\\n\\\\[\\n\\\\lim_{z\\\\to -4 } \\\\frac{z^2+6 z+8}{z+4} = \
-\\\\answer{-2}\\n\\\\]\\n\\\\begin{hint}\\nTry to factor either the numerator \
-or the denominator.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\\\
-\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\
-\\\\license{Creative Commons 3.0 \
-By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
-limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\n\\n\\\\[\\n\\\\lim_{n\\\\to -3 } \\\\frac{n^2+2 n-3}{n+3} = \
-\\\\answer{-4}\\n\\\\]\\n\\\\begin{hint}\\nTry to factor either the numerator \
-or the denominator.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\\\
-\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\
-\\\\license{Creative Commons 3.0 \
-By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
-limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\n\\n\\\\[\\n\\\\lim_{z\\\\to -2 } \\\\frac{z+2}{-2 z^2-2 z+4} = \
-\\\\answer{\\\\frac{1}{6}}\\n\\\\]\\n\\\\begin{hint}\\nTry to factor either \
-the numerator or the \
-denominator.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\\\\\
-documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\\\
-\\license{Creative Commons 3.0 \
-By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
-limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\n\\n\\\\[\\n\\\\lim_{w\\\\to 2 } \\\\frac{2 w^2-10 w+12}{w-2} = \
-\\\\answer{-2}\\n\\\\]\\n\\\\begin{hint}\\nTry to factor either the numerator \
-or the denominator.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\\\
-\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\
-\\\\license{Creative Commons 3.0 \
-By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
-limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\n\\n\\\\[\\n\\\\lim_{z\\\\to 3 } \\\\frac{z^2-8 z+15}{z-3} = \
-\\\\answer{-2}\\n\\\\]\\n\\\\begin{hint}\\nTry to factor either the numerator \
-or the denominator.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\\\
-\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\
-\\\\license{Creative Commons 3.0 \
-By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
-limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\n\\n\\\\[\\n\\\\lim_{k\\\\to -1 } \\\\frac{k+1}{-k^2-5 k-4} = \
-\\\\answer{-\\\\frac{1}{3}}\\n\\\\]\\n\\\\begin{hint}\\nTry to factor either \
-the numerator or the \
-denominator.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\\\\\
-documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\\\
-\\license{Creative Commons 3.0 \
-By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
-limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\n\\n\\\\[\\n\\\\lim_{w\\\\to 2 } \\\\frac{w^2-6 w+8}{w-2} = \
-\\\\answer{-2}\\n\\\\]\\n\\\\begin{hint}\\nTry to factor either the numerator \
-or the denominator.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\\\
-\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\
-\\\\license{Creative Commons 3.0 \
-By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
-limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\n\\n\\\\[\\n\\\\lim_{v\\\\to -1 } \\\\frac{v+1}{v^2-4 v-5} = \
-\\\\answer{-\\\\frac{1}{6}}\\n\\\\]\\n\\\\begin{hint}\\nTry to factor either \
-the numerator or the \
-denominator.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\"\>"], \
-"Output",
+or the denominator.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\"\
+\>"], "Output",
  CellChangeTimes->{
   3.6502406017498407`*^9, 3.650240646847403*^9, {3.6502406973167973`*^9, 
    3.6502407275496597`*^9}, {3.650240767454872*^9, 3.6502407974985933`*^9}, 
@@ -265,7 +199,7 @@ denominator.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\"\>"], \
    3.650243170722159*^9, 3.650243211502778*^9, 3.650243476541616*^9, {
    3.650244119093915*^9, 3.650244139714717*^9}, 3.650244170465603*^9, 
    3.650245227069167*^9, 3.650277274509276*^9, {3.650290658374156*^9, 
-   3.65029066452113*^9}, 3.650290702119557*^9}]
+   3.65029066452113*^9}, 3.650290702119557*^9, 3.6503011260253687`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -274,14 +208,15 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"Export", "[", 
      RowBox[{
-      RowBox[{"\"\<QuadraticLimit\>\"", "<>", 
+      RowBox[{"\"\<quadraticLimit\>\"", "<>", 
        RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.tex\>\""}], ",", 
       "code", ",", "\"\<Text\>\""}], "]"}], ",", 
     RowBox[{"{", 
      RowBox[{"i", ",", "2"}], "}"}]}], "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.650243247135182*^9, 3.650243308322151*^9}, {
   3.650243357322897*^9, 3.6502433903735037`*^9}, {3.650243429166459*^9, 
-  3.6502435245708437`*^9}, {3.650244179818222*^9, 3.650244188522778*^9}}]
+  3.6502435245708437`*^9}, {3.650244179818222*^9, 3.650244188522778*^9}, {
+  3.6503011119054737`*^9, 3.650301112187138*^9}}]
 },
 WindowSize->{1920, 1020},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -301,10 +236,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 7229, 158, 693, "Input"],
-Cell[7811, 182, 5882, 85, 3805, "Output"]
+Cell[579, 22, 7250, 158, 693, "Input"],
+Cell[7832, 182, 1365, 19, 439, "Output"]
 }, Open  ]],
-Cell[13708, 270, 565, 13, 32, "Input"]
+Cell[9212, 204, 616, 14, 32, "Input"]
 }
 ]
 *)

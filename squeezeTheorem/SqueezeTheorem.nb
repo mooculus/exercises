@@ -10,14 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     12586,        284]
-NotebookOptionsPosition[     12287,        269]
-NotebookOutlinePosition[     12644,        285]
-CellTagsIndexPosition[     12601,        282]
+NotebookDataLength[     16070,        343]
+NotebookOptionsPosition[     15694,        325]
+NotebookOutlinePosition[     16051,        341]
+CellTagsIndexPosition[     16008,        338]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{
   RowBox[{"RandomSeed", "[", "1", "]"}], ";"}], "\[IndentingNewLine]", 
@@ -251,6 +253,60 @@ Theorem:\n\\\\[\\n\\\\lim_{\>\"", ",",
    3.65029607804496*^9}},
  EmphasizeSyntaxErrors->True],
 
+Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
+author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
+By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\n\\\\outcome{\
+Understand the Squeeze Theorem and how it can be used to find limit \
+values.}\\n\\\\outcome{Calculate limits using the Squeeze \
+Theorem.}\\n\\\\tag{limit}\\n\\\\tag{squeeze \
+theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{z\\\\to 0} \\\\left(\\\\tan \
+^{-1}\\\\left(\\\\frac{3}{z}\\\\right) \\\\tan ^{-1}(z)\\\\right)\\n\\\\]\\nA \
+good way to compute this limit would be to use \
+\\\\wordChoice{\\\\choice{limit laws}\\\\choice{indeterminate \
+forms}\\\\choice[correct]{the Squeeze Theorem}\\\\choice{the Intermediate \
+Value Theorem}}.\\n\\\\begin{exercise}\\nList two functions $g$ and $h$ such \
+that\\n\\\\[\\ng(z)\\\\le \\\\tan ^{-1}\\\\left(\\\\frac{3}{z}\\\\right) \
+\\\\tan ^{-1}(z) \\\\le h(z)\\n\\\\]\\nfor all $z$ on some interval \
+containing $z=0$.\\n\\\\[\\ng(z)=\\\\answer{-\\\\frac{1}{2} \\\\pi  \
+\\\\left\\\\left| \\\\tan ^{-1}(z)\\\\right\\\\right|}\\\\qquad h(z) \
+=\\\\answer{\\\\frac{1}{2} \\\\pi  \\\\left\\\\left| \\\\tan \
+^{-1}(z)\\\\right\\\\right|}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\
+\\n\\\\lim_{z \\\\to 0}-\\\\frac{1}{2} \\\\pi  \\\\left\\\\left| \\\\tan \
+^{-1}(z)\\\\right\\\\right| = \\\\answer{0}\\\\qquad \\\\lim_{z\\\\to \
+0}\\\\frac{1}{2} \\\\pi  \\\\left\\\\left| \\\\tan \
+^{-1}(z)\\\\right\\\\right| = \
+\\\\answer{0}\\n\\\\]\\n\\\\begin{exercise}\\nBy the Squeeze Theorem:\\n\\\\[\
+\\n\\\\lim_{z\\\\to 0} \\\\left(\\\\tan \
+^{-1}\\\\left(\\\\frac{3}{z}\\\\right) \\\\tan ^{-1}(z)\\\\right) = \
+\\\\answer{0}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{\
+exercise}\\n\\\\end{exercise}\\n\\\\end{document}\\\\documentclass{ximera}\\n\
+\\\\input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\\\\license{Creative \
+Commons 3.0 \
+By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\n\\\\outcome{\
+Understand the Squeeze Theorem and how it can be used to find limit \
+values.}\\n\\\\outcome{Calculate limits using the Squeeze \
+Theorem.}\\n\\\\tag{limit}\\n\\\\tag{squeeze \
+theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{x\\\\to 0} \\\\left(x^2 \
+e^{-\\\\sin \\\\left(\\\\frac{1}{x}\\\\right)}\\\\right)\\n\\\\]\\nA good way \
+to compute this limit would be to use \\\\wordChoice{\\\\choice{limit laws}\\\
+\\choice{indeterminate forms}\\\\choice[correct]{the Squeeze \
+Theorem}\\\\choice{the Intermediate Value \
+Theorem}}.\\n\\\\begin{exercise}\\nList two functions $g$ and $h$ such \
+that\\n\\\\[\\ng(x)\\\\le x^2 e^{-\\\\sin \\\\left(\\\\frac{1}{x}\\\\right)} \
+\\\\le h(x)\\n\\\\]\\nfor all $x$ on some interval containing \
+$x=0$.\\n\\\\[\\ng(x)=\\\\answer{\\\\frac{\\\\left| x\\\\right| \
+^2}{e}}\\\\qquad h(x) =\\\\answer{e \\\\left| x\\\\right| \
+^2}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\\n\\\\lim_{x \\\\to 0}\\\
+\\frac{\\\\left| x\\\\right| ^2}{e} = \\\\answer{0}\\\\qquad \\\\lim_{x\\\\to \
+0}e \\\\left| x\\\\right| ^2 = \
+\\\\answer{0}\\n\\\\]\\n\\\\begin{exercise}\\nBy the Squeeze Theorem:\\n\\\\[\
+\\n\\\\lim_{x\\\\to 0} \\\\left(x^2 e^{-\\\\sin \
+\\\\left(\\\\frac{1}{x}\\\\right)}\\\\right) = \
+\\\\answer{0}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{\
+exercise}\\n\\\\end{exercise}\\n\\\\end{document}\"\>"], "Output",
+ CellChangeTimes->{3.650296086611569*^9}]
+}, Open  ]],
+
 Cell[BoxData[
  RowBox[{
   RowBox[{"Do", "[", 
@@ -284,8 +340,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 11109, 231, 1265, "Input"],
-Cell[11669, 253, 614, 14, 32, "Input"]
+Cell[CellGroupData[{
+Cell[579, 22, 11109, 231, 1265, "Input"],
+Cell[11691, 255, 3370, 51, 1793, "Output"]
+}, Open  ]],
+Cell[15076, 309, 614, 14, 32, "Input"]
 }
 ]
 *)
