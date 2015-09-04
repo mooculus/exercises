@@ -1,0 +1,41 @@
+\documentclass{ximera}
+\input{preamble.tex}
+\author{Bart Snapp}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+
+\outcome{Understand the Squeeze Theorem and how it can be used to find limit values.}
+\outcome{Calculate limits using the Squeeze Theorem.}
+\tag{limit}
+\tag{squeeze theorem}
+
+Consider:
+\[
+\lim_{n\to 0} \left(n^2 \cos \left(\frac{3}{n}\right)\right)
+\]
+A good way to compute this limit would be to use \wordChoice{\choice{limit laws}\choice{indeterminate forms}\choice[correct]{the Squeeze Theorem}\choice{the Intermediate Value Theorem}}.
+\begin{exercise}
+List two functions $g$ and $h$ such that
+\[
+g(n)\le n^2 \cos \left(\frac{3}{n}\right) \le h(n)
+\]
+for all $n$ on some interval containing $n=0$.
+\[
+g(n)=\answer{-\left| n\right| ^2}\qquad h(n) =\answer{\left| n\right| ^2}
+\]
+\begin{exercise}
+Compute:
+\[
+\lim_{n \to 0}-\left| n\right| ^2 = \answer{0}\qquad \lim_{n\to 0}\left| n\right| ^2 = \answer{0}
+\]
+\begin{exercise}
+By the Squeeze Theorem:
+\[
+\lim_{n\to 0} \left(n^2 \cos \left(\frac{3}{n}\right)\right) = \answer{0}
+\]
+\end{exercise}
+\end{exercise}
+\end{exercise}
+\end{exercise}
+\end{document}

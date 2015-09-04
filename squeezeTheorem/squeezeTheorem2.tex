@@ -1,0 +1,41 @@
+\documentclass{ximera}
+\input{preamble.tex}
+\author{Bart Snapp}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+
+\outcome{Understand the Squeeze Theorem and how it can be used to find limit values.}
+\outcome{Calculate limits using the Squeeze Theorem.}
+\tag{limit}
+\tag{squeeze theorem}
+
+Consider:
+\[
+\lim_{x\to 0} \left(x 2^{\tan ^{-1}\left(\frac{\pi }{x}\right)}\right)
+\]
+A good way to compute this limit would be to use \wordChoice{\choice{limit laws}\choice{indeterminate forms}\choice[correct]{the Squeeze Theorem}\choice{the Intermediate Value Theorem}}.
+\begin{exercise}
+List two functions $g$ and $h$ such that
+\[
+g(x)\le x 2^{\tan ^{-1}\left(\frac{\pi }{x}\right)} \le h(x)
+\]
+for all $x$ on some interval containing $x=0$.
+\[
+g(x)=\answer{2^{-\pi /2} \left| x\right|}\qquad h(x) =\answer{2^{\pi /2} \left| x\right|}
+\]
+\begin{exercise}
+Compute:
+\[
+\lim_{x \to 0}2^{-\pi /2} \left| x\right| = \answer{0}\qquad \lim_{x\to 0}2^{\pi /2} \left| x\right| = \answer{0}
+\]
+\begin{exercise}
+By the Squeeze Theorem:
+\[
+\lim_{x\to 0} \left(x 2^{\tan ^{-1}\left(\frac{\pi }{x}\right)}\right) = \answer{0}
+\]
+\end{exercise}
+\end{exercise}
+\end{exercise}
+\end{exercise}
+\end{document}
