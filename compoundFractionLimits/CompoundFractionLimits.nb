@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     11707,        282]
-NotebookOptionsPosition[     11333,        264]
-NotebookOutlinePosition[     11692,        280]
-CellTagsIndexPosition[     11649,        277]
+NotebookDataLength[     11913,        286]
+NotebookOptionsPosition[     11541,        268]
+NotebookOutlinePosition[     11898,        284]
+CellTagsIndexPosition[     11855,        281]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -171,9 +171,10 @@ form zero over zero.}\n\\\\tag{limit}\n\\\\tag{indeterminate form}\n\
         RowBox[{"LaTeX", "[", 
          RowBox[{"Expand", "[", 
           RowBox[{"fDenominator", "[", "variable", "]"}], "]"}], "]"}], ",", 
-        "\"\<} = \\\\answer{\>\"", ",", 
+        "\"\<}  \\\\begin{prompt}=\\\\answer{\>\"", ",", 
         RowBox[{"LaTeX", "[", "answer", "]"}], ",", 
-        "\"\<}\n\\\\]\n\\\\begin{hint}\nMultiply by $\\\\frac{\>\"", ",", 
+        "\"\<}\\\\end{prompt}\n\\\\]\n\\\\begin{hint}\nMultiply by $\\\\frac{\
+\>\"", ",", 
         RowBox[{"LaTeX", "[", 
          RowBox[{
           RowBox[{"(", 
@@ -221,17 +222,19 @@ form zero over zero.}\n\\\\tag{limit}\n\\\\tag{indeterminate form}\n\
    3.650244995318503*^9}, 3.6502808388133497`*^9, 3.650280903294174*^9, {
    3.650281733243767*^9, 3.650281804282493*^9}, {3.6502818427320623`*^9, 
    3.6502820324312067`*^9}, {3.6502820834581203`*^9, 3.650282191588335*^9}, 
-   3.65028226282106*^9, {3.650290260424748*^9, 3.6502902614152203`*^9}}],
+   3.65028226282106*^9, {3.650290260424748*^9, 3.6502902614152203`*^9}, {
+   3.6503205978247643`*^9, 3.6503206154324617`*^9}}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
 author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
 limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\n\\n\\\\[\\n\\\\lim_{n\\\\to -1 } \
-\\\\frac{n+1}{\\\\frac{1}{n-4}-\\\\frac{4}{5 (n-3)}} = \
-\\\\answer{100}\\n\\\\]\\n\\\\begin{hint}\\nMultiply by $\\\\frac{(n-4) \
-(n-3)}{(n-4) (n-3)}$.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\
-\"\>"], "Output",
+form}\\n\\n\\\\[\\n\\\\lim_{x\\\\to -4 } \
+\\\\frac{x+4}{-\\\\frac{3}{x+5}-\\\\frac{6}{x+2}}  \
+\\\\begin{prompt}=\\\\answer{\\\\frac{2}{9}}\\\\end{prompt}\\n\\\\]\\n\\\\\
+begin{hint}\\nMultiply by $\\\\frac{(x+2) (x+5)}{(x+2) \
+(x+5)}$.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\"\>"], \
+"Output",
  CellChangeTimes->{
   3.6502406017498407`*^9, 3.650240646847403*^9, {3.6502406973167973`*^9, 
    3.6502407275496597`*^9}, {3.650240767454872*^9, 3.6502407974985933`*^9}, 
@@ -243,7 +246,8 @@ form}\\n\\n\\\\[\\n\\\\lim_{n\\\\to -1 } \
    3.650243170722159*^9, 3.650243211502778*^9, 3.650243476541616*^9, {
    3.650244119093915*^9, 3.650244139714717*^9}, 3.650244170465603*^9, 
    3.650245227069167*^9, 3.650277274509276*^9, 3.6502820421774397`*^9, 
-   3.6502821973993683`*^9, 3.650282266315496*^9}]
+   3.6502821973993683`*^9, 3.650282266315496*^9, 3.650320636846483*^9, 
+   3.6503207828532352`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -256,14 +260,14 @@ Cell[BoxData[
        RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.tex\>\""}], ",", 
       "code", ",", "\"\<Text\>\""}], "]"}], ",", 
     RowBox[{"{", 
-     RowBox[{"i", ",", "2"}], "}"}]}], "]"}], ";"}]], "Input",
+     RowBox[{"i", ",", "12"}], "}"}]}], "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.650243247135182*^9, 3.650243308322151*^9}, {
-  3.650243357322897*^9, 3.6502433903735037`*^9}, {3.650243429166459*^9, 
-  3.6502435245708437`*^9}, {3.650244179818222*^9, 3.650244188522778*^9}, {
-  3.650282208740053*^9, 3.6502822141316023`*^9}}]
+   3.650243357322897*^9, 3.6502433903735037`*^9}, {3.650243429166459*^9, 
+   3.6502435245708437`*^9}, {3.650244179818222*^9, 3.650244188522778*^9}, {
+   3.650282208740053*^9, 3.6502822141316023`*^9}, 3.6503206457882957`*^9}]
 },
-WindowSize->{959, 1018},
-WindowMargins->{{950, Automatic}, {Automatic, -8}},
+WindowSize->{959, 706},
+WindowMargins->{{Automatic, -9}, {Automatic, -8}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
@@ -280,10 +284,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 8741, 201, 781, "Input"],
-Cell[9323, 225, 1368, 20, 407, "Output"]
+Cell[579, 22, 8829, 203, 781, "Input"],
+Cell[9411, 227, 1460, 22, 429, "Output"]
 }, Open  ]],
-Cell[10706, 248, 623, 14, 32, "Input"]
+Cell[10886, 252, 651, 14, 32, "Input"]
 }
 ]
 *)

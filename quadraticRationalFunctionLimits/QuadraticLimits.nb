@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     10281,        240]
-NotebookOptionsPosition[      9910,        222]
-NotebookOutlinePosition[     10267,        238]
-CellTagsIndexPosition[     10224,        235]
+NotebookDataLength[     10462,        244]
+NotebookOptionsPosition[     10092,        226]
+NotebookOutlinePosition[     10448,        242]
+CellTagsIndexPosition[     10405,        239]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -142,11 +142,12 @@ form zero over zero.}\n\\\\tag{limit}\n\\\\tag{indeterminate form}\n\
         RowBox[{"LaTeX", "[", 
          RowBox[{"Expand", "[", 
           RowBox[{"fDenominator", "[", "variable", "]"}], "]"}], "]"}], ",", 
-        "\"\<} = \\\\answer{\>\"", ",", 
+        "\"\<}\\\\begin{prompt} = \\\\answer{\>\"", ",", 
         RowBox[{"LaTeX", "[", "answer", "]"}], ",", 
-        "\"\<}\n\\\\]\n\\\\begin{hint}\nTry to factor either the numerator or \
-the denominator.\n\\\\end{hint}\n\\\\end{exercise}\n\\\\end{document}\>\""}], 
-       "]"}]}]}], "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+        "\"\<}\\\\end{prompt}\n\\\\]\n\\\\begin{hint}\nTry to factor either \
+the numerator or the denominator.\n\\\\end{hint}\n\\\\end{exercise}\n\
+\\\\end{document}\>\""}], "]"}]}]}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"StringJoin", "[", 
   RowBox[{"Table", "[", 
    RowBox[{"code", ",", 
@@ -178,16 +179,19 @@ the denominator.\n\\\\end{hint}\n\\\\end{exercise}\n\\\\end{document}\>\""}],
    3.6502444862907753`*^9}, 3.650244915264084*^9, {3.650244964092853*^9, 
    3.650244995318503*^9}, {3.650290243092153*^9, 3.6502902475056763`*^9}, {
    3.6502906239619703`*^9, 3.650290664177299*^9}, {3.650290701052876*^9, 
-   3.650290701236167*^9}, 3.650301124644281*^9}],
+   3.650290701236167*^9}, 3.650301124644281*^9, {3.65031970729558*^9, 
+   3.650319722382215*^9}}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
 author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
 limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\n\\n\\\\[\\n\\\\lim_{x\\\\to -4 } \\\\frac{x+4}{-x^2-9 x-20} = \
-\\\\answer{-1}\\n\\\\]\\n\\\\begin{hint}\\nTry to factor either the numerator \
-or the denominator.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\"\
-\>"], "Output",
+form}\\n\\n\\\\[\\n\\\\lim_{x\\\\to -4 } \\\\frac{x+4}{-x^2-9 \
+x-20}\\\\begin{prompt} = \
+\\\\answer{-1}\\\\end{prompt}\\n\\\\]\\n\\\\begin{hint}\\nTry to factor \
+either the numerator or the \
+denominator.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\"\>"], \
+"Output",
  CellChangeTimes->{
   3.6502406017498407`*^9, 3.650240646847403*^9, {3.6502406973167973`*^9, 
    3.6502407275496597`*^9}, {3.650240767454872*^9, 3.6502407974985933`*^9}, 
@@ -200,7 +204,7 @@ or the denominator.\\n\\\\end{hint}\\n\\\\end{exercise}\\n\\\\end{document}\"\
    3.650244119093915*^9, 3.650244139714717*^9}, 3.650244170465603*^9, 
    3.650245227069167*^9, 3.650277274509276*^9, {3.650290658374156*^9, 
    3.65029066452113*^9}, 3.650290702119557*^9, 3.6503011260253687`*^9, 
-   3.650301837272789*^9}]
+   3.650301837272789*^9, 3.650319735576593*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -213,14 +217,14 @@ Cell[BoxData[
        RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.tex\>\""}], ",", 
       "code", ",", "\"\<Text\>\""}], "]"}], ",", 
     RowBox[{"{", 
-     RowBox[{"i", ",", "20"}], "}"}]}], "]"}], ";"}]], "Input",
+     RowBox[{"i", ",", "12"}], "}"}]}], "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.650243247135182*^9, 3.650243308322151*^9}, {
   3.650243357322897*^9, 3.6502433903735037`*^9}, {3.650243429166459*^9, 
   3.6502435245708437`*^9}, {3.650244179818222*^9, 3.650244188522778*^9}, {
   3.6503011119054737`*^9, 3.650301112187138*^9}, {3.650301841650695*^9, 
-  3.6503018417454557`*^9}}]
+  3.6503018417454557`*^9}, {3.650319729726328*^9, 3.650319729775127*^9}}]
 },
-WindowSize->{1920, 1020},
+WindowSize->{1366, 708},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
@@ -238,10 +242,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 7250, 158, 693, "Input"],
-Cell[7832, 182, 1391, 20, 407, "Output"]
+Cell[579, 22, 7328, 160, 715, "Input"],
+Cell[7910, 184, 1449, 22, 439, "Output"]
 }, Open  ]],
-Cell[9238, 205, 668, 15, 32, "Input"]
+Cell[9374, 209, 714, 15, 32, "Input"]
 }
 ]
 *)

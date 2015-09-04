@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     16070,        343]
-NotebookOptionsPosition[     15694,        325]
-NotebookOutlinePosition[     16051,        341]
-CellTagsIndexPosition[     16008,        338]
+NotebookDataLength[     15985,        341]
+NotebookOptionsPosition[     15610,        323]
+NotebookOutlinePosition[     15966,        339]
+CellTagsIndexPosition[     15923,        336]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -259,25 +259,22 @@ By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\n\\\\outcome{\
 Understand the Squeeze Theorem and how it can be used to find limit \
 values.}\\n\\\\outcome{Calculate limits using the Squeeze \
 Theorem.}\\n\\\\tag{limit}\\n\\\\tag{squeeze \
-theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{z\\\\to 0} \\\\left(\\\\tan \
-^{-1}\\\\left(\\\\frac{3}{z}\\\\right) \\\\tan ^{-1}(z)\\\\right)\\n\\\\]\\nA \
-good way to compute this limit would be to use \
-\\\\wordChoice{\\\\choice{limit laws}\\\\choice{indeterminate \
-forms}\\\\choice[correct]{the Squeeze Theorem}\\\\choice{the Intermediate \
-Value Theorem}}.\\n\\\\begin{exercise}\\nList two functions $g$ and $h$ such \
-that\\n\\\\[\\ng(z)\\\\le \\\\tan ^{-1}\\\\left(\\\\frac{3}{z}\\\\right) \
-\\\\tan ^{-1}(z) \\\\le h(z)\\n\\\\]\\nfor all $z$ on some interval \
-containing $z=0$.\\n\\\\[\\ng(z)=\\\\answer{-\\\\frac{1}{2} \\\\pi  \
-\\\\left\\\\left| \\\\tan ^{-1}(z)\\\\right\\\\right|}\\\\qquad h(z) \
-=\\\\answer{\\\\frac{1}{2} \\\\pi  \\\\left\\\\left| \\\\tan \
-^{-1}(z)\\\\right\\\\right|}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\
-\\n\\\\lim_{z \\\\to 0}-\\\\frac{1}{2} \\\\pi  \\\\left\\\\left| \\\\tan \
-^{-1}(z)\\\\right\\\\right| = \\\\answer{0}\\\\qquad \\\\lim_{z\\\\to \
-0}\\\\frac{1}{2} \\\\pi  \\\\left\\\\left| \\\\tan \
-^{-1}(z)\\\\right\\\\right| = \
+theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{z\\\\to 0} \\\\left(z 2^{-\\\\tan \
+^{-1}\\\\left(\\\\frac{1}{z}\\\\right)}\\\\right)\\n\\\\]\\nA good way to \
+compute this limit would be to use \\\\wordChoice{\\\\choice{limit \
+laws}\\\\choice{indeterminate forms}\\\\choice[correct]{the Squeeze \
+Theorem}\\\\choice{the Intermediate Value \
+Theorem}}.\\n\\\\begin{exercise}\\nList two functions $g$ and $h$ such \
+that\\n\\\\[\\ng(z)\\\\le z 2^{-\\\\tan \
+^{-1}\\\\left(\\\\frac{1}{z}\\\\right)} \\\\le h(z)\\n\\\\]\\nfor all $z$ on \
+some interval containing $z=0$.\\n\\\\[\\ng(z)=\\\\answer{2^{-\\\\pi /2} \
+\\\\left| z\\\\right|}\\\\qquad h(z) =\\\\answer{2^{\\\\pi /2} \\\\left| \
+z\\\\right|}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\\n\\\\lim_{z \\\
+\\to 0}2^{-\\\\pi /2} \\\\left| z\\\\right| = \\\\answer{0}\\\\qquad \
+\\\\lim_{z\\\\to 0}2^{\\\\pi /2} \\\\left| z\\\\right| = \
 \\\\answer{0}\\n\\\\]\\n\\\\begin{exercise}\\nBy the Squeeze Theorem:\\n\\\\[\
-\\n\\\\lim_{z\\\\to 0} \\\\left(\\\\tan \
-^{-1}\\\\left(\\\\frac{3}{z}\\\\right) \\\\tan ^{-1}(z)\\\\right) = \
+\\n\\\\lim_{z\\\\to 0} \\\\left(z 2^{-\\\\tan \
+^{-1}\\\\left(\\\\frac{1}{z}\\\\right)}\\\\right) = \
 \\\\answer{0}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{\
 exercise}\\n\\\\end{exercise}\\n\\\\end{document}\\\\documentclass{ximera}\\n\
 \\\\input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\\\\license{Creative \
@@ -286,25 +283,26 @@ By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\n\\\\outcome{\
 Understand the Squeeze Theorem and how it can be used to find limit \
 values.}\\n\\\\outcome{Calculate limits using the Squeeze \
 Theorem.}\\n\\\\tag{limit}\\n\\\\tag{squeeze \
-theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{x\\\\to 0} \\\\left(x^2 \
-e^{-\\\\sin \\\\left(\\\\frac{1}{x}\\\\right)}\\\\right)\\n\\\\]\\nA good way \
-to compute this limit would be to use \\\\wordChoice{\\\\choice{limit laws}\\\
-\\choice{indeterminate forms}\\\\choice[correct]{the Squeeze \
+theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{v\\\\to 0} \\\\left(v \\\\cot \
+^{-1}\\\\left(\\\\frac{2}{v}\\\\right)\\\\right)\\n\\\\]\\nA good way to \
+compute this limit would be to use \\\\wordChoice{\\\\choice{limit \
+laws}\\\\choice{indeterminate forms}\\\\choice[correct]{the Squeeze \
 Theorem}\\\\choice{the Intermediate Value \
 Theorem}}.\\n\\\\begin{exercise}\\nList two functions $g$ and $h$ such \
-that\\n\\\\[\\ng(x)\\\\le x^2 e^{-\\\\sin \\\\left(\\\\frac{1}{x}\\\\right)} \
-\\\\le h(x)\\n\\\\]\\nfor all $x$ on some interval containing \
-$x=0$.\\n\\\\[\\ng(x)=\\\\answer{\\\\frac{\\\\left| x\\\\right| \
-^2}{e}}\\\\qquad h(x) =\\\\answer{e \\\\left| x\\\\right| \
-^2}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\\n\\\\lim_{x \\\\to 0}\\\
-\\frac{\\\\left| x\\\\right| ^2}{e} = \\\\answer{0}\\\\qquad \\\\lim_{x\\\\to \
-0}e \\\\left| x\\\\right| ^2 = \
+that\\n\\\\[\\ng(v)\\\\le v \\\\cot ^{-1}\\\\left(\\\\frac{2}{v}\\\\right) \\\
+\\le h(v)\\n\\\\]\\nfor all $v$ on some interval containing \
+$v=0$.\\n\\\\[\\ng(v)=\\\\answer{-\\\\frac{\\\\pi  \\\\left| v\\\\right| \
+}{2}}\\\\qquad h(v) =\\\\answer{\\\\frac{\\\\pi  \\\\left| v\\\\right| \
+}{2}}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\\n\\\\lim_{v \\\\to \
+0}-\\\\frac{\\\\pi  \\\\left| v\\\\right| }{2} = \\\\answer{0}\\\\qquad \
+\\\\lim_{v\\\\to 0}\\\\frac{\\\\pi  \\\\left| v\\\\right| }{2} = \
 \\\\answer{0}\\n\\\\]\\n\\\\begin{exercise}\\nBy the Squeeze Theorem:\\n\\\\[\
-\\n\\\\lim_{x\\\\to 0} \\\\left(x^2 e^{-\\\\sin \
-\\\\left(\\\\frac{1}{x}\\\\right)}\\\\right) = \
-\\\\answer{0}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{\
-exercise}\\n\\\\end{exercise}\\n\\\\end{document}\"\>"], "Output",
- CellChangeTimes->{3.650296086611569*^9}]
+\\n\\\\lim_{v\\\\to 0} \\\\left(v \\\\cot \
+^{-1}\\\\left(\\\\frac{2}{v}\\\\right)\\\\right) = \\\\answer{0}\\n\\\\]\\n\\\
+\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{exercise}\\\
+n\\\\end{document}\"\>"], "Output",
+ CellChangeTimes->{3.650296086611569*^9, 3.6503261067834997`*^9, 
+  3.650328618426681*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -317,14 +315,14 @@ Cell[BoxData[
        RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.tex\>\""}], ",", 
       "code", ",", "\"\<Text\>\""}], "]"}], ",", 
     RowBox[{"{", 
-     RowBox[{"i", ",", "2"}], "}"}]}], "]"}], ";"}]], "Input",
+     RowBox[{"i", ",", "6"}], "}"}]}], "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.650243247135182*^9, 3.650243308322151*^9}, {
-  3.650243357322897*^9, 3.6502433903735037`*^9}, {3.650243429166459*^9, 
-  3.6502435245708437`*^9}, {3.650244179818222*^9, 3.650244188522778*^9}, {
-  3.650295579974926*^9, 3.650295584369331*^9}}]
+   3.650243357322897*^9, 3.6502433903735037`*^9}, {3.650243429166459*^9, 
+   3.6502435245708437`*^9}, {3.650244179818222*^9, 3.650244188522778*^9}, {
+   3.650295579974926*^9, 3.650295584369331*^9}, 3.650326111149954*^9}]
 },
-WindowSize->{1920, 1047},
-WindowMargins->{{Automatic, 0}, {0, Automatic}},
+WindowSize->{1366, 708},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
@@ -341,10 +339,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 11109, 231, 1265, "Input"],
-Cell[11691, 255, 3370, 51, 1793, "Output"]
+Cell[579, 22, 11109, 231, 1331, "Input"],
+Cell[11691, 255, 3261, 49, 1869, "Output"]
 }, Open  ]],
-Cell[15076, 309, 614, 14, 32, "Input"]
+Cell[14967, 307, 639, 14, 32, "Input"]
 }
 ]
 *)

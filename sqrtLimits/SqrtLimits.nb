@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     11829,        284]
-NotebookOptionsPosition[     11456,        266]
-NotebookOutlinePosition[     11815,        282]
-CellTagsIndexPosition[     11772,        279]
+NotebookDataLength[     11937,        286]
+NotebookOptionsPosition[     11566,        268]
+NotebookOutlinePosition[     11923,        284]
+CellTagsIndexPosition[     11880,        281]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -187,9 +187,10 @@ form zero over zero.}\n\\\\tag{limit}\n\\\\tag{indeterminate form}\n\
         "\"\<}{\>\"", ",", " ", 
         RowBox[{"LaTeX", "[", 
          RowBox[{"fDenominator", "[", "variable", "]"}], "]"}], ",", 
-        "\"\<} = \\\\answer{\>\"", ",", 
+        "\"\<}\\\\begin{prompt} = \\\\answer{\>\"", ",", 
         RowBox[{"LaTeX", "[", "answer", "]"}], ",", 
-        "\"\<}\n\\\\]\n\\\\begin{hint}\nMultiply by $\\\\frac{\>\"", ",", 
+        "\"\<}\\\\end{prompt}\n\\\\]\n\\\\begin{hint}\nMultiply by $\\\\frac{\
+\>\"", ",", 
         RowBox[{"LaTeX", "[", 
          RowBox[{"conjugate", "[", "variable", "]"}], "]"}], ",", 
         "\"\<}{\>\"", ",", 
@@ -233,18 +234,19 @@ form zero over zero.}\n\\\\tag{limit}\n\\\\tag{indeterminate form}\n\
    3.650283361362123*^9, 3.650283549845399*^9}, {3.650283643577321*^9, 
    3.65028365211569*^9}, {3.650283696826622*^9, 3.650283748176735*^9}, {
    3.650283784516683*^9, 3.6502837858837214`*^9}, {3.650283940137579*^9, 
-   3.650283959667637*^9}, {3.650290220158394*^9, 3.650290221164467*^9}}],
+   3.650283959667637*^9}, {3.650290220158394*^9, 3.650290221164467*^9}, {
+   3.650320192851213*^9, 3.6503202056060047`*^9}}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
 author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
 limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\n\\n\\\\[\\n\\\\lim_{u\\\\to -4 } \
-\\\\frac{\\\\sqrt{2-u}-\\\\sqrt{6}}{u+4} = \\\\answer{-\\\\frac{1}{2 \
-\\\\sqrt{6}}}\\n\\\\]\\n\\\\begin{hint}\\nMultiply by \
-$\\\\frac{\\\\sqrt{2-u}+\\\\sqrt{6}}{\\\\sqrt{2-u}+\\\\sqrt{6}}$.\\n\\\\end{\
-hint}\\n\\\\end{exercise}\\n\\\\end{document}\"\>"], "Output",
- CellChangeTimes->{3.650283960389832*^9}]
+form}\\n\\n\\\\[\\n\\\\lim_{x\\\\to -4 } \
+\\\\frac{x+4}{\\\\sqrt{x+5}-1}\\\\begin{prompt} = \
+\\\\answer{2}\\\\end{prompt}\\n\\\\]\\n\\\\begin{hint}\\nMultiply by \
+$\\\\frac{\\\\sqrt{x+5}+1}{\\\\sqrt{x+5}+1}$.\\n\\\\end{hint}\\n\\\\end{\
+exercise}\\n\\\\end{document}\"\>"], "Output",
+ CellChangeTimes->{3.650283960389832*^9, 3.65032022056378*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -257,15 +259,15 @@ Cell[BoxData[
        RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.tex\>\""}], ",", 
       "code", ",", "\"\<Text\>\""}], "]"}], ",", 
     RowBox[{"{", 
-     RowBox[{"i", ",", "2"}], "}"}]}], "]"}], ";"}]], "Input",
+     RowBox[{"i", ",", "12"}], "}"}]}], "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.650243247135182*^9, 3.650243308322151*^9}, {
-  3.650243357322897*^9, 3.6502433903735037`*^9}, {3.650243429166459*^9, 
-  3.6502435245708437`*^9}, {3.650244179818222*^9, 3.650244188522778*^9}, {
-  3.650282208740053*^9, 3.6502822141316023`*^9}, {3.6502838089826202`*^9, 
-  3.65028380955208*^9}}]
+   3.650243357322897*^9, 3.6502433903735037`*^9}, {3.650243429166459*^9, 
+   3.6502435245708437`*^9}, {3.650244179818222*^9, 3.650244188522778*^9}, {
+   3.650282208740053*^9, 3.6502822141316023`*^9}, {3.6502838089826202`*^9, 
+   3.65028380955208*^9}, 3.650320224731565*^9}]
 },
-WindowSize->{959, 1018},
-WindowMargins->{{930, Automatic}, {Automatic, -8}},
+WindowSize->{959, 706},
+WindowMargins->{{Automatic, -9}, {Automatic, -8}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
@@ -282,10 +284,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 9552, 213, 869, "Input"],
-Cell[10134, 237, 642, 9, 407, "Output"]
+Cell[579, 22, 9638, 215, 869, "Input"],
+Cell[10220, 239, 639, 9, 407, "Output"]
 }, Open  ]],
-Cell[10791, 249, 661, 15, 32, "Input"]
+Cell[10874, 251, 688, 15, 32, "Input"]
 }
 ]
 *)
