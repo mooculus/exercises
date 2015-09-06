@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     11283,        241]
-NotebookOptionsPosition[     10912,        223]
-NotebookOutlinePosition[     11268,        239]
-CellTagsIndexPosition[     11225,        236]
+NotebookDataLength[     12230,        260]
+NotebookOptionsPosition[     11859,        242]
+NotebookOutlinePosition[     12215,        258]
+CellTagsIndexPosition[     12172,        255]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -59,6 +59,11 @@ Cell[BoxData[{
           RowBox[{"-", "2"}], ",", 
           RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
           "5"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"deg", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{"2", ",", "3", ",", "4"}], "}"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
       RowBox[{"kk", "=", 
        RowBox[{"RandomChoice", "[", 
         RowBox[{"{", 
@@ -74,7 +79,10 @@ Cell[BoxData[{
       "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{"fDenominator", "[", "x_", "]"}], "=", 
-       RowBox[{"x", "-", "r1"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"x", "-", "r1"}], ")"}], "^", "deg"}]}], ";", 
+      "\[IndentingNewLine]", 
       RowBox[{"answerL", "=", 
        RowBox[{"Limit", "[", 
         RowBox[{
@@ -93,45 +101,51 @@ Cell[BoxData[{
          RowBox[{"x", "\[Rule]", "r1"}], ",", 
          RowBox[{"Direction", "\[Rule]", 
           RowBox[{"-", "1"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"answer", "=", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"answerL", "\[Equal]", "answerR"}], ",", " ", 
+         RowBox[{"LaTeX", "[", "answerL", "]"}], ",", " ", 
+         RowBox[{"ToString", "[", "DNE", "]"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
       RowBox[{"StringJoin", "[", 
        RowBox[{
        "\"\<\\\\documentclass{ximera}\n\\\\input{preamble.tex}\n\
 \\\\author{Bart Snapp}\n\\\\license{Creative Commons 3.0 By-NC}\n\
 \\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Define a vertical \
 asymptote.}\n\\\\outcome{Calculate limits of the form number over zero.}\n\
-\\\\tag{limit}\nConsider \n\\\\[\nf(\>\"", ",", 
+\\\\tag{limit}\nConsider \n\\\\[\nf(\>\"", ",", " ", 
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<) = \\\\frac{\>\"",
          ",", 
         RowBox[{"LaTeX", "[", 
-         RowBox[{"Expand", "[", 
-          RowBox[{"fNumerator", "[", "variable", "]"}], "]"}], "]"}], ",", 
+         RowBox[{"fNumerator", "[", "variable", "]"}], "]"}], ",", 
         "\"\<}{\>\"", ",", " ", 
         RowBox[{"LaTeX", "[", 
-         RowBox[{"Expand", "[", 
-          RowBox[{"fDenominator", "[", "variable", "]"}], "]"}], "]"}], ",", 
+         RowBox[{"fDenominator", "[", "variable", "]"}], "]"}], ",", 
         "\"\<}.\n\\\\]\nCompute\n\\\\begin{enumerate}\n\\\\item \
 $\\\\lim_{\>\"", ",", 
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<\\\\to \>\"", ",", 
         
-        RowBox[{"LaTeX", "[", "r1", "]"}], ",", "\"\<^- } f(\>\"", ",", 
+        RowBox[{"LaTeX", "[", "r1", "]"}], ",", "\"\<^- } f(\>\"", ",", " ", 
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", 
         "\"\<) \\\\begin{prompt} = \\\\answer{\>\"", ",", 
         RowBox[{"LaTeX", "[", "answerL", "]"}], ",", 
         "\"\<}\\\\end{prompt}$\n\\\\item $\\\\lim_{\>\"", ",", 
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<\\\\to \>\"", ",", 
         
-        RowBox[{"LaTeX", "[", "r1", "]"}], ",", "\"\<^+ } f(\>\"", ",", 
+        RowBox[{"LaTeX", "[", "r1", "]"}], ",", "\"\<^+ } f(\>\"", ",", " ", 
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", 
         "\"\<) \\\\begin{prompt} = \\\\answer{\>\"", ",", 
         RowBox[{"LaTeX", "[", "answerR", "]"}], ",", 
         "\"\<}\\\\end{prompt}$\n\\\\item $\\\\lim_{\>\"", ",", 
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<\\\\to \>\"", ",", 
         
-        RowBox[{"LaTeX", "[", "r1", "]"}], ",", "\"\< } f(\>\"", ",", 
+        RowBox[{"LaTeX", "[", "r1", "]"}], ",", "\"\< } f(\>\"", ",", " ", 
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", 
-        "\"\<) \\\\begin{prompt} = \\\\answer{DNE}\\\\end{prompt}$\n\
-\\\\end{enumerate}\n\\\\end{exercise}\n\\\\end{document}\>\""}], "]"}]}]}], 
-    "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+        "\"\<) \\\\begin{prompt} = \\\\answer{\>\"", ",", "answer", ",", 
+        "\"\<}\\\\end{prompt}$\n\\\\end{enumerate}\n\\\\end{exercise}\n\
+\\\\end{document}\>\""}], "]"}]}]}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"StringJoin", "[", 
   RowBox[{"Table", "[", 
    RowBox[{"code", ",", 
@@ -169,21 +183,23 @@ $\\\\lim_{\>\"", ",",
    3.6505345770782747`*^9}, {3.6505351338419437`*^9, 3.650535181047366*^9}, {
    3.650535234404273*^9, 3.650535406824849*^9}, {3.650535457045752*^9, 
    3.650535470248581*^9}, {3.650535527702035*^9, 3.6505355277479067`*^9}, {
-   3.65053561968163*^9, 3.650535627907455*^9}, {3.650536742076643*^9, 
-   3.650536769352016*^9}}],
+   3.65053561968163*^9, 3.650535627907455*^9}, {3.6505360335457487`*^9, 
+   3.650536133976968*^9}, {3.650536165796115*^9, 3.650536310048164*^9}, {
+   3.650536344701562*^9, 3.650536354051857*^9}, {3.650536477244413*^9, 
+   3.65053657595501*^9}, {3.6505368111813107`*^9, 3.6505368474948063`*^9}}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
 author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Define a \
 vertical asymptote.}\\n\\\\outcome{Calculate limits of the form number over \
 zero.}\\n\\\\tag{limit}\\nConsider \\n\\\\[\\nf(x) = \
-\\\\frac{-5}{x+4}.\\n\\\\]\\nCompute\\n\\\\begin{enumerate}\\n\\\\item \
+\\\\frac{-5}{(x+4)^2}.\\n\\\\]\\nCompute\\n\\\\begin{enumerate}\\n\\\\item \
 $\\\\lim_{x\\\\to -4^- } f(x) \\\\begin{prompt} = \
-\\\\answer{\\\\infty}\\\\end{prompt}$\\n\\\\item $\\\\lim_{x\\\\to -4^+ } \
+\\\\answer{-\\\\infty}\\\\end{prompt}$\\n\\\\item $\\\\lim_{x\\\\to -4^+ } \
 f(x) \\\\begin{prompt} = \\\\answer{-\\\\infty}\\\\end{prompt}$\\n\\\\item \
 $\\\\lim_{x\\\\to -4 } f(x) \\\\begin{prompt} = \
-\\\\answer{DNE}\\\\end{prompt}$\\n\\\\end{enumerate}\\n\\\\end{exercise}\\n\\\
-\\end{document}\"\>"], "Output",
+\\\\answer{-\\\\infty}\\\\end{prompt}$\\n\\\\end{enumerate}\\n\\\\end{\
+exercise}\\n\\\\end{document}\"\>"], "Output",
  CellChangeTimes->{
   3.6502406017498407`*^9, 3.650240646847403*^9, {3.6502406973167973`*^9, 
    3.6502407275496597`*^9}, {3.650240767454872*^9, 3.6502407974985933`*^9}, 
@@ -199,7 +215,10 @@ $\\\\lim_{x\\\\to -4 } f(x) \\\\begin{prompt} = \
    3.650301837272789*^9, 3.650319735576593*^9, 3.650533977190826*^9, 
    3.650534021421137*^9, {3.6505353891055107`*^9, 3.6505354095962057`*^9}, 
    3.650535472367573*^9, {3.650535517344198*^9, 3.6505355283146133`*^9}, {
-   3.6505356219592037`*^9, 3.6505356283500032`*^9}, 3.650536771198759*^9}]
+   3.6505356219592037`*^9, 3.6505356283500032`*^9}, 3.650536136326545*^9, {
+   3.6505361766875887`*^9, 3.65053627326681*^9}, {3.650536303625404*^9, 
+   3.650536310592106*^9}, {3.6505363545372753`*^9, 3.650536383703253*^9}, {
+   3.650536483338769*^9, 3.650536579835219*^9}, 3.650536848651194*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -239,10 +258,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 7588, 150, 803, "Input"],
-Cell[8170, 174, 1907, 27, 473, "Output"]
+Cell[579, 22, 8302, 166, 847, "Input"],
+Cell[8884, 190, 2140, 30, 473, "Output"]
 }, Open  ]],
-Cell[10092, 204, 816, 17, 32, "Input"]
+Cell[11039, 223, 816, 17, 32, "Input"]
 }
 ]
 *)

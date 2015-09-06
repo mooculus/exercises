@@ -25,7 +25,9 @@
   \]
   where
   \[
-  f(x) = \left\{\begin{array}{cl} x^2-x+1 & x\leq 3, \\ 2x+1 & x>3. \end{array}\right.
+  f(x) = \begin{cases}x^2-x+1 & x\leq 3, \\
+    2x+1 & x>3.
+  \end{cases}
   \]
     \begin{hint}
      Both pieces of $f(x)$, $x^2-x+1$, for $x\leq3$, and $2x+1$, for $x>3$, are continuous for all $x$. However, for the limit $\lim_{x\to3}f(x)$ to exist, both the left-hand and the right-hand limits of $f(x)$ at $3$ must exist and be equal.

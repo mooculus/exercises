@@ -28,7 +28,8 @@
   \]
   where
   \[
-  f(x) = \left\{\begin{array}{cl} \sin(x) & x\leq \pi/2, \\ \cos(x) & x>\pi/2. \end{array}\right.
+  f(x) = \begin{cases}\sin(x) & x\leq \pi/2, \\ \cos(x) & x>\pi/2.
+  \end{cases}
   \]
     \begin{hint}
      Both pieces of $f(x)$, $\sin(x)$, for $x\leq\pi/2$, and $\cos(x)$, for $x>\pi/2$ are continuous for all $x$. However, for the limit $\lim_{x\to\pi/2}f(x)$ to exist, both the left-hand and the right-hand limits of $f(x)$ at $\pi/2$ must exist and be equal.
