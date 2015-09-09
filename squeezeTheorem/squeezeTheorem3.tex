@@ -12,27 +12,27 @@
 
 Consider:
 \[
-\lim_{n\to 0} \left(n^2 \cos \left(\frac{3}{n}\right)\right)
+\lim_{z\to 0} \left(\sqrt{z} 2^{\sin \left(\frac{3}{z}\right)}\right)
 \]
 A good way to compute this limit would be to use \wordChoice{\choice{limit laws}\choice{indeterminate forms}\choice[correct]{the Squeeze Theorem}\choice{the Intermediate Value Theorem}}.
 \begin{exercise}
 List two functions $g$ and $h$ such that
 \[
-g(n)\le n^2 \cos \left(\frac{3}{n}\right) \le h(n)
+g(z)\le \sqrt{z} 2^{\sin \left(\frac{3}{z}\right)} \le h(z)
 \]
-for all $n$ on some interval containing $n=0$.
+for all $z$ on some interval containing $z=0$.
 \[
-g(n)=\answer{-\left| n\right| ^2}\qquad h(n) =\answer{\left| n\right| ^2}
+g(z)=\answer{\frac{\sqrt{\left| z\right| }}{2}}\qquad h(z) =\answer{2 \sqrt{\left| z\right| }}
 \]
 \begin{exercise}
 Compute:
 \[
-\lim_{n \to 0}-\left| n\right| ^2 = \answer{0}\qquad \lim_{n\to 0}\left| n\right| ^2 = \answer{0}
+\lim_{z \to 0}\frac{\sqrt{\left| z\right| }}{2} = \answer{0}\qquad \lim_{z\to 0}2 \sqrt{\left| z\right| } = \answer{0}
 \]
 \begin{exercise}
 By the Squeeze Theorem:
 \[
-\lim_{n\to 0} \left(n^2 \cos \left(\frac{3}{n}\right)\right) = \answer{0}
+\lim_{z\to 0} \left(\sqrt{z} 2^{\sin \left(\frac{3}{z}\right)}\right) = \answer{0}
 \]
 \end{exercise}
 \end{exercise}

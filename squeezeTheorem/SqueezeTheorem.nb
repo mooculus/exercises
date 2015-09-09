@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     15985,        341]
-NotebookOptionsPosition[     15610,        323]
-NotebookOutlinePosition[     15966,        339]
-CellTagsIndexPosition[     15923,        336]
+NotebookDataLength[     16751,        355]
+NotebookOptionsPosition[     16335,        336]
+NotebookOutlinePosition[     16692,        352]
+CellTagsIndexPosition[     16649,        349]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,7 +22,19 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"RandomSeed", "[", "1", "]"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"RandomSeed", "[", "9", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"System`Convert`TeXFormDump`$TeXDelimiterReplacements", "=", 
+   RowBox[{"System`Convert`TeXFormDump`$TeXDelimiterReplacements", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\"\<\\\\left| \>\"", "|", "\"\<\\\\right| \>\""}], "\[Rule]", 
+       "\"\<|\>\""}], ",", 
+      RowBox[{
+       RowBox[{"\"\<\\\\left\\\\| \>\"", "|", "\"\<\\\\right\\\\| \>\""}], 
+       "\[Rule]", "\"\<\\\\| \>\""}]}], "}"}]}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"LaTeX", "[", "x_", "]"}], ":=", 
@@ -38,18 +50,20 @@ Cell[BoxData[{
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"LaTeX", "[", "ArcTan", "]"}], "=", 
-   RowBox[{"RandomChoice", "[", 
-    RowBox[{"{", 
-     RowBox[{"\"\<\\\\arctan\>\"", ",", "\"\<\\\\tan^{-1}\>\""}], "}"}], 
-    "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"LaTeX", "[", "ArcCot", "]"}], "=", 
-   RowBox[{"RandomChoice", "[", 
-    RowBox[{"{", 
-     RowBox[{"\"\<\\\\arccot\>\"", ",", "\"\<\\\\cot^{-1}\>\""}], "}"}], 
-    "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"LaTeX", "[", "ArcTan", "]"}], "=", 
+    RowBox[{"RandomChoice", "[", 
+     RowBox[{"{", 
+      RowBox[{"\"\<\\\\arctan\>\"", ",", "\"\<\\\\tan^{-1}\>\""}], "}"}], 
+     "]"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"LaTeX", "[", "ArcCot", "]"}], "=", 
+     RowBox[{"RandomChoice", "[", 
+      RowBox[{"{", 
+       RowBox[{"\"\<\\\\arccot\>\"", ",", "\"\<\\\\cot^{-1}\>\""}], "}"}], 
+      "]"}]}], ";"}], "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"code", ":=", 
    RowBox[{"Module", "[", 
@@ -59,7 +73,7 @@ Cell[BoxData[{
       RowBox[{"wildFunction", "=", 
        RowBox[{"RandomChoice", "[", 
         RowBox[{"{", 
-         RowBox[{"Sin", ",", "Cos", ",", "ArcTan", ",", "ArcCot", ",", 
+         RowBox[{"Sin", ",", "Cos", ",", "ArcTan", ",", 
           RowBox[{"Function", "[", 
            RowBox[{"E", "^", 
             RowBox[{"Sin", "[", "#", "]"}]}], "]"}], ",", 
@@ -70,9 +84,6 @@ Cell[BoxData[{
            RowBox[{"E", "^", 
             RowBox[{"ArcTan", "[", "#", "]"}]}], "]"}], ",", 
           RowBox[{"Function", "[", 
-           RowBox[{"E", "^", 
-            RowBox[{"ArcCot", "[", "#", "]"}]}], "]"}], ",", 
-          RowBox[{"Function", "[", 
            RowBox[{"2", "^", 
             RowBox[{"Sin", "[", "#", "]"}]}], "]"}], ",", 
           RowBox[{"Function", "[", 
@@ -80,15 +91,12 @@ Cell[BoxData[{
             RowBox[{"Cos", "[", "#", "]"}]}], "]"}], ",", 
           RowBox[{"Function", "[", 
            RowBox[{"2", "^", 
-            RowBox[{"ArcTan", "[", "#", "]"}]}], "]"}], ",", 
-          RowBox[{"Function", "[", 
-           RowBox[{"2", "^", 
-            RowBox[{"ArcCot", "[", "#", "]"}]}], "]"}]}], "}"}], "]"}]}], ";",
+            RowBox[{"ArcTan", "[", "#", "]"}]}], "]"}]}], "}"}], "]"}]}], ";",
        "\[IndentingNewLine]", 
       RowBox[{"boundingFunction", "=", 
        RowBox[{"RandomChoice", "[", 
         RowBox[{"{", 
-         RowBox[{"Sin", ",", "ArcTan", ",", 
+         RowBox[{"Sin", ",", 
           RowBox[{"Function", "[", "#", "]"}], ",", 
           RowBox[{"Function", "[", 
            RowBox[{"#", "^", "2"}], "]"}], ",", 
@@ -183,18 +191,18 @@ that\n\\\\[\ng(\>\"", ",",
         "\"\<) =\\\\answer{\>\"", ",", " ", 
         RowBox[{"LaTeX", "[", 
          RowBox[{"upperFunction", "[", "variable", "]"}], "]"}], ",", 
-        "\"\<}\n\\\\]\n\\\\begin{exercise}\nCompute:\n\\[\n\\lim_{\>\"", ",", 
-        
+        "\"\<}\n\\\\]\n\\\\begin{exercise}\nCompute:\n\\\\[\n\\\\lim_{\>\"", 
+        ",", 
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\< \\\\to 0}\>\"", 
         ",", 
         RowBox[{"LaTeX", "[", 
          RowBox[{"lowerFunction", "[", "variable", "]"}], "]"}], ",", 
-        "\"\< = \\answer{0}\\\\qquad \\lim_{\>\"", ",", 
+        "\"\< = \\\\answer{0}\\\\qquad \\\\lim_{\>\"", ",", 
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<\\\\to 0}\>\"", 
         ",", 
         RowBox[{"LaTeX", "[", 
          RowBox[{"upperFunction", "[", "variable", "]"}], "]"}], ",", 
-        "\"\< = \\\\answer{0}\n\\]\n\\\\begin{exercise}\nBy the Squeeze \
+        "\"\< = \\\\answer{0}\n\\\\]\n\\\\begin{exercise}\nBy the Squeeze \
 Theorem:\n\\\\[\\n\\\\lim_{\>\"", ",", 
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", 
         "\"\<\\\\to 0} \\\\left(\>\"", ",", 
@@ -250,8 +258,14 @@ Theorem:\n\\\\[\\n\\\\lim_{\>\"", ",",
    3.650295694471307*^9, 3.650295698728323*^9}, {3.650295808272828*^9, 
    3.650295808526581*^9}, {3.6502958388491697`*^9, 3.650295861758136*^9}, {
    3.650295953401759*^9, 3.6502959674333878`*^9}, {3.6502960734556637`*^9, 
-   3.65029607804496*^9}},
- EmphasizeSyntaxErrors->True],
+   3.65029607804496*^9}, {3.650806363363018*^9, 3.650806392314749*^9}, {
+   3.650806486693557*^9, 3.650806534854594*^9}, {3.650806672541168*^9, 
+   3.650806672957444*^9}, {3.650807520790368*^9, 3.650807521824654*^9}, {
+   3.6508205697279367`*^9, 3.6508205713417597`*^9}}],
+
+Cell[BoxData["System`Convert`TeXFormDump`$TeXDelimiterReplacements"], "Output",
+ CellChangeTimes->{{3.65080649123632*^9, 3.650806538175659*^9}, 
+   3.650806676534937*^9, 3.65080753564639*^9, 3.6508205810805063`*^9}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
 author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
@@ -259,22 +273,21 @@ By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\n\\\\outcome{\
 Understand the Squeeze Theorem and how it can be used to find limit \
 values.}\\n\\\\outcome{Calculate limits using the Squeeze \
 Theorem.}\\n\\\\tag{limit}\\n\\\\tag{squeeze \
-theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{z\\\\to 0} \\\\left(z 2^{-\\\\tan \
-^{-1}\\\\left(\\\\frac{1}{z}\\\\right)}\\\\right)\\n\\\\]\\nA good way to \
+theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{w\\\\to 0} \\\\left(w \\\\sin \
+\\\\left(\\\\frac{\\\\pi }{w}\\\\right)\\\\right)\\n\\\\]\\nA good way to \
 compute this limit would be to use \\\\wordChoice{\\\\choice{limit \
 laws}\\\\choice{indeterminate forms}\\\\choice[correct]{the Squeeze \
 Theorem}\\\\choice{the Intermediate Value \
 Theorem}}.\\n\\\\begin{exercise}\\nList two functions $g$ and $h$ such \
-that\\n\\\\[\\ng(z)\\\\le z 2^{-\\\\tan \
-^{-1}\\\\left(\\\\frac{1}{z}\\\\right)} \\\\le h(z)\\n\\\\]\\nfor all $z$ on \
-some interval containing $z=0$.\\n\\\\[\\ng(z)=\\\\answer{2^{-\\\\pi /2} \
-\\\\left| z\\\\right|}\\\\qquad h(z) =\\\\answer{2^{\\\\pi /2} \\\\left| \
-z\\\\right|}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\\n\\\\lim_{z \\\
-\\to 0}2^{-\\\\pi /2} \\\\left| z\\\\right| = \\\\answer{0}\\\\qquad \
-\\\\lim_{z\\\\to 0}2^{\\\\pi /2} \\\\left| z\\\\right| = \
-\\\\answer{0}\\n\\\\]\\n\\\\begin{exercise}\\nBy the Squeeze Theorem:\\n\\\\[\
-\\n\\\\lim_{z\\\\to 0} \\\\left(z 2^{-\\\\tan \
-^{-1}\\\\left(\\\\frac{1}{z}\\\\right)}\\\\right) = \
+that\\n\\\\[\\ng(w)\\\\le w \\\\sin \\\\left(\\\\frac{\\\\pi }{w}\\\\right) \
+\\\\le h(w)\\n\\\\]\\nfor all $w$ on some interval containing \
+$w=0$.\\n\\\\[\\ng(w)=\\\\answer{-\\\\left| w\\\\right|}\\\\qquad h(w) \
+=\\\\answer{\\\\left| \
+w\\\\right|}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\\n\\\\lim_{w \\\
+\\to 0}-\\\\left| w\\\\right| = \\\\answer{0}\\\\qquad \\\\lim_{w\\\\to \
+0}\\\\left| w\\\\right| = \\\\answer{0}\\n\\\\]\\n\\\\begin{exercise}\\nBy \
+the Squeeze Theorem:\\n\\\\[\\n\\\\lim_{w\\\\to 0} \\\\left(w \\\\sin \
+\\\\left(\\\\frac{\\\\pi }{w}\\\\right)\\\\right) = \
 \\\\answer{0}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{\
 exercise}\\n\\\\end{exercise}\\n\\\\end{document}\\\\documentclass{ximera}\\n\
 \\\\input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\\\\license{Creative \
@@ -283,26 +296,26 @@ By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\n\\\\outcome{\
 Understand the Squeeze Theorem and how it can be used to find limit \
 values.}\\n\\\\outcome{Calculate limits using the Squeeze \
 Theorem.}\\n\\\\tag{limit}\\n\\\\tag{squeeze \
-theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{v\\\\to 0} \\\\left(v \\\\cot \
-^{-1}\\\\left(\\\\frac{2}{v}\\\\right)\\\\right)\\n\\\\]\\nA good way to \
-compute this limit would be to use \\\\wordChoice{\\\\choice{limit \
-laws}\\\\choice{indeterminate forms}\\\\choice[correct]{the Squeeze \
+theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{k\\\\to 0} \\\\left(\\\\sqrt[3]{k} \
+2^{\\\\cos \\\\left(\\\\frac{1}{k}\\\\right)}\\\\right)\\n\\\\]\\nA good way \
+to compute this limit would be to use \\\\wordChoice{\\\\choice{limit laws}\\\
+\\choice{indeterminate forms}\\\\choice[correct]{the Squeeze \
 Theorem}\\\\choice{the Intermediate Value \
 Theorem}}.\\n\\\\begin{exercise}\\nList two functions $g$ and $h$ such \
-that\\n\\\\[\\ng(v)\\\\le v \\\\cot ^{-1}\\\\left(\\\\frac{2}{v}\\\\right) \\\
-\\le h(v)\\n\\\\]\\nfor all $v$ on some interval containing \
-$v=0$.\\n\\\\[\\ng(v)=\\\\answer{-\\\\frac{\\\\pi  \\\\left| v\\\\right| \
-}{2}}\\\\qquad h(v) =\\\\answer{\\\\frac{\\\\pi  \\\\left| v\\\\right| \
-}{2}}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\\n\\\\lim_{v \\\\to \
-0}-\\\\frac{\\\\pi  \\\\left| v\\\\right| }{2} = \\\\answer{0}\\\\qquad \
-\\\\lim_{v\\\\to 0}\\\\frac{\\\\pi  \\\\left| v\\\\right| }{2} = \
-\\\\answer{0}\\n\\\\]\\n\\\\begin{exercise}\\nBy the Squeeze Theorem:\\n\\\\[\
-\\n\\\\lim_{v\\\\to 0} \\\\left(v \\\\cot \
-^{-1}\\\\left(\\\\frac{2}{v}\\\\right)\\\\right) = \\\\answer{0}\\n\\\\]\\n\\\
-\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{exercise}\\\
-n\\\\end{document}\"\>"], "Output",
- CellChangeTimes->{3.650296086611569*^9, 3.6503261067834997`*^9, 
-  3.650328618426681*^9}]
+that\\n\\\\[\\ng(k)\\\\le \\\\sqrt[3]{k} 2^{\\\\cos \\\\left(\\\\frac{1}{k}\\\
+\\right)} \\\\le h(k)\\n\\\\]\\nfor all $k$ on some interval containing \
+$k=0$.\\n\\\\[\\ng(k)=\\\\answer{\\\\frac{\\\\sqrt[3]{\\\\left| k\\\\right| \
+}}{2}}\\\\qquad h(k) =\\\\answer{2 \\\\sqrt[3]{\\\\left| k\\\\right| \
+}}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\\n\\\\lim_{k \\\\to \
+0}\\\\frac{\\\\sqrt[3]{\\\\left| k\\\\right| }}{2} = \\\\answer{0}\\\\qquad \
+\\\\lim_{k\\\\to 0}2 \\\\sqrt[3]{\\\\left| k\\\\right| } = \\\\answer{0}\\n\\\
+\\]\\n\\\\begin{exercise}\\nBy the Squeeze \
+Theorem:\\n\\\\[\\n\\\\lim_{k\\\\to 0} \\\\left(\\\\sqrt[3]{k} 2^{\\\\cos \
+\\\\left(\\\\frac{1}{k}\\\\right)}\\\\right) = \
+\\\\answer{0}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{\
+exercise}\\n\\\\end{exercise}\\n\\\\end{document}\"\>"], "Output",
+ CellChangeTimes->{{3.65080649123632*^9, 3.650806538175659*^9}, 
+   3.650806676534937*^9, 3.65080753564639*^9, 3.650820581246655*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -321,8 +334,8 @@ Cell[BoxData[
    3.6502435245708437`*^9}, {3.650244179818222*^9, 3.650244188522778*^9}, {
    3.650295579974926*^9, 3.650295584369331*^9}, 3.650326111149954*^9}]
 },
-WindowSize->{1366, 708},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{1920, 1047},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
@@ -339,10 +352,11 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 11109, 231, 1331, "Input"],
-Cell[11691, 255, 3261, 49, 1869, "Output"]
+Cell[579, 22, 11611, 241, 1289, "Input"],
+Cell[12193, 265, 215, 2, 32, "Output"],
+Cell[12411, 269, 3266, 48, 1793, "Output"]
 }, Open  ]],
-Cell[14967, 307, 639, 14, 32, "Input"]
+Cell[15692, 320, 639, 14, 32, "Input"]
 }
 ]
 *)
