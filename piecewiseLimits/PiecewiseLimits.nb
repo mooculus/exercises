@@ -1,0 +1,971 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     44045,        962]
+NotebookOptionsPosition[     43691,        945]
+NotebookOutlinePosition[     44029,        960]
+CellTagsIndexPosition[     43986,        957]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"LaTeX", "[", "x_", "]"}], ":=", 
+   RowBox[{"ToString", "[", 
+    RowBox[{"TeXForm", "[", "x", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LaTeX", "[", "Sin", "]"}], "=", "\"\<\\\\sin\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LaTeX", "[", "Cos", "]"}], "=", "\"\<\\\\cos\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"code", ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"trigf1", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"{", 
+          RowBox[{"Sin", ",", "Cos"}], "}"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"trigf2", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"{", 
+          RowBox[{"Sin", ",", "Cos"}], "}"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"func", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"{", 
+          RowBox[{
+          "a", ",", "b", ",", "c", ",", "f", ",", "g", ",", "s", ",", "p", 
+           ",", "r", ",", "y", ",", "A", ",", "B", ",", "F", ",", "G", ",", 
+           "P", ",", "R", ",", "Y"}], "}"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"var", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"{", 
+          RowBox[{
+          "x", ",", "z", ",", "t", ",", "n", ",", "k", ",", "w", ",", "u", 
+           ",", "v"}], "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"point", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "5"}], ",", 
+           RowBox[{"-", "4"}], ",", 
+           RowBox[{"-", "3"}], ",", 
+           RowBox[{"-", "2"}], ",", 
+           RowBox[{"-", "1"}], ",", "0", ",", "1", ",", "2", ",", "3", ",", 
+           "4", ",", "5"}], "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"meet", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"{", 
+          RowBox[{"\"\<Y\>\"", ",", "\"\<N\>\""}], "}"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"trig1", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"{", 
+          RowBox[{"\"\<Y\>\"", ",", "\"\<N\>\""}], "}"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"trig2", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"{", 
+          RowBox[{"\"\<Y\>\"", ",", "\"\<N\>\""}], "}"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"deg1", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "4"}], "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"deg2", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "4"}], "}"}], "]"}]}]}], "\[IndentingNewLine]", 
+      "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Clear", "[", 
+        RowBox[{
+        "a", ",", "b", ",", "c", ",", "f", ",", "g", ",", "s", ",", "p", ",", 
+         "r", ",", "y", ",", "A", ",", "B", ",", "F", ",", "G", ",", "P", ",",
+          "R", ",", "Y", ",", "cc", ",", "gg", ",", "f1", ",", "f2"}], "]"}], 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"meet", "\[Equal]", "\"\<Y\>\""}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"trig1", "\[Equal]", "\"\<Y\>\""}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"trig2", "\[Equal]", "\"\<N\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"pp", "[", "var_", "]"}], "=", 
+                 RowBox[{"Sum", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "10"}], ",", 
+                    RowBox[{"-", "9"}], ",", 
+                    RowBox[{"-", "8"}], ",", 
+                    RowBox[{"-", "7"}], ",", 
+                    RowBox[{"-", "6"}], ",", 
+                    RowBox[{"-", "5"}], ",", 
+                    RowBox[{"-", "4"}], ",", 
+                    RowBox[{"-", "3"}], ",", 
+                    RowBox[{"-", "2"}], ",", 
+                    RowBox[{"-", "1"}], ",", "0", ",", "1", ",", "2", ",", 
+                    "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", 
+                    ",", "9", ",", "10"}], "}"}], "]"}], "*", 
+                    RowBox[{"var", "^", "n"}]}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"n", ",", "1", ",", "deg1"}], "}"}]}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{"cc", "=", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"cc", "/.", 
+                    RowBox[{"Solve", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"trigf1", "[", "point", "]"}], "\[Equal]", 
+                    RowBox[{
+                    RowBox[{"pp", "[", "point", "]"}], "+", "cc"}]}], ",", 
+                    "cc"}], "]"}]}], ")"}], "[", 
+                  RowBox[{"[", "1", "]"}], "]"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"pp", "[", "var_", "]"}], "=", 
+                 RowBox[{
+                  RowBox[{"pp", "[", "var", "]"}], "+", "cc"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"f1", "[", "var_", "]"}], "=", 
+                 RowBox[{"RandomChoice", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"pp", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"f2", "[", "var_", "]"}], "=", 
+                 RowBox[{"RandomChoice", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"pp", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{"While", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"f2", "[", "var", "]"}], "\[Equal]", 
+                   RowBox[{"f1", "[", "var", "]"}]}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"f2", "[", "var_", "]"}], "=", 
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"pp", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                   ";"}]}], "\[IndentingNewLine]", "]"}], ";"}], 
+               "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{"trigf2", "\[Equal]", "trigf1"}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{"While", "[", 
+                    RowBox[{
+                    RowBox[{"trigf2", "\[Equal]", "trigf1"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"trigf2", "=", 
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Sin", ",", "Cos"}], "}"}], "]"}]}]}], 
+                    "\[IndentingNewLine]", "]"}], ";"}]}], 
+                 "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+                RowBox[{"cc", "=", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"cc", "/.", 
+                    RowBox[{"Solve", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"trigf1", "[", "point", "]"}], "\[Equal]", 
+                    RowBox[{
+                    RowBox[{"trigf2", "[", "point", "]"}], "+", "cc"}]}], ",",
+                     "cc"}], "]"}]}], ")"}], "[", 
+                  RowBox[{"[", "1", "]"}], "]"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"h", "[", "var_", "]"}], "=", 
+                 RowBox[{
+                  RowBox[{"trigf2", "[", "var", "]"}], "+", "cc"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"f1", "[", "var_", "]"}], "=", 
+                 RowBox[{"RandomChoice", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"h", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"f2", "[", "var_", "]"}], "=", 
+                 RowBox[{"RandomChoice", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"h", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                RowBox[{"While", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"f2", "[", "var", "]"}], "\[Equal]", 
+                   RowBox[{"f1", "[", "var", "]"}]}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"f2", "[", "var_", "]"}], "=", 
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"h", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                   ";"}]}], "\[IndentingNewLine]", "]"}], ";"}]}], 
+              "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], ";"}], 
+            "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"trig2", "\[Equal]", "\"\<N\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"p1", "[", "var_", "]"}], "=", 
+                 RowBox[{"Sum", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "10"}], ",", 
+                    RowBox[{"-", "9"}], ",", 
+                    RowBox[{"-", "8"}], ",", 
+                    RowBox[{"-", "7"}], ",", 
+                    RowBox[{"-", "6"}], ",", 
+                    RowBox[{"-", "5"}], ",", 
+                    RowBox[{"-", "4"}], ",", 
+                    RowBox[{"-", "3"}], ",", 
+                    RowBox[{"-", "2"}], ",", 
+                    RowBox[{"-", "1"}], ",", "0", ",", "1", ",", "2", ",", 
+                    "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", 
+                    ",", "9", ",", "10"}], "}"}], "]"}], "*", 
+                    RowBox[{"var", "^", "n"}]}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"n", ",", "1", ",", "deg1"}], "}"}]}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"p2", "[", "var_", "]"}], "=", 
+                 RowBox[{"Sum", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "10"}], ",", 
+                    RowBox[{"-", "9"}], ",", 
+                    RowBox[{"-", "8"}], ",", 
+                    RowBox[{"-", "7"}], ",", 
+                    RowBox[{"-", "6"}], ",", 
+                    RowBox[{"-", "5"}], ",", 
+                    RowBox[{"-", "4"}], ",", 
+                    RowBox[{"-", "3"}], ",", 
+                    RowBox[{"-", "2"}], ",", 
+                    RowBox[{"-", "1"}], ",", "0", ",", "1", ",", "2", ",", 
+                    "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", 
+                    ",", "9", ",", "10"}], "}"}], "]"}], "*", 
+                    RowBox[{"var", "^", "n"}]}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"n", ",", "1", ",", "deg2"}], "}"}]}], "]"}]}], 
+                ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                RowBox[{"While", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"p1", "[", "var", "]"}], "\[Equal]", 
+                   RowBox[{"p2", "[", "var", "]"}]}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"p2", "[", "var_", "]"}], "=", 
+                    RowBox[{"Sum", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "10"}], ",", 
+                    RowBox[{"-", "9"}], ",", 
+                    RowBox[{"-", "8"}], ",", 
+                    RowBox[{"-", "7"}], ",", 
+                    RowBox[{"-", "6"}], ",", 
+                    RowBox[{"-", "5"}], ",", 
+                    RowBox[{"-", "4"}], ",", 
+                    RowBox[{"-", "3"}], ",", 
+                    RowBox[{"-", "2"}], ",", 
+                    RowBox[{"-", "1"}], ",", "0", ",", "1", ",", "2", ",", 
+                    "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", 
+                    ",", "9", ",", "10"}], "}"}], "]"}], "*", 
+                    RowBox[{"var", "^", "n"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"n", ",", "1", ",", "deg2"}], "}"}]}], "]"}]}], 
+                   ";"}]}], "\[IndentingNewLine]", "]"}], ";", 
+                "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                RowBox[{"cc", "=", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"cc", "/.", 
+                    RowBox[{"Solve", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"p1", "[", "point", "]"}], "\[Equal]", 
+                    RowBox[{
+                    RowBox[{"p2", "[", "point", "]"}], "+", "cc"}]}], ",", 
+                    "cc"}], "]"}]}], ")"}], "[", 
+                  RowBox[{"[", "1", "]"}], "]"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"p2", "[", "var_", "]"}], "=", 
+                 RowBox[{
+                  RowBox[{"p2", "[", "var", "]"}], "+", "cc"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"f1", "[", "var_", "]"}], "=", 
+                 RowBox[{"RandomChoice", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"p1", "[", "var", "]"}], ",", 
+                    RowBox[{"p2", "[", "var", "]"}]}], "}"}], "]"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"f2", "[", "var_", "]"}], "=", 
+                 RowBox[{"RandomChoice", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"p1", "[", "var", "]"}], ",", 
+                    RowBox[{"p2", "[", "var", "]"}]}], "}"}], "]"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{"While", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"f2", "[", "var", "]"}], "\[Equal]", 
+                   RowBox[{"f1", "[", "var", "]"}]}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"f2", "[", "var_", "]"}], "=", 
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"p1", "[", "var", "]"}], ",", 
+                    RowBox[{"p2", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                   ";"}]}], "\[IndentingNewLine]", "]"}], ";"}], 
+               "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"pp", "[", "var_", "]"}], "=", 
+                 RowBox[{"Sum", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "10"}], ",", 
+                    RowBox[{"-", "9"}], ",", 
+                    RowBox[{"-", "8"}], ",", 
+                    RowBox[{"-", "7"}], ",", 
+                    RowBox[{"-", "6"}], ",", 
+                    RowBox[{"-", "5"}], ",", 
+                    RowBox[{"-", "4"}], ",", 
+                    RowBox[{"-", "3"}], ",", 
+                    RowBox[{"-", "2"}], ",", 
+                    RowBox[{"-", "1"}], ",", "0", ",", "1", ",", "2", ",", 
+                    "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", 
+                    ",", "9", ",", "10"}], "}"}], "]"}], "*", 
+                    RowBox[{"var", "^", "n"}]}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"n", ",", "1", ",", "deg1"}], "}"}]}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{"cc", "=", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"cc", "/.", 
+                    RowBox[{"Solve", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"trigf1", "[", "point", "]"}], "\[Equal]", 
+                    RowBox[{
+                    RowBox[{"pp", "[", "point", "]"}], "+", "cc"}]}], ",", 
+                    "cc"}], "]"}]}], ")"}], "[", 
+                  RowBox[{"[", "1", "]"}], "]"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"pp", "[", "var_", "]"}], "=", 
+                 RowBox[{
+                  RowBox[{"pp", "[", "var", "]"}], "+", "cc"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"f1", "[", "var_", "]"}], "=", 
+                 RowBox[{"RandomChoice", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"pp", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"f2", "[", "var_", "]"}], "=", 
+                 RowBox[{"RandomChoice", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"pp", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{"While", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"f2", "[", "var", "]"}], "\[Equal]", 
+                   RowBox[{"f1", "[", "var", "]"}]}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"f2", "[", "var_", "]"}], "=", 
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"pp", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                   ";"}]}], "\[IndentingNewLine]", "]"}], ";"}]}], 
+              "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", 
+           "]"}], ";"}], "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"trig1", "\[Equal]", "\"\<Y\>\""}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"trig2", "\[Equal]", "\"\<N\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"pp", "[", "var_", "]"}], "=", 
+                 RowBox[{"Sum", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "10"}], ",", 
+                    RowBox[{"-", "9"}], ",", 
+                    RowBox[{"-", "8"}], ",", 
+                    RowBox[{"-", "7"}], ",", 
+                    RowBox[{"-", "6"}], ",", 
+                    RowBox[{"-", "5"}], ",", 
+                    RowBox[{"-", "4"}], ",", 
+                    RowBox[{"-", "3"}], ",", 
+                    RowBox[{"-", "2"}], ",", 
+                    RowBox[{"-", "1"}], ",", "0", ",", "1", ",", "2", ",", 
+                    "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", 
+                    ",", "9", ",", "10"}], "}"}], "]"}], "*", 
+                    RowBox[{"var", "^", "n"}]}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"n", ",", "1", ",", "deg1"}], "}"}]}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{"cc", "=", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"cc", "/.", 
+                    RowBox[{"FindInstance", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"trigf1", "[", "point", "]"}], "\[NotEqual]", 
+                    RowBox[{
+                    RowBox[{"pp", "[", "point", "]"}], "+", "cc"}]}], ",", 
+                    "cc", ",", "Integers"}], "]"}]}], ")"}], "[", 
+                  RowBox[{"[", "1", "]"}], "]"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"pp", "[", "var_", "]"}], "=", 
+                 RowBox[{
+                  RowBox[{"pp", "[", "var", "]"}], "+", "cc"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"f1", "[", "var_", "]"}], "=", 
+                 RowBox[{"RandomChoice", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"pp", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"f2", "[", "var_", "]"}], "=", 
+                 RowBox[{"RandomChoice", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"pp", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{"While", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"f2", "[", "var", "]"}], "\[Equal]", 
+                   RowBox[{"f1", "[", "var", "]"}]}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"f2", "[", "var_", "]"}], "=", 
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"pp", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                   ";"}]}], "\[IndentingNewLine]", "]"}], ";"}], 
+               "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"cc", "=", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"cc", "/.", 
+                    RowBox[{"FindInstance", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"trigf1", "[", "point", "]"}], "\[NotEqual]", 
+                    RowBox[{
+                    RowBox[{"trigf2", "[", "point", "]"}], "+", "cc"}]}], ",",
+                     "cc", ",", "Integers"}], "]"}]}], ")"}], "[", 
+                  RowBox[{"[", "1", "]"}], "]"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"h", "[", "var_", "]"}], "=", 
+                 RowBox[{
+                  RowBox[{"trigf2", "[", "var", "]"}], "+", "cc"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"f1", "[", "var_", "]"}], "=", 
+                 RowBox[{"RandomChoice", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"h", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"f2", "[", "var_", "]"}], "=", 
+                 RowBox[{"RandomChoice", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"h", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{"While", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"f2", "[", "var", "]"}], "\[Equal]", 
+                   RowBox[{"f1", "[", "var", "]"}]}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"f2", "[", "var_", "]"}], "=", 
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"h", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                   ";"}]}], "\[IndentingNewLine]", "]"}], ";"}]}], 
+              "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", ",",
+             "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"trig2", "\[Equal]", "\"\<N\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"p1", "[", "var_", "]"}], "=", 
+                 RowBox[{"Sum", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "10"}], ",", 
+                    RowBox[{"-", "9"}], ",", 
+                    RowBox[{"-", "8"}], ",", 
+                    RowBox[{"-", "7"}], ",", 
+                    RowBox[{"-", "6"}], ",", 
+                    RowBox[{"-", "5"}], ",", 
+                    RowBox[{"-", "4"}], ",", 
+                    RowBox[{"-", "3"}], ",", 
+                    RowBox[{"-", "2"}], ",", 
+                    RowBox[{"-", "1"}], ",", "0", ",", "1", ",", "2", ",", 
+                    "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", 
+                    ",", "9", ",", "10"}], "}"}], "]"}], "*", 
+                    RowBox[{"var", "^", "n"}]}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"n", ",", "1", ",", "deg1"}], "}"}]}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"p2", "[", "var_", "]"}], "=", 
+                 RowBox[{"Sum", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "10"}], ",", 
+                    RowBox[{"-", "9"}], ",", 
+                    RowBox[{"-", "8"}], ",", 
+                    RowBox[{"-", "7"}], ",", 
+                    RowBox[{"-", "6"}], ",", 
+                    RowBox[{"-", "5"}], ",", 
+                    RowBox[{"-", "4"}], ",", 
+                    RowBox[{"-", "3"}], ",", 
+                    RowBox[{"-", "2"}], ",", 
+                    RowBox[{"-", "1"}], ",", "0", ",", "1", ",", "2", ",", 
+                    "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", 
+                    ",", "9", ",", "10"}], "}"}], "]"}], "*", 
+                    RowBox[{"var", "^", "n"}]}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"n", ",", "1", ",", "deg2"}], "}"}]}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{"cc", "=", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"cc", "/.", 
+                    RowBox[{"FindInstance", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"p1", "[", "point", "]"}], "\[NotEqual]", 
+                    RowBox[{
+                    RowBox[{"p2", "[", "point", "]"}], "+", "cc"}]}], ",", 
+                    "cc", ",", "Integers"}], "]"}]}], ")"}], "[", 
+                  RowBox[{"[", "1", "]"}], "]"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"p2", "[", "var_", "]"}], "=", 
+                 RowBox[{
+                  RowBox[{"p2", "[", "var", "]"}], "+", "cc"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"f1", "[", "var_", "]"}], "=", 
+                 RowBox[{"RandomChoice", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"p1", "[", "var", "]"}], ",", 
+                    RowBox[{"p2", "[", "var", "]"}]}], "}"}], "]"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"f2", "[", "var_", "]"}], "=", 
+                 RowBox[{"RandomChoice", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"p1", "[", "var", "]"}], ",", 
+                    RowBox[{"p2", "[", "var", "]"}]}], "}"}], "]"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{"While", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"f2", "[", "var", "]"}], "\[Equal]", 
+                   RowBox[{"f1", "[", "var", "]"}]}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"f2", "[", "var_", "]"}], "=", 
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"p1", "[", "var", "]"}], ",", 
+                    RowBox[{"p2", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                   ";"}]}], "\[IndentingNewLine]", "]"}], ";"}], 
+               "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"pp", "[", "var_", "]"}], "=", 
+                 RowBox[{"Sum", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "10"}], ",", 
+                    RowBox[{"-", "9"}], ",", 
+                    RowBox[{"-", "8"}], ",", 
+                    RowBox[{"-", "7"}], ",", 
+                    RowBox[{"-", "6"}], ",", 
+                    RowBox[{"-", "5"}], ",", 
+                    RowBox[{"-", "4"}], ",", 
+                    RowBox[{"-", "3"}], ",", 
+                    RowBox[{"-", "2"}], ",", 
+                    RowBox[{"-", "1"}], ",", "0", ",", "1", ",", "2", ",", 
+                    "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", 
+                    ",", "9", ",", "10"}], "}"}], "]"}], "*", 
+                    RowBox[{"var", "^", "n"}]}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"n", ",", "1", ",", "deg1"}], "}"}]}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{"cc", "=", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"cc", "/.", 
+                    RowBox[{"FindInstance", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"trigf1", "[", "point", "]"}], "\[NotEqual]", 
+                    RowBox[{
+                    RowBox[{"pp", "[", "point", "]"}], "+", "cc"}]}], ",", 
+                    "cc", ",", "Integers"}], "]"}]}], ")"}], "[", 
+                  RowBox[{"[", "1", "]"}], "]"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"pp", "[", "var_", "]"}], "=", 
+                 RowBox[{
+                  RowBox[{"pp", "[", "var", "]"}], "+", "cc"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"f1", "[", "var_", "]"}], "=", 
+                 RowBox[{"RandomChoice", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"pp", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"f2", "[", "var_", "]"}], "=", 
+                 RowBox[{"RandomChoice", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"pp", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{"While", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"f2", "[", "var", "]"}], "\[Equal]", 
+                   RowBox[{"f1", "[", "var", "]"}]}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"f2", "[", "var_", "]"}], "=", 
+                    RowBox[{"RandomChoice", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"pp", "[", "var", "]"}], ",", 
+                    RowBox[{"trigf1", "[", "var", "]"}]}], "}"}], "]"}]}], 
+                   ";"}]}], "\[IndentingNewLine]", "]"}], ";"}]}], 
+              "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", 
+           "]"}], ";"}]}], "\[IndentingNewLine]", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"gg", "[", "var_", "]"}], "=", 
+       RowBox[{"Piecewise", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"f1", "[", "var", "]"}], ",", 
+            RowBox[{"var", "\[LessEqual]", "point"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"f2", "[", "var", "]"}], ",", 
+            RowBox[{"var", ">", "point"}]}], "}"}]}], "}"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"answer1", "=", 
+       RowBox[{"Limit", "[", 
+        RowBox[{
+         RowBox[{"gg", "[", "var", "]"}], ",", 
+         RowBox[{"var", "\[Rule]", "point"}], ",", 
+         RowBox[{"Direction", "\[Rule]", 
+          RowBox[{"-", "1"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"answer2", "=", 
+       RowBox[{"Limit", "[", 
+        RowBox[{
+         RowBox[{"gg", "[", "var", "]"}], ",", 
+         RowBox[{"var", "\[Rule]", "point"}], ",", 
+         RowBox[{"Direction", "\[Rule]", "1"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"answer3", "=", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"answer1", "\[Equal]", "answer2"}], ",", 
+         RowBox[{"LaTeX", "[", "answer1", "]"}], ",", 
+         RowBox[{"ToString", "[", "DNE", "]"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"StringJoin", "[", 
+       RowBox[{"\"\<\\\\begin{exercise} Find the limit of $\>\"", ",", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{"func", "[", "var", "]"}], "]"}], ",", 
+        "\"\<=\\\\begin{cases}\>\"", ",", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{"f1", "[", "var", "]"}], "]"}], ",", "\"\<&\>\"", ",", " ", 
+        RowBox[{"LaTeX", "[", "var", "]"}], ",", "\"\<\\\\le\>\"", ",", 
+        RowBox[{"LaTeX", "[", "point", "]"}], ",", "\"\<\\\\\\ \>\"", ",", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{"f2", "[", "var", "]"}], "]"}], ",", "\"\<&\>\"", ",", 
+        RowBox[{"LaTeX", "[", "var", "]"}], ",", "\"\<>\>\"", ",", 
+        RowBox[{"LaTeX", "[", "point", "]"}], ",", 
+        "\"\<\\\\end{cases}$ in the following cases:\\n\\\\[\\n\\\\lim_{\>\"",
+         ",", 
+        RowBox[{"LaTeX", "[", "var", "]"}], ",", "\"\<\\\\to\>\"", ",", 
+        RowBox[{"LaTeX", "[", "point", "]"}], ",", "\"\<^{+}}\>\"", ",", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{"func", "[", "var", "]"}], "]"}], ",", 
+        "\"\<\n\\\\begin{prompt}\n=\\\\answer{\>\"", ",", 
+        RowBox[{"LaTeX", "[", "answer1", "]"}], ",", 
+        "\"\<}\n\\\\end{prompt}\\n\\\\]\n\\n\\\\[\\n\\\\lim_{\>\"", ",", 
+        RowBox[{"LaTeX", "[", "var", "]"}], ",", "\"\<\\\\to\>\"", ",", 
+        RowBox[{"LaTeX", "[", "point", "]"}], ",", "\"\<^{-}}\>\"", ",", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{"func", "[", "var", "]"}], "]"}], ",", 
+        "\"\<\n\\\\begin{prompt}\n=\\\\answer{\>\"", ",", 
+        RowBox[{"LaTeX", "[", "answer2", "]"}], ",", 
+        "\"\<}\n\\\\end{prompt}\\n\\\\]\n\\n\\\\[\\n\\\\lim_{\>\"", ",", 
+        RowBox[{"LaTeX", "[", "var", "]"}], ",", "\"\<\\\\to\>\"", ",", 
+        RowBox[{"LaTeX", "[", "point", "]"}], ",", "\"\<}\>\"", ",", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{"func", "[", "var", "]"}], "]"}], ",", 
+        "\"\<\n\\\\begin{prompt}\n=\\\\answer{\>\"", ",", "answer3", ",", 
+        "\"\<}\n\\\\end{prompt}\\n\\\\]\\n\n\\\\{exercise}\\n\\n\>\""}], 
+       "]"}]}]}], "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.596822797404059*^9, 3.596822804542852*^9}, {
+   3.5968826810601063`*^9, 3.5968826817983427`*^9}, {3.597068159626274*^9, 
+   3.59706815983995*^9}, {3.598285044339224*^9, 3.598285051576729*^9}, {
+   3.6491840542782373`*^9, 3.6491843130532722`*^9}, {3.649184355831109*^9, 
+   3.6491845329190483`*^9}, {3.649184600958383*^9, 3.649184601525992*^9}, {
+   3.649184926244669*^9, 3.649185000845984*^9}, {3.649185086948194*^9, 
+   3.6491851266619797`*^9}, {3.6491851698973494`*^9, 3.649185232056341*^9}, {
+   3.649185284984262*^9, 3.649185315685734*^9}, {3.649695722483925*^9, 
+   3.6496957228182983`*^9}, {3.649855222973742*^9, 3.649855640141882*^9}, {
+   3.649855678815884*^9, 3.6498559396183567`*^9}, {3.64985598408263*^9, 
+   3.649856001966117*^9}, 3.64985605519753*^9, 3.6498560950581627`*^9, {
+   3.64985622876362*^9, 3.649856241526177*^9}, {3.650738204860301*^9, 
+   3.650738205408675*^9}, {3.650738242319566*^9, 3.650738251517624*^9}, {
+   3.650738300003194*^9, 3.650738324320806*^9}, {3.650738493535165*^9, 
+   3.650738514470004*^9}, {3.6507385668102503`*^9, 3.650738578672965*^9}, {
+   3.6507386495477743`*^9, 3.650738686113831*^9}, {3.650738738024143*^9, 
+   3.650738739390757*^9}, {3.650738791324431*^9, 3.650738921611512*^9}, {
+   3.650738961434245*^9, 3.650739125134804*^9}, {3.650739156070127*^9, 
+   3.6507391789073057`*^9}, {3.650739242148066*^9, 3.650739340265403*^9}, {
+   3.650739376624968*^9, 3.650739496415943*^9}, {3.650739632344738*^9, 
+   3.650739767729149*^9}, {3.650739864203061*^9, 3.650739893329603*^9}, {
+   3.650739923367485*^9, 3.650739946085039*^9}, {3.6507400086095*^9, 
+   3.650740043197453*^9}, {3.65074007684237*^9, 3.650740265392486*^9}, {
+   3.650740321742579*^9, 3.6507403233504744`*^9}, {3.650740391825708*^9, 
+   3.6507404094249372`*^9}, {3.650740442536195*^9, 3.650740530136262*^9}, {
+   3.650740563648172*^9, 3.650740693616227*^9}, {3.650740727815751*^9, 
+   3.650740729341238*^9}, {3.6507407682610407`*^9, 3.650740781392922*^9}, {
+   3.650740904630072*^9, 3.650741086561764*^9}, {3.6507411233121223`*^9, 
+   3.650741265758543*^9}, {3.650741307042935*^9, 3.650741609647328*^9}, {
+   3.650741653127022*^9, 3.650741697035467*^9}, {3.65074173714674*^9, 
+   3.6507417380420523`*^9}, {3.650741786398863*^9, 3.650741877588915*^9}, {
+   3.650741943305852*^9, 3.650742010361216*^9}, {3.6507420601271667`*^9, 
+   3.650742254032136*^9}, {3.650742289593679*^9, 3.650742290014803*^9}, {
+   3.65074234613309*^9, 3.650742347225726*^9}, {3.650742396145*^9, 
+   3.6507424709542007`*^9}, {3.650743911613886*^9, 3.650743965843925*^9}, {
+   3.650744025467986*^9, 3.6507440475418053`*^9}, {3.6507440813670473`*^9, 
+   3.650744084827862*^9}, {3.6507441559478683`*^9, 3.650744193363346*^9}, {
+   3.650744235421055*^9, 3.650744246537723*^9}, {3.6507444126336517`*^9, 
+   3.6507444292141457`*^9}, {3.65074446812498*^9, 3.6507444968669863`*^9}, {
+   3.6507446023589563`*^9, 3.6507446733352013`*^9}, {3.650744710781536*^9, 
+   3.6507447544258013`*^9}, {3.6507449781351213`*^9, 3.650744986627151*^9}, {
+   3.650745500998913*^9, 3.650745502016787*^9}, {3.650745545569352*^9, 
+   3.6507455471442213`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"StringJoin", "[", 
+   RowBox[{"Table", "[", 
+    RowBox[{"code", ",", 
+     RowBox[{"{", "20", "}"}]}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.650741892150469*^9, 3.650741909158337*^9}, 
+   3.6507422674145393`*^9, {3.650744101009828*^9, 3.650744114839517*^9}, {
+   3.650744256310717*^9, 3.650744308723737*^9}, 3.6507443559303007`*^9, {
+   3.650745633522336*^9, 3.65074563386379*^9}}],
+
+Cell[BoxData["\<\"\\\\begin{exercise} Find the limit of \
+$f(v)=\\\\begin{cases}-10 v-20+\\\\cos (2)&v\\\\le-2\\\\ \\\\cos \
+(v)&v>-2\\\\end{cases}$ in the following \
+cases:\\n\\\\[\\n\\\\lim_{v\\\\to-2^{+}}f(v)\\n\\\\begin{prompt}\\n=\\\\\
+answer{\\\\cos \
+(2)}\\n\\\\end{prompt}\\n\\\\]\\n\\n\\\\[\\n\\\\lim_{v\\\\to-2^{-}}f(v)\\n\\\\\
+begin{prompt}\\n=\\\\answer{\\\\cos (2)}\\n\\\\end{prompt}\\n\\\\]\\n\\n\\\\[\
+\\n\\\\lim_{v\\\\to-2}f(v)\\n\\\\begin{prompt}\\n=\\\\answer{\\\\cos \
+(2)}\\n\\\\end{prompt}\\n\\\\]\\n\\n\\\\{exercise}\\n\\n\"\>"], "Output",
+ CellChangeTimes->{{3.650741888461705*^9, 3.650741903704545*^9}, {
+   3.650742267917849*^9, 3.65074235341803*^9}, {3.6507424412093983`*^9, 
+   3.650742445472713*^9}, 3.650743992261054*^9, {3.650744032706448*^9, 
+   3.6507440501996317`*^9}, {3.650744095655698*^9, 3.650744119481842*^9}, {
+   3.6507441749810534`*^9, 3.650744197579092*^9}, {3.6507442494163647`*^9, 
+   3.650744259710492*^9}, {3.65074429656647*^9, 3.650744309345245*^9}, {
+   3.6507443435978947`*^9, 3.650744360397324*^9}, 3.650744400312901*^9, {
+   3.650744433194695*^9, 3.650744438672474*^9}, {3.6507445002157383`*^9, 
+   3.650744538850439*^9}, 3.650744916021265*^9, {3.650744993109292*^9, 
+   3.6507450156150217`*^9}, 3.650745426838217*^9, 3.650745514463995*^9, {
+   3.650745566095867*^9, 3.650745605339167*^9}}]
+}, Open  ]]
+},
+WindowSize->{1144, 752},
+WindowMargins->{{Automatic, 613}, {Automatic, 20}},
+FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 41297, 888, 3333, "Input"],
+Cell[CellGroupData[{
+Cell[41880, 912, 450, 9, 55, "Input"],
+Cell[42333, 923, 1342, 19, 583, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
