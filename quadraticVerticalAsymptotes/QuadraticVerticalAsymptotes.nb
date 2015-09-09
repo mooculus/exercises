@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     15636,        335]
-NotebookOptionsPosition[     15261,        317]
-NotebookOutlinePosition[     15618,        333]
-CellTagsIndexPosition[     15575,        330]
+NotebookDataLength[     15664,        334]
+NotebookOptionsPosition[     15289,        316]
+NotebookOutlinePosition[     15646,        332]
+CellTagsIndexPosition[     15603,        329]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -39,9 +39,8 @@ Cell[BoxData[{
         RowBox[{"{", 
          RowBox[{
          "a", ",", "b", ",", "c", ",", "f", ",", "g", ",", "s", ",", "p", ",",
-           "r", ",", "y", ",", "A", ",", "B", ",", "C", ",", "F", ",", "G", 
-          ",", "P", ",", "R", ",", "Y"}], "}"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
+           "r", ",", "A", ",", "B", ",", "C", ",", "F", ",", "G", ",", "P", 
+          ",", "R", ",", "Y"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"variable", "=", 
        RowBox[{"RandomChoice", "[", 
         RowBox[{"{", 
@@ -125,16 +124,16 @@ Cell[BoxData[{
 \\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Define a vertical \
 asymptote.}\n\\\\outcome{Calculate limits of the form number over zero.}\n\
 \\\\outcome{Calculate limits of the form zero over zero.}\n\\\\tag{limit}\n\
-Consider \n\\\\[\nf(\>\"", ",", " ", 
-        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<) = \\\\frac{\>\"",
-         ",", 
+Consider \n\\\\[\>\"", ",", "\n", 
+        RowBox[{"LaTeX", "[", "func", "]"}], ",", "\"\<(x) = \\\\frac{\>\"", 
+        ",", 
         RowBox[{"LaTeX", "[", 
          RowBox[{"Expand", "[", 
-          RowBox[{"fNumerator", "[", "variable", "]"}], "]"}], "]"}], ",", 
+          RowBox[{"fNumerator", "[", "x", "]"}], "]"}], "]"}], ",", 
         "\"\<}{\>\"", ",", " ", 
         RowBox[{"LaTeX", "[", 
          RowBox[{"Expand", "[", 
-          RowBox[{"fDenominator", "[", "variable", "]"}], "]"}], "]"}], ",", 
+          RowBox[{"fDenominator", "[", "x", "]"}], "]"}], "]"}], ",", 
         "\"\<}.\n\\\\]\nFind all vertical asymptotes.\n\\\\begin{prompt}\n\
 \\\\begin{multipleChoice}\\n\>\"", ",", "\[IndentingNewLine]", 
         RowBox[{"If", "[", 
@@ -271,27 +270,27 @@ asymptotes}\\n\\\\choice[correct]{There are no vertical asymptotes}\n\
    3.650735036628747*^9}, {3.650735100454896*^9, 3.650735184311426*^9}, {
    3.650735230619482*^9, 3.6507353553041487`*^9}, {3.650735389555341*^9, 
    3.650735410389805*^9}, 3.6507354646999197`*^9, {3.650735635525419*^9, 
-   3.65073566981103*^9}}],
+   3.65073566981103*^9}, {3.650791669340588*^9, 3.6507917088128567`*^9}}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
 author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Define a \
 vertical asymptote.}\\n\\\\outcome{Calculate limits of the form number over \
 zero.}\\n\\\\outcome{Calculate limits of the form zero over \
-zero.}\\n\\\\tag{limit}\\nConsider \\n\\\\[\\nf(x) = \\\\frac{x^2-2 \
-x-15}{x^2+2 x-8}.\\n\\\\]\\nFind all vertical asymptotes.\\n\\\\begin{prompt}\
-\\n\\\\begin{multipleChoice}\\n\\\\choice[correct]{There are vertical \
-asymptotes}\\n\\\\choice{There are no vertical \
+zero.}\\n\\\\tag{limit}\\nConsider \\n\\\\[P(x) = \\\\frac{x^2-4 x-5}{x^2-3 \
+x-4}.\\n\\\\]\\nFind all vertical \
+asymptotes.\\n\\\\begin{prompt}\\n\\\\begin{multipleChoice}\\n\\\\choice[\
+correct]{There are vertical asymptotes}\\n\\\\choice{There are no vertical \
 asymptotes}\\n\\\\end{multipleChoice}\\n\\\\begin{exercise}Write your answers \
 from least to \
-greatest:\\n\\\\[\\ny=\\\\answer{-4}\\\\qquad\\\\text{and}\\\\qquad \
-y=\\\\answer{2}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{prompt}\\n\\\\end{\
+greatest:\\n\\\\[\\ny=\\\\answer{-1}\\\\qquad\\\\text{and}\\\\qquad \
+y=\\\\answer{4}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{prompt}\\n\\\\end{\
 exercise}\\n\\\\end{document}\"\>"], "Output",
  CellChangeTimes->{{3.650735037512088*^9, 3.650735056545582*^9}, {
    3.6507351634901667`*^9, 3.6507351885575933`*^9}, {3.650735284851359*^9, 
    3.6507353073657084`*^9}, 3.6507353565119553`*^9, 3.650735415274826*^9, {
    3.650735465144868*^9, 3.650735469456723*^9}, 3.650735688383263*^9, 
-   3.650735795324771*^9}]
+   3.650735795324771*^9, 3.6507917153919*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -333,10 +332,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 12467, 251, 1089, "Input"],
-Cell[13049, 275, 1222, 18, 627, "Output"]
+Cell[579, 22, 12479, 250, 1089, "Input"],
+Cell[13061, 274, 1238, 18, 605, "Output"]
 }, Open  ]],
-Cell[14286, 296, 971, 19, 32, "Input"]
+Cell[14314, 295, 971, 19, 32, "Input"]
 }
 ]
 *)
