@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     15124,        287]
-NotebookOptionsPosition[     14749,        269]
-NotebookOutlinePosition[     15105,        285]
-CellTagsIndexPosition[     15062,        282]
+NotebookDataLength[     15226,        289]
+NotebookOptionsPosition[     14850,        271]
+NotebookOutlinePosition[     15207,        287]
+CellTagsIndexPosition[     15164,        284]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -82,9 +82,9 @@ Cell[BoxData[{
 \\\\author{Bart Snapp}\n\\\\license{Creative Commons 3.0 By-NC}\n\
 \\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{State the Intermediate \
 Value Theorem including hypotheses.}\n\\\\tag{continuity}\n\
-\\\\tag{intermediate value theorem}\n\\\\begin{theorem}[Intermediate Value \
-Theorem]\nIf $f$ is a continuous function for all $x$ in the closed interval\n\
-$[\>\"", ",", 
+\\\\tag{intermediate value theorem}\nThe Intermediate Value Theorem states:\n\
+If $f$ is a continuous function for all $x$ in the closed interval\n$[\>\"", 
+        ",", 
         RowBox[{"LaTeX", "[", "aa", "]"}], ",", "\"\<,\>\"", ",", 
         RowBox[{"LaTeX", "[", "bb", "]"}], ",", "\"\<]$ and $\>\"", ",", 
         RowBox[{"LaTeX", "[", "dd", "]"}], ",", 
@@ -110,13 +110,13 @@ $[\>\"", ",",
         "\"\<]$}} such that\n  \\\\wordChoice{\\\\choice[correct]{$f(\>\"", 
         ",", 
         RowBox[{"LaTeX", "[", "cc", "]"}], ",", "\"\<) = \>\"", ",", 
-        RowBox[{"LaTeX", "[", "dd", "]"}], ",", "\"\<$},\\\\choice{$f(\>\"", 
+        RowBox[{"LaTeX", "[", "dd", "]"}], ",", "\"\<$}\\\\choice{$f(\>\"", 
         ",", 
         RowBox[{"LaTeX", "[", "dd", "]"}], ",", "\"\<) = \>\"", ",", 
         RowBox[{"LaTeX", "[", "cc", "]"}], ",", 
-        "\"\<$}}.\n\\\\end{theorem}\n\\\\begin{hint}\nConsider the following \
-graph:\n\\\\begin{image}\n\\\\begin{tikzpicture}\n\\\\begin{axis}[\n          \
-  domain=0:6, ymin=0, ymax=2.2,xmax=6,\n            axis lines =left, \
+        "\"\<$}}.\n\\\\begin{hint}\nConsider the following graph:\n\
+\\\\begin{image}\n\\\\begin{tikzpicture}\n\\\\begin{axis}[\n            \
+domain=0:6, ymin=0, ymax=2.2,xmax=6,\n            axis lines =left, \
 xlabel=$x$, ylabel=$y$,\n            every axis y label/.style={at=(current \
 axis.above origin),anchor=south},\n            every axis x \
 label/.style={at=(current axis.right of origin),anchor=west},\n            \
@@ -199,21 +199,22 @@ closed hole          \n        \\\\end{axis}\n\\\\end{tikzpicture}\n\
    3.650970443488235*^9, 3.650970460046976*^9}, {3.650971180133683*^9, 
    3.650971184705266*^9}, {3.650971611134132*^9, 3.65097161481495*^9}, {
    3.650971795706193*^9, 3.6509718050943823`*^9}, {3.6509720937926807`*^9, 
-   3.650972099595277*^9}}],
+   3.650972099595277*^9}, {3.6509866691152773`*^9, 3.6509866706299343`*^9}, {
+   3.650986755852104*^9, 3.6509867691967287`*^9}, 3.650986865006035*^9}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
 author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{State the \
 Intermediate Value Theorem including \
-hypotheses.}\\n\\\\tag{continuity}\\n\\\\tag{intermediate value theorem}\\n\\\
-\\begin{theorem}[Intermediate Value Theorem]\\nIf $f$ is a continuous \
+hypotheses.}\\n\\\\tag{continuity}\\n\\\\tag{intermediate value \
+theorem}\\nThe Intermediate Value Theorem states:\\nIf $f$ is a continuous \
 function for all $x$ in the closed interval\\n$[b,n]$ and $u$ is between\\n\\\
 \\wordChoice{\\\\choice{$b$}\\\\choice[correct]{$f(b)$}} \
 and\\n\\\\wordChoice{\\\\choice{$n$}\\\\choice[correct]{$f(n)$}}, then there \
 is a\\nnumber \\\\wordChoice{\\\\choice[correct]{$a$}\\\\choice{$f(a)$}} \
 in\\n  \\\\wordChoice{\\\\choice{$[f(b),f(n)]$}\\\\choice[correct]{$[b, n]$}} \
-such that\\n  \\\\wordChoice{\\\\choice[correct]{$f(a) = u$},\\\\choice{$f(u) \
-= a$}}.\\n\\\\end{theorem}\\n\\\\begin{hint}\\nConsider the following \
+such that\\n  \\\\wordChoice{\\\\choice[correct]{$f(a) = u$}\\\\choice{$f(u) \
+= a$}}.\\n\\\\begin{hint}\\nConsider the following \
 graph:\\n\\\\begin{image}\\n\\\\begin{tikzpicture}\\n\\\\begin{axis}[\\n      \
       domain=0:6, ymin=0, ymax=2.2,xmax=6,\\n            axis lines =left, \
 xlabel=$x$, ylabel=$y$,\\n            every axis y label/.style={at=(current \
@@ -243,7 +244,8 @@ closed hole          \\n          \\\\addplot \
 closed hole          \\n        \
 \\\\end{axis}\\n\\\\end{tikzpicture}\\n\\\\end{image}\\n\\\\end{hint}\\n\\\\\
 end{exercise}\\n\\\\end{document}\"\>"], "Output",
- CellChangeTimes->{3.650973192612834*^9, 3.6509732405089207`*^9}]
+ CellChangeTimes->{3.650973192612834*^9, 3.6509732405089207`*^9, 
+  3.650986945036022*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -267,8 +269,8 @@ Cell[BoxData[
   3.650971881047402*^9, 3.650971882872566*^9}, {3.650973226964438*^9, 
   3.6509732277338247`*^9}}]
 },
-WindowSize->{1024, 708},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{1920, 1047},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
@@ -285,10 +287,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 10150, 179, 1507, "Input"],
-Cell[10732, 203, 3052, 42, 1221, "Output"]
+Cell[579, 22, 10254, 180, 1309, "Input"],
+Cell[10836, 204, 3049, 43, 1111, "Output"]
 }, Open  ]],
-Cell[13799, 248, 946, 19, 32, "Input"]
+Cell[13900, 250, 946, 19, 32, "Input"]
 }
 ]
 *)
