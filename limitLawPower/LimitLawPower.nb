@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13231,        280]
-NotebookOptionsPosition[     12921,        264]
-NotebookOutlinePosition[     13256,        279]
-CellTagsIndexPosition[     13213,        276]
+NotebookDataLength[     13713,        295]
+NotebookOptionsPosition[     13363,        278]
+NotebookOutlinePosition[     13698,        293]
+CellTagsIndexPosition[     13655,        290]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -253,14 +253,28 @@ Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
 author{Matthew Carr}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
 limits using the limit laws.}\\n\\\\tag{limit}\\n\\\\tag{limit \
-laws}\\nSuppose that $\\\\lim_{\\\\psi\\\\to5}f(\\\\psi)=-5$ and $\\\\lim_{\\\
-\\psi\\\\to5}f(\\\\psi)=-3$. Compute the \
-limit\\n\\n\\\\[\\n\\\\lim_{\\\\psi\\\\to 5 } \
-\\\\sqrt[8]{f(\\\\psi)f(\\\\psi)-3}\\\\begin{prompt} = \
-\\\\answer{\\\\sqrt[8]{14}}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\\
-end{document}\"\>"], "Output",
- CellChangeTimes->{3.651081139804494*^9, 3.651081182646319*^9}]
-}, Open  ]]
+laws}\\nSuppose that $\\\\lim_{\\\\psi\\\\to4}P(\\\\psi)=-1$ and $\\\\lim_{\\\
+\\psi\\\\to4}P(\\\\psi)=-5$. Compute the \
+limit\\n\\n\\\\[\\n\\\\lim_{\\\\psi\\\\to 4 } \
+\\\\sqrt[2]{P(\\\\psi)P(\\\\psi)-5}\\\\begin{prompt} = \
+\\\\answer{\\\\sqrt{2}}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{\
+document}\"\>"], "Output",
+ CellChangeTimes->{3.651081139804494*^9, 3.651081182646319*^9, 
+  3.651081547191504*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Do", "[", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+      RowBox[{"\"\<limitLawPower\>\"", "<>", 
+       RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.tex\>\""}], ",", 
+      "code", ",", "\"\<Text\>\""}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "6"}], "}"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.651081520903022*^9, 3.6510815433073053`*^9}}]
 },
 WindowSize->{1366, 708},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -280,8 +294,9 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 11644, 227, 803, "Input"],
-Cell[12227, 251, 678, 10, 395, "Output"]
-}, Open  ]]
+Cell[12227, 251, 699, 11, 363, "Output"]
+}, Open  ]],
+Cell[12941, 265, 418, 11, 32, "Input"]
 }
 ]
 *)
