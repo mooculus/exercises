@@ -1,0 +1,26 @@
+\documentclass{ximera}
+\input{preamble.tex}
+\author{Bart Snapp}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+\outcome{Calculate the limit as $x$ approaches $\pm \infty$ of common functions algebraically.}
+\outcome{Compute limits at infinity of famous functions.}
+\tag{limit}
+Let 
+\[
+s(z) = \frac{z^3+4 z-3}{2 z^2+\sqrt{z^6-5 z^5-3 z^4-4 z^3+4 z^2}}.
+\]
+Compute
+\begin{enumerate}
+\item $\lim_{z\to \infty} s(z) \begin{prompt} = \answer{1}\end{prompt}$
+\item $\lim_{z\to -\infty}s(z) \begin{prompt} = \answer{-1}\end{prompt}$
+\end{enumerate}
+\begin{hint}
+Multiply by
+\[
+\frac{\frac{1}{z^3}}{\frac{1}{z^3}}
+\]
+\end{hint}
+\end{exercise}
+\end{document}
