@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12735,        272]
-NotebookOptionsPosition[     12344,        254]
-NotebookOutlinePosition[     12679,        269]
-CellTagsIndexPosition[     12636,        266]
+NotebookDataLength[     12288,        261]
+NotebookOptionsPosition[     11938,        244]
+NotebookOutlinePosition[     12274,        259]
+CellTagsIndexPosition[     12231,        256]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -30,91 +30,90 @@ Cell[BoxData[{
   RowBox[{"code", ":=", 
    RowBox[{"Module", "[", 
     RowBox[{
-     RowBox[{"{", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{"func1", "=", 
-        RowBox[{"RandomChoice", "[", 
-         RowBox[{"{", 
-          RowBox[{
-          "a", ",", "b", ",", "c", ",", "f", ",", "g", ",", "s", ",", "p", 
-           ",", "r", ",", "y", ",", "A", ",", "B", ",", "C", ",", "F", ",", 
-           "G", ",", "P", ",", "R", ",", "Y"}], "}"}], "]"}]}], ",", 
-       "\[IndentingNewLine]", "\[IndentingNewLine]", 
-       RowBox[{"variable", "=", 
-        RowBox[{"RandomChoice", "[", 
-         RowBox[{"{", 
-          RowBox[{
-          "x", ",", "z", ",", "t", ",", "n", ",", "k", ",", "w", ",", "u", 
-           ",", "v", ",", "\[Theta]", ",", "\[Psi]"}], "}"}], "]"}]}], ",", 
-       "\[IndentingNewLine]", 
-       RowBox[{"r1", " ", "=", " ", 
-        RowBox[{"RandomChoice", "[", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"-", "5"}], ",", 
-           RowBox[{"-", "4"}], ",", 
-           RowBox[{"-", "3"}], ",", 
-           RowBox[{"-", "2"}], ",", 
-           RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
-           "5"}], "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
-       RowBox[{"r2", "=", 
-        RowBox[{"RandomChoice", "[", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"-", "5"}], ",", 
-           RowBox[{"-", "4"}], ",", 
-           RowBox[{"-", "3"}], ",", 
-           RowBox[{"-", "2"}], ",", 
-           RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
-           "5"}], "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
-       RowBox[{"r3", "=", 
-        RowBox[{"RandomChoice", "[", 
-         RowBox[{"Complement", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"-", "5"}], ",", 
-             RowBox[{"-", "4"}], ",", 
-             RowBox[{"-", "3"}], ",", 
-             RowBox[{"-", "2"}], ",", 
-             RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
-             "5"}], "}"}], ",", 
-           RowBox[{"{", "r2", "}"}]}], "]"}], "]"}]}], ",", 
-       "\[IndentingNewLine]", 
-       RowBox[{"r4", "=", 
-        RowBox[{"RandomChoice", "[", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"-", "5"}], ",", 
-           RowBox[{"-", "4"}], ",", 
-           RowBox[{"-", "3"}], ",", 
-           RowBox[{"-", "2"}], ",", 
-           RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
-           "5"}], "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
-       RowBox[{"func2", "=", 
-        RowBox[{"RandomChoice", "[", 
-         RowBox[{"Complement", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{
-            "a", ",", "b", ",", "c", ",", "f", ",", "g", ",", "s", ",", "p", 
-             ",", "r", ",", "y", ",", "A", ",", "B", ",", "C", ",", "F", ",", 
-             "G", ",", "P", ",", "R", ",", "Y"}], "}"}], ",", 
-           RowBox[{"{", "func1", "}"}]}], "]"}], "]"}]}], ",", 
-       "\[IndentingNewLine]", 
-       RowBox[{"func3", "=", 
-        RowBox[{"RandomChoice", "[", 
-         RowBox[{"Complement", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{
-            "a", ",", "b", ",", "c", ",", "f", ",", "g", ",", "s", ",", "p", 
-             ",", "r", ",", "y", ",", "A", ",", "B", ",", "C", ",", "F", ",", 
-             "G", ",", "P", ",", "R", ",", "Y"}], "}"}], ",", 
-           RowBox[{"{", "func1", "}"}], ",", 
-           RowBox[{"{", "func2", "}"}]}], "]"}], "]"}]}]}], "}"}], ",", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
      RowBox[{
+      RowBox[{"func1", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{
+         "a", ",", "b", ",", "c", ",", "f", ",", "g", ",", "s", ",", "p", ",",
+           "r", ",", "y", ",", "A", ",", "B", ",", "C", ",", "F", ",", "G", 
+          ",", "P", ",", "R", ",", "Y"}], "}"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"variable", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{
+         "x", ",", "z", ",", "t", ",", "n", ",", "k", ",", "w", ",", "u", ",",
+           "v", ",", "\[Theta]", ",", "\[Psi]"}], "}"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"r1", " ", "=", " ", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "5"}], ",", 
+          RowBox[{"-", "4"}], ",", 
+          RowBox[{"-", "3"}], ",", 
+          RowBox[{"-", "2"}], ",", 
+          RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
+          "5"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"r2", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "5"}], ",", 
+          RowBox[{"-", "4"}], ",", 
+          RowBox[{"-", "3"}], ",", 
+          RowBox[{"-", "2"}], ",", 
+          RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
+          "5"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"r3", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"Complement", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "5"}], ",", 
+            RowBox[{"-", "4"}], ",", 
+            RowBox[{"-", "3"}], ",", 
+            RowBox[{"-", "2"}], ",", 
+            RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
+            "5"}], "}"}], ",", 
+          RowBox[{"{", "r2", "}"}]}], "]"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"r4", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "5"}], ",", 
+          RowBox[{"-", "4"}], ",", 
+          RowBox[{"-", "3"}], ",", 
+          RowBox[{"-", "2"}], ",", 
+          RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
+          "5"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"func2", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"Complement", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "a", ",", "b", ",", "c", ",", "f", ",", "g", ",", "s", ",", "p", 
+            ",", "r", ",", "y", ",", "A", ",", "B", ",", "C", ",", "F", ",", 
+            "G", ",", "P", ",", "R", ",", "Y"}], "}"}], ",", 
+          RowBox[{"{", "func1", "}"}]}], "]"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"func3", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"Complement", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "a", ",", "b", ",", "c", ",", "f", ",", "g", ",", "s", ",", "p", 
+            ",", "r", ",", "y", ",", "A", ",", "B", ",", "C", ",", "F", ",", 
+            "G", ",", "P", ",", "R", ",", "Y"}], "}"}], ",", 
+          RowBox[{"{", "func1", "}"}], ",", 
+          RowBox[{"{", "func2", "}"}]}], "]"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{"answer", "=", 
        FractionBox["r1", 
         RowBox[{"r2", "-", "r3"}]]}], ";", "\[IndentingNewLine]", 
@@ -145,7 +144,7 @@ $\\\\lim_{\>\"", ",",
         "\"\<$. Compute the limit\n\\n\\\\[\\n\\\\lim_{\>\"", ",", 
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<\\\\to \>\"", ",", 
         
-        RowBox[{"LaTeX", "[", "r1", "]"}], ",", "\"\< } \\\\frac{\>\"", ",", 
+        RowBox[{"LaTeX", "[", "r4", "]"}], ",", "\"\< } \\\\frac{\>\"", ",", 
         RowBox[{"LaTeX", "[", "func1", "]"}], ",", "\"\<(\>\"", ",", 
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<)}{\>\"", ",", " ", 
         RowBox[{"LaTeX", "[", "func2", "]"}], ",", "\"\<(\>\"", ",", 
@@ -205,33 +204,24 @@ $\\\\lim_{\>\"", ",",
    3.651067614483348*^9, 3.651067662790485*^9}, 3.651067695472044*^9, 
    3.6510677409312887`*^9, {3.6510678034184723`*^9, 3.6510679225602493`*^9}, {
    3.651068008159754*^9, 3.6510680702203827`*^9}, {3.651068136521688*^9, 
-   3.651068163402722*^9}, 3.651081706261181*^9, 3.651081919043344*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Power", "::", "infy"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Infinite expression \[NoBreak]\\!\\(1\\/0\\)\[NoBreak] \
-encountered. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/infy\\\", ButtonNote -> \
-\\\"Power::infy\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.651081926072207*^9}],
+   3.651068163402722*^9}, 3.651081706261181*^9, 3.651081919043344*^9, {
+   3.651251047248242*^9, 3.651251047452368*^9}, {3.651251204205819*^9, 
+   3.65125123123971*^9}}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
 author{Matthew Carr}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
 limits using the limit laws.}\\n\\\\tag{limit}\\n\\\\tag{limit \
-laws}\\nSuppose that $\\\\lim_{\\\\theta\\\\to-1}P(\\\\theta)=4$, \
-$\\\\lim_{\\\\theta\\\\to-1}B(\\\\theta)=4$, and \
-$\\\\lim_{\\\\theta\\\\to-1}B(\\\\theta)=4$. Compute the \
-limit\\n\\n\\\\[\\n\\\\lim_{\\\\theta\\\\to 4 } \
-\\\\frac{P(\\\\theta)}{B(\\\\theta)-B(\\\\theta)}\\\\begin{prompt} = \
-\\\\answer{\\\\text{ComplexInfinity}}\\\\end{prompt}\\n\\\\]\\n\\\\end{\
-exercise}\\n\\\\end{document}\"\>"], "Output",
+laws}\\nSuppose that $\\\\lim_{w\\\\to-3}G(w)=-3$, \
+$\\\\lim_{w\\\\to-3}r(w)=2$, and $\\\\lim_{w\\\\to-3}b(w)=-3$. Compute the \
+limit\\n\\n\\\\[\\n\\\\lim_{w\\\\to -3 } \
+\\\\frac{G(w)}{r(w)-b(w)}\\\\begin{prompt} = \
+\\\\answer{-\\\\frac{3}{5}}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\\
+end{document}\"\>"], "Output",
  CellChangeTimes->{
-  3.651081732968299*^9, {3.651081922022501*^9, 3.651081926075066*^9}}]
+  3.651081732968299*^9, {3.651081922022501*^9, 3.651081926075066*^9}, 
+   3.651250978783822*^9, {3.651251048794347*^9, 3.6512510795603027`*^9}, {
+   3.651251222965067*^9, 3.651251232071877*^9}}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -252,8 +242,8 @@ Cell[BoxData[
    3.65028380955208*^9}, 3.650320224731565*^9, {3.651081723871084*^9, 
    3.651081755073681*^9}}]
 },
-WindowSize->{1366, 708},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{1920, 1047},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
 ]
@@ -269,11 +259,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 9756, 185, 750, "Input"],
-Cell[10339, 209, 445, 10, 42, "Message"],
-Cell[10787, 221, 787, 12, 363, "Output"]
+Cell[580, 22, 9763, 186, 728, "Input"],
+Cell[10346, 210, 822, 13, 363, "Output"]
 }, Open  ]],
-Cell[11589, 236, 751, 16, 32, "Input"]
+Cell[11183, 226, 751, 16, 32, "Input"]
 }
 ]
 *)
