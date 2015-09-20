@@ -1,0 +1,423 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19209,        414]
+NotebookOptionsPosition[     18895,        398]
+NotebookOutlinePosition[     19231,        413]
+CellTagsIndexPosition[     19188,        410]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"LaTeX", "[", "x_", "]"}], ":=", 
+   RowBox[{"ToString", "[", 
+    RowBox[{"TeXForm", "[", "x", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Alpha]\[Alpha]", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"10", " ", 
+      SqrtBox["2"], " ", 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"181", "/", "200"}]], " ", "\[Pi]"}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", " ", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"81", "/", "200"}]], " ", 
+       SqrtBox["\[Pi]"]}], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"117", "/", "200"}]], " ", 
+       SqrtBox["\[Pi]"]}], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"33", "/", "50"}]], " ", 
+       SqrtBox["\[Pi]"]}], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"29", "/", "40"}]], " ", 
+       SqrtBox["\[Pi]"]}], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"39", "/", "50"}]], " ", 
+       SqrtBox["\[Pi]"]}], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"33", "/", "40"}]], " ", 
+       SqrtBox["\[Pi]"]}], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"43", "/", "50"}]], " ", 
+       SqrtBox["\[Pi]"]}], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"177", "/", "200"}]], " ", 
+       SqrtBox["\[Pi]"]}], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"9", "/", "10"}]], " ", 
+       SqrtBox["\[Pi]"]}], "+", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"181", "/", "200"}]], " ", 
+       SqrtBox["\[Pi]"]}], "+", 
+      RowBox[{"2", " ", 
+       SqrtBox[
+        RowBox[{"\[ExponentialE]", " ", "\[Pi]"}]]}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"wlist", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"\[Alpha]\[Alpha]", "*", 
+      FractionBox[
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"-", 
+         FractionBox[
+          SuperscriptBox["k", "2"], "200"]}]], 
+       RowBox[{"10", " ", 
+        SqrtBox[
+         RowBox[{"2", " ", "\[Pi]"}]]}]]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", 
+       RowBox[{"-", "10"}], ",", "10"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"listo", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "10"}], ",", 
+     RowBox[{"-", "9"}], ",", 
+     RowBox[{"-", "8"}], ",", 
+     RowBox[{"-", "7"}], ",", 
+     RowBox[{"-", "6"}], ",", 
+     RowBox[{"-", "5"}], ",", 
+     RowBox[{"-", "4"}], ",", 
+     RowBox[{"-", "3"}], ",", 
+     RowBox[{"-", "2"}], ",", 
+     RowBox[{"-", "1"}], ",", "0", ",", "1", ",", "2", ",", "3", ",", "4", 
+     ",", "5", ",", "6", ",", "7", ",", "8", ",", "9", ",", "10"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"listm", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "10"}], ",", 
+     RowBox[{"-", "9"}], ",", 
+     RowBox[{"-", "8"}], ",", 
+     RowBox[{"-", "7"}], ",", 
+     RowBox[{"-", "6"}], ",", 
+     RowBox[{"-", "5"}], ",", 
+     RowBox[{"-", "4"}], ",", 
+     RowBox[{"-", "3"}], ",", 
+     RowBox[{"-", "2"}], ",", 
+     RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", "5", 
+     ",", "6", ",", "7", ",", "8", ",", "9", ",", "10"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"code", ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"deg", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "1"}], ",", "0", ",", "1", ",", "2", ",", "3"}], 
+          "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"func", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"{", 
+          RowBox[{
+          "a", ",", "b", ",", "c", ",", "f", ",", "g", ",", "s", ",", "p", 
+           ",", "r", ",", "y", ",", "A", ",", "B", ",", "C", ",", "F", ",", 
+           "G", ",", "P", ",", "R", ",", "Y"}], "}"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"variable", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"{", 
+          RowBox[{
+          "x", ",", "z", ",", "t", ",", "n", ",", "k", ",", "w", ",", "u", 
+           ",", "v", ",", "\[Theta]", ",", "\[Psi]"}], "}"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"pp", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "5"}], ",", "5"}], "}"}], "]"}]}]}], 
+      "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"deg", "\[Equal]", 
+         RowBox[{"-", "1"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"gg", "[", "xx_", "]"}], "=", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"RandomChoice", "[", "listm", "]"}], "xx"}], "+", 
+            RowBox[{"RandomChoice", "[", 
+             RowBox[{"wlist", "\[Rule]", "listo"}], "]"}]}], ")"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"ff", "[", "xx_", "]"}], "=", 
+          RowBox[{
+           RowBox[{"RandomChoice", "[", "listm", "]"}], "/", 
+           RowBox[{"gg", "[", "xx", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+        ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"ff", "[", "xx_", "]"}], "=", 
+          RowBox[{"Sum", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"RandomChoice", "[", 
+              RowBox[{"wlist", "\[Rule]", "listo"}], "]"}], 
+             RowBox[{"xx", "^", "k"}]}], ",", 
+            RowBox[{"{", 
+             RowBox[{"k", ",", "0", ",", "deg"}], "}"}]}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"While", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"ff", "[", "xx", "]"}], "\[Equal]", "0"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"ff", "[", "xx_", "]"}], "=", 
+             RowBox[{"Sum", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"RandomChoice", "[", 
+                 RowBox[{"wlist", "\[Rule]", "listo"}], "]"}], 
+                RowBox[{"xx", "^", "k"}]}], ",", 
+               RowBox[{"{", 
+                RowBox[{"k", ",", "0", ",", "deg"}], "}"}]}], "]"}]}], 
+            ";"}]}], "\[IndentingNewLine]", "]"}], ";"}]}], 
+       "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"While", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"deg", "\[Equal]", 
+          RowBox[{"-", "1"}]}], "&&", 
+         RowBox[{
+          RowBox[{"gg", "[", "pp", "]"}], "\[Equal]", "0"}]}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"pp", "=", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "10"}], ",", "10"}], "}"}], "]"}]}], ";"}]}], 
+       "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"answer", "=", 
+       RowBox[{
+        RowBox[{"ff", "'"}], "[", "pp", "]"}]}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
+      RowBox[{"StringJoin", "[", 
+       RowBox[{
+       "\"\<\\\\documentclass{ximera}\n\\\\input{preamble.tex}\n\
+\\\\author{Matthew Carr}\n\\\\license{Creative Commons 3.0 By-NC}\n\
+\\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Use limits to find the \
+slope of the tangent line at a point.}\n\\\\tag{limits}\n\\\\tag{derivative}\n\
+\\\\tag{tangent}\nLet $\>\"", ",", 
+        RowBox[{"LaTeX", "[", "func", "]"}], ",", "\"\<(\>\"", ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<)=\>\"", ",", 
+        RowBox[{"LaTeX", "[", 
+         RowBox[{"ff", "[", "variable", "]"}], "]"}], ",", 
+        "\"\<$. Find the slope $m_{tan}$, of the line tangent to $\>\"", ",", 
+        
+        RowBox[{"LaTeX", "[", "func", "]"}], ",", "\"\<$ at $\>\"", ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<=\>\"", ",", 
+        RowBox[{"LaTeX", "[", "pp", "]"}], ",", 
+        "\"\<$.\n\n\\n\\\\[\\n m_{tan}=\\\\begin{prompt} = \\\\answer{\>\"", 
+        ",", 
+        RowBox[{"LaTeX", "[", "answer", "]"}], ",", 
+        "\"\<}\\\\end{prompt}\n\\\\]\n\\\\end{exercise}\n\\\\end{document}\\n\
+\\n\>\""}], "]"}]}]}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"StringJoin", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{"code", ",", 
+    RowBox[{"{", "7", "}"}]}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.596822797404059*^9, 3.596822804542852*^9}, {
+   3.5968826810601063`*^9, 3.5968826817983427`*^9}, {3.597068159626274*^9, 
+   3.59706815983995*^9}, {3.598285044339224*^9, 3.598285051576729*^9}, {
+   3.6491840542782373`*^9, 3.6491843130532722`*^9}, {3.649184355831109*^9, 
+   3.6491845329190483`*^9}, {3.649184600958383*^9, 3.649184601525992*^9}, {
+   3.649184926244669*^9, 3.649185000845984*^9}, {3.649185086948194*^9, 
+   3.6491851266619797`*^9}, {3.6491851698973494`*^9, 3.649185232056341*^9}, {
+   3.649185284984262*^9, 3.649185315685734*^9}, {3.649695722483925*^9, 
+   3.6496957228182983`*^9}, {3.650239727639044*^9, 3.650239785469083*^9}, {
+   3.6502398393357973`*^9, 3.650239879978263*^9}, {3.650239910621757*^9, 
+   3.650239918751099*^9}, {3.650239969187818*^9, 3.65024003821836*^9}, {
+   3.650240070160635*^9, 3.650240114874547*^9}, {3.65024016914121*^9, 
+   3.6502402140374317`*^9}, {3.650240252090557*^9, 3.6502402532573853`*^9}, {
+   3.650240305111455*^9, 3.6502403504202538`*^9}, {3.650240540728094*^9, 
+   3.650240600207924*^9}, {3.650240633748528*^9, 3.6502406422739973`*^9}, {
+   3.6502406772650146`*^9, 3.6502407134374847`*^9}, {3.650240759424238*^9, 
+   3.650240788325815*^9}, {3.6502409398356752`*^9, 3.650240951213749*^9}, {
+   3.650241021123671*^9, 3.6502410390827627`*^9}, {3.6502411558020372`*^9, 
+   3.6502411574950533`*^9}, {3.650241281437385*^9, 3.6502412913806*^9}, {
+   3.650241391770602*^9, 3.650241471238296*^9}, {3.650241508600918*^9, 
+   3.6502416329440527`*^9}, {3.65024311800169*^9, 3.650243118826358*^9}, {
+   3.6502432104583397`*^9, 3.6502432105964746`*^9}, {3.65024357625863*^9, 
+   3.650243614286467*^9}, {3.650243657585082*^9, 3.650243752124509*^9}, {
+   3.650244003936206*^9, 3.650244165880848*^9}, {3.6502443745247307`*^9, 
+   3.6502444862907753`*^9}, 3.650244915264084*^9, {3.650244964092853*^9, 
+   3.650244995318503*^9}, 3.6502808388133497`*^9, 3.650280903294174*^9, {
+   3.650281733243767*^9, 3.650281804282493*^9}, {3.6502818427320623`*^9, 
+   3.6502820324312067`*^9}, {3.6502820834581203`*^9, 3.650282191588335*^9}, 
+   3.65028226282106*^9, {3.6502833165974703`*^9, 3.650283324540572*^9}, {
+   3.650283361362123*^9, 3.650283549845399*^9}, {3.650283643577321*^9, 
+   3.65028365211569*^9}, {3.650283696826622*^9, 3.650283748176735*^9}, {
+   3.650283784516683*^9, 3.6502837858837214`*^9}, {3.650283940137579*^9, 
+   3.650283959667637*^9}, {3.650290220158394*^9, 3.650290221164467*^9}, {
+   3.650320192851213*^9, 3.6503202056060047`*^9}, {3.651061106539178*^9, 
+   3.6510611075045757`*^9}, {3.651061687988813*^9, 3.6510617212343493`*^9}, {
+   3.651062110225968*^9, 3.6510621357611227`*^9}, {3.651062172959468*^9, 
+   3.651062178928031*^9}, {3.651062280165462*^9, 3.651062332722844*^9}, {
+   3.65106239896292*^9, 3.651062484327796*^9}, {3.651062531078845*^9, 
+   3.651062765591711*^9}, {3.651063557846607*^9, 3.65106358845186*^9}, {
+   3.651064181767476*^9, 3.65106418663004*^9}, {3.651064931439664*^9, 
+   3.6510650439376383`*^9}, {3.651065083451666*^9, 3.651065178200377*^9}, {
+   3.651067614483348*^9, 3.651067662790485*^9}, 3.651067695472044*^9, 
+   3.6510677409312887`*^9, {3.6510678034184723`*^9, 3.6510679225602493`*^9}, {
+   3.651068008159754*^9, 3.6510680702203827`*^9}, {3.651068136521688*^9, 
+   3.651068163402722*^9}, {3.651070371185432*^9, 3.651070411299844*^9}, {
+   3.651070523810273*^9, 3.651070526490232*^9}, {3.651070688625825*^9, 
+   3.651070735725148*^9}, {3.6510709158976994`*^9, 3.651071016950439*^9}, 
+   3.651071055148925*^9, {3.651071125012561*^9, 3.6510711571864653`*^9}, {
+   3.651071406445619*^9, 3.651071416310816*^9}, {3.651071561515006*^9, 
+   3.651071766164802*^9}, {3.651071812582402*^9, 3.651071842651978*^9}, 
+   3.651071875306551*^9, {3.651071914740575*^9, 3.651071934618009*^9}, {
+   3.651072005896525*^9, 3.651072012677959*^9}, {3.651072093184382*^9, 
+   3.651072127452808*^9}, {3.6510721760281553`*^9, 3.65107217989185*^9}, {
+   3.651072405822847*^9, 3.651072426782585*^9}, {3.651072588060482*^9, 
+   3.651072608705998*^9}, 3.651072717251986*^9, {3.6510729196270037`*^9, 
+   3.651072945802524*^9}, 3.651072981457622*^9, {3.6510731177275543`*^9, 
+   3.651073122773397*^9}, {3.6510731550693903`*^9, 3.6510731732354383`*^9}, {
+   3.651073238355905*^9, 3.6510732479544497`*^9}, {3.6510732884015007`*^9, 
+   3.651073288600987*^9}, {3.651073325705171*^9, 3.6510733264162807`*^9}, {
+   3.651073370958062*^9, 3.6510733711972303`*^9}, {3.651073413583395*^9, 
+   3.651073415612197*^9}, {3.651073445854258*^9, 3.651073448141893*^9}, {
+   3.651436042115222*^9, 3.651436043400427*^9}, {3.65143675278102*^9, 
+   3.651436942778654*^9}, {3.651437013587564*^9, 3.651437328684278*^9}, {
+   3.651437374552802*^9, 3.65143742409344*^9}, {3.651437628892449*^9, 
+   3.651437970857071*^9}, {3.651438073968669*^9, 3.6514381546256247`*^9}, {
+   3.651438282757056*^9, 3.651438437341506*^9}, {3.651438491096189*^9, 
+   3.651438529753631*^9}, {3.651438729134487*^9, 3.651438807692281*^9}, 
+   3.651438889394725*^9, {3.6514389288940277`*^9, 3.651438930272944*^9}, {
+   3.6514391412575293`*^9, 3.651439160967787*^9}, 3.651439240254941*^9, {
+   3.651439792992106*^9, 3.651439882208056*^9}, {3.651440234420417*^9, 
+   3.651440238843986*^9}, {3.651441194322578*^9, 3.651441327206183*^9}, {
+   3.651441361495294*^9, 3.6514413807662773`*^9}, {3.6514414451243067`*^9, 
+   3.651441446307047*^9}, {3.651441624645586*^9, 3.651441640796351*^9}, {
+   3.651444792139901*^9, 3.651444827065373*^9}, 3.651488726419146*^9}],
+
+Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
+author{Matthew Carr}\\n\\\\license{Creative Commons 3.0 \
+By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use limits \
+to find the slope of the tangent line at a \
+point.}\\n\\\\tag{limits}\\n\\\\tag{derivative}\\n\\\\tag{tangent}\\nLet \
+$Y(\\\\theta)=-9 \\\\theta -4$. Find the slope $m_{tan}$, of the line tangent \
+to $Y$ at $\\\\theta=5$.\\n\\n\\n\\\\[\\n m_{tan}=\\\\begin{prompt} = \
+\\\\answer{-9}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\
+\\n\\n\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{\
+Matthew Carr}\\n\\\\license{Creative Commons 3.0 By-NC}\\n\\\\begin{document}\
+\\n\\\\begin{exercise}\\n\\\\outcome{Use limits to find the slope of the \
+tangent line at a \
+point.}\\n\\\\tag{limits}\\n\\\\tag{derivative}\\n\\\\tag{tangent}\\nLet \
+$G(k)=2$. Find the slope $m_{tan}$, of the line tangent to $G$ at \
+$k=-4$.\\n\\n\\n\\\\[\\n m_{tan}=\\\\begin{prompt} = \
+\\\\answer{0}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\\\
+n\\n\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Matthew \
+Carr}\\n\\\\license{Creative Commons 3.0 \
+By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use limits \
+to find the slope of the tangent line at a \
+point.}\\n\\\\tag{limits}\\n\\\\tag{derivative}\\n\\\\tag{tangent}\\nLet \
+$P(z)=-10 z-8$. Find the slope $m_{tan}$, of the line tangent to $P$ at \
+$z=3$.\\n\\n\\n\\\\[\\n m_{tan}=\\\\begin{prompt} = \
+\\\\answer{-10}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\
+\\n\\n\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{\
+Matthew Carr}\\n\\\\license{Creative Commons 3.0 By-NC}\\n\\\\begin{document}\
+\\n\\\\begin{exercise}\\n\\\\outcome{Use limits to find the slope of the \
+tangent line at a \
+point.}\\n\\\\tag{limits}\\n\\\\tag{derivative}\\n\\\\tag{tangent}\\nLet \
+$Y(z)=-6$. Find the slope $m_{tan}$, of the line tangent to $Y$ at $z=-5$.\\n\
+\\n\\n\\\\[\\n m_{tan}=\\\\begin{prompt} = \
+\\\\answer{0}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\\\
+n\\n\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Matthew \
+Carr}\\n\\\\license{Creative Commons 3.0 \
+By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use limits \
+to find the slope of the tangent line at a \
+point.}\\n\\\\tag{limits}\\n\\\\tag{derivative}\\n\\\\tag{tangent}\\nLet \
+$c(\\\\theta)=\\\\frac{5}{5 \\\\theta +7}$. Find the slope $m_{tan}$, of the \
+line tangent to $c$ at $\\\\theta=5$.\\n\\n\\n\\\\[\\n \
+m_{tan}=\\\\begin{prompt} = \\\\answer{-\\\\frac{25}{1024}}\\\\end{prompt}\\n\
+\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\\n\\n\\\\documentclass{ximera}\\\
+n\\\\input{preamble.tex}\\n\\\\author{Matthew Carr}\\n\\\\license{Creative \
+Commons 3.0 \
+By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use limits \
+to find the slope of the tangent line at a \
+point.}\\n\\\\tag{limits}\\n\\\\tag{derivative}\\n\\\\tag{tangent}\\nLet \
+$b(w)=-2$. Find the slope $m_{tan}$, of the line tangent to $b$ at \
+$w=4$.\\n\\n\\n\\\\[\\n m_{tan}=\\\\begin{prompt} = \
+\\\\answer{0}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\\\
+n\\n\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Matthew \
+Carr}\\n\\\\license{Creative Commons 3.0 \
+By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use limits \
+to find the slope of the tangent line at a \
+point.}\\n\\\\tag{limits}\\n\\\\tag{derivative}\\n\\\\tag{tangent}\\nLet \
+$s(v)=6$. Find the slope $m_{tan}$, of the line tangent to $s$ at \
+$v=2$.\\n\\n\\n\\\\[\\n m_{tan}=\\\\begin{prompt} = \
+\\\\answer{0}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\\\
+n\\n\"\>"], "Output",
+ CellChangeTimes->{{3.651441406416314*^9, 3.65144141608381*^9}, {
+  3.6514414739617968`*^9, 3.65144147901059*^9}, {3.651441639236332*^9, 
+  3.65144164128135*^9}, {3.651488714823444*^9, 3.651488726856737*^9}}]
+}, Open  ]]
+},
+WindowSize->{1920, 1020},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 14293, 311, 1003, "Input"],
+Cell[14876, 335, 4003, 60, 2991, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
