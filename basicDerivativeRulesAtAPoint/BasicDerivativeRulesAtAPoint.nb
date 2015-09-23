@@ -99,7 +99,7 @@ Cell[BoxData[{
       
       RowBox[{"StringJoin", "[", 
        RowBox[{
-       "\"\<\\\\documentclass{ximera}\n\\\\input{preamble.tex}\n\
+       "\"\<\\\\documentclass{ximera}\n\\\\input{../preamble.tex}\n\
 \\\\author{Bart Snapp}\n\\\\license{Creative Commons 3.0 By-NC}\n\
 \\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Use the definition of \
 the derivative to develop shortcut rules to find the derivatives of constants \
@@ -191,7 +191,7 @@ derivative of the sine function.}\n\\\\tag{derivative}\nLet $\>\"", ",",
    3.652008251369646*^9, 3.652008257705995*^9}, {3.652009098930094*^9, 
    3.652009099826725*^9}}],
 
-Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
+Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\\\
 author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use the \
 definition of the derivative to develop shortcut rules to find the \

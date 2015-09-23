@@ -168,7 +168,7 @@ Cell[BoxData[{
       "\[IndentingNewLine]", 
       RowBox[{"StringJoin", "[", 
        RowBox[{
-       "\"\<\\\\documentclass{ximera}\n\\\\input{preamble.tex}\n\
+       "\"\<\\\\documentclass{ximera}\n\\\\input{../preamble.tex}\n\
 \\\\author{Bart Snapp}\n\\\\license{Creative Commons 3.0 By-NC}\n\
 \\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Calculate the limit as \
 $x$ approaches $\\\\pm \\\\infty$ of common functions algebraically.}\n\
@@ -280,7 +280,7 @@ by\n\\\\[\n\\\\frac{\\\\frac{1}{\>\"", ",",
    3.651136669470798*^9, 3.651136735453206*^9}, {3.651136770530479*^9, 
    3.6511367968828487`*^9}}],
 
-Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
+Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\\\
 author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
 the limit as $x$ approaches $\\\\pm \\\\infty$ of common functions \
@@ -294,7 +294,7 @@ $\\\\lim_{x\\\\to -\\\\infty}s(x) \\\\begin{prompt} = \
 \\\\begin{hint}\\nMultiply \
 by\\n\\\\[\\n\\\\frac{\\\\frac{1}{x^2}}{\\\\frac{1}{x^2}}\\n\\\\]\\n\\\\end{\
 hint}\\n\\\\end{exercise}\\n\\\\end{document}\\\\documentclass{ximera}\\n\\\\\
-input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\\\\license{Creative Commons \
+input{../preamble.tex}\\n\\\\author{Bart Snapp}\\n\\\\license{Creative Commons \
 3.0 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{\
 Calculate the limit as $x$ approaches $\\\\pm \\\\infty$ of common functions \
 algebraically.}\\n\\\\outcome{Compute limits at infinity of famous \
@@ -307,7 +307,7 @@ $\\\\lim_{z\\\\to -\\\\infty}P(z) \\\\begin{prompt} = \
 \\\\begin{hint}\\nMultiply \
 by\\n\\\\[\\n\\\\frac{\\\\frac{1}{z^2}}{\\\\frac{1}{z^2}}\\n\\\\]\\n\\\\end{\
 hint}\\n\\\\end{exercise}\\n\\\\end{document}\\\\documentclass{ximera}\\n\\\\\
-input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\\\\license{Creative Commons \
+input{../preamble.tex}\\n\\\\author{Bart Snapp}\\n\\\\license{Creative Commons \
 3.0 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{\
 Calculate the limit as $x$ approaches $\\\\pm \\\\infty$ of common functions \
 algebraically.}\\n\\\\outcome{Compute limits at infinity of famous \
@@ -320,7 +320,7 @@ $\\\\lim_{w\\\\to -\\\\infty}C(w) \\\\begin{prompt} = \
 nMultiply \
 by\\n\\\\[\\n\\\\frac{\\\\frac{1}{w^3}}{\\\\frac{1}{w^3}}\\n\\\\]\\n\\\\end{\
 hint}\\n\\\\end{exercise}\\n\\\\end{document}\\\\documentclass{ximera}\\n\\\\\
-input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\\\\license{Creative Commons \
+input{../preamble.tex}\\n\\\\author{Bart Snapp}\\n\\\\license{Creative Commons \
 3.0 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{\
 Calculate the limit as $x$ approaches $\\\\pm \\\\infty$ of common functions \
 algebraically.}\\n\\\\outcome{Compute limits at infinity of famous \

@@ -78,7 +78,7 @@ Cell[BoxData[{
        "\[IndentingNewLine]", 
       RowBox[{"StringJoin", "[", 
        RowBox[{
-       "\"\<\\\\documentclass{ximera}\n\\\\input{preamble.tex}\n\
+       "\"\<\\\\documentclass{ximera}\n\\\\input{../preamble.tex}\n\
 \\\\author{Bart Snapp}\n\\\\license{Creative Commons 3.0 By-NC}\n\
 \\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{State the Intermediate \
 Value Theorem including hypotheses.}\n\\\\tag{continuity}\n\
@@ -202,7 +202,7 @@ closed hole          \n        \\\\end{axis}\n\\\\end{tikzpicture}\n\
    3.650972099595277*^9}, {3.6509866691152773`*^9, 3.6509866706299343`*^9}, {
    3.650986755852104*^9, 3.6509867691967287`*^9}, 3.650986865006035*^9}],
 
-Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
+Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\\\
 author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{State the \
 Intermediate Value Theorem including \

@@ -341,7 +341,7 @@ Cell[BoxData[{
       "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{"StringJoin", "[", 
        RowBox[{
-       "\"\<\\\\documentclass{ximera}\n\\\\input{preamble.tex}\n\
+       "\"\<\\\\documentclass{ximera}\n\\\\input{../preamble.tex}\n\
 \\\\author{Matthew Carr}\n\\\\license{Creative Commons 3.0 By-NC}\n\
 \\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Use limits to find the \
 slope of the tangent line at a point.}\n\\\\tag{limits}\n\\\\tag{derivative}\n\
@@ -467,7 +467,7 @@ slope of the tangent line at a point.}\n\\\\tag{limits}\n\\\\tag{derivative}\n\
    3.651447401574615*^9, 3.6514474070672283`*^9}, {3.6514475781492662`*^9, 
    3.651447581859149*^9}}],
 
-Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
+Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\\\
 author{Matthew Carr}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use limits \
 to find the slope of the tangent line at a \

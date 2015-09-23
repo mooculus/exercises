@@ -234,7 +234,7 @@ Cell[BoxData[{
       "\[IndentingNewLine]", 
       RowBox[{"StringJoin", "[", 
        RowBox[{
-       "\"\<\\\\documentclass{ximera}\n\\\\input{preamble.tex}\n\
+       "\"\<\\\\documentclass{ximera}\n\\\\input{../preamble.tex}\n\
 \\\\author{Matthew Carr}\n\\\\license{Creative Commons 3.0 By-NC}\n\
 \\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Use limits to find the \
 slope of the tangent line at a point.}\n\\\\tag{limits}\n\\\\tag{derivative}\n\
@@ -333,7 +333,7 @@ slope of the tangent line at a point.}\n\\\\tag{limits}\n\\\\tag{derivative}\n\
    3.651441446307047*^9}, {3.651441624645586*^9, 3.651441640796351*^9}, {
    3.651444792139901*^9, 3.651444827065373*^9}, 3.651488726419146*^9}],
 
-Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
+Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\\\
 author{Matthew Carr}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use limits \
 to find the slope of the tangent line at a \
@@ -341,7 +341,7 @@ point.}\\n\\\\tag{limits}\\n\\\\tag{derivative}\\n\\\\tag{tangent}\\nLet \
 $Y(\\\\theta)=-9 \\\\theta -4$. Find the slope $m_{tan}$, of the line tangent \
 to $Y$ at $\\\\theta=5$.\\n\\n\\n\\\\[\\n m_{tan}=\\\\begin{prompt} = \
 \\\\answer{-9}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\
-\\n\\n\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{\
+\\n\\n\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\\author{\
 Matthew Carr}\\n\\\\license{Creative Commons 3.0 By-NC}\\n\\\\begin{document}\
 \\n\\\\begin{exercise}\\n\\\\outcome{Use limits to find the slope of the \
 tangent line at a \
@@ -349,7 +349,7 @@ point.}\\n\\\\tag{limits}\\n\\\\tag{derivative}\\n\\\\tag{tangent}\\nLet \
 $G(k)=2$. Find the slope $m_{tan}$, of the line tangent to $G$ at \
 $k=-4$.\\n\\n\\n\\\\[\\n m_{tan}=\\\\begin{prompt} = \
 \\\\answer{0}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\\\
-n\\n\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Matthew \
+n\\n\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\\author{Matthew \
 Carr}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use limits \
 to find the slope of the tangent line at a \
@@ -357,7 +357,7 @@ point.}\\n\\\\tag{limits}\\n\\\\tag{derivative}\\n\\\\tag{tangent}\\nLet \
 $P(z)=-10 z-8$. Find the slope $m_{tan}$, of the line tangent to $P$ at \
 $z=3$.\\n\\n\\n\\\\[\\n m_{tan}=\\\\begin{prompt} = \
 \\\\answer{-10}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\
-\\n\\n\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{\
+\\n\\n\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\\author{\
 Matthew Carr}\\n\\\\license{Creative Commons 3.0 By-NC}\\n\\\\begin{document}\
 \\n\\\\begin{exercise}\\n\\\\outcome{Use limits to find the slope of the \
 tangent line at a \
@@ -365,7 +365,7 @@ point.}\\n\\\\tag{limits}\\n\\\\tag{derivative}\\n\\\\tag{tangent}\\nLet \
 $Y(z)=-6$. Find the slope $m_{tan}$, of the line tangent to $Y$ at $z=-5$.\\n\
 \\n\\n\\\\[\\n m_{tan}=\\\\begin{prompt} = \
 \\\\answer{0}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\\\
-n\\n\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Matthew \
+n\\n\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\\author{Matthew \
 Carr}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use limits \
 to find the slope of the tangent line at a \
@@ -374,7 +374,7 @@ $c(\\\\theta)=\\\\frac{5}{5 \\\\theta +7}$. Find the slope $m_{tan}$, of the \
 line tangent to $c$ at $\\\\theta=5$.\\n\\n\\n\\\\[\\n \
 m_{tan}=\\\\begin{prompt} = \\\\answer{-\\\\frac{25}{1024}}\\\\end{prompt}\\n\
 \\\\]\\n\\\\end{exercise}\\n\\\\end{document}\\n\\n\\\\documentclass{ximera}\\\
-n\\\\input{preamble.tex}\\n\\\\author{Matthew Carr}\\n\\\\license{Creative \
+n\\\\input{../preamble.tex}\\n\\\\author{Matthew Carr}\\n\\\\license{Creative \
 Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use limits \
 to find the slope of the tangent line at a \
@@ -382,7 +382,7 @@ point.}\\n\\\\tag{limits}\\n\\\\tag{derivative}\\n\\\\tag{tangent}\\nLet \
 $b(w)=-2$. Find the slope $m_{tan}$, of the line tangent to $b$ at \
 $w=4$.\\n\\n\\n\\\\[\\n m_{tan}=\\\\begin{prompt} = \
 \\\\answer{0}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\\\
-n\\n\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Matthew \
+n\\n\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\\author{Matthew \
 Carr}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use limits \
 to find the slope of the tangent line at a \

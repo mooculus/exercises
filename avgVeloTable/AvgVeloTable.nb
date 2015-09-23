@@ -158,7 +158,7 @@ Cell[BoxData[{
       "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{"StringJoin", "[", 
        RowBox[{
-       "\"\<\\\\documentclass{ximera}\n\\\\input{preamble.tex}\n\
+       "\"\<\\\\documentclass{ximera}\n\\\\input{../preamble.tex}\n\
 \\\\author{Bart Snapp}\n\\\\license{Creative Commons 3.0 By-NC}\n\
 \\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Compute average \
 velocity.}\nThe position $s(t)$ of an object at time $t$ is given by the \
@@ -321,7 +321,7 @@ following table:\n\\\\[\n\\\\begin{array}{|c|c|c|c|c|c|}\\\\hline\nt &\>\"",
    3.6511403487138567`*^9, 3.651140382184505*^9}, {3.651140557195992*^9, 
    3.651140571372319*^9}, {3.651140625059931*^9, 3.651140635515115*^9}}],
 
-Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
+Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\\\
 author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Compute \
 average velocity.}\\nThe position $s(t)$ of an object at time $t$ is given by \
