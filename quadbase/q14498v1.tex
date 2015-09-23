@@ -1,0 +1,96 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14498v1}
+\begin{document}
+
+\begin{exercise}
+
+A pine tree 96 feet tall casts a shadow on the ground. How is the length
+of the shadow changing when the acute angle between the sun and the
+ground is $\pi/6$ radians? Assume the angle between the sun and the
+ground changes at a constant rate of $\pi/12$ radians per hour.
+
+
+
+\begin{image}\includegraphics{relatedrates-tree.jpg}\end{image}
+
+
+\begin{hint}
+This is a related rates problem. You need to identify and label the
+variables and find a relation between them. Then differentiate the
+relation and use your known values and rates to compute the desired
+rate.
+\end{hint}
+
+
+\begin{hint}
+\begin{image}\includegraphics{rr-tree-labeled.jpg}\end{image}
+
+
+
+Variables
+
+\begin{itemize}
+\item
+  $a$ the length of the shadow in feet
+\item
+  $c$ the length of the hypotenuse of the shadow/tree triangle in feet
+\item
+  $\theta$ the acute angle between the ground and the sun in radians
+\end{itemize}
+
+Relation
+
+\begin{itemize}
+\item
+  $a^2+96^2 = c^2$ (not useful - no $\theta$)
+\item
+  $\tan(\theta) = \frac{96}{a}$ (useful! has both $\theta$ and $a$)
+\end{itemize}
+
+Differentiating the useful relation, we have
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  $\sec^2(\theta)\frac{d\theta}{dt} = -\frac{96}{a^2}\frac{da}{dt}$
+\end{itemize}
+
+Knowns
+
+\begin{itemize}
+\item
+  Tree is 96 feet tall
+\item
+  $\frac{d\theta}{dt} = \frac{\pi}{12}$ radians/hour
+\item
+  $\theta = \frac{\pi}{6}$ radians at the time of interest
+\end{itemize}
+
+Therefore, $\tan(\pi/6) = \frac{96}{a}$ and $a = 96\sqrt{3}$ feet
+
+Plugging in our known (and computed) values for $a$, $\theta$ and
+$\frac{d\theta}{dt}$ we have \begin{align*}
+\sec^2(\theta)\frac{d\theta}{dt} &= -\frac{96}{a^2}\frac{da}{dt}\\
+\sec^2(\pi/6)\left(\frac{\pi}{12}\right) &= -\frac{96}{(96\sqrt{3})^2}\frac{da}{dt} \\
+\left(\frac{2}{\sqrt{3}}\right)^2\frac{\pi}{12} &= -\frac{1}{96\cdot 3}\frac{da}{dt} \\
+\frac{da}{dt} &= -\frac{\pi}{9}\left(96\cdot 3\right)  \\
+&= -32\pi
+\end{align*} So the length of the shadow is changing at $-32\pi$ feet
+per hour when $\theta = \pi/6$.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$-\frac{32}{9}\pi$ feet per hour}
+\choice{$96\pi$ feet per hour}
+\choice[correct]{$-32\pi$ feet per hour}
+\choice{$\frac{32}{9}\pi$ feet per hour}
+\choice{$32\pi$ feet per hour}
+\choice{$-96\pi$ feet per hour}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

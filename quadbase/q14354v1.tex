@@ -1,0 +1,42 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14354v1}
+\begin{document}
+
+\begin{exercise}
+
+Use logarithmic differentiation to calculate $\frac{dy}{dt}$ for
+\[y(t) = 8^{t^2}.\]
+
+
+\begin{hint}
+This is a logarithmic differentiation problem because of the base which
+is not $e$ and the exponent which is not constant. Take the natural
+logarithm of both sides and then use implicit differentiation to solve
+for the derivative.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+\ln(y) &= \ln\left(8^{t^2}\right) \\
+\ln(y) &= t^2\ln(8) \\
+\frac{1}{y}\frac{dy}{dt} &= 2t\ln(8) \\
+\frac{dy}{dt} &= y2t\ln(8) \\
+\frac{dy}{dt} &= 2\ln(8)t8^{t^2}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{$y'(t) = 2\ln(8)t8^{t^2}$}
+\choice{$y'(t) = \ln(8)t8^{t^2}$}
+\choice{$y'(t) = \ln(8)8^{t^2}$}
+\choice{$y'(t) = 2t8^{t^2}$}
+\choice{$y'(t) = \ln(8)t^28^{t^2-1}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

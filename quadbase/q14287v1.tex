@@ -1,0 +1,45 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14287v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative of $f$ with respect to $x$ with
+\[f(x) = \ln\left(\frac{2x\cos(x)}{5x^2+1}\right).\]
+
+
+\begin{hint}
+This is a logarithm problem. As usual with logs, the calculus becomes
+much easier if you simplify algebraically before computing the
+derivative. Recall that
+\[\ln\left(\frac{MN}{P}\right) = \ln(M)+\ln(N)-\ln(P).\]
+\end{hint}
+
+
+\begin{hint}
+Using (algebraic) logarithm rules, we can compute: \begin{align*}
+f(x) &= \ln\left(\frac{2x\cos(x)}{5x^2+1}\right) \\
+&= \ln(2x\cos(x))-\ln(5x^2+1) \\
+&= \ln(2)+\ln(x)+\ln(\cos(x))-\ln(5x^2+1)
+\end{align*} Then using the rule for differentiating logarithms, we
+see that: \begin{align*}
+f'(x) &= 
+0 + \frac{1}{x} + \frac{-\sin(x)}{\cos(x)} - \frac{10x}{5x^2+1} \\
+&= \frac{1}{x} -\tan(x) - \frac{10x}{5x^2+1}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$f'(x) = \ln\left(\frac{2x\cos(x)}{5x^2+1}\right)$}
+\choice{$f'(x) = \frac{1}{2x}+\frac{1}{\cos(x)}-\frac{1}{5x^2+1}$}
+\choice{$f'(x) = \frac{5x^2+1}{x\cos(x)}$}
+\choice{$f'(x) = \frac{1}{x}+\tan(x)-\frac{10x}{5x^2+1}$}
+\choice[correct]{$f'(x) = \frac{1}{x} -\tan(x) - \frac{10x}{5x^2+1}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

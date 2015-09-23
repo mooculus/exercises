@@ -1,0 +1,41 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14352v1}
+\begin{document}
+
+\begin{exercise}
+
+Use implicit differentiation to calculate $\frac{dx}{dt}$ if
+\[x^3t^2 = 6xt-3.\]
+
+
+\begin{hint}
+This is an implicit differentiation problem. You need to treat each $x$
+as a function $x(t)$ and use the product and chain rules appropriately.
+Take the derivative $\frac{d}{dt}$ of both sides and then solve for the
+$\frac{dx}{dt}$ that arises from using the chain rule.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+\frac{d}{dt}\left(x^3t^2\right) &= \frac{d}{dt}\left(6xt-3\right) \\
+3x^2t^2\frac{dx}{dt}+2x^3t &= 6t\frac{dx}{dt} + 6x \\
+\frac{dx}{dt}\left(3x^2t^2-6t\right) &= 6x-2x^3t \\
+\frac{dx}{dt} &= \frac{6x-2x^3t}{3x^2t^2-6t} 
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{$\frac{dx}{dt} = \frac{6x-2x^3t}{3x^2t^2-6t}$}
+\choice{$\frac{dx}{dt} = 6x-2x^3t$}
+\choice{$\frac{dx}{dt} = \frac{3x^2t^2-6t}{6x-2x^3t}$}
+\choice{$\frac{dx}{dt} = \frac{6t+6x-2x^3t}{3x^2t^2}$}
+\choice{$\frac{dx}{dt} = \frac{3x^2t^2+2x^3t-6x}{6t}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

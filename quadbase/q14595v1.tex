@@ -1,0 +1,46 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14595v1}
+\begin{document}
+
+\begin{exercise}
+
+True or False.
+
+The midpoint approximation Riemann sum is always closer, for any fixed
+set of subintervals, to the exact value of the signed area under the
+curve than either the left-endpoint Riemann sum or the right-endpoint
+Riemann sum.
+
+
+\begin{hint}
+Think conceptually about functions that might have strange properties,
+for instance radically different values around their midpoints, then
+check the details to see if you can argue for truth or falsehood.
+\end{hint}
+
+
+\begin{hint}
+Consider \[f(x) = \begin{cases} 10 & |x|>1 \\
+10|x| & |x|\leq 1 \end{cases}\] The actual area under the curve over the
+interval $[-10,10]$ is
+\[10*9+\frac{1}{2}(1)(10)+\frac{1}{2}(1)(10)+10*9 = 2(90+5) = 190.\] If
+we take one subinterval $[-10,10]$ then the right endpoint approximation
+is \[f(10)*\left(10-(-10)\right) = 10*20 = 200\] and the left endpoint
+approximation is \[f(-10)*\left(10-(-10)\right) = 10*20 = 200\] but the
+midpoint approximation is
+\[f\left(\frac{10+(-10)}{2}\right)*\left(10-(-10)\right) = f(0)*20 = 0*20 = 0.\]
+In this case, both the right- and left-hand Riemann sums are closer to
+the exact value.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{False}
+\choice{True}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

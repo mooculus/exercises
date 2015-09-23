@@ -1,0 +1,41 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14034v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative of
+\[f(\theta) = 7\cos\left(\frac{\theta}{2}\right).\]
+
+
+\begin{hint}
+This is a trigonometric rule problem.
+\end{hint}
+
+
+\begin{hint}
+To solve this, you need to remember that for any function $u(x)$ and any
+constant $a$,
+\[\frac{d}{dx}\left(a\cos(u)\right) = -a\left(\frac{du}{dx}\right)\sin(u).\]
+The negative goes along with derivatives of CO-functions: COsine,
+COsecant, COtangent.
+
+In this case, $a=7$ and $u(\theta) = \frac{\theta}{2}$ (with $x=\theta$
+from our rule) so:
+\[\frac{d}{d\theta}\left(7\cos\left(\frac{\theta}{2}\right)\right) = 7\frac{d}{d\theta}\left(\frac{\theta}{2}\right)\left(-\sin\left(\frac{\theta}{2}\right)\right) = -\frac{7}{2}\sin\left(\frac{\theta}{2}\right).\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{$f'(\theta) = -\frac{7}{2}\sin\left(\frac{\theta}{2}\right)$}
+\choice{$f'(\theta) = 14\sin\left(\frac{\theta}{2}\right)$}
+\choice{$f'(\theta) = \frac{7}{2}\sin\left(\frac{\theta}{2}\right)$}
+\choice{$f'(\theta) = -14\sin\left(\frac{\theta}{2}\right)$}
+\choice{$f'(\theta) = \frac{7}{2}\cos\left(-\frac{\theta}{2}\right)$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

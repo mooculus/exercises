@@ -1,0 +1,98 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14476v1}
+\begin{document}
+
+\begin{exercise}
+
+Sand is dropped onto a pile at a rate of 2 cubic meters per minute. The
+cone that is formed has a height with is 1/4 the radius of the base. How
+fast is the height changing when the volume is $\frac{9}{4}\pi$ cubic
+meters?
+
+
+\begin{hint}
+This is a related rates problem. You need to identify the appropriate
+variables and relations, differentiate the relation with respect to time
+using implicit differentiation and chain rule techniques, and solve for
+the unknown rate.
+\end{hint}
+
+
+\begin{hint}
+Variables:
+
+\begin{itemize}
+\item
+  $h$ is the height of the cone in meters, depends on time
+\item
+  $r$ is the radius of the cone in meters, depends on time
+\item
+  $V$ is the volume of the cone in cubic meters, depends on time
+\end{itemize}
+
+Known values:
+
+\begin{itemize}
+\item
+  $\frac{dV}{dt} = 2 \mbox{m}^3/\mbox{min}$
+\item
+  $h = \frac{1}{4}r$
+\end{itemize}
+
+Want to know?
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  $\frac{dh}{dt}$ when $V=\frac{9}{4}\pi$
+\end{itemize}
+
+Equation:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  $V = \frac{1}{3}\pi r^2h$
+\end{itemize}
+
+Taking the derivative with respect to time:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  $\frac{dV}{dt} = \frac{1}{3}\pi\left(2rh\frac{dr}{dt}+r^2\frac{dh}{dt}\right)$
+\end{itemize}
+
+Solve for $r$ and $h$ when $V=\frac{9}{4}\pi$ m$^3$: \begin{align*}
+V &= \frac{1}{3}\pi r^2h \\
+\frac{9}{4}\pi &= \frac{1}{3}\pi r^2\left(\frac{r}{4}\right) \\
+27 &= r^3 \\
+r &= 3 \mbox{m} \\
+&\Rightarrow h= \frac{1}{4}3 = \frac{3}{4} \mbox{m} \\
+\end{align*}
+
+Plugging in our known and computed values when $V=\frac{9}{4}\pi$ m$^3$,
+we have: \begin{align*}
+\frac{dV}{dt} &= \frac{1}{3}\pi\left(2rh\frac{dr}{dt}+r^2\frac{dh}{dt}\right) \\
+2 &= \frac{1}{3}\pi \left(2\cdot 3 \cdot \frac{3}{4}\cdot\left(4\frac{dh}{dt}\right)+\left(3\right)^2\frac{dh}{dt}\right) \\
+\frac{6}{\pi} &= 18\frac{dh}{dt} + 9\frac{dh}{dt} \\
+\frac{6}{\pi} &= 27\frac{dh}{dt} \\
+\frac{dh}{dt} &= \frac{6}{27\pi} = \frac{2}{9\pi} \\
+& \simeq .7074 \mbox{m/min} 
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$\frac{2}{9\pi}$ m$^3$/min}
+\choice{$\frac{9}{2\pi}$ m/min}
+\choice[correct]{$\frac{2}{9\pi}$ m/min}
+\choice{$\frac{9}{2\pi}$ m$^3$/min}
+\choice{$\frac{2}{9}\pi$ m/min}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

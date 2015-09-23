@@ -1,0 +1,41 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14355v1}
+\begin{document}
+
+\begin{exercise}
+
+Use logarithmic differentiation to find the derivative with respect to
+$x$ of \[y(x) = \sqrt{\frac{x^5(x^2-4x-3)}{(7x-2)^3(2x-1)}}.\]
+
+
+\begin{hint}
+This is solved most easily as a logarithmic differentiation problem
+because of the many levels of product/quotient/chain rule otherwise
+required. The ability to simplify with logarithmic rules before applying
+any calculus concepts is extremely powerful.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+\ln(y) &= \ln\left[\sqrt{\frac{x^5(x^2-4x-3)}{(7x-2)^3(2x-1)}}\right] \\
+\ln(y) &= \frac{1}{2}\left[\ln(x^5)+\ln(x^2-4x-3)-\ln\left((7x-2)^3\right)-\ln(2x-1)\right] \\
+\ln(y) &= \frac{1}{2}\left[5\ln(x) + \ln(x^2-4x-3)-3\ln(7x-2)-\ln(2x-1)\right] \\
+\frac{1}{y}\frac{dy}{dx} &= \frac{1}{2}\left[\frac{5}{x}+\frac{2x-4}{x^2-4x-3}-\frac{21}{7x-2}-\frac{2}{2x-1}\right] \\
+\frac{dy}{dx} &= \sqrt{\frac{x^5(x^2-4x-3)}{(7x-2)^3(2x-1)}}\left[\frac{5}{2x}+\frac{x-2}{x^2-4x-3}-\frac{21}{14x-4}-\frac{1}{2x-1}\right] \end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$y'(x) = \frac{1}{2}\sqrt{\frac{x^5(x^2-4x-3)}{(7x-2)^3(2x-1)}}\left[\frac{1}{x}+\frac{1}{x^2-4x-3}-\frac{1}{7x-2}-\frac{1}{2x-1}\right]$}
+\choice[correct]{$y'(x) = \sqrt{\frac{x^5(x^2-4x-3)}{(7x-2)^3(2x-1)}}\left[\frac{5}{2x}+\frac{x-2}{x^2-4x-3}-\frac{21}{14x-4}-\frac{1}{2x-1}\right]$}
+\choice{$y'(x) = \frac{5}{2x}+\frac{x-2}{x^2-4x-3}-\frac{21}{14x-4}-\frac{1}{2x-1}$}
+\choice{$y'(x) = \sqrt{\frac{x^5(x^2-4x-3)}{(7x-2)^3(2x-1)}}\left[\frac{5}{x}+\frac{2x-4}{x^2-4x-3}-\frac{21}{7x-2}-\frac{2}{2x-1}\right] $}
+\choice{$y'(x) = \sqrt{\frac{x^5(x^2-4x-3)}{(7x-2)^3(2x-1)}}\left[\frac{1}{x}+\frac{1}{x^2-4x-3}-\frac{1}{7x-2}-\frac{1}{2x-1}\right]$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

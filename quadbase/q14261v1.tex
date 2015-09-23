@@ -1,0 +1,38 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14261v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative $\frac{dP}{dx}$ if \[P(x) = \cos(2x+3).\]
+
+
+\begin{hint}
+This is a chain rule question, you should use
+\[\frac{d}{dx}\left(\cos(u)\right) = -\sin(u)\frac{du}{dx}.\]
+\end{hint}
+
+
+\begin{hint}
+Letting $u = 2x+3$, we can use the chain rule for cosine to observe that
+\begin{align*}
+P'(x) &= \frac{d}{dx}\left(\cos(2x+3)\right) \\
+&= -\sin(2x+3)\left(\frac{d}{dx}\left(2x+3\right)\right) \\
+&= -\sin(2x+3)(2) \\
+&= \boxed{-2\sin(2x+3)}\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$P'(x) = 2\sin(2x) + \sin(3)$}
+\choice{$P'(x) = -2\sin(2x)+\sin(3)$}
+\choice{$P'(x) = 2\sin(2x)$}
+\choice{$P'(x) = -2\sin(2x)$}
+\choice[correct]{$P'(x) = -2\sin(2x+3)$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

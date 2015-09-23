@@ -1,0 +1,38 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14551v1}
+\begin{document}
+
+\begin{exercise}
+
+Evaluate the limit: \[\lim_{x \to 0} \frac{\sin(4x)}{\sin(8x)}.\]
+
+
+\begin{hint}
+This is a L'Hopital's Rule problem as it takes the indeterminate form
+$\frac{0}{0}$.
+\end{hint}
+
+
+\begin{hint}
+Evaluating naively, we see that
+\[\lim_{x\to 0} \frac{\sin(4x)}{\sin(8x)} = \frac{\sin(0)}{\sin(0)} = \frac{0}{0}.\]
+Applying L'Hopital, we have: \begin{align*}
+\lim_{x\to 0} \frac{\sin(4x)}{\sin(8x)} &= \lim_{x\to 0} \frac{4\cos(4x)}{8\cos(8x)} \\
+&= \frac{4}{8} = \frac{1}{2}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$1$}
+\choice{$0$}
+\choice{$\infty$}
+\choice[correct]{$\frac{1}{2}$}
+\choice{DNE}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

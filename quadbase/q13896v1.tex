@@ -1,0 +1,43 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q13896v1}
+\begin{document}
+
+\begin{exercise}
+
+Use the definition of the derivative to calculate
+\[f'(t) = \frac{d}{dt}(f(t))\] for the function \[f(t) = -2t+7.\]
+
+
+\begin{hint}
+Find the limit of a sequence of slopes of tangent lines between the
+point $(t, f(t))$ and the point $(t+\Delta t, f(t+\Delta t))$.
+\end{hint}
+
+
+\begin{hint}
+Use the definition of the derivative to calculate
+\[f'(t) = \frac{d}{dt}(f(t))\] for the function \[f(t) = -2t+7.\]
+
+The definition of the derivative says
+\[f'(t) = \lim_{\Delta t \to 0} \frac{f(t+\Delta t)-f(t)}{\Delta t}.\]
+Plugging in our function $f$ on the right hand side, this becomes
+\begin{align*} f'(t) & = \lim{\Delta t \to 0} \frac{\left(-2(t+\Delta t)+7\right)-\left(-2t+7\right)}{\Delta t} \\
+&= \lim_{\Delta t \to 0} \frac{-2t+-2\Delta t +7 + 2t -7}{\Delta t} \\
+&= \lim_{\Delta t \to 0} \frac{-2\Delta t}{\Delta t} \\
+&= \lim_{\Delta t \to 0} -2
+\\ & = \boxed{-2}\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$-2\Delta t$}
+\choice{$-2t+7$}
+\choice{$7$}
+\choice[correct]{$-2$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

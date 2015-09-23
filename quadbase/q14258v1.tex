@@ -1,0 +1,42 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14258v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative $\frac{df}{d\theta}$ of
+$f(\theta) = \sec(\theta)\tan(\theta).$
+
+
+\begin{hint}
+This is a product rule question. You need to use
+\[\frac{d}{d\theta}\left(f(\theta)g(\theta)\right) = f'(\theta)g(\theta)+f(\theta)g'(\theta).\]
+\end{hint}
+
+
+\begin{hint}
+In this case, in the product rule
+\[\frac{d}{d\theta}\left(f(\theta)g(\theta)\right) = f'(\theta)g(\theta)+f(\theta)g'(\theta),\]
+we wish to use $f(\theta) = \sec(\theta)$ and
+$g(\theta) = \tan(\theta).$ This gives us: \begin{align*}
+f'(\theta) &= \sec(\theta)\tan(\theta) \\
+g'(\theta) &= \sec^2(\theta) \\
+\frac{df}{d\theta} &= \sec(\theta)\tan(\theta)\tan(\theta) + \sec(\theta)\sec^2(\theta) \\
+&= \boxed{\sec(\theta)\tan^2(\theta)+\sec^3(\theta)}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$f'(\theta) = \sec(\theta)\tan(\theta) + \sec^2(\theta)$}
+\choice{$f'(\theta) = \sec(\theta)\tan^2(\theta)-\sec^3\theta$}
+\choice{$f'(\theta) = \sec(\theta)\tan^2(\theta)$}
+\choice{$f'(\theta) = \sec^3(\theta)$}
+\choice[correct]{$f'(\theta) = \sec(\theta)\tan^2(\theta) + \sec^3(\theta)$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

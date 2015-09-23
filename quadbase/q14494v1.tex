@@ -1,0 +1,103 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14494v1}
+\begin{document}
+
+\begin{exercise}
+
+Algae cover in a pond is growing day by day. If the area covered is
+circular, and $t=0$ is the point when algae started growing, then the
+change in area is $\frac{dA}{dt} = e^{.02t}$ m$^2$ per day. What is the
+rate of change of the radius at the point r = 12 m? Please give a
+decimal solution to three significant digits and, as always, include
+units.
+
+``Hint: significant digits are the ones that you write down in
+scientific notation.''
+
+
+\begin{hint}
+This is a related rates problem. You need to identify the variables and
+their relation, take the derivative with respect to time of the
+relation, and solve for the desired rate.
+\end{hint}
+
+
+\begin{hint}
+Variables:
+
+\begin{itemize}
+\item
+  $t$ time in days since the algal outbreak
+\item
+  $r$ radius of the algal cover in meters, function of time
+\item
+  $A$ area of the algal cover in square meters, function of time
+\end{itemize}
+
+Relation
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  $A = \pi r^2$
+\end{itemize}
+
+Known values
+
+\begin{itemize}
+\item
+  $\frac{dA}{dt} = e^{.02t}$ m$^2$/day
+\item
+  $A(0) = r(0) = 0$
+\item
+  $r$=12 m at the time of interest, $t_i$
+\end{itemize}
+
+Differentiating the relation we have:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  $\frac{dA}{dt} = 2\pi r \frac{dr}{dt}$
+\end{itemize}
+
+Plugging in our values, we have: \begin{align*}
+\frac{dA}{dt} &= 2\pi r \frac{dr}{dt} \\
+e^{.02t_i} &= 2\pi (12) \frac{dr}{dt} \\
+\frac{dr}{dt} &= \frac{1}{24\pi}e^{.02t_i}
+\end{align*} To solve for $t_i$, we need to use our initial
+conditions. \begin{align*}
+A &= \int e^{.02t}\; dt \\
+&= \frac{1}{.02}e^{.02t}+C \\
+&= 50e^{.02t}+C \\
+A(0) = 0 &= 50e^{.02(0)}+C = 50+C \\
+& \Rightarrow C = -50 \\
+A(t) &= 50e^{.02t}-50 \\
+A(t_i) &= 50e^{.02t_i}-50 = \pi r(t_i)^2 = \pi(12)^2 = 144\pi \\
+e^{.02t_i} &= \frac{144\pi+50}{50} \\
+.02t_i &= \ln\left(\frac{144\pi+1}{50}\right) \\
+t_i &= 50\ln\left(\frac{144\pi+50}{50}\right) \\
+&\simeq 115.368 \mbox{days}
+\end{align*}
+
+Plugging back in, we have:
+\begin{align*}\frac{dr}{dt} &= \frac{1}{24\pi}\left(\frac{144\pi+50}{50}\right) \\
+&= \frac{144\pi+50}{1200\pi} \\
+& \simeq .133 m/day
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{0.120 m}
+\choice{0.1203 m}
+\choice{0.119 m}
+\choice{0.121 m}
+\choice{0.1 m}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

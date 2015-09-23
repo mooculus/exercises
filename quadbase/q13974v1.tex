@@ -1,0 +1,46 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q13974v1}
+\begin{document}
+
+\begin{exercise}
+
+Use a spreadsheet to estimate
+\[\lim_{t\to .3} \frac{e^{t^2}}{(t-.3)^2}.\] Find the smallest number of
+the form $t=.3 + 10^{-k}$ for $k=2, 3, 4, \ldots$ (that is $t=.301$,
+$t=.3001$, etc) that will give you at least 7 digits of accuracy in the
+limit.
+
+
+\begin{hint}
+Plug in pairs of points .31 and .29, .301 and .299 approaching .3 from
+above and below. When the digits stabilize in their numerical
+approximation, you are approaching the correct limit. For a general
+function, you should be careful to check the graph as well to determine
+that a limit actually exists.
+\end{hint}
+
+
+\begin{hint}
+One possible spreadsheet is shown below:
+\{img:numerical-limit-approx\_1.jpg\}
+
+As you can see, coming toward .3 from the positive side always gives an
+underestimate of the value while coming from the negative side gives an
+overestimate. We finally have more than two decimal places of agreement
+when we get to the $f(0.30000000001) = -20.59987566$ and
+$f(0.29999999999) = -20.59987566$ pair.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{0.30000001}
+\choice{0.300000000001}
+\choice{0.300001}
+\choice{0.3000000001}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,36 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q13900v1}
+\begin{document}
+
+\begin{exercise}
+
+Write down the limit expression that you would solve to find the
+derivative of $f(x) = \cos(x+4)$ using the definition of the derivative.
+
+
+\begin{hint}
+This question requires remembering the limit definition of a derivative,
+and the rules for evaluating a function at an argument.
+\end{hint}
+
+
+\begin{hint}
+This question asks us to remember that
+\[f'(x) = \lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}.\]
+Because $f(x) = \cos(x+4)$, this becomes
+\[f'(x) = \lim_{\Delta x \to 0} \frac{\cos((x+\Delta x)+4)-\cos(x+4)}{\Delta x} = \lim_{\Delta x \to 0} \frac{\cos(x+\Delta x+4)-\cos(x+4)}{\Delta x}.\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$\lim_{\Delta x \to 0} \frac{x+\Delta x+4-x-4}{\Delta x}$}
+\choice{$\lim_{\Delta x \to 0} \frac{\cos(\Delta x+4)-\cos(x+4)}{\Delta x}$}
+\choice[correct]{$\lim_{\Delta x \to 0} \frac{\cos(x+\Delta x+4)-\cos(x+4)}{\Delta x}$}
+\choice{$\lim_{\Delta x \to 0} \frac{\cos(x+\Delta x)-\cos(x+4)}{\Delta x}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

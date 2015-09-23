@@ -1,0 +1,42 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14259v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative with respect to $t$ of
+\[g(t) = \frac{4}{3}t^3e^{3t}\cos(3t).\]
+
+
+\begin{hint}
+This is a product rule question, but you will need to split the problem
+up more than once.
+\end{hint}
+
+
+\begin{hint}
+For instance, we could calculate:
+
+\begin{align*}
+g'(t) &= \frac{d}{dt}\left(\frac{4}{3}t^3\right)e^{3t}\cos(3t) + \frac{4}{3}t^3\frac{d}{dt}\left(e^{3t}\cos(3t)\right) \\
+&= 4t^2e^{3t}\cos(3t) + \frac{4}{3}t^3\left(\frac{d}{dt}\left(e^{3t}\right)\cos(3t) + e^{3t}\frac{d}{dt}\left(\cos(3t)\right)\right) \\
+&= 4t^2e^{3t}\cos(3t) + \frac{4}{3}t^3\left(3e^{3t}\cos(3t)-3e^{3t}\sin(3t)\right) \\
+&= 4t^2e^{3t}\cos(3t)+4t^3e^{3t}\cos(3t)-4t^3e^{3t}\sin(3t) \\
+&= e^{3t}\left((4t^2+4t^3)\cos(3t)-4t^3\sin(3t)\right)
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{$g'(t) = e^{3t}\left((4t^2+4t^3)\cos(3t)-4t^3\sin(3t)\right)$}
+\choice{$g'(t) = 4t^2e^{3t}\cos(3t)-4t^3e^{3t}\sin(3t)$}
+\choice{$g'(t) = -3t^2e^{3t}\sin(3t)$}
+\choice{$g'(t) = 4t^2\left(e^{3t}\cos(3t)- te^{3t}\sin(3t)\right)$}
+\choice{$g'(t) = 4\left(t^2+e^{3t}-\sin(3t)\right)$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

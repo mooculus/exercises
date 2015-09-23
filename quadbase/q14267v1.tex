@@ -1,0 +1,39 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14267v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative with respect to $v$ of
+\[G(v) = e^{5v^2+2v-3}.\]
+
+
+\begin{hint}
+This is a chain rule problem. You need to use
+\[\frac{d}{dv}f(g(v)) = \frac{df}{dg}\cdot\frac{dg}{dv}.\]
+\end{hint}
+
+
+\begin{hint}
+Let $f(g) = e^g$ and $g(v) = 5v^2+2v-3$. Then we have \begin{align*}
+\frac{df}{dg} &= e^g \\
+\frac{dg}{dv} &= 10v+2 \\
+\frac{d}{dv}\left(f(g(v))\right) &= \frac{d}{dv}\left(e^{5v^2+2v-3}\right) \\
+&= e^g(10v+2) \\ &= \boxed{(10v+2)e^{5v^2+2v-3}}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$G'(v) = (5v^2+2v-3)e^{5v^2+2v-3}$}
+\choice[correct]{$G'(v) = (10v+2)e^{5v^2+2v-3}$}
+\choice{$G'(v) = e^{5v^2+2v-3}$}
+\choice{$G'(v) = e^{10v+2}$}
+\choice{$G'(v) = (10v+2)e^{5v^2+2v-4}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

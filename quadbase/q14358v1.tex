@@ -1,0 +1,41 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14358v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative of $h$ with respect to $r$ if $|r|<1/4$ and
+\[h(r) = (1-16r^2)e^{\arcsin(4r)}.\]
+
+
+\begin{hint}
+This is the derivative of an inverse trigonometric function. Because the
+range of the sine function is $[-1,1]$, the domain of the inverse sine
+function is $[-1,1]$. However, in our case, the limitation of $|r|<1/4$
+keeps us within this domain and the derivative will exist.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+h'(r) &= \frac{d}{dr}\left(1-16r^2\right)e^{\arcsin(4r)} + \left(1-16r^2\right)\frac{d}{dr}\left(e^{\arcsin(4r)}\right) \\
+&= -32re^{\arcsin(4r)} + \left(1-16r^2\right)\left(e^{\arcsin(4r)}\right)\left(\frac{1}{\sqrt{1-(4r)^2}}\right)\left(4\right) \\
+&= 4\left(\sqrt{1-16r^2}-8r\right)e^{\arcsin(4r)}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$h'(r) = -\frac{32r}{\sqrt{1-16r^2}}e^{\arcsin(4r)}$}
+\choice{$h'(r) = \frac{32r}{\sqrt{1-16r^2}}e^{\arcsin(4r)}$}
+\choice{$h'(r) = \left(\sqrt{1-16r^2}-16r\right)e^{\arcsin(4r)}$}
+\choice[correct]{$h'(r) = 4\left(\sqrt{1-16r^2}-8r\right)e^{\arcsin(4r)}$}
+\choice{The derivative doesn't exist because $\arcsin(4r)$ doesn't exist in this
+domain.}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

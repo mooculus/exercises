@@ -1,0 +1,60 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14593v1}
+\begin{document}
+
+\begin{exercise}
+
+With $\Delta x = \frac{x_n-x_{0}}{n}$, which of the following sums are
+equivalent:
+
+{$\lim_{n\to\infty} \sum_{i=0}^{n-1} f(x_i) \Delta x$}
+
+{$\lim_{n\to\infty} \sum_{i=1}^{n} f(x_i) \Delta x$}
+
+{$\lim_{n\to\infty} \sum_{i=1}^{n} f\left(\frac{x_i+x_{i-1}}{2}\right) \Delta x$}
+
+
+\begin{hint}
+This is a question about the equivalence of Riemann sums using different
+evaluation rules. 1) is a left-endpoint sum, 2) is a right-endpoint sum
+and 3) is a midpoint sum.
+\end{hint}
+
+
+\begin{hint}
+In the limit as $n\to \infty$, we have $\Delta x \to 0$ and since
+\[\lim_{\Delta x_i \to 0} \sum_{i=1}^{\infty} f(x_i) \Delta x  = \int_{x_0}^{x_n}f(x) \; dx,\]
+so all three of these Riemann sums are equivalent in the limit:
+right-endpoint, left-endpoint or mid-point evaluation does not matter.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{They are all different.}
+\choice[correct]{They are all equivalent.}
+\choice{\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \& 3) only.
+\end{enumerate}}
+\choice{\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \& 2) only.
+\end{enumerate}}
+\choice{\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{1}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \& 3) only.
+\end{enumerate}}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

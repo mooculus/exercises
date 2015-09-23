@@ -1,0 +1,39 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14545v1}
+\begin{document}
+
+\begin{exercise}
+
+Find the limit: \[\lim_{x \to 0} \frac{1}{x} - \frac{1}{\sin(3x)}.\]
+
+
+\begin{hint}
+This is a L'Hopital rule problem because if we come from the left, the
+limit is $-\infty + \infty$ and if we come from the right the limit is
+$\infty - \infty$, so either way is an indeterminate quantity.
+\end{hint}
+
+
+\begin{hint}
+Applying L'Hopital, we have \begin{align*}
+\lim_{x\to 0} \frac{1}{x} - \frac{1}{\sin(3x)} &= \lim_{x\to 0} \frac{\sin(3x)-x}{x\sin(3x)} \left(=\frac{0}{0}\right) \\
+&= \lim_{x\to 0} \frac{3\cos(3x)-1}{\sin(3x)+3x\cos(3x)} \\
+&= \frac{2}{\sin(0)+3(0)(1)} \\
+\lim_{x\to 0^-} \frac{1}{x}-\frac{1}{\sin(3x)} &= -\infty \\
+\lim_{x\to 0^+} \frac{1}{x}-\frac{1}{\sin(3x)} &= \infty \\
+\lim_{x\to 0} \frac{1}{x}-\frac{1}{\sin(3x)} &= \mbox{ DNE} \end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{DNE}
+\choice{$0$}
+\choice{$-\infty$}
+\choice{$\infty$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

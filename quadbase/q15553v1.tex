@@ -1,0 +1,37 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q15553v1}
+\begin{document}
+
+\begin{exercise}
+
+For what values of $t$ is \[h(t) = \frac{\ln(t-1)}{1-e^t}\] continuous?
+
+
+\begin{hint}
+Remember that $\ln(x)$ exists for $x>0$ and the denominator must be
+non-zero for a fraction to be continuous.
+\end{hint}
+
+
+\begin{hint}
+In order for $\ln(t-1)$ to exist, we must have $t-1>0$ so $t>1$. We
+\emph{also} need to exclude solutions to $1-e^t=0$ which is $t=0$.
+However, since that is already excluded from the solution by $t>1$, the
+correct answer is \[(1,\infty).\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$(-\infty, 1) \bigcup (1, \infty)$}
+\choice{$(0,1)\bigcup(1,\infty)$}
+\choice{$[1,\infty)$}
+\choice{$\{0\}\bigcup [1,\infty)$}
+\choice[correct]{$(1,\infty)$}
+\choice{$(-\infty, 0)\bigcup (0,1) \bigcup (1, \infty)$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

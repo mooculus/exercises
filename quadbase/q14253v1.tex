@@ -1,0 +1,48 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14253v1}
+\begin{document}
+
+\begin{exercise}
+
+Compute the derivative with respect to $T$ of the ideal gas law:
+\[V(T) = \frac{nRT}{P},\] where $V$ is the volume, $n$ is a constant
+giving the number of moles of the gas, $R$ is the universal gas
+constant, and $P$ is a constant pressure.
+
+Note that $\frac{dV}{dT}$ expresses how the volume of the gas changes as
+the temperature changes. You should particularly pay attention to the
+sign of your result--does gas expand or contract as it is warmed up?
+
+
+\begin{hint}
+This is a simple power rule derivative. The complications all arise from
+the use of actual named constants, $n$, $R$, and $P$.
+\end{hint}
+
+
+\begin{hint}
+Because $n$, $R$, and $P$ are all constant terms, we could write this
+problem as
+\[\frac{dV}{dT} = \frac{d}{dT}\left(\left(\frac{nR}{P}\right)T\right).\]
+Using the first linearity rule for constants, this becomes
+\begin{align*}
+\frac{dV}{dT} &= \left(\frac{nR}{P}\right)\frac{d}{dT}\left(T\right) \\
+&= \left(\frac{nR}{P}\right)(1) \\
+&= \boxed{\frac{nR}{P}}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$V'(T) = \frac{nT}{P}$}
+\choice{$V'(T) = 0$}
+\choice{$V'(T) = \frac{RT}{P}$}
+\choice[correct]{$V'(T) = \frac{nR}{P}$}
+\choice{$V'(T) = -\frac{nRT}{P^2}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

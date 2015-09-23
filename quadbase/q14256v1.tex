@@ -1,0 +1,37 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14256v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative with respect to $t$ of \[f(t) = 3e^t-5e^{-t}.\]
+
+
+\begin{hint}
+This is an exponential rule problem. You need to use
+\[\frac{d}{dt}\left(e^{at}\right) = ae^{at}.\]
+\end{hint}
+
+
+\begin{hint}
+By linearity, we have \begin{align*}
+f'(t) &= 3\frac{d}{dt}\left(e^t\right)- 5\frac{d}{dt}\left(e^{-t}\right) \\
+&= 3e^t -5 (-1)e^{-t} \\
+&= \boxed{3e^t+5e^{-t}}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$f'(t) = 3e^t+5te^{t}$}
+\choice[correct]{$f'(t) = 3e^t+5e^{-t}$}
+\choice{$f'(t) = 3e^t-5e^{-t}$}
+\choice{$f'(t) = 3te^{t-1}+5te^{-t-1}$}
+\choice{$f'(t) = 3e^t+5e^{-2t}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

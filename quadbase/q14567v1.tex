@@ -1,0 +1,42 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14567v1}
+\begin{document}
+
+\begin{exercise}
+
+Estimate the value of $\tan(1)$ using linear approximation about
+$\pi/3$.
+
+
+\begin{hint}
+Find the tangent line to $y=\tan(x)$ at the point $x_0=\pi/3$ and then
+use that to evaluate $L(1)$.
+\end{hint}
+
+
+\begin{hint}
+First, we find $L(x)$: \begin{align*}
+\tan(\pi/3) &= \sqrt{3} \\
+\sec^2(\pi/3) &= \left(\frac{1}{1/2}\right)^2 = 2^2 = 4\\
+&\\
+L(x) &= \sqrt{3}+4\left(x-\frac{\pi}{3}\right) \\
+L(1) &= \sqrt{3}+4\left(1-\frac{\pi}{3}\right) \\
+&= \sqrt{3}+4\left(\frac{3-\pi}{3}\right) \\
+&\simeq 1.54326
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{1.544}
+\choice{1.545}
+\choice{1.547}
+\choice{1.546}
+\choice[correct]{1.543}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

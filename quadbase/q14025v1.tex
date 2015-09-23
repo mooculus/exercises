@@ -1,0 +1,36 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14025v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative of the function \[y(t) = 8e^{-3t}.\]
+
+
+\begin{hint}
+This is an exponential rule problem.
+\end{hint}
+
+
+\begin{hint}
+Solve this problem by applying the exponential rule--for any constants
+$a$ and $b$ we have:
+\[\frac{d}{dt}\left(ae^{bt}\right) = \frac{d(bt)}{dt}ae^{bt} = bae^{bt}.\]
+Thus, with $a=8$ and $b=-3$ we have:
+\[\frac{d}{dt}\left(8e^{-3t}\right) = -3\cdot 8 e^{-3t} = \boxed{-24e^{-3t}}.\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{$y'(t) = -24e^{-3t}$}
+\choice{$y'(t) = -\frac{8}{3}e^{-3t}$}
+\choice{$y'(t) = -3e^{-3t}$}
+\choice{$y'(t) = -24t e^{-3t-1}$}
+\choice{$y'(t) = 8e^{-3t}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

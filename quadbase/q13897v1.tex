@@ -1,0 +1,44 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q13897v1}
+\begin{document}
+
+\begin{exercise}
+
+Use the definition of the derivative to calculate
+\[f'(t) = \frac{d}{dt}(f(t))\] for the function \[f(t) = 17t+4.\]
+
+
+\begin{hint}
+Find the derivative as the limit of the slopes of tangent lines through
+the points $(t,f(t))$ and $(t+\Delta t, f(t+\Delta t))$ as $\Delta t$
+approaches 0.
+\end{hint}
+
+
+\begin{hint}
+Use the definition of the derivative to calculate
+\[f'(t) = \frac{d}{dt}(f(t))\] for the function \[f(t) = 17t+4.\]
+
+The definition of the derivative says
+\[f'(t) = \lim_{\Delta t \to 0} \frac{f(t+\Delta t)-f(t)}{\Delta t}.\]
+Plugging in our function $f$ on the right hand side, this becomes
+\begin{align*} f'(t) & = \lim{\Delta t \to 0} \frac{\left(17(t+\Delta t)+4\right)-\left(17t+4\right)}{\Delta t} \\
+&= \lim_{\Delta t \to 0} \frac{17t+17\Delta t + 4 - 17t -4}{\Delta t} \\
+&= \lim_{\Delta t \to 0} \frac{17\Delta t}{\Delta t} \\
+&= \lim_{\Delta t \to 0} 17
+\\ & = \boxed{17}\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{17t+4}
+\choice{-17}
+\choice[correct]{17}
+\choice{4}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

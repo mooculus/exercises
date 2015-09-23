@@ -1,0 +1,76 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14528v1}
+\begin{document}
+
+\begin{exercise}
+
+Find and identify the extrema for $y = x^3-1$ on the domain $[-3,1]$.
+
+
+\begin{hint}
+This is a bounded extrema problem. In addition to finding the interior
+critical points and checking whether they are extrema, we also need to
+determine whether the endpoints are maxima or minima.
+\end{hint}
+
+
+\begin{hint}
+To find the critical points, first calculate
+\[y' = 3x^2 = 0 \Rightarrow x^*=0.\] The second derivative test
+$y'' = 6x \Rightarrow y''(0)=0$, tells us nothing, so falling back to
+the first derivative test, we see that for $x_- < 0$,
+$y'(x_-)=3(x_-)^2 > 0$ and for $x_+>0$, $y'(x_+) > 3(x_+)^2 > 0$. Since
+the sign is the same, the critical point is not a maximum or a minimum.
+
+This leaves only the endpoints. At the left end, $x=-3$, we have
+\[y'(-3) = 3(-3)^2 = 27 > 0 \Rightarrow \mbox{ minimum}\] and at the
+right end, $x=1$, we have
+\[y'(1) = 3(1)^2 = 3 > 0 \Rightarrow \mbox{ maximum}.\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{There are two extrema:
+
+\begin{itemize}
+\item
+  $x=-3$ is a minimum
+\item
+  $x=1$ is a maximum
+\end{itemize}}
+\choice{There are three extrema:
+
+\begin{itemize}
+\item
+  $x=-3$ is a maximum
+\item
+  $x=0$ is a minimum
+\item
+  $x=1$ is a minimum
+\end{itemize}}
+\choice{There are three extrema:
+
+\begin{itemize}
+\item
+  $x=-3$ is a minimum
+\item
+  $x=0$ is a minimum
+\item
+  $x=1$ is a maximum
+\end{itemize}}
+\choice{There are no extrema of $y$.}
+\choice{There are two extrema:
+
+\begin{itemize}
+\item
+  $x=-3$ is a maximum
+\item
+  $x=1$ is a minimum
+\end{itemize}}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

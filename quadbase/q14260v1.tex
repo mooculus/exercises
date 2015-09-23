@@ -1,0 +1,38 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14260v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative $\frac{dy}{dt}$ if \[y(t) = e^{-4t^2}.\]
+
+
+\begin{hint}
+This is a chain rule question. Remember that
+\[\frac{d}{dt}\left(e^{u}\right) = e^{u}\frac{du}{dt}.\]
+\end{hint}
+
+
+\begin{hint}
+Letting $u= -4t^2$ in the chain rule for exponential functions,
+\[\frac{d}{dt}\left(e^{u}\right) = e^{u}\frac{du}{dt},\] we have
+\begin{align*}
+\frac{du}{dt} &= -8t \\
+\frac{dy}{dt} &= e^{-4t^2}\left(-8t\right) \\
+&= \boxed{-8te^{-4t^2}} \end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{$y'(t) = -8te^{-4t^2}$}
+\choice{$y'(t) = -4e^{-4t^2}$}
+\choice{$y'(t) = 2te^{-4t^2}$}
+\choice{$y'(t) = -8te^{-8t}$}
+\choice{$y'(t) = e^{-4t^2}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

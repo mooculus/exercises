@@ -1,0 +1,44 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q13742v1}
+\begin{document}
+
+\begin{exercise}
+
+Let
+\[f(x) = \begin{cases} 5 & \mbox{if } x>4 \\ -1 & \mbox{if } x=4 \\ -x+5 & \mbox{if } -2\leq x < 4 \\ 7 & \mbox{if } x<-2 \end{cases}\]
+
+Sketch the graph of this function and find following limit.
+
+\[\lim_{x \to 4} = \]
+
+
+\begin{hint}
+A function $f$ is continuous at $x=4$ if and only if
+\[\lim_{x\to 4^-} f(x) = \lim_{x\to 4^+} f(x) = f(4).\]
+\end{hint}
+
+
+\begin{hint}
+\begin{image}\includegraphics{piecewise.jpg}\end{image}
+
+ Since this function takes on three different
+values in the region approaching 4,
+\[\lim_{x\to 4^-} f(x) = 1 \neq \lim_{x\to 4^+} f(x) = 5 \neq f(4) = -1,\]
+we say that $f$ is discontinuous at $x=4$ or that the limit does not
+exist, DNE.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{1}
+\choice{-1}
+\choice{5}
+\choice{7}
+\choice[correct]{DNE}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

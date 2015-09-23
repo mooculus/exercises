@@ -1,0 +1,79 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14525v1}
+\begin{document}
+
+\begin{exercise}
+
+Find, and identify, the extrema of $f(t) = t^3-27t$.
+
+
+\begin{hint}
+This is a problem of identifying extrema by finding the critical points
+and then using the second derivative test to classify them.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+f'(t) &= 3t^2-27 \\
+0 &= t^2-9 \\
+& \Rightarrow t = \pm 3 \\
+t^*_1 = 3&; t^*_2 = -3 \\
+& \\
+f''(t) &= 6t \\
+f''(t^*_1) &= 18 > 0 \Rightarrow \mbox{ 3 is a local minimum} \\
+f''(t^*_2) &= -18 < 0 \Rightarrow \mbox{ -3 is a local maximum}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{There are three extrema:
+
+\begin{itemize}
+\item
+  $t=3\sqrt{3}$ which is a local minimum
+\item
+  $t=0$ which is a local maximum
+\item
+  $t=-3\sqrt{3}$ which is a local minimum
+\end{itemize}}
+\choice[correct]{There are two extrema:
+
+\begin{itemize}
+\item
+  $t=3$ which is a local minimum
+\item
+  $t=-3$ which is a local maximum
+\end{itemize}}
+\choice{There are two extrema:
+
+\begin{itemize}
+\item
+  $t=0$ which is a local maximum
+\item
+  $t=-3\sqrt{3}$ which is a local minimum
+\end{itemize}}
+\choice{There are two extrema:
+
+\begin{itemize}
+\item
+  $t=3$ which is a local maximum
+\item
+  $t=-3$ which is a local minimum
+\end{itemize}}
+\choice{There are two extrema:
+
+\begin{itemize}
+\item
+  $t=0$ which is a local minimum
+\item
+  $t=3\sqrt{3}$ which is a local maximum
+\end{itemize}}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

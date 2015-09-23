@@ -1,0 +1,43 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14566v1}
+\begin{document}
+
+\begin{exercise}
+
+Use linear approximation around the point $1$ to estimate the value of
+$1.01^6$.
+
+
+\begin{hint}
+Find the tangent line to $y=x^6$ through the point $x_0=1$. Then
+evaluate at $x=1.01$.
+\end{hint}
+
+
+\begin{hint}
+Find the tangent line to $y=x^6$ through the point $x_0=1$. This is
+\begin{align*}
+y(1) &= 1^6 = 1 \\
+y'(1) &= 6(1^5) = 6 \\
+L(x) &= 1+6(x-1) \end{align*}
+
+Then evaluate $L$ at $x=1.01$. This process makes it clear why we
+frequently leave our solutions in the form $y_0+m(x-x_0)$ because it
+makes it easy to evaluate linear approximations close to the original
+point. Here we have \[L(1.01) = 1+6(1.01-1) = 1+6(.01) = 1.06.\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$1.07$}
+\choice{$1.03$}
+\choice{$1.05$}
+\choice[correct]{$1.06$}
+\choice{$1.04$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

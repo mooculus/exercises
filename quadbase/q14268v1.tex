@@ -1,0 +1,45 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14268v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative with respect to $\theta$ of
+\[y(\theta) = \cos^2(8\theta) + \tan^3(4\theta).\]
+
+
+\begin{hint}
+This is a multi-level chain rule problem. Remember that every set of
+parentheses (present or implied) invokes a chain rule. This problem has
+\[\frac{d}{d\theta}\left(f(g(h(\theta)))\right) = \frac{df}{dg}\cdot \frac{dg}{dh}\cdot \frac{dh}{d\theta}.\]
+\end{hint}
+
+
+\begin{hint}
+First, you may want to rewrite the powers on the trigonometric functions
+to make them explicit. Thus, \[
+y(\theta) = \cos^2(8\theta)+\tan^3(4\theta) = \left[\cos(8\theta)\right]^2 + \left[\tan(4\theta)\right]^3.
+\] Then we will use the power rule on the outer functions--those denoted
+by {[}{]}--and trigonometric rules, with their embedded chain rules--on
+the inner functions. Thus, \begin{align*}
+y'(\theta) &= 2\left[\cos(8\theta)\right]^{2-1}\frac{d}{d\theta}\left(\cos(8\theta)\right)+3\left[\tan(4\theta)\right]^{3-1}\frac{d}{d\theta}\left(\tan(4\theta)\right) \\
+&= 2\cos(8\theta)\left(-\sin(8\theta)\frac{d}{d\theta}\left(8\theta\right)\right) + 3\tan^2(4\theta)\left(\sec^2(4\theta)\frac{d}{d\theta}\left(4\theta\right)\right) \\
+&= 2\cos(8\theta)\left(-8\sin(8\theta)\right) + 3\tan^2(4\theta)\left(4\sec^2(4\theta)\right) \\
+&= \boxed{-16\cos(8\theta)\sin(8\theta) + 12\tan^2(4\theta)\sec^2(4\theta)}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$y'(\theta) = -8\cos(8\theta)\sin(8\theta) + 4\tan^2(4\theta)\sec^2(4\theta)$}
+\choice{$y'(\theta) = -8\sin^2(8\theta)+4\sec^6(4\theta)$}
+\choice[correct]{$y'(\theta) = -16\cos(8\theta)\sin(8\theta) + 12\tan^2(4\theta)\sec^2(4\theta)$}
+\choice{$y'(\theta) = 8\sin^2(8\theta)+4\sec^6(4\theta)$}
+\choice{$y'(\theta) = -2\cos(8\theta)\sin(8\theta) + 3\tan^2(4\theta)\sec^2(4\theta)$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,37 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14549v1}
+\begin{document}
+
+\begin{exercise}
+
+Evaluate the limit: \[\lim_{t \to 0^+} t\ln(t).\]
+
+
+\begin{hint}
+This is a L'Hopital's Rule problem of the indeterminate form
+$0\cdot (-\infty)$.
+\end{hint}
+
+
+\begin{hint}
+Rewriting, we have \begin{align*}
+\lim_{t\to 0^+} t\ln(t) &= \lim_{t\to 0^+} \frac{\ln(t)}{1/t} \left(=\frac{-\infty}{\infty}\right) \\
+&= \lim_{t\to 0^+} \frac{1/t}{-1/t^2} \\
+&= \lim_{t\to 0^+} -\frac{t^2/t} = \lim_{t\to 0^+} -t = 0
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{DNE}
+\choice[correct]{$0$}
+\choice{$\infty$}
+\choice{$1$}
+\choice{$-\infty$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

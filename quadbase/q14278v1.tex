@@ -1,0 +1,42 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14278v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative of $y(t)$ with respect to $t$ if
+\[y(t) = \sec(4t-5)e^{\frac{7}{3}t}.\]
+
+
+\begin{hint}
+This is a mixed rule derivative problem involving both product rule and
+chain rule, as well as our basic derivatives of functions.
+\end{hint}
+
+
+\begin{hint}
+If we identify $y(t) = a(t)b(t)$ for the product rule with
+$a(t) = \sec(4t-5)$ and $b(t) = e^{\frac{7}{3}t}$, and $a(t) = f(g(t))$
+for the chain rule with $f(g) = \sec(g)$ and $g(t) = 4t-5$ we have:
+\begin{align*}
+y'(t) &= \frac{d}{dt}\left(sec(4t-5)\right)e^{\frac{7}{3}t} + \sec(4t-5)\frac{d}{dt}\left(e^{\frac{7}{3}t}\right) \\
+&= \left(\sec(4t-5)\tan(4t-5)\frac{d}{dt}(4t-5)\right)e^{\frac{7}{3}t} + \sec(4t-5)\left(\frac{7}{3}e^{\frac{7}{3}t}\right) \\
+&= 4\sec(4t-5)\tan(4t-5)e^{\frac{7}{3}t} + \frac{7}{3}\sec(4t-5)e^{\frac{7}{3}t} \\
+&= \left(4\tan(4t-5)+\frac{7}{3}\right)\sec(4t-5)e^{\frac{7}{3}t}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$y'(t) = 4\sec(4t-5)\tan(4t-5)e^{\frac{7}{3}t}$}
+\choice[correct]{$y'(t) = \left(4\tan(4t-5)+\frac{7}{3}\right)\sec(4t-5)e^{\frac{7}{3}t}$}
+\choice{$y'(t) = \frac{28}{3}\sec(4t-5)\tan(4t-5)e^{\frac{7}{3}t}$}
+\choice{$y'(t) = \sec(4t-5)\tan(4t-5)e^{\frac{7}{3}t}$}
+\choice{$y'(t) = \left(4\tan(4t-5)-\frac{7}{3}\right)\sec(4t-5)e^{\frac{7}{3}t}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,36 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14027v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative of the function \[y(t) = 4e^{-\frac{2}{5}t}.\]
+
+
+\begin{hint}
+This is an exponential rule problem.
+\end{hint}
+
+
+\begin{hint}
+Solve this problem by applying the exponential rule--for any constants
+$a$ and $b$ we have:
+\[\frac{d}{dt}\left(ae^{bt}\right) = \frac{d(bt)}{dt}ae^{bt} = bae^{bt}.\]
+Thus, with $a=4$ and $b=-\frac{2}{5}$ we have:
+\[\frac{d}{dt}\left(4e^{-\frac{2}{5}t}\right) = -\frac{2}{5}\cdot 4 e^{-\frac{2}{5}t} = \boxed{-\frac{8}{5}e^{-\frac{2}{5}t}}.\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$y'(t) = -\frac{2}{5}e^{-\frac{2}{5}t}$}
+\choice[correct]{$y'(t) = -\frac{8}{5}e^{-\frac{2}{5}t}$}
+\choice{$y'(t) = \frac{8}{5}e^{-\frac{2}{5}t}$}
+\choice{$y'(t) = -\frac{8}{5}te^{-\frac{2}{5}t}$}
+\choice{$y'(t) = -\frac{5}{2}e^{-\frac{2}{5}t}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

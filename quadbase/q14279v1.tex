@@ -1,0 +1,41 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14279v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative with respect to $\theta$ of
+\[r(\theta) = \left(8\pi\theta-\frac{3\pi}{2}\right)\tan(\theta+\pi/2).\]
+
+
+\begin{hint}
+This is a mixed derivative rule problem. There is a product rule and a
+chain rule.
+\end{hint}
+
+
+\begin{hint}
+Letting $r(\theta) = ab$ we could take $a = 8\pi\theta-\frac{3\pi}{2}$
+and $b = \tan(\theta+\pi/2)$. Then $a'=8\pi$ is a simple power rule
+problem but $b = f(g(\theta))$ with $f = \tan(g)$ and $g = \theta+\pi/2$
+involves a chain rule to calculate
+\[b' = \sec^2(\theta+\pi/2)\cdot(1) = \sec^2(\theta+\pi/2).\] Putting it
+all together, we have: \begin{align*}
+r'(\theta) &= 8\pi\tan(\theta+\pi/2) + \left(8\pi\theta-\frac{3\pi}{2}\right)\sec^2(\theta+\pi/2)
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$r'(\theta) = 8\pi\sec^2(1)$}
+\choice{$r'(\theta) = 8\pi\tan(\theta+\pi/2)-\left(8\pi\theta-\frac{3\pi}{2}\right)\sec^2(\theta+\pi/2)$}
+\choice{$r'(\theta) = 8\pi\sec^2(\theta+\pi/2)$}
+\choice[correct]{$r'(\theta) = 8\pi\tan(\theta+\pi/2)+\left(8\pi\theta-\frac{3\pi}{2}\right)\sec^2(\theta+\pi/2)$}
+\choice{$r'(\theta) = 0$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

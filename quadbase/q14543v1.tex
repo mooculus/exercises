@@ -1,0 +1,45 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14543v1}
+\begin{document}
+
+\begin{exercise}
+
+Find the limit \[\lim_{r\to \infty} \frac{r^5-3r^2+3}{4r^3-2r+10}.\]
+
+
+\begin{hint}
+This problem satisfies the indeterminate value conditions to apply
+L'Hopital's rule. Repeat until the value is found.
+\end{hint}
+
+
+\begin{hint}
+First, we check the results of naively attempting to calculate our
+limit:
+\[\lim_{r\to\infty} \frac{\infty^5\left(1-3(\infty^{-3})+3\infty^{-5}\right)}{4\infty^3\left(1-2\infty^{-2}+10\infty^{-3}\right)} = \frac{\infty}{\infty}.\]
+Then applying L'Hopital, we have: \begin{align*}
+\lim_{r\to\infty} \frac{r^5-3r^2+3}{4r^3-2r+10} &= \lim_{r\to\infty} \frac{5r^4-6r}{12r^2-2} \\
+&= \frac{\infty^4\left(5-6\infty^{-3}\right)}{\infty^2\left(12-2\infty^{-2}\right)} = \frac{\infty}{\infty} \\
+\mbox{and again!} & \\
+\lim_{r\to\infty} \frac{5r^4-6r}{12r^2-2} &= \lim_{r\to\infty} \frac{20r^3-6}{24r} \\
+&= \frac{\infty^3\left(20-6\infty^{-3}\right)}{24\infty} = \frac{\infty}{\infty} \\
+\mbox{and again!} & \\
+\lim_{r\to\infty} \frac{20r^3-6}{24r} &= \lim_{r\to\infty} \frac{60r^2}{24} \\
+&= \lim_{r\to\infty} \frac{5}{2}r^2 = \infty
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{$\infty$}
+\choice{$-\infty$}
+\choice{$\frac{1}{5}$}
+\choice{$\frac{5}{12}$}
+\choice{$0$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,44 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14548v1}
+\begin{document}
+
+\begin{exercise}
+
+Find the limit:
+\[\lim_{\theta \to \pi/2} \frac{\sin(\theta)}{\cos(3\theta)}.\]
+
+
+\begin{hint}
+This is a limit question. Be careful, because L'Hopital does not
+apply--naive evaluation does not give you an indeterminate form!
+\end{hint}
+
+
+\begin{hint}
+When we first attempt to evaluate the limit of this function we get
+\begin{align*}
+\lim_{\theta \to \pi/2} \frac{\sin(\theta)}{\cos(3\theta)} &= \frac{\sin(\pi/2)}{\cos(3\pi/2)} \\
+&= \frac{1}{0}
+\end{align*} Since, for $1 > > \epsilon > 0$,
+$\cos(3\pi/2-\epsilon) < 0$ and $\cos(3\pi/2+\epsilon) > 0$, we have
+\begin{align*}
+\lim_{\theta \to \pi/2^+} \frac{\sin(\theta)}{\cos(3\theta)} &= \infty \\
+\lim_{\theta \to \pi/2^-} \frac{\sin(\theta)}{\cos(3\theta)} &= -\infty \\
+\mbox{so...} & \\
+\lim_{\theta \to \pi/2} \frac{\sin(\theta)}{\cos(3\theta)} &= \mbox{ DNE} \end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$-\infty$}
+\choice{$-\frac{1}{3}$}
+\choice[correct]{DNE}
+\choice{$0$}
+\choice{$\infty$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,38 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14230v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative of \[h(t) = \tan(t)e^t.\]
+
+
+\begin{hint}
+This is a product rule question. You need to use
+\[\frac{d}{dt}\left(f(t)g(t)\right) = f'(t)g(t)+f(t)g'(t)\] to solve it.
+\end{hint}
+
+
+\begin{hint}
+Using the product rule,
+\[\frac{d}{dt}\left(f(t)g(t)\right) = f'(t)g(t)+f(t)g'(t),\] and
+$f(t) = \tan(t),$ $g(t) = e^t$ we have
+\begin{align*} \frac{d}{dt}\left(\tan(t)e^t\right) &= \frac{d}{dt}\left(\tan(t)\right)e^t+\tan(t)\left(\frac{d}{dt}\left(e^t\right)\right) \\
+&= \boxed{\sec^2(t)e^t + \tan(t)e^t}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$h'(t) = \tan(t)e^t$}
+\choice{$h'(t) = \sec^2(t)e^t+t\tan(t)e^{t-1}$}
+\choice[correct]{$h'(t) = \sec^2(t)e^t+\tan(t)e^t$}
+\choice{$h'(t) = 2\sec(t)e^t+\tan(t)e^t$}
+\choice{$h'(t) = \sec^2(t)+e^t$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,39 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14360v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate $\frac{dT}{dP}$ if \[PV=nRT.\] Assume that $V, n$ and $R$ are
+constant.
+
+
+\begin{hint}
+This is a slightly silly question to use implicit differentiation on
+because it is easy to solve for $T$ as a function of $P$ in a form that
+is easy to differentiate. That said, it certainly can be done directly
+as an implicit differentiation problem.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+\frac{d}{dP}\left(PV\right) &= \frac{d}{dP}\left(nRT\right) \\
+V &= nR\frac{dT}{dP} \\
+\frac{dT}{dP} &= \frac{V}{nR}\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$\frac{dT}{dP} = 0$}
+\choice{$\frac{dT}{dP} = \frac{P}{nR}$}
+\choice[correct]{$\frac{dT}{dP} = \frac{V}{nR}$}
+\choice{$\frac{dT}{dP} = \frac{nR}{V}$}
+\choice{$\frac{dT}{dP} = V$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

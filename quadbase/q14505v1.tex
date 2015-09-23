@@ -1,0 +1,86 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14505v1}
+\begin{document}
+
+\begin{exercise}
+
+Algae cover in a pond is growing day by day. If the area covered is
+circular, and $t=0$ is the point when algae started growing, then the
+change in area is $\frac{dA}{dt} = e^{.02t}$ m$^2$ per day. What is the
+rate of change of the radius when the algae has been growing for 30 days
+and the radius is 5.385 m? Please give a decimal solution to three
+significant digits and, as always, include units.
+
+``Hint: significant digits are the ones that you write down in
+scientific notation.''
+
+
+\begin{hint}
+This is a related rates problem. You need to identify the variables and
+their relation, take the derivative with respect to time of the
+relation, and solve for the desired rate.
+\end{hint}
+
+
+\begin{hint}
+Variables:
+
+\begin{itemize}
+\item
+  $t$ time in days since the algal outbreak
+\item
+  $r$ radius of the algal cover in meters, function of time
+\item
+  $A$ area of the algal cover in square meters, function of time
+\end{itemize}
+
+Relation
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  $A = \pi r^2$
+\end{itemize}
+
+Known values
+
+\begin{itemize}
+\item
+  $\frac{dA}{dt} = e^{.02t}$ m$^2$/day
+\item
+  $A(0) = r(0) = 0$
+\item
+  $t_i = 30$ days at time of interest
+\item
+  $r=5.385$ m at time of interest
+\end{itemize}
+
+Differentiating the relation we have:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  $\frac{dA}{dt} = 2\pi r \frac{dr}{dt}$
+\end{itemize}
+
+Plugging in our values, we have: \begin{align*}
+\frac{dA}{dt} &= 2\pi r \frac{dr}{dt} \\
+e^{.02(30)} &= 2\pi (5.385) \frac{dr}{dt} \\
+\frac{dr}{dt} &= .0539 m/day
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$\frac{dr}{dt} = .107$ m/day}
+\choice{$\frac{dr}{dt} = .108$ m/day}
+\choice{$\frac{dr}{dt} = .0538$ m/day}
+\choice[correct]{$\frac{dr}{dt} = .0539$ m/day}
+\choice{$\frac{dr}{dt} = .0537$ m/day}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

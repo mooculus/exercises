@@ -1,0 +1,46 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q13560v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate \[\lim_{x\to 5} \frac{x-5}{x^2-25}.\]
+
+
+\begin{hint}
+Using continuity to evaluate the function results in an undefined form,
+so the function must be simplified algebraically to find the limit.
+\end{hint}
+
+
+\begin{hint}
+{First, substitute 5 in for x in the function:
+\[\frac{5-5}{5^2-25}.\]}
+
+{Because the result is $\frac{0}{0}$ which is undefined, you
+need to algebraically simplify the
+problem.}
+
+{Observe that
+\[\frac{x-5}{x^2-25} = \frac{x-5}{(x+5)(x-5)} = \frac{1}{x+5}.\]}
+
+{Use the simplified form in the limit
+problem:}
+
+\[\lim_{x\to 5} \frac{x-5}{x^2-25} = \lim_{x\to 5}\frac{1}{x+5} = \frac{1}{10}.\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$\infty$}
+\choice{0}
+\choice{$\frac{1}{25}$}
+\choice[correct]{$\frac{1}{10}$}
+\choice{1}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

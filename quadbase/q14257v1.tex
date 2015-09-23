@@ -1,0 +1,39 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14257v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative with respect to $x$ of
+\[f(x) = \frac{e^{x}+2e^{-x}}{\tan(3x)+2}.\]
+
+
+\begin{hint}
+This is a quotient rule problem. You need to use
+\[\frac{d}{dx}\left(\frac{p(x)}{q(x)}\right) = \frac{p'(x)q(x)-p(x)q'(x)}{(q(x))^2}.\]
+\end{hint}
+
+
+\begin{hint}
+Let $p(x) = e^x+2e^{-x}$ and $q(x) = \tan(3x)+2$. Then \begin{align*}
+p'(x) &= e^x-2e^{-x} \\
+q'(x) &= 3\sec^2(3x) \\
+f'(x) &= \frac{\left(e^x-2e^{-x}\right)\left(\tan(3x)+2\right) - \left(e^x+2e^{-x}\right)\left(3\sec^2(3x)\right)}{\left(\tan(3x)+2\right)^2} \\
+&= \frac{\left(e^x-2e^{-x}\right)\left(\tan(3x)+2\right) - 3\left(e^x+2e^{-x}\right)\sec^2(3x)}{\left(\tan(3x)+2\right)^2}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$f'(x) = \frac{(e^x-2e^{-x})(\tan(3x)+2)-(e^x-2e^{-x})\sec^2(3x)}{(\tan(3x)+2)^2}$}
+\choice{$f'(x) = \frac{(e^x-2e^{-x})(\tan(3x)+2)-3(e^x+2e^{-x})\sec^2(3x)}{\tan(3x)+2}$}
+\choice{$f'(x) = \frac{e^x-2e^{-x}}{3\sec^2(3x)}$}
+\choice[correct]{$f'(x) = \frac{(e^x-2e^{-x})(\tan(3x)+2)-3(e^x+2e^{-x})\sec^2(3x)}{(\tan(3x)+2)^2}$}
+\choice{$f'(x) = \frac{-(e^x-2e^{-x})(\tan(3x)+2)+3(e^x+2e^{-x})\sec^2(3x)}{(\tan(3x)+2)^2}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

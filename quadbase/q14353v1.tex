@@ -1,0 +1,43 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14353v1}
+\begin{document}
+
+\begin{exercise}
+
+Use logarithmic differentiation to calculate the derivative
+$\frac{dy}{dt}$ of \[y = t^{4t}.\]
+
+
+\begin{hint}
+This is a logarithmic differentiation problem because of the presence of
+variables in both the base and the exponent. To use logarithmic
+differentiation, take the logarithm of both sides, then take the
+derivative and solve as you would in an implicit differentiation
+problem.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+\ln(y) &= \ln\left(t^{4t}\right) \\
+\ln(y) &= 4t\ln\left(t\right) \\
+\frac{1}{y}\frac{dy}{dt} &= 4\ln(t)+\frac{4t}{t} \\
+\frac{dy}{dt} &= y\left(4\ln(t) + 4\right) \\
+\frac{dy}{dt} &= \left(4\ln(t) + 4\right)t^{4t} \\
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$\frac{dy}{dt} = 4t^{4t}$}
+\choice[correct]{$\frac{dy}{dt} = \left(4\ln(t) + 4\right)t^{4t}$}
+\choice{$\frac{dy}{dt} = t^{4t}$}
+\choice{$\frac{dy}{dt} = 4\ln(t)+4$}
+\choice{$\frac{dy}{dt} = 4t^{4t+1}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

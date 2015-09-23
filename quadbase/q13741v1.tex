@@ -1,0 +1,45 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q13741v1}
+\begin{document}
+
+\begin{exercise}
+
+Let
+\[f(x) = \begin{cases} 5 & \mbox{if } x>4 \\ -1 & \mbox{if } x=4 \\ -x+5 & \mbox{if } -2\leq x < 4 \\ 7 & \mbox{if } x<-2 \end{cases}\]
+
+Sketch the graph of this function and find following limit.
+
+\[\lim_{x \to 4^+} = \]
+
+
+\begin{hint}
+The limit as $x$ approaches 4 from the right only involves the piecewise
+component where $f(x) = 5$.
+\end{hint}
+
+
+\begin{hint}
+\begin{image}\includegraphics{piecewise.jpg}\end{image}
+
+
+
+As $x$ approaches 4 from the right, the function $f(x)$ is constant with
+$f(x)=5$. The fact that $f(x)$ is discontinuous at the point $x=4$
+doesn't matter because that value is never reached, we only care about
+values that are strictly larger than 4.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{DNE}
+\choice[correct]{5}
+\choice{7}
+\choice{1}
+\choice{-1}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

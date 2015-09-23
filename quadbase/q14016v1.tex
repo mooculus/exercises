@@ -1,0 +1,42 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14016v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative of the function \[f(x) = x^3+2x^2-6x+8.\]
+
+
+\begin{hint}
+This is a power rule question.
+\end{hint}
+
+
+\begin{hint}
+Solve this using the power rule applied to each term--for any constants
+$a$ and $n \neq 0$: \[\frac{d}{dx}\left(ax^n\right) = nax^{n-1}.\]
+\begin{align*}
+\frac{d}{dx}(x^3) &= 3x^2 \\
+\frac{d}{dx}(2x^2) &= 4x \\
+\frac{d}{dx}(-6x) &= -6 \\
+\frac{d}{dx}(8) &= 0 \\
+\end{align*}
+
+Putting the pieces together, we see that
+\[\frac{d}{dx}\left(x^3+2x^2-6x+8\right) = \boxed{3x^2+4x-6}.\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$f'(x) = 3x^4+4x^3-6x^2+8x$}
+\choice[correct]{$f'(x) = 3x^2+4x-6$}
+\choice{$f'(x) = 3x^2+2x-6$}
+\choice{$f'(x) = \frac{1}{4}x^4+\frac{2}{3}x^3-3x^2+8x$}
+\choice{$f'(x) = 8$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

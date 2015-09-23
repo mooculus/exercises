@@ -1,0 +1,45 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14357v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate $\frac{df}{dy}$ of \[f(y) = \sin\left(\arctan(3y)\right).\]
+
+
+\begin{hint}
+This problem involves derivatives of inverse trigonometric functions and
+the use of trigonometric triangles for substitutions.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+f'(y) &= \frac{d}{dy}\left(\sin\left(\arctan(3y)\right)\right) \\
+&= \cos(\arctan(3y))\frac{d}{dy}\left(\arctan(3y)\right) \\
+&=  \frac{1}{\sqrt{1+9y^2}}\left(\frac{3}{1+9y^2}\right) \\
+&= \frac{3}{\left(1+9y^2\right)^{3/2}}
+\end{align*}
+
+where we have used 
+
+\begin{image}\includegraphics{trig-triangle-arctan3y.jpg}\end{image}
+
+ to see that
+\[\cos\left(\arctan(3y)\right) = \frac{1}{\sqrt{1+9y^2}}.\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$f'(y) = \frac{3y}{\left(1+9y^2\right)^{3/2}}$}
+\choice{$f'(y) = \cos\left(\frac{3}{1+9y^2}\right)$}
+\choice{$f'(y) = \frac{9}{\left(1+9y^2\right)^{3/2}}$}
+\choice{$f'(y) = \frac{9y}{\left(1+9y^2\right)^{3/2}}$}
+\choice[correct]{$f'(y) = \frac{3}{\left(1+9y^2\right)^{3/2}}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

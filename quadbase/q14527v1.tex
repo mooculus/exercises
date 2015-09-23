@@ -1,0 +1,100 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14527v1}
+\begin{document}
+
+\begin{exercise}
+
+Find and identify the extrema of
+$p(\theta) = \frac{6}{\pi}\sin\left(\frac{\pi}{2}\theta\right)$ over the
+domain $\theta \in [0,3]$.
+
+
+\begin{hint}
+This is a bounded extrema question. You need to find all the interior
+extrema and then identify whether the endpoints are maxima or minima.
+\end{hint}
+
+
+\begin{hint}
+At the endpoints, $p(0)=0$ and $p(3) = 0$.
+
+The derivative is
+\[p'(\theta) = 3\cos\left(\frac{\pi}{2}\theta\right).\] Thus,
+$p'(\theta)  = 0$ when $\theta = 1, 3, 5, 7, \ldots$ or
+$\theta = -1, -3, -5, -7, \ldots $. In our region, that is just
+$\theta=1$ and $\theta=3$.
+
+Using the second derivative test,
+\[p''(\theta) = -\frac{3\pi}{2}\sin\left(\frac{\pi}{2}\theta\right).\]
+Thus, \begin{align*}
+p''(1) &= -\frac{3\pi}{2}\sin\left(\frac{\pi}{2}\right) = -\frac{3\pi}{2} < 0 \Rightarrow \mbox{ local maximum} \\
+p''(3) &= -\frac{3\pi}{2}\sin\left(\frac{3\pi}{2}\right) = \frac{3\pi}{2} > 0 \Rightarrow \mbox{ local minimum}
+\end{align*} Using the first derivative test at the endpoint $0$ we
+see that $p'(0)= 3\cos(0) = 3 > 0$ so the left endpoint $0$ is a local
+minimum.
+
+Summing up:
+
+\begin{itemize}
+\item
+  $0$ is a local minimum
+\item
+  $1$ is a local maximum (in fact, global)
+\item
+  $3$ is a local minimum (in fact, global)
+\end{itemize}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{The extrema are at $t=2k+1$ for all integer $k$.
+
+\begin{itemize}
+\item
+  When $k$ is even, $t=2k+1$ is a minimum.
+\item
+  When $k$ is odd, $t=2k+1$ is a maximum.
+\end{itemize}}
+\choice{The extrema are:
+
+\begin{itemize}
+\item
+  $t=1$ is a local minimum (in fact, global)
+\item
+  $t=3$ is a local maximum (in fact, global)
+\end{itemize}}
+\choice[correct]{The extrema are:
+
+\begin{itemize}
+\item
+  $t=0$ is a local minimum
+\item
+  $t=1$ is a local maximum (in fact, global)
+\item
+  $t=3$ is a local minimum (in fact, global)
+\end{itemize}}
+\choice{The extrema are:
+
+\begin{itemize}
+\item
+  $t=1$ is a local maximum (in fact, global)
+\item
+  $t=3$ is a local minimum (in fact, global)
+\end{itemize}}
+\choice{The extrema are:
+
+\begin{itemize}
+\item
+  $t=0$ is a local maximum
+\item
+  $t=1$ is a local minimum
+\item
+  $t=3$ is a local maximum
+\end{itemize}}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

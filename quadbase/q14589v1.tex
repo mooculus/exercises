@@ -1,0 +1,62 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14589v1}
+\begin{document}
+
+\begin{exercise}
+
+A rancher wants to create a corral with two semi-circular ends and a
+rectangular middle. If she has 800 feet of fencing, what is the largest
+possible corral she can build.
+
+\begin{image}\includegraphics{corral.jpg}\end{image}
+
+
+\begin{hint}
+This is an optimization problem. Find a formula for the area you want to
+optimize, and then find its extrema by taking the derivative and setting
+it to zero.
+\end{hint}
+
+
+\begin{hint}
+First, we need to label our diagram:
+
+\begin{image}\includegraphics{corral-labeled.jpg}\end{image}
+
+
+
+Then, we can note that \[A = h(2r)+\pi r^2.\] We also have the
+constraint that there is only 800 feet of fencing available, so the
+perimeter of the corral is
+\[P = 2\pi r + 2h = 800 \Rightarrow \pi r +h = 400.\] Solving for $h$ we
+have: \[h = 400-\pi r,\] so \begin{align*}
+A &=  h(2r)+\pi r^2 \\
+&= (400-\pi r)(2r) + \pi r^2 \\
+&= 800r - \pi r^2 \\
+A' &= 800 - 2\pi r \\
+0 &= 800-2\pi r \\
+r &= \frac{400}{\pi} \Rightarrow h = 400-\pi\left(\frac{400}{\pi}\right) = 400-400=0
+\end{align*} In other words, the critical point of this area function occurs when
+$r=400/\pi$ and $h=0$ so the corral is a circle. We can check that this
+is a maximum using the second derivative test: \[A'' = -2\pi < 0 \] so
+we are correct.
+
+The area of the largest corral is
+\[A = \pi \left(\frac{400}{\pi}\right)^2 = \frac{160000}{\pi} \mbox{ ft}^2.\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{The largest possible corral is $40000\left(1+\frac{\pi}{4}\right)$
+ft$^2$.}
+\choice[correct]{The largest possible corral is $\frac{160000}{\pi}$.}
+\choice{The largest possible corral is $800+\pi$ ft$^2$.}
+\choice{The largest possible corral is $40000$ ft$^2$.}
+\choice{The largest possible corral is 800 ft$^2$.}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

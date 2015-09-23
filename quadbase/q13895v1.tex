@@ -1,0 +1,43 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q13895v1}
+\begin{document}
+
+\begin{exercise}
+
+Use the definition of the derivative to calculate
+\[f'(t) = \frac{d}{dt}(f(t))\] for the function \[f(t) = 3t-4.\]
+
+
+\begin{hint}
+Find the limit of the slopes of tangent lines between the point of
+interest, $t$ and the point $t+\Delta t$ as $\Delta t$ approaches 0.
+\end{hint}
+
+
+\begin{hint}
+Use the definition of the derivative to calculate
+\[f'(t) = \frac{d}{dt}(f(t))\] for the function \[f(t) = 3t-4.\]
+
+The definition of the derivative says
+\[f'(t) = \lim_{\Delta t \to 0} \frac{f(t+\Delta t)-f(t)}{\Delta t}.\]
+Plugging in our function $f$ on the right hand side, this becomes
+\begin{align*} f'(t) & = \lim{\Delta t \to 0} \frac{\left(3(t+\Delta t)-4\right)-\left(3t-4\right)}{\Delta t} \\
+&= \lim_{\Delta t \to 0} \frac{3t+3\Delta t - 4 - 3t +4}{\Delta t} \\
+&= \lim_{\Delta t \to 0} \frac{3\Delta t}{\Delta t} \\
+&= \lim_{\Delta t \to 0} 3 
+\\ & = \boxed{3}\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{-4}
+\choice{3t}
+\choice[correct]{3}
+\choice{3t-4}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

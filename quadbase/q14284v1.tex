@@ -1,0 +1,41 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14284v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate $\frac{d^2f}{dx^2}$ for
+\[f(x) = 3x^4-\frac{1}{6}x^3+\frac{7}{2}x^2+\frac{1}{5}x-1.\]
+
+
+\begin{hint}
+This is a higher order derivative problem. You just need to remember
+that the first derivative of a function is also a function and calculate
+another derivative of the result.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+f(x) &= 3x^4-\frac{1}{6}x^3+\frac{7}{2}x^2+\frac{1}{5}x-1 \\
+f'(x) &= (4)3x^3-\frac{3}{6}x^2+7x+\frac{1}{5} \\
+&= 12x^3-\frac{1}{2}x^2+7x+\frac{1}{5} \\
+f''(x) &= (3)12x^2-x+7 \\
+&= 36x^2-x+7
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{$f''(x) = 36x^2-x+7$}
+\choice{$f''(x) = 0$}
+\choice{$f''(x) = 12x^3-\frac{1}{2}x^2+7x+\frac{1}{5}$}
+\choice{$f''(x) = 72$}
+\choice{$f''(x) = 72x-1$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

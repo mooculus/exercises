@@ -1,0 +1,45 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14571v1}
+\begin{document}
+
+\begin{exercise}
+
+When using Newton's method to estimate the $\sqrt{10}$, if the initial
+guess is $1$, how many iterations are required to get an estimate which
+is correct to at least 8 decimal places?
+
+
+\begin{hint}
+This requires iterating Newton's Method beginning with an initial guess
+of $x_0=1$ for the function $f(x) = x^2-10$ and checking the error from
+$\sqrt{10}$ at each step.
+\end{hint}
+
+
+\begin{hint}
+Using a spreadsheet to calculate these iterations, we have:
+
+
+\begin{image}\includegraphics{newtonsmethod-iterates.png}\end{image}
+
+ Therefore, at step 5 we have a value
+which differs from $\sqrt{10}$ by only
+$-0.000000005 = -5\times 10^{-9}$, so our answer is correct to 8 decimal
+places. Earlier steps differed by significantly more. At step 4, for
+instance, our answer was only correct to 3 decimal places.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{3}
+\choice{0}
+\choice{7}
+\choice[correct]{5}
+\choice{1}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

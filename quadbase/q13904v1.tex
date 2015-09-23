@@ -1,0 +1,35 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q13904v1}
+\begin{document}
+
+\begin{exercise}
+
+True or False?
+
+The limit of a function can have the property that
+\[f(0) < \lim_{x\to 0} f(x).\]
+
+
+\begin{hint}
+This property can occur for functions with removable discontinuities.
+\end{hint}
+
+
+\begin{hint}
+For example, consider
+\[f(x) = \begin{cases} \frac{x^2+x}{x} & x \neq 0 \\ 0 & x = 0 \end{cases}.\]
+Then
+\[\lim_{x\to 0} f(x) = \lim_{x\to 0} \frac{x^2+x}{x} = \lim_{x\to 0} x+1 = 1 > f(0) = 0.\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{False}
+\choice[correct]{True}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,42 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14439v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate \[\int_{-2}^2 3t^2-2t+4\; dt.\]
+
+
+\begin{hint}
+This is a fundamental theorem of calculus question. First, select an
+antiderivative, $F(t)$, of $f(t)=3t^2-2t+4$ usually setting C=0 is
+convenient, and then evaluate \[\int_a^b f(t)\; dt = F(b)-F(a).\]
+\end{hint}
+
+
+\begin{hint}
+In this case, we can take $F(t) = t^3-t^2+4t$. This gives us:
+\begin{align*}
+\int_{-2}^2 3t^2-2t+4 &= \left.t^3-t^2+4t + C\right|_{-2}^2 \\
+&= F(2)-F(-2) \\
+&= \left(2^3-2^2+4(2)\right)-\left((-2)^3-(-2)^2+4(-2)\right) \\
+&= \left(8-4+8\right)-\left(-8-4-8\right) \\
+&= 12-(-20) \\
+&= 32
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$0$}
+\choice{$16$}
+\choice{$-8$}
+\choice[correct]{$32$}
+\choice{$24$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

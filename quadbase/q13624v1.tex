@@ -1,0 +1,38 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q13624v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate \[\lim_{t \to \pi/4} \tan(2t).\]
+
+
+\begin{hint}
+This function is discontinuous at the limit point. You must identify the
+type of discontinuity to determine the appropriate value of the limit.
+\end{hint}
+
+
+\begin{hint}
+Tangent has an essential discontinuity at
+$\displaystyle \pi/2 \pm n\pi$.
+\[\lim_{t\to \pi/4^+} \tan(2t) = -\infty.\]
+\[\lim_{t\to \pi/4^-} \tan(2t) = \infty.\] Thus,
+$\displaystyle \lim_{t\to \pi/4} \tan(2t)$ does not exist because the
+right and left one-sided limits do not agree.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{DNE}
+\choice{-1}
+\choice{1}
+\choice{0}
+\choice{$\infty$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

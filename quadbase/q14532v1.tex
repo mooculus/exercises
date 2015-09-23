@@ -1,0 +1,39 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14532v1}
+\begin{document}
+
+\begin{exercise}
+
+Find, and identify, the extreme values of $g(t) = -|t|$.
+
+
+\begin{hint}
+This is an extreme value problem. Solve it by identifying the critical
+point(s) of the function and using the first derivative test to
+determine whether they are maxima or minima.
+\end{hint}
+
+
+\begin{hint}
+First, recall that \[g'(t) = \begin{cases} 1 & t < 0 \\ -1 & t > 0 \\
+\mbox{DNE} & t=0 \end{cases}.\] Therefore, there is a critical point of
+$g$ at $t^*=0$, where the derivative does not exist. Since for
+$t < t^*$, $g'(t) > 0$ and for $t > t^*$, $g'(t) < 0$, we see by the
+first derivative test that $t^*$ is a (global) maximum for $g$.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{There is a critical point of $g$ at $t=0$, and $t=0$ is a (global)
+minimum for $g$.}
+\choice[correct]{There is a critical point of $g$ at $t=0$, and $t=0$ is a (global)
+maximum for $g$.}
+\choice{There is a critical point of $g$ at $t=0$, but there are no extrema.}
+\choice{There are no critical points of $g$, so there are no extrema.}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

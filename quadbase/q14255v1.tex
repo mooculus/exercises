@@ -1,0 +1,51 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14255v1}
+\begin{document}
+
+\begin{exercise}
+
+In relativistic physics, there is a concept of the gamma factor, denoted
+by $\gamma$, that describes time dilation and length contraction when
+moving at relativistic speeds, that is speeds close to the speed of
+light. If $v$ is the velocity of an object and $c$ is the speed of
+light, then the object's gamma factor is:
+
+\[\gamma = \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}.\]
+
+Compute the rate at which $\gamma$ changes with respect to $v$, that is
+$\frac{d\gamma}{dv}$.
+
+
+\begin{hint}
+This is a chain rule question, and also requires using the power rule.
+You need to use both
+\[\frac{d}{dv}\left(f\left(g(v)\right)\right) = f'\left(g(v)\right)\cdot g'(v)\]
+and \[\frac{d}{dv}\left(v^n\right) = nv^{n-1}.\]
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+\frac{d\gamma}{dv} &= \frac{d}{dv}\left(\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\right) \\
+&= 
+\frac{d}{dv}\left(\left(1-\frac{v^2}{c^2}\right)^{-1/2}\right) \\
+&= -\frac{1}{2}\left(1-\frac{v^2}{c^2}\right)^{-3/2}\left(\frac{d}{dv}\left(1-\frac{v^2}{c^2}\right)\right) \\
+&=  -\frac{1}{2}\left(1-\frac{v^2}{c^2}\right)^{-3/2}\left(-\frac{2v}{c^2}\right) \\
+&= \frac{v}{c^2(1-\frac{v^2}{c^2})^{3/2}} = \boxed{\frac{v}{c^2}\left(1-\frac{v^2}{c^2}\right)^{-3/2}}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$\frac{d\gamma}{dv} =  -\frac{v}{c^2}\left(1-\frac{v^2}{c^2}\right)^{-1/2}$}
+\choice[correct]{$\frac{d\gamma}{dv} =  \frac{v}{c^2}\left(1-\frac{v^2}{c^2}\right)^{-3/2}$}
+\choice{$\frac{d\gamma}{dv} =  -\frac{2v}{c^2}\left(1-\frac{v^2}{c^2}\right)^{-3/2}$}
+\choice{$\frac{d\gamma}{dv} =  -\frac{1}{2}\left(1-\frac{v^2}{c^2}\right)^{-3/2}$}
+\choice{$\frac{d\gamma}{dv} =  -\frac{v}{c^2}\left(1-\frac{v^2}{c^2}\right)^{-3/2}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,36 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14033v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative of \[f(\theta) = -6\sin(\pi \theta).\]
+
+
+\begin{hint}
+This is a trigonometric derivative question.
+\end{hint}
+
+
+\begin{hint}
+To solve this problem, remember that for any function $u(x)$ and
+constant $a$,
+\[\frac{d}{dx}\left(a\sin(u)\right) = a\left(\frac{du}{dx}\right)\cos(u).\]
+In this case, $a = -6$, $u = \pi \theta$ (and $x=\theta$) so
+\[\frac{d}{d\theta}\left(-6\sin(\pi \theta)\right) = -6\frac{d}{d\theta}\left(\pi\theta\right)\cos(\pi\theta) = -6\pi\cos(\pi\theta).\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$f'(\theta) = \frac{6}{\pi}\cos(\pi \theta)$}
+\choice{$f'(\theta) = -\frac{6}{\pi}\cos(\pi \theta)$}
+\choice{$f'(\theta) = 0$}
+\choice{$f'(\theta) = 6\pi\cos(\pi\theta)$}
+\choice[correct]{$f'(\theta) = -6\pi \cos(\pi \theta)$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

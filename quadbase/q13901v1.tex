@@ -1,0 +1,59 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q13901v1}
+\begin{document}
+
+\begin{exercise}
+
+Use the definition of the derivative to calculate
+\[f'(t) = \frac{d}{dt}(f(t))\] for the function \[f(t) = 3t^2-2t+4.\]
+You must write down the limit expression to evaluate as well as the
+final derivative function.
+
+
+\begin{hint}
+Use the limit of the slopes of tangent lines passing through $(t,f(t))$
+and $(t+\Delta t,f(t+\Delta t))$ as $\Delta t$ approaches zero to
+calculate the derivative.
+\end{hint}
+
+
+\begin{hint}
+The slope of the tangent line passing through $(t,f(t))$ and
+$(t+\Delta t, f(t+\Delta t))$ is
+\[\frac{\mbox{rise}}{\mbox{run}} = \frac{f(t+\Delta t) - f(t)}{(t+\Delta t)-t} = \frac{f(t+\Delta t)-f(t)}{\Delta t}.\]
+The definition of the derivative says
+\[f'(t) = \lim_{\Delta t \to 0} \frac{f(t+\Delta t)-f(t)}{\Delta t}.\]
+Plugging in our function $f$ on the right hand side, this becomes
+\begin{align*} f'(t) &= \lim_{\Delta t \to 0} \frac{3(t+\Delta t)^2-2(t+\Delta t)+4-3t^2+2t-4}{\Delta t} \\
+&= \lim_{\Delta t \to 0} \frac{3t^2+6t\Delta t+3(\Delta t)^2-2t-2\Delta t+4-3t^2+2t-4}{\Delta t} \\
+&= \lim_{\Delta t \to 0} \frac{6t\Delta t+3(\Delta t)^2-2\Delta t}{\Delta t} \\
+&= \lim_{\Delta t \to 0} 6t-2 + 3\Delta t \\
+&= \boxed{6t-2}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{\begin{align*} f'(t) &= \lim_{\Delta t \to 0} \frac{3(t+\Delta t)^2-2(t+\Delta t)+4-3t^2+2t-4}{\Delta t} \\
+&= \lim_{\Delta t \to 0} 6t-2 + 3\Delta t \\
+&= \boxed{6t-2}
+\end{align*}}
+\choice{\begin{align*} f'(t) &= \lim_{\Delta t \to 0} \frac{3t^2+3(\Delta t)^2-2t-2\Delta t+4-3t^2+2t-4}{\Delta t} \\
+&= \lim_{\Delta t \to 0} 6t-2 + 3\Delta t \\
+&= \boxed{6t-2}
+\end{align*}}
+\choice{\begin{align*} f'(t) &= \lim_{\Delta t \to 0} \frac{3(t+\Delta t)^2-2(t+\Delta t)+4-3t^2+2t-4}{\Delta t} \\
+&= \lim_{\Delta t \to 0} 6t-2 + 3\Delta t \\
+&= \boxed{6t+1}
+\end{align*}}
+\choice{\begin{align*} f'(t) &= \lim_{\Delta t \to 0} \frac{3t^2+3(\Delta t)^2-2(t+\Delta t)+4-3t^2+2t-4}{\Delta t} \\
+&= \lim_{\Delta t \to 0} -2 + 3\Delta t \\
+&= \boxed{-2}
+\end{align*}}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

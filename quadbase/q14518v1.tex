@@ -1,0 +1,41 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14518v1}
+\begin{document}
+
+\begin{exercise}
+
+Find the function $x(t)$ that satisfies $x'(t) = 4e^{-7t}+6$ with
+$x(0)=\frac{3}{7}$.
+
+
+\begin{hint}
+This is an initial value problem. Find the general antiderivative of
+$x'(t)$, then use the initial condition given to solve for the
+particular antiderivative requested.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+x'(t) &= 4e^{-7t}+6 \\
+\int x'(t) \; dt &= \int 4e^{-7t}+6\; dt \\
+x(t) &= -\frac{4}{7}e^{-7t}+6t+C \\
+x(0) = \frac{3}{7} &= -\frac{4}{7}e^{-7(0)}+6(0)+C \\
+&\Rightarrow C=1 \\
+x(t) &= -\frac{4}{7}e^{-7t}+6t+1 \end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{$x(t) = -\frac{4}{7}e^{-7t}+6t+1$}
+\choice{$x(t) = -28e^{-7t}+6t+\frac{199}{7}$}
+\choice{$x(t) = \frac{4}{7}e^{-7t}+1$}
+\choice{$x(t) = -\frac{4}{7}e^{-7t}+6t+\frac{3}{7}$}
+\choice{$x(t) = \frac{4}{7}e^{-7t}+6t-\frac{1}{7}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,83 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14526v1}
+\begin{document}
+
+\begin{exercise}
+
+Find, and identify, the local extrema of
+$g(x) = \frac{1}{5}x^5-\frac{2}{3}x^3+x-10.$
+
+
+\begin{hint}
+This is a problem of identifying extrema. Find the critical points of
+the function $g(x)$ and then use the second derivative test to determine
+whether they are local maxima or minima.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+g'(x) &= x^4-2x^2+1 \\
+0 &= (x^2-1)^2 \\
+x^*_1 = 1&; x^*_2 = -1 \\
+& \\
+g''(x) &= 4x^3-4x \\
+g''(1) &= 4-4 = 0 \\
+g''(-1) &= -4-(-4) = 0 
+\end{align*} Therefore, the second derivative test is inconclusive.
+Checking the graph, we see that there are no local extrema for this
+function: 
+
+\begin{image}\includegraphics{extrema-none-graph.jpg}\end{image}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{There are two extrema:
+
+\begin{itemize}
+\item
+  A maximum at $x=1$
+\item
+  A minimum at $x=-1$
+\end{itemize}}
+\choice{There are two extrema:
+
+\begin{itemize}
+\item
+  A minimum at $x=1$
+\item
+  A maximum at $x=-1$
+\end{itemize}}
+\choice{There are four extrema:
+
+\begin{itemize}
+\item
+  A minimum at $x=-2$
+\item
+  A maximum at $x=-1$
+\item
+  A minimum at $x=1$
+\item
+  A maximum at $x=2$
+\end{itemize}}
+\choice{There are four extrema:
+
+\begin{itemize}
+\item
+  A maximum at $x=-2$
+\item
+  A minimum at $x=-1$
+\item
+  A maximum at $x=1$
+\item
+  A minimum at $x=2$
+\end{itemize}}
+\choice[correct]{The function $g$ has no extreme values.}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

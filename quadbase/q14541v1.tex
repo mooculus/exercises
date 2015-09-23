@@ -1,0 +1,38 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14541v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate \[\lim_{t \to 3} \frac{\sin(t\pi)}{t-3}.\]
+
+
+\begin{hint}
+This is a L'Hopital's rule problem. Attempting to evaluate the limit
+results in the indeterminate form of $\frac{0}{0}$.
+\end{hint}
+
+
+\begin{hint}
+First, we naively attempt to evaluate by plugging in $t=3$. This gives
+\[\frac{\sin(3\pi)}{3-3} = \frac{0}{0},\] which is an indeterminate form
+and thus suitable for L'Hopital's rule.
+
+Applying L'Hopital, we have
+\[\lim_{t\to 3}\frac{\sin(\pi t)}{t-3} = \lim_{t\to 3} \frac{\pi\cos(\pi t)}{1} = \frac{\pi\cos(3\pi)}{1} = -\pi.\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$1$}
+\choice{$\pi$}
+\choice[correct]{$-\pi$}
+\choice{DNE}
+\choice{$-1$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

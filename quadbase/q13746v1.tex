@@ -1,0 +1,44 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q13746v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate \[\lim_{x\to -2} \frac{x+4}{x^2+4x+4}.\]
+
+
+\begin{hint}
+The denominator is non-negative, but zero at the point in question,
+$x=-2$. Therefore, the sign of the non-zero numerator evaluated at the
+point in question will indicate the proper infinity.
+\end{hint}
+
+
+\begin{hint}
+We wish to calculate \[\lim_{x\to -2} \frac{x+4}{x^2+4x+4}.\] Plugging
+in the value $x=-2$ we get
+\[\frac{-2+4}{(-2)^2+4(-2)+4} = \frac{2}{0},\] which is undefined.
+However, in the limit as $x$ approaches $-2$, the denominator
+\[x^2+4x+4 = (x+2)^2\] is always positive, except at the vertex of the
+parabola when $x=-2$. Thus, as $x \to -2$ the denominator is positive
+and very very close to zero. The numerator, by contrast, is continuous
+and non-zero so as $x\to -2$ it takes values very very close to
+$-2+4=2$. If we take numbers close to $2$ and divide them by smaller and
+smaller positive numbers we end up with larger and larger positive
+numbers--we express by saying that the limit is positive infinity:
+\[\lim_{x\to -2} \frac{x+4}{x^2+4x+4} = \infty.\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$-\infty$}
+\choice{$\frac{1}{8}$}
+\choice[correct]{$\infty$}
+\choice{$\frac{3}{8}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

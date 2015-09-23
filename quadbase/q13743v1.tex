@@ -1,0 +1,41 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q13743v1}
+\begin{document}
+
+\begin{exercise}
+
+Let
+\[f(x) = \begin{cases} 5 & \mbox{if } x>4 \\ -1 & \mbox{if } x=4 \\ -x+5 & \mbox{if } -2\leq x < 4 \\ 7 & \mbox{if } x<-2 \end{cases}\]
+
+Sketch the graph of this function and find following limit.
+
+\[\lim_{x \to -2^-} = \]
+
+
+\begin{hint}
+The limit of $f(x)$ as $x$ approaches 2 from the left only depends on
+the region where $f(x) = 7$.
+\end{hint}
+
+
+\begin{hint}
+\begin{image}\includegraphics{piecewise.jpg}\end{image}
+
+ Since the limit of $f(x)$ as $x$ approaches 2 from
+the left only depends on the region where $x<-2$, we see that $f(x) = 7$
+there. Thus, \[\lim_{x\to 2^-}f(x) = 7.\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{3}
+\choice[correct]{7}
+\choice{DNE}
+\choice{$-x+5$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

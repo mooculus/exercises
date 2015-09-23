@@ -1,0 +1,39 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14359v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative $\frac{dx}{dy}$ if \[\cos(xy) = 2x-3y.\]
+
+
+\begin{hint}
+This is an implicit derivation question. You need to assume that $x$ is
+a function of $y$ and then calculate the appropriate derivatives
+involving the product and chain rules.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+\frac{d}{dy}\left(\cos(xy)\right) &= \frac{d}{dy}\left(2x-3y\right) \\
+-\sin(xy)\left(y\frac{dx}{dy}+x\right) &= 2\frac{dx}{dy}-3 \\
+\left(2+y\sin(xy)\right)\frac{dx}{dy} &= 3-x\sin(xy) \\
+\frac{dx}{dy} &= \frac{3-x\sin(xy)}{2+y\sin(xy)}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$\frac{dx}{dy} = \frac{2+y\sin(xy)}{3-x\sin(xy)}$}
+\choice{$\frac{dx}{dy} = \frac{1}{2}\left(3-y\sin(xy)\right)$}
+\choice[correct]{$\frac{dx}{dy} = \frac{3-x\sin(xy)}{2+y\sin(xy)}$}
+\choice{$\frac{dx}{dy} = \frac{1}{2}\left(3-x\sin(xy)\right)$}
+\choice{$\frac{dx}{dy} = 3-x\sin(xy)$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

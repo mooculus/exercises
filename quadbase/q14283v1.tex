@@ -1,0 +1,39 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14283v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative with respect to $x$ of
+\[Q(x) = \ln\left(\frac{3x-5}{6x^2+7x-2}\right).\]
+
+
+\begin{hint}
+This is a logarithm rule problem, and, as usual, benefits from algebraic
+simplification before you start in on the calculus.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+Q(x) &= \ln\left(\frac{3x-5}{6x^2+7x-2}\right) \\
+&= \ln(3x-5)-\ln(6x^2+7x-2) \\
+Q'(x) &= \frac{1}{3x-5}\frac{d}{dx}(3x-5) - \frac{1}{6x^2+7x-2}\frac{d}{dx}\left(6x^2+7x-2\right) \\
+&=\frac{3}{3x-5} - \frac{12x+7}{6x^2+7x-2}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$Q'(x) = \frac{1}{3x-5} - \frac{1}{6x^2+7x-2}$}
+\choice{$Q'(x) = \frac{6x^2+7x-2}{3x-5}$}
+\choice{$Q'(x) = \frac{3}{3x-5} + \frac{12x+7}{6x^2+7x-2}$}
+\choice[correct]{$Q'(x) = \frac{3}{3x-5} - \frac{12x+7}{6x^2+7x-2}$}
+\choice{$Q'(x) = \frac{1}{3x-5}+\frac{1}{6x^2+7x-2}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

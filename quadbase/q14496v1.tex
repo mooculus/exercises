@@ -1,0 +1,46 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14496v1}
+\begin{document}
+
+\begin{exercise}
+
+Consider the ideal gas law, \[PV = nRT.\] How fast is the temperature of
+a balloon changing when the temperature of the gas inside is 326.15
+degrees K, the pressure is 101325 N/m$^2$, $R=8.31432$ Nm/(mol K),
+$V=.25$ m$^3$ and $n=345$ mols if you are inflating the balloon at 1
+m$^3$/min while the pressure increases at a rate of $1.135$ N/m$^2$ per
+minute?
+
+Give your answer to the nearest tenth of a degree per minute.
+
+
+\begin{hint}
+This is a related rates problem with a given equation. Take the
+derivative with respect to time and plug in the given values to compute
+$\frac{dT}{dt}$.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+\frac{dP}{dt}V + P\frac{dV}{dt} &= nR\frac{dT}{dt} \\
+(1.135)(.25) + 101325(1) &= 345(8.31432) \frac{dT}{dt} \\
+\frac{dT}{dt} &\simeq 35.3
+\end{align*} So the temperature is increasing at a rate of $35.3$
+degrees Kelvin per minute.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$35.5$ degrees K per minute}
+\choice{$35.2$ degrees K per minute}
+\choice{$35.4$ degrees K per minute}
+\choice{$35.6$ degrees K per minute}
+\choice[correct]{$35.3$ degrees K per minute}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,81 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14512v1}
+\begin{document}
+
+\begin{exercise}
+
+A 12 foot ladder is leaning against a wall. Initially it touches a point
+8 feet up the wall, but it is sliding down at a rate of 1 inch per
+minute. How fast is the base moving outward?
+
+
+\begin{hint}
+This is a related rates problem. Start by identifying your variables and
+relations, then differentiate and solve for the desired rate. Remember
+to be careful with units.
+\end{hint}
+
+
+\begin{hint}
+Variables:
+
+*$a$ - the distance from the corner to the base of the ladder in feet
+
+*$h$ - the distance from the corner to the top of the ladder in feet
+
+Known values:
+
+*$12$ feet = length of the ladder
+
+*$\frac{dh}{dt} = -1$ inch/minute $=-\frac{1}{12}$ ft/min
+
+\begin{itemize}
+\item
+  $h(0)=8$ ft Want to know:
+\item
+  $\frac{da}{dt}$
+\end{itemize}
+
+Relation:
+
+*$a^2+h^2 = 12^2$
+
+Differentiating:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  $2a\frac{da}{dt} +2h\frac{dh}{dt} = 0$
+\end{itemize}
+
+Plugging in:
+
+\begin{itemize}
+\item
+  Find $a(0)$ using the relation:
+  \[8^2+a^2 = 12^2 \Rightarrow a = \sqrt{144-64} = \sqrt{80} = 4\sqrt{5}\]
+\item
+  Plug values into the derivative
+  \[2(4\sqrt{5})\frac{da}{dt} + 2(8)\left(-\frac{1}{12}\right) = 0\]
+\item
+  Solve for $\frac{da}{dt}$
+  \[\frac{da}{dt} = \frac{4}{3}\left(\frac{1}{8\sqrt{5}}\right) = \frac{1}{6\sqrt{5}}.\]
+  So the base is moving outward at $\frac{1}{6\sqrt{5}}$ ft/min or
+  $\frac{2}{\sqrt{5}}$ in/min.
+\end{itemize}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$\frac{2}{\sqrt{5}}$ ft/min}
+\choice{$-\frac{1}{6\sqrt{5}}$ ft/min}
+\choice{$\frac{1}{6\sqrt{5}}$ in/min}
+\choice[correct]{$\frac{1}{6\sqrt{5}}$ ft/min}
+\choice{$-\frac{2}{\sqrt{5}}$ ft/min}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

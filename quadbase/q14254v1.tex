@@ -1,0 +1,48 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14254v1}
+\begin{document}
+
+\begin{exercise}
+
+Head loss is the loss of energy through friction and turbulence in a
+real liquid flowing through a pipe. The Darcy-Weisbach equation gives a
+measure of head loss due to friction, $h_f$, for a liquid filling a pipe
+with circular cross-section: \[h_f = \frac{8f_DLQ^2}{g\pi^2D^5}, \]
+where $f_D$ is the Darcy-Weisbach friction factor, $L$ is the length of
+the pipe, $Q$ is the volumetric flow rate, $g$ is the gravitational
+constant, and $D$ is the diameter of the pipe.
+
+Assuming that $f_D$, $L$, and $D$ are constant, calculate
+\[\frac{dh_f}{dQ}.\]
+
+
+\begin{hint}
+This is a power rule derivative, all of the complicated factors are
+simply named constants.
+\end{hint}
+
+
+\begin{hint}
+Using the linearity rule with respect to constants, this derivative
+becomes
+\begin{align*} \frac{dh_f}{dQ} &= \frac{d}{dQ}\left(\frac{8f_DLQ^2}{g\pi^2D^5}\right) \\
+&= \left(\frac{8f_DL}{g\pi^2D^5}\right) \frac{d}{dQ}\left(Q^2\right) \\
+&= \left(\frac{8f_DL}{g\pi^2D^5}\right)(2Q) \\
+&= \boxed{\frac{16f_DLQ}{g\pi^2D^5}}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$\frac{dh_f}{dQ} = \frac{16f_DLQ}{5g\pi^2D^4}$}
+\choice{$\frac{dh_f}{dQ} = -\frac{16f_DLQ}{g\pi^2D^5}$}
+\choice{$\frac{dh_f}{dQ} = 2Q$}
+\choice[correct]{$\frac{dh_f}{dQ} = \frac{16f_DLQ}{g\pi^2D^5}$}
+\choice{$\frac{dh_f}{dQ} = \frac{16f_DLQ}{10g\pi D^4}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

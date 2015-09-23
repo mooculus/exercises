@@ -1,0 +1,39 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14288v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative of $g(r)$ with respect to $r$.
+\[g(r) = r\ln(5r)-r.\]
+
+
+\begin{hint}
+This is a simple product rule question with derivatives of logarithms
+and power rules included.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+g'(r) &= \frac{d}{dr}(r)\ln(5r)+r\frac{d}{dr}\left(\ln(5r)\right) - \frac{d}{dr}\left(r\right) \\
+&= (1)\ln(5r) + r\left(\frac{5}{5r}\right) - 1 \\
+&= \ln(5r) + 1 -1 \\
+&= \ln(5r)
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$g'(r) = \ln(5r)+1$}
+\choice{$g'(r) = \frac{1}{5r}-1$}
+\choice{$g'(r) = \ln(5r)-1$}
+\choice[correct]{$g'(r) = \ln(5r)$}
+\choice{$g'(r) = -\frac{4}{5}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

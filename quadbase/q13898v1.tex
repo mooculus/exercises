@@ -1,0 +1,37 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q13898v1}
+\begin{document}
+
+\begin{exercise}
+
+Write down the limit expression that you would solve to find the
+derivative of $f(x) = \sin(3x)$ using the definition of the derivative.
+
+
+\begin{hint}
+This question requires remembering the limit definition of a derivative,
+and the rules for evaluating a function at an argument.
+\end{hint}
+
+
+\begin{hint}
+This question asks us to remember that
+\[f'(x) = \lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}.\]
+Because $f(x) = \sin(3x)$, this becomes
+\[f'(x) = \lim_{\Delta x \to 0} \frac{\sin(3(x+\Delta x))-\sin(3x)}{\Delta x} = \lim_{\Delta x \to 0} \frac{\sin(3x+3\Delta x)-\sin(3x)}{\Delta x}.\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$\lim_{\Delta x \to 0} \frac{\sin(3x+\Delta x)-\sin(3x)}{\Delta x}$}
+\choice{$\lim_{\Delta x \to 0} \frac{\sin(3\Delta x)-\sin(3x)}{\Delta x}$}
+\choice{$\lim_{\Delta x \to 0} \frac{\sin(x+\Delta x)-\sin(3x)}{\Delta x}$}
+\choice[correct]{$\lim_{\Delta x \to 0} \frac{\sin(3x+3\Delta x)-\sin(3x)}{\Delta x}$}
+\choice{$\lim_{\Delta x \to 0} \frac{\sin(3x)+\sin(3\Delta x)-\sin(3x)}{\Delta x}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

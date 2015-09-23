@@ -1,0 +1,44 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14535v1}
+\begin{document}
+
+\begin{exercise}
+
+Consider a trip along the Mass Pike from the intersection with I-95 to
+the Berkshires. You pass a toll booth on entering at the I-95
+interchange at 12:35 pm. You pass a toll both when exiting to the
+Berkshires at 2:05 pm. Having gone 116 miles, if the maximum speed limit
+on the route is 70 miles per hour, do you deserve a ticket? Why or why
+not?
+
+
+\begin{hint}
+The mean value theorem says that if $f(x)$ is defined and continuous on
+the interval $[a,b]$, then there is at least one point $c \in (a,b)$
+with $f'(c) = \frac{f(b)-f(a)}{b-a}.$
+\end{hint}
+
+
+\begin{hint}
+Applying the mean value theorem in this case, we see that we traveled
+\[\frac{116 \mbox{ miles}}{2:05-12:35 \mbox{ hours}} = \frac{116}{1.5} \mbox{ mph} = 77.\overline{3} \mbox{ mph}.\]
+Therefore, if we consider our position as $f(t)$, there is some time $t$
+between 12:35 pm and 2:05 pm when $f'(t) = 77.\overline{3}$ mph so we
+must have been driving over the speed limit.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{No, you traveled at an average speed of just over 66 mph, so while you
+may have exceeded the speed limit, the toll booth operators cannot prove
+it.}
+\choice[correct]{Yes, you traveled at an average speed of just over 77 mph, so you must
+have exceeded the speed limit for a large part of your journey (or gone
+extremely fast for a short time).}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,88 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14495v1}
+\begin{document}
+
+\begin{exercise}
+
+Say we have a cylindrical tank of oil oriented with one circular base on
+the ground. Let $h$ be the height of oil in the tank. If the tank is $3$
+meters in diameter and $5$ meters tall, what is the change in the volume
+of oil in the tank if $\frac{dh}{dt} = -.4$ meters per minute?
+
+
+\begin{hint}
+This is a related rates problem. You need to identify the variables and
+their relation, take the derivative with respect to time of the
+relation, and solve for the desired rate.
+\end{hint}
+
+
+\begin{hint}
+Variables:
+
+\begin{itemize}
+\item
+  $h$ - the height of oil in the tank in meters, depends on $t$
+\item
+  $t$ - the time in minutes
+\item
+  $D$ - the diameter of the tank, constant
+\item
+  $H$ - the height of the tank, constant
+\item
+  $V$ - volume of oil in the tank in cubic meters, depends on $t$
+\end{itemize}
+
+Relation - volume of oil!
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  $V = \pi (D/2)^2h$
+\end{itemize}
+
+Known values
+
+\begin{itemize}
+\item
+  $D = 3$
+\item
+  $H = 5$
+\item
+  $\frac{dh}{dt} = -.4$ meters per minute
+\end{itemize}
+
+Want to know
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  $\frac{dV}{dt}$
+\end{itemize}
+
+Differentiate the relation
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  $\frac{dV}{dt} = \pi (D/2)^2 \frac{dh}{dt}$
+\end{itemize}
+
+Plug in known values
+\[\frac{dV}{dt} = \pi (3/2)^2 (-.4) = -\frac{9}{10}\pi \mbox{m}^3/\mbox{min}\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$-\pi$ m$^3$/min}
+\choice{$\frac{25}{4}\pi$ m$^3$/min}
+\choice[correct]{$-\frac{5}{2}\pi$ m$^3$/min}
+\choice{$\frac{5}{2\pi}$ m$^3$/min}
+\choice{$-\frac{2}{5}\pi$ m$^3$/min}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,45 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14533v1}
+\begin{document}
+
+\begin{exercise}
+
+Find, and identify, the extrema of the unit step function
+\[H(t) = \begin{cases} 1 & t > 0 \\
+\frac{1}{2} & t = 0 \\ 0 & t < 0 \end{cases}.\]
+
+`'Note: $H(t)$ is also called the Heaviside unit step function. It
+arises frequently in solving differential equations.''
+
+
+\begin{hint}
+This is an extreme value problem where every point is a critical point,
+so think carefully about what it means to be a maximum or a minimum.
+\end{hint}
+
+
+\begin{hint}
+Because \[H'(t) = \begin{cases} 0 & t \neq 0 \\
+DNE & t = 0 \end{cases},\] every point is a critical point for $H$. The
+second derivative is the same, however, so it is not a helpful test.
+Using our definition of maximum, we see that $H(t^+)=1\geq H(t)$ for any
+$t^+ > 0$ and any real number $t$, so each $t^+$ is a maximum.
+Similarly, $H(t^-) = 0 \leq H(t)$ for any $t^- < 0$ and any real number
+$t$ so each $t^-$ is a minimum. This only misses $H(0) = \frac{1}{2}$,
+which is larger than 0 but smaller than 1.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{Every point $t < 0$ is a (global) minimum and every point $t > 0$ is a
+(global) maximum.}
+\choice{Because every point is a critical point, every value $t$ is an extremum
+for $H(t)$.}
+\choice{There are no extrema for $H(t)$.}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,45 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14531v1}
+\begin{document}
+
+\begin{exercise}
+
+Find and identify the extrema of $f(x) = \ln(x)-x.$
+
+
+\begin{hint}
+This is an extreme value problem. Because $f$ is continuous on its
+domain, $x>0$, we can solve this by only checking the critical points of
+$f$ using the second derivative test.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+f' &= \frac{1}{x}-1 \\
+0 &= \frac{1}{x^*}-1 \\
+& \Rightarrow x^* = 1 \\
+&\\
+f'' &= -\frac{1}{x^2} \\
+f''(1) &= -\frac{1}{1^2} = -1 <0 \Rightarrow \mbox{ maximum}
+\end{align*} There is one extreme value for $f(x) = \ln(x)-x$ -- a
+(global) maximum at $x=1$. 
+
+\begin{image}\includegraphics{extremalnx-x.jpg}\end{image}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{There is one extremum: a maximum at $x=1$.}
+\choice{There are three extrema: a minimum at $x=0$, a maximum at $x=1$ and a
+minimum at $x=\infty$.}
+\choice{There are no extrema on $f$.}
+\choice{There are two extrema: a minimum at $x=0$ and a maximum at $x=1$.}
+\choice{There is one extremum: a minimum at $x=1$.}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,44 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14565v1}
+\begin{document}
+
+\begin{exercise}
+
+Find the tangent line to $y = \sin(\theta)$ at $\theta = \pi/6$.
+
+
+\begin{hint}
+This is a tangent line problem. You should use
+\[y = f(\theta_0)+f'(\theta_0)(\theta-\theta_0).\]
+\end{hint}
+
+
+\begin{hint}
+With $f(\theta) = \sin(\theta)$, we have \begin{align*}
+f(\theta_0) &= \sin(\pi/6) = \frac{1}{2} \\
+f'(\theta) &= \cos(\theta) \\
+f'(\theta_0) &= \cos(\pi/6) = \frac{\sqrt{3}}{2} \\
+& \\
+y &= \frac{1}{2}+\frac{\sqrt{3}}{2}\left(\theta-\frac{\pi}{6}\right)
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$ y = -\frac{1}{2}+\frac{\sqrt{3}}{2}\left(\theta -
+\frac{\pi}{6}\right)$}
+\choice{$ y = \frac{1}{2}-\frac{\sqrt{3}}{2}\left(\theta -
+\frac{\pi}{6}\right)$}
+\choice{$ y = -\frac{1}{2}+\frac{\sqrt{3}}{2}\left(\theta +
+\frac{\pi}{6}\right)$}
+\choice{$ y = \frac{1}{2}-\frac{\sqrt{3}}{2}\left(\theta +
+\frac{\pi}{6}\right)$}
+\choice[correct]{$ y = \frac{1}{2}+\frac{\sqrt{3}}{2}\left(\theta -
+\frac{\pi}{6}\right)$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

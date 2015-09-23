@@ -1,0 +1,43 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q13740v1}
+\begin{document}
+
+\begin{exercise}
+
+Let
+\[f(x) = \begin{cases} 5 & \mbox{if } x>4 \\ -1 & \mbox{if } x=4 \\ -x+5 & \mbox{if } -2\leq x < 4 \\ 7 & \mbox{if } x<-2 \end{cases}\]
+
+Sketch the graph of this function and find following limit.
+
+\[\lim_{x \to 4^-} = \]
+
+
+\begin{hint}
+The limit as $x$ approaches 4 from the left only involves values of $x$
+slightly smaller than 4, so we need only consider the piecewise
+component $g(x) = -x+5$.
+\end{hint}
+
+
+\begin{hint}
+\begin{image}\includegraphics{piecewise.jpg}\end{image}
+
+ Although the function has a discontinuity at the
+point $x=4$, the limit as $x\to4^-$ is the value of $x=4$ in the linear
+function $g(x)=-x+5$, that is $g(4)=-4+5=1$.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{5}
+\choice[correct]{1}
+\choice{-1}
+\choice{7}
+\choice{DNE}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

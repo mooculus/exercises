@@ -1,0 +1,47 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14035v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative of
+\[f(\theta) = 3\cos(2\theta)-\frac{1}{2}\sin(5\theta)+\cos(3\pi).\]
+
+
+\begin{hint}
+This is a trignometric rule question with one constant rule component.
+\end{hint}
+
+
+\begin{hint}
+First, notice that $\cos(3\pi) = -1$ is simply a constant, so by the
+constant rule \[\frac{d}{d\theta}\left(\cos(3\pi)\right) = 0.\] Then you
+need to remember that for any function $u(x)$ and any constant $a$,
+\[\frac{d}{dx}\left(a\cos(u)\right) = -a\left(\frac{du}{dx}\right)\sin(u).\]
+The negative goes along with derivatives of CO-functions: COsine,
+COsecant, COtangent. Therefore,
+\[\frac{d}{d\theta}\left(3\cos(2\theta)\right) = 3\left(\frac{d}{d\theta}\left(2\theta\right)\right)\left(-\sin(2\theta)\right) = -6\sin(2\theta).\]
+Finally, you need to remember that for any function $u(x)$ and any
+constant $a$,
+\[\frac{d}{dx}\left(a\sin(u)\right) = a\left(\frac{du}{dx}\right)\cos(u).\]
+Therefore,
+\[\frac{d}{d\theta}\left(-\frac{1}{2}\sin(5\theta)\right) = -\frac{1}{2}\left(\frac{d}{d\theta}\left(5\theta\right)\right)\cos(5\theta) = -\frac{5}{2}\cos(5\theta).\]
+Putting this together, we have:
+\[\frac{d}{d\theta}\left(3\cos(2\theta)-\frac{1}{2}\sin(5\theta)+\cos(3\pi)\right) = -6\sin(2\theta)-\frac{5}{2}\sin(5\theta).\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$f'(\theta) = \frac{3}{2}\sin(2\theta)-\frac{1}{10}\cos(5\theta)-\theta$}
+\choice[correct]{$f'(\theta) = -6\sin(2\theta)-\frac{5}{2}\cos(5\theta)$}
+\choice{$f'(\theta) = -6\sin(2\theta)+\frac{5}{2}\cos(5\theta)-3\sin(3\pi)$}
+\choice{$f'(\theta) = 6\sin(2\theta)-\frac{5}{2}\cos(5\theta)$}
+\choice{$f'(\theta) = 6\sin(2\theta)+\frac{5}{2}\cos(5\theta)$}
+\choice{$f'(\theta) = -6\sin(2\theta)+\frac{5}{2}\cos(5\theta)$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

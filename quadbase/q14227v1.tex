@@ -1,0 +1,38 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14227v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative of \[g(x) = 3x^2e^x.\]
+
+
+\begin{hint}
+This is a product rule question. You need to use
+\[\frac{d}{dx}\left(f(x)g(x)\right) = f'(x)g(x)+f(x)g'(x)\] to solve it.
+\end{hint}
+
+
+\begin{hint}
+Using the product rule,
+\[\frac{d}{dx}\left(f(x)g(x)\right) = f'(x)g(x)+f(x)g'(x),\] we have
+\begin{align*} \frac{d}{dx}\left(3x^2e^x\right) &= \frac{d}{dx}\left(3x^2\right)e^x + 3x^2\left(\frac{d}{dx}\left(e^x\right)\right) \\
+&= \left(6x\right)e^x + 3x^2\left(e^x\right) \\
+&= \boxed{6xe^x+3x^2e^x}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$g'(x) = 6xe^x + 3e^x$}
+\choice{$g'(x) = 3+6x+e^x$}
+\choice{$g'(x) = 6xe^x$}
+\choice{$g'(x) = 2xe^x + 3x^2e^x$}
+\choice[correct]{$g'(x) = 6xe^x+3x^2e^x$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

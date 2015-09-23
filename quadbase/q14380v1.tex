@@ -1,0 +1,51 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14380v1}
+\begin{document}
+
+\begin{exercise}
+
+Head loss is the loss of energy through friction and turbulence in a
+real liquid flowing through a pipe. The Darcy-Weisbach equation gives a
+measure of head loss due to friction, $h_f$, for a liquid filling a pipe
+with circular cross-section: \[h_f = \frac{8f_D LQ^2}{g\pi^2D^5}, \]
+where $f_D$ is the Darcy-Weisbach friction factor, $L$ is the length of
+the pipe, $Q$ is the volumetric flow rate, $g$ is the gravitational
+constant, and $D$ is the diameter of the pipe.
+
+If $L=50$ m, $Q = 4-4\cos(t)$ m/s, $g=9.8$ m/s$^2$, $D=.5$ m, and
+$f_D = .035$, calculate $\frac{dh_f}{dt}$ at $t=3\pi$ minutes if $L$,
+$D$, and $f_D$ are constant. Give your answer to three significant
+digits. Note, the units of $h_f$ are meters.
+
+
+\begin{hint}
+This is a related rates problem with a given relationship. You need to
+take the derivative of the given equation and then plug in the
+appropriate values.
+\end{hint}
+
+
+\begin{hint}
+Taking the derivative of the equation, and accounting for the constants
+$L$, $D$, $f_D$, $\pi$ and $g$, we have
+\[\frac{dh_f}{dt} = \frac{8f_DL(2Q)}{g\pi^2D^5}\left(\frac{dQ}{dt}\right).\]
+
+Plugging in our values, we have: \begin{align*}\frac{dh_f}{dt} &= \frac{8(.035)(50)(8-8\cos(3\pi*60))}{(9.8)\pi^2(.5^5)}\left(4\sin(3\pi*60)\right)\\
+&= 0
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{296 m/s}
+\choice{-295 m/s}
+\choice[correct]{0.00 m/s}
+\choice{295 m/s}
+\choice{-296 m/s}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

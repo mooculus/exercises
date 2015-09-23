@@ -1,0 +1,41 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14568v1}
+\begin{document}
+
+\begin{exercise}
+
+Use linear approximation to compute f(.99) by using a tangent line
+through $t=1$ if $f(t) = t^5-3t^2+1$.
+
+
+\begin{hint}
+This is a linear approximation problem. Find the tangent line to $f(t)$
+at $t_0=1$ and then compute $L(.99)$.
+\end{hint}
+
+
+\begin{hint}
+We have:
+
+\begin{align*}
+f(1) &= 1^5-3(1^2)+1 = -1 \\
+f'(1) &= 5(1)^4-6(1) = -1 \\
+L(t) &= -1+(-1)(t-1) = -1-t+1 = -t \\
+L(.99) &= -.99
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$-.992$}
+\choice[correct]{$-.990$}
+\choice{$-.988$}
+\choice{$-.991$}
+\choice{$-.989$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

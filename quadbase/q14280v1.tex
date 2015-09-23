@@ -1,0 +1,39 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14280v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative of $f$ with respect to $x$ if
+\[f(x) = \ln(x^2-6x+2).\]
+
+
+\begin{hint}
+This is a log rule problem, with a chain rule included for good measure.
+Remember, \[\frac{d}{dx}\ln(u(x)) = \frac{u'(x)}{u(x)}.\]
+\end{hint}
+
+
+\begin{hint}
+In this case we have a chain rule with $g(u(x)) = \ln(x^2-6x+2)$ where
+$g = \ln(u)$ and $u = x^2-6x+2$. Then \begin{align*}
+\frac{dg}{du} &= \frac{1}{u} \\
+\frac{du}{dx} &= 2x-6 \\
+f'(x) &= \frac{1}{x^2-6x+2}\left(2x-6\right) = \frac{2x-6}{x^2-6x+2}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$f'(x) = \frac{x^2-6x+2}{2x-6}$}
+\choice[correct]{$f'(x) = \frac{2x-6}{x^2-6x+2}$}
+\choice{$f'(x) = \frac{1}{x^2-6x+2}$}
+\choice{$f'(x) = (2x-6)\ln(x^2-6x+2)$}
+\choice{$f'(x) = \ln(x^2-6x+2)$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

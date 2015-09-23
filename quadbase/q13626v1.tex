@@ -1,0 +1,38 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q13626v1}
+\begin{document}
+
+\begin{exercise}
+
+If $\displaystyle \lim_{x\to 5} f(x) = \infty$, then the limit exists
+with value $\infty$.
+
+
+\begin{hint}
+This question is exploring the idea of what it means for a limit to
+exist. Limits only exist when there is a single finite value approached
+by the function at that point.
+\end{hint}
+
+
+\begin{hint}
+In this case, the function $f(x)$ is unbounded above, or in other words
+diverging to positive infinity, from both directions as $x \to 5$. We
+write that the limit `equals' infinity, but that is a statement about
+the direction of the divergence is occurring, not the existence of a
+limit value. It means that no matter how large a value of $M$ we choose,
+there is some small $\epsilon$ such that $f(x)>M$ for
+$5-\epsilon \leq x \leq 5+\epsilon$.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{False}
+\choice{True}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

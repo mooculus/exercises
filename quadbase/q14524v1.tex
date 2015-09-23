@@ -1,0 +1,78 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14524v1}
+\begin{document}
+
+\begin{exercise}
+
+Find, and identify, the extrema of $y(x) = \frac{1}{3}x^3-2x^2-12x$.
+
+
+\begin{hint}
+To find the extrema of a twice differentiable function, find the
+critical points and then apply the second derivative test.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+y'(x) &= x^2-4x-12 \\
+&= (x-6)(x+2) \\
+x^*_1 =6 &;\mbox{   } x^*_2 = -2\\
+& \\
+y''(x) &= 2x-4 \\
+y''(x^*_1) &= 2(6)-4 = 8 > 0 \Rightarrow \mbox{local minimum} \\
+y''(x^*_2) &= 2(-2)-4 = -8 < 0 \Rightarrow \mbox{local maximum}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{There are two local extrema:
+
+\begin{itemize}
+\item
+  $x^*=6$ which is a local maximum
+\item
+  $x^*=-2$ which is a local minimum
+\end{itemize}}
+\choice{There are two local extrema:
+
+\begin{itemize}
+\item
+  $x^*=0$ which is a local maximum
+\item
+  $x^*= \frac{1}{3}\left(1+\sqrt{37}\right)$ which is a local minimum
+\end{itemize}}
+\choice[correct]{There are two local extrema:
+
+\begin{itemize}
+\item
+  $x^*=6$ which is a local minimum
+\item
+  $x^*=-2$ which is a local maximum
+\end{itemize}}
+\choice{There are two local extrema:
+
+\begin{itemize}
+\item
+  $x^*= \frac{1}{3}\left(1+\sqrt{37}\right)$ which is a local maximum
+\item
+  $x^*= \frac{1}{3}\left(1-\sqrt{37}\right)$ which is a local minimum
+\end{itemize}}
+\choice{There are three local extrema:
+
+\begin{itemize}
+\item
+  $x^*=0$ which is a local minimum
+\item
+  $x^*= \frac{1}{3}\left(1+\sqrt{37}\right)$ which is a local maximum
+\item
+  $x^*= \frac{1}{3}\left(1-\sqrt{37}\right)$ which is a local maximum
+\end{itemize}}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

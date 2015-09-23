@@ -1,0 +1,42 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14269v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative with respect to $t$ of
+\[P(t) = \left(4t+e^{6t-4}-\sec(3t/2)\right)^5.\]
+
+
+\begin{hint}
+This is a chain rule problem. You need to remember that
+\[\frac{d}{dt}\left(f(g(t))\right) = f'(g)g'(t) = \frac{df}{dg}\cdot\frac{dg}{dt}.\]
+\end{hint}
+
+
+\begin{hint}
+Consider the given function
+$P(t)=\left(4t+e^{6t-4}-\sec(3t/2)\right)^5$, and remember to use
+parentheses as your guide. Thus, we see that this function is
+$P(t) = f(g(t))$ for $f(g) = g^5$ and $g(t) = 4t+e^{6t-4}-\sec(3t/2)$.
+This gives us \begin{align*}
+\frac{df}{dg} &= 5g^4 \\
+\frac{dg}{dt} &= 4+6e^{6t-4}-\frac{3}{2}\sec(3t/2)\tan(3t/2) \\
+P'(t) &= 5\left(4t+e^{6t-4}-\sec(3t/2)\right)^4\left(4+6e^{6t-4}-\frac{3}{2}\sec(3t/2)\tan(3t/2)\right)
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$P'(t) = 5\left(4t+e^{6t-4}-\sec(3t/2)\right)^4\left(4+6te^{5t-4}-\frac{3}{2}\sec(3t/2)\tan(3t/2)\right)$}
+\choice{$P'(t) = 5\left(4t+e^{6t-4}-\sec(3t/2)\right)^4\left(4+6e^{6t-4}+\frac{3}{2}\sec(3t/2)\tan(3t/2)\right)$}
+\choice[correct]{$P'(t) = 5\left(4t+e^{6t-4}-\sec(3t/2)\right)^4\left(4+6e^{6t-4}-\frac{3}{2}\sec(3t/2)\tan(3t/2)\right)$}
+\choice{$P'(t) = 5\left(4t+e^{6t-4}-\sec(3t/2)\right)^4$}
+\choice{$P'(t) = 5\left(4+6e^{6t-4}-\frac{3}{2}\sec(3t/2)\tan(3t/2)\right)^4$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

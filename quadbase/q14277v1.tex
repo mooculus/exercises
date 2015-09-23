@@ -1,0 +1,43 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14277v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative $\frac{df}{dx}$ with
+\[f(x) = x\csc(3x^2-2x+8).\]
+
+
+\begin{hint}
+This problem uses both the chain rule and the product rule, as well as
+derivatives of basic functions.
+\end{hint}
+
+
+\begin{hint}
+If we use $\frac{d}{dx}(ab) = a'b+b'a$ for the product rule, then $a=x$
+and $b=\csc(3x^2-2x+8)$. Then, $a'=1$ is easy, but to calculate $b'$ we
+also need the chain rule,
+$\frac{d}{dx}\left(f(g(x))\right) = \frac{df}{dg}\cdot\frac{dg}{dx}$
+where we identify \begin{align*}
+g &= \csc(u) \Rightarrow \frac{dg}{du} = -\csc(u)\cot(u) \\
+u &= 3x^2-2x+8 \Rightarrow \frac{du}{dx} = 6x-2 \\
+b' &= \frac{d}{dx}(g(u(x))) = -\csc(3x^2-2x+8)\cot(3x^2-2x+8)(6x-2)\\
+\end{align*} Putting this all together we have
+\[f'(x) = \csc(3x^2-2x+8)-(6x^2-2x)\csc(3x^2-2x+8)\cot(3x^2-2x+8)\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$f'(x) = \csc(3x^2-2x+8)-x\csc(6x-2)\cot(6x-2)$}
+\choice{$f'(x) = \csc(3x^2-2x+8)+x\csc(6x-2)\cot(6x-2)$}
+\choice{$f'(x) = (6x^2-2x)\csc(3x^2-2x+8)\cot(3x^2-2x+8)$}
+\choice[correct]{$f'(x) = \csc(3x^2-2x+8) - (6x^2-2x)\csc(3x^2-2x+8)\cot(3x^2-2x+8)$}
+\choice{$f'(x) = \csc(3x^2-2x+8) + (6x^2-2x)\csc(3x^2-2x+8)\cot(3x^2-2x+8)$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

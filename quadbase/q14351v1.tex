@@ -1,0 +1,44 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14351v1}
+\begin{document}
+
+\begin{exercise}
+
+Use implicit differentiation to find $\frac{dr}{dt}$ if
+\[r = rt+\sin(3r)\]
+
+
+\begin{hint}
+This is an implicit differentiation problem. You need to treat each $r$
+in the equation as a function $r(t)$ and then take the derivative of the
+entire equation $\frac{d}{dt}$ using product and chain rules, as
+appropriate. When you have done that, the chain rule will result in
+terms involving $\frac{dr}{dt}$ and you simply solve for the derivative
+algebraically.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+\frac{d}{dt}\left(r\right) &= \frac{d}{dt}\left(rt+\sin(3r)\right) \\
+\frac{dr}{dt} &= \frac{d}{dt}\left(rt\right)+\frac{d}{dt}\left(\sin(3r)\right) \\
+\frac{dr}{dt} &= t\frac{dr}{dt}+r + 3\cos(3r)\frac{dr}{dt} \\
+\frac{dr}{dt}\left(1-t-3\cos(3r)\right) &= r \\
+\frac{dr}{dt} &= \frac{r}{1-t-3\cos(3r)} 
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{$\frac{dr}{dt} = \frac{r}{1-t-3\cos(3r)}$}
+\choice{$\frac{dr}{dt} = r+3\cos(3r)$}
+\choice{$\frac{dr}{dt} = t+r+3\cos(3r)$}
+\choice{$\frac{dr}{dt} = \frac{r+3\cos(3r)}{1-t}$}
+\choice{$\frac{dr}{dt} = r$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

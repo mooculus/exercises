@@ -1,0 +1,44 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14597v1}
+\begin{document}
+
+\begin{exercise}
+
+Express the Riemann sum approximation of $\int_0^3 x \; dx$ with $n$
+equal length subintervals. Use the right endpoint method. Your answer
+should be a function of $n$.
+
+
+\begin{hint}
+Choose an evaluation point (left endpoint, right endpoint, midpoint) and
+set up a general Riemann sum with $n$ subintervals of length
+$\frac{3}{n}$ as a function of $n$.
+\end{hint}
+
+
+\begin{hint}
+Using the left endpoint, we have: \begin{align*}
+\sum_{k=1}^{n} f(x_k) \Delta x_k &= \sum_{k=0}^{n-1} x_k\left(\frac{3}{n}\right) \\
+&= \sum_{k=1}^{n} k\left(\frac{3}{n}\right)\left(\frac{3}{n}\right) \\
+ &=  \sum_{k=1}^{n} k\left(\frac{3}{n}\right)^2\\ 
+&= \left(\frac{3}{n}\right)^2 \sum_{k=1}^{n} k \\
+&=  \left(\frac{3}{n}\right)^2 \left(\frac{n(n+1)}{2}\right) \\
+&= \frac{9n^2+9n}{2n^2} \\
+&= \frac{9n+9}{2n}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$\frac{9n-9}{2n}$}
+\choice[correct]{$\frac{9n+9}{2n}$}
+\choice{$\frac{9}{2}$}
+\choice{$\frac{9-9n}{2n}$}
+\choice{$\frac{9+9n^2}{2n^2}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

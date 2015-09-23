@@ -1,0 +1,55 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14251v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative with respect to $r$ of
+\[G(r) = \frac{g m_1m_2}{r^2}\] where $g$, $m_1$ and $m_2$ are
+constants.
+
+Note: This is the force due to gravity on two objects of masses $m_1$
+and $m_2$ that are a distance $r$ apart. $g$ is the gravitational
+constant.
+
+
+\begin{hint}
+This is a power rule problem, though it could also be done with the
+quotient rule. You will need to use either
+$\frac{d}{dr}\left(r^n\right) = nr^{n-1}$ or
+\[\frac{d}{dr}\left(\frac{p(r)}{q(r)}\right) = \frac{p'(r)q(r)-p(r)q'(r)}{\left(q(r)\right)^2}\]
+to solve it.
+\end{hint}
+
+
+\begin{hint}
+Using the power rule, we have \begin{align*}
+G(r) &= \frac{gm_1m_2}{r^2} = gm_1m_2r^{-2} \\
+G'(r) &= gm_1m_2(-2)r^{-2-1} = -2gm_1m_2r^{-3} \\
+&= \boxed{\frac{-2gm_1m_2}{r^3}}\end{align*}
+
+Using the quotient rule
+\[\frac{d}{dr}\left(\frac{p(r)}{q(r)}\right) = \frac{p'(r)q(r)-p(r)q'(r)}{\left(q(r)\right)^2}\]
+with $p(r) = gm_1m_2$ and $q(r) = r^2$ we have \begin{align*}
+p'(r) &= 0 \\
+q'(r) &= 2r^1 = 2r\\
+G'(r) &= \frac{0(r^2)-gm_1m_2(2r)}{(r^2)^2} \\
+&= -\frac{2gm_1m_2r}{r^4} \\
+&= \boxed{-\frac{2gm_1m_2}{r^3}}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{$G'(r) = -\frac{2gm_1m_2}{r^3}$}
+\choice{$G'(r) = 0$}
+\choice{$G'(r) = \frac{2gm_1m_2}{r^3}.$}
+\choice{$G'(r) = -\frac{gm_1m_2}{r^3}$}
+\choice{$G'(r) = -\frac{gm_1m_2}{r^4}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

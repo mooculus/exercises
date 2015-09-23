@@ -1,0 +1,40 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14592v1}
+\begin{document}
+
+\begin{exercise}
+
+True or False? In the limit, we have:
+\[\lim_{n\to \infty} \sum_{i=1}^n f(x_i) \; \Delta x_i = \int_{x_0}^{x_n} f(x) \; dx\]
+where $\Delta x_i = x_i-x_{i-1} = \frac{x_n-x_0}{n}.$
+
+
+\begin{hint}
+This is a question about the relationship between (right-endpoint)
+Riemann sums and definite integrals.
+\end{hint}
+
+
+\begin{hint}
+Since the equality of Riemann sums in the limit as the number of
+rectangles goes to infinity can be considered the definition of a
+definite integral over the same interval, this statement is true.
+Another way to see this is to consider the relationship between
+antiderivatives and definite integrals in the Fundamental Theorem of
+Calculus. In that case it was clear that what a definite integral is
+computing is the area under a curve, the same as that computed by a
+limit of Riemann sums.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{True}
+\choice{False}
+\choice{Not enough data to tell}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

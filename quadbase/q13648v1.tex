@@ -1,0 +1,62 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q13648v1}
+\begin{document}
+
+\begin{exercise}
+
+Say we have a hurricane with a circular shape. If the radius of the
+storm is growing at 5 miles per hour, how fast is the area of the storm
+growing when the storm is 120 miles in diameter?
+
+
+\begin{hint}
+Identify the relationship between the known and unknown variables and
+differentiate it to relate the known and unknown rates.
+\end{hint}
+
+
+\begin{hint}
+Name the variables:
+
+*area = $A$ in square miles
+
+*radius = $r$ in miles
+
+*time = $t$ in hours
+
+Known values: \[\frac{dr}{dt} = 5 \mbox{ miles per hour }\]
+\[\mbox{diameter} = 120 \mbox{ miles} \Rightarrow r = 60 \mbox{ miles}\]
+
+Known formulas (relate the variables):
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Area of a circle: \[A = \pi r^2\]
+\end{itemize}
+
+Related rates (take the derivative with respect to time):
+\[\frac{dA}{dt} = 2\pi r \cdot \frac{dr}{dt}\]
+
+Plug in the known values:
+\[\frac{dA}{dt} = 2\cdot \pi \cdot 60 \cdot 5 = 600 \pi \mbox{ square miles per hour}\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$300 \pi$ miles squared per hour}
+\choice{$240 \pi$ miles squared per hour}
+\choice{$10 \pi$ miles squared per hour}
+\choice{$5\pi$ miles per hour}
+\choice{$120\pi$ miles squared per hour}
+\choice{$10 \pi$ miles per hour}
+\choice[correct]{$600 \pi$ miles squared per hour}
+\choice{$5\pi$ miles squared per hour}
+\choice{$1200 \pi$ miles squared per hour}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

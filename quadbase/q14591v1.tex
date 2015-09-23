@@ -1,0 +1,53 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14591v1}
+\begin{document}
+
+\begin{exercise}
+
+Find the $x$ coordinate of the point on the curve $y=x^2$ that is
+closest to the point $(1,2)$. Give your answer to three decimal places.
+`'Hint: Use the distance formula (Pythagorean theorem) on the points
+$(1,2)$ and $(x,x^2)$.''
+
+
+\begin{hint}
+This is an optimization question. Write down a formula for the distance
+$D(x)$ between points on the curve and our fixed point and then find the
+extrema of $D$.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+D(x) &= \sqrt{(x-1)^2+(x^2-2)^2} \\
+D'(x) &= \frac{1}{2}\left((x-1)^2+(x^2-2)^2\right)^{-1/2}\left(2(x-1)+2(x^2-2)(2x)\right) \\
+&= \frac{x-1+2x^3-4x}{\left((x-1)^2+(x^2-2)^2\right)^{1/2}} = 0 \\
+&\Rightarrow 2x^3-3x-1 = 0
+\end{align*} Using Newton's method or another numerical solver, we see
+that \begin{align*}
+f(x) &= 2x^3-3x-1 \\
+f'(x) &= 6x^2-3 \\
+x_0 &= 1 \\
+x_1 &= 1 - \frac{-2}{3} = 1\frac{2}{3} \simeq  1.666667\\
+x_2 &\simeq 1.4281842818 \\
+x_3 & \simeq 1.3695572746 \\
+x_4 & \simeq 1.3660378116 \\
+x_5 & \simeq 1.3660254039 \\
+x_6 & \simeq 1.3660254038 \end{align*} So the minimum is at
+approximately $x=1.366$.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$x=-1.000$}
+\choice{$x=-.361$}
+\choice[correct]{$x=1.366$}
+\choice{$x=-.740$}
+\choice{$x=.701$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

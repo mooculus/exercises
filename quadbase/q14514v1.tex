@@ -1,0 +1,45 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14514v1}
+\begin{document}
+
+\begin{exercise}
+
+Find $R(\theta)$ if \begin{align*}
+R''(\theta) &= \sin(4\theta)-1 \\
+R(0)&=-1 \\ R'(0)&=0. \end{align*}
+
+
+\begin{hint}
+This is an initial value problem requiring two levels of integration.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+\int R''(\theta) \; d\theta &= \int \sin(4\theta)-1\; d\theta \\
+R'(\theta) &= -\frac{1}{4}\cos(4\theta)-\theta+C \\
+R'(0)=0 &= -\frac{1}{4}\cos(4(0))-0+C_1 \\
+& \Rightarrow C_1=\frac{1}{4} \\
+R'(\theta) &= -\frac{1}{4}\cos(4\theta)-\theta+\frac{1}{4} \\
+\int R'(\theta)\; d\theta &= \int  -\frac{1}{4}\cos(4\theta)-\theta+\frac{1}{4}\; d\theta \\ 
+R(\theta) &= -\frac{1}{16}\sin(4\theta)-\frac{1}{2}\theta^2+\frac{1}{4}\theta+C_2 \\
+R(0) = -1 &= -\frac{1}{16}\sin(4(0))-\frac{1}{2}(0^2)+\frac{1}{4}(0)+C_2 \\
+&\Rightarrow C_2=-1 \\
+R(\theta) &= -\frac{1}{16}\sin(4\theta)-\frac{1}{2}\theta^2+\frac{1}{4}\theta-1
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$R(\theta) = \frac{1}{16}\sin(4\theta)+\frac{1}{2}\theta^2+\frac{1}{4}\theta-1$}
+\choice{$R(\theta) = -16\sin(4\theta)$}
+\choice{$R(\theta) = -16\sin(4\theta)-\frac{1}{2}\theta^2+8\theta-1$}
+\choice[correct]{$R(\theta) = -\frac{1}{16}\sin(4\theta)-\frac{1}{2}\theta^2+\frac{1}{4}\theta-1$}
+\choice{$R(\theta) = \frac{1}{16}\sin(4\theta)-\frac{1}{2}\theta^2+\frac{1}{4}\theta-1$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

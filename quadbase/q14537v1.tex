@@ -1,0 +1,45 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14537v1}
+\begin{document}
+
+\begin{exercise}
+
+Find two values of $t$ that allow you to use the mean value theorem to
+argue that there is a critical point between 0 and 4 for
+$f(t) = \sin(3t)e^{t-5}-t^4(t-\pi)^3$.
+
+
+\begin{hint}
+We need to find two points on this curve which achieve the same exact
+value. You need to be very careful because calculators will offer many
+approximate solutions that are not exact for this purpose.
+\end{hint}
+
+
+\begin{hint}
+One easy value to look for is always zero. In this case, if we start
+with $t=0$ we have
+\[f(0) = \sin(3(0))e^{0-5}-0^4(0-\pi)^3 = 0e^{-5}+0(\pi^3) = 0.\] There
+are no values that will make $e^{t-5}$ be zero, but any multiple of
+$\pi/3$ will make $\sin(3t)$ zero. In the other term, the zeros are
+$t=0$ and $t=\pi$. The intersection of these two sets is $t=0$ and
+$t=\pi$.
+
+Therefore, there exists $0 < c < \pi$ such that
+\[f'(c) = \frac{f(\pi)-f(0)}{\pi-0} = \frac{0-0}{\pi} = 0,\] and
+therefore $c$ is a critical point of $f$.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$t=0$ and $t=1$}
+\choice{$t=0$ and $t=\pi/2$}
+\choice[correct]{$t=0$ and $t=\pi$}
+\choice{$t=0$ and $t=5$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

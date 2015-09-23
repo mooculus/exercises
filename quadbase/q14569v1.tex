@@ -1,0 +1,43 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14569v1}
+\begin{document}
+
+\begin{exercise}
+
+Use Newton's method to approximate a solution of $e^x -\cos(x)=0$ with
+an initial guess of $x_0=.5$. Iterate three times, that is find $x_3$,
+and give your answer to 5 decimal places.
+
+
+\begin{hint}
+This is a Newton's Method problem. You solve it by iterating using the
+formula \[x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}.\]
+\end{hint}
+
+
+\begin{hint}
+For this problem, $f(x) = e^x-\cos(x)$ and $f'(x) = e^x+\sin(x)$.
+
+Since I told you to start with the ridiculous guess $x_0 = .5$, you
+should find: 
+
+\begin{image}\includegraphics{newtonsmethodsoln-ost1.png}\end{image}
+
+ Therefore, the third
+iterate to five decimal places is: \[x_3 = .00023.\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$x_3 = .00000$}
+\choice{$x_3 = .00024$}
+\choice{$x_3 = .00026$}
+\choice{$x_3 = .00025$}
+\choice[correct]{$x_3 = .00023$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

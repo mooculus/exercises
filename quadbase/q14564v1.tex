@@ -1,0 +1,40 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14564v1}
+\begin{document}
+
+\begin{exercise}
+
+Find the tangent line to $y=e^{2x}$ at the point $x=\ln(2)$.
+
+
+\begin{hint}
+This is a tangent line problem. You should solve it using
+\[y = f(x_0)+f'(x_0)(x-x_0).\]
+\end{hint}
+
+
+\begin{hint}
+In this case, $f(x) = e^{2x}$ and $x_0 = \ln(2)$. Therefore,
+\begin{align*}
+f(x_0) &= e^{2\ln(2)} = e^{\ln(2^2)} = 4 \\
+f'(x) &= 2e^{2x} \\
+f'(x_0) &= 2e^{2\ln(2)} = 2e^{\ln(2^2)} = 2(4) = 8 \\
+& \\
+y&= 4+8(x-\ln(2))
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$y= -4+8(x-\ln(2))$}
+\choice{$y=4-8(x-\ln(2))$}
+\choice{$y=4+8(x+\ln(2))$}
+\choice{$y= -4-8(x-\ln(2))$}
+\choice[correct]{$y=4+8(x-\ln(2))$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

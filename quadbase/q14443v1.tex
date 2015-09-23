@@ -1,0 +1,49 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14443v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate \[\int_{0}^{4}\sin\left(\frac{\pi}{3}\theta\right)\;d\theta.\]
+
+
+\begin{hint}
+This is a problem using the fundamental theorem of calculus: when
+$F(\theta)$ is an antiderivative for $f(\theta)$,
+\[\int_a^b f(\theta)\; d\theta = F(b)-F(a).\]
+\end{hint}
+
+
+\begin{hint}
+In our case, $f(\theta) = \sin\left(\frac{\pi}{3}\theta\right)$. Thus,
+the antiderivative must involve $\cos\left(\frac{\pi}{3}\theta\right).$
+Calculating, we see that \begin{align*}
+\frac{d}{d\theta}\left(\cos\left(\frac{\pi}{3}\theta\right)\right) &= -\frac{\pi}{3}\sin\left(\frac{\pi}{3}\theta\right) \\
+\left(\frac{-3}{\pi}\right)\frac{d}{d\theta}\left(\cos\left(\frac{\pi}{3}\theta\right)\right) &= \sin\left(\frac{\pi}{3}\theta\right) 
+\end{align*} Therefore, one reasonable choice is
+\[F(\theta) = \frac{-3}{\pi}\cos\left(\frac{\pi}{3}\theta\right).\]
+Plugging this into the fundamental theorem of calculus, we have:
+\begin{align*}
+\int_{0}^{4}\sin\left(\frac{\pi}{3}\theta\right)\;d\theta &= \left.-\frac{3}{\pi}\cos\left(\frac{\pi}{3}\theta\right)\right|_0^4 \\
+&= F(4)-F(0) \\
+&= -\frac{3}{\pi}\left(\cos(4\pi/3)-\cos(0)\right) \\
+&= -\frac{3}{\pi}\left(-\frac{1}{2}-1\right) \\
+&= -\frac{3}{\pi}\left(-\frac{3}{2}\right) \\
+&= \frac{9}{2\pi}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$-\frac{9}{2\pi}$}
+\choice{$\frac{1}{2}$}
+\choice[correct]{$\frac{9}{2\pi}$}
+\choice{$\frac{3}{2\pi}$}
+\choice{$\frac{3}{2}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

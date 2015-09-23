@@ -1,0 +1,44 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14570v1}
+\begin{document}
+
+\begin{exercise}
+
+Consider the function $y=-x^2+10$, shown below with several tangent
+lines: \{img:newtonsmethod-ost-opt2\_1.png\} If these tangent lines were
+created using Newton's Method, what order were they created in?
+
+
+\begin{hint}
+The key here is to think about what Newton's method is doing. Newton's
+method is iteratively searching for roots, zeros, of a function and each
+step should bring you closer to a root.
+\end{hint}
+
+
+\begin{hint}
+\begin{image}\includegraphics{newtonsmethod-ost-opt2.png}\end{image}
+
+
+
+Here, we start with an initial guess of a 0.5. That gives us a
+subsequent guess of just over 10 (the blue line) followed by about 5.7
+(the green line) and lastly by about 3.7 (the black line). Since it is
+converging to the root $\sqrt{10} \simeq 3.1623$, we haven't done too
+badly.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{First green, then black, then blue.}
+\choice[correct]{First blue, then green, then black.}
+\choice{First blue, then black, then green.}
+\choice{First black, then green, then blue.}
+\choice{First green, then blue, then black.}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

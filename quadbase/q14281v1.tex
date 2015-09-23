@@ -1,0 +1,46 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14281v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative $\frac{dq}{dt}$ if \[q(t) = \ln(t^2-2t+1).\]
+
+
+\begin{hint}
+This is a log rule problem. It is frequently useful to apply algebraic
+log rules before attempting calculus. In this case, the problem
+simplifies if you note that
+\[\ln(t^2-2t+1) = \ln\left((t-1)^2\right) = 2\ln(t-1).\]
+\end{hint}
+
+
+\begin{hint}
+Using the above simplification, the derivative becomes: \begin{align*}
+q'(t) &= 2\frac{d}{dt}\left(\ln(t-1)\right) \\
+&= 2 \left(\frac{1}{t-1}\right)\frac{d}{dt}\left(t-1\right) \\
+&= \frac{2}{t-1}
+\end{align*} However, if you do not notice the algebraic
+simplification initially, you will find the same answer by plowing
+through: \begin{align*}
+q'(t) &= \frac{1}{t^2-2t+1}\frac{d}{dt}\left(t^2-2t+1\right) \\
+&= \frac{2t-2}{t^2-2t+1} \\
+&= \frac{2(t-1)}{(t-1)^2} \\
+&= \frac{2}{t-1}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice[correct]{$q'(t) = \frac{2}{t-1}$}
+\choice{$q'(t) = \frac{t-1}{\ln(t-1)}$}
+\choice{$q'(t) = (2t-2)\ln(t^2-2t+1)$}
+\choice{$q'(t) = \ln(t^2-2t+1)$}
+\choice{$q'(t) = \frac{1}{t^2-2t+1}$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,106 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14499v1}
+\begin{document}
+
+\begin{exercise}
+
+Consider the intersection of two country roads shown below. If a cow is
+ambling away from the intersection at a leisurely 3 miles per hour and a
+cowherd is running toward the intersection at a blazing 10 miles per
+hour, what is the speed at which the cowherd is approaching the cow when
+he is 2 miles away from the intersection and the cow passed the
+intersection 40 minutes earlier?
+
+
+
+\begin{image}\includegraphics{relatedrates-cow.jpg}\end{image}
+
+
+\begin{hint}
+This is a related rates problem. You need to begin by identifying your
+variables, finding a relation, differentiating the relation and plugging
+in known (and/or computed) values to find the desired rate.
+\end{hint}
+
+
+\begin{hint}
+\begin{image}\includegraphics{rr-cow-labeled.jpg}\end{image}
+
+
+
+Variables
+
+\begin{itemize}
+\item
+  $a$ is the distance from the cowherd to the intersection in miles
+\item
+  $b$ is the distance from the cow to the intersection in miles
+\item
+  $c$ is the distance from the cow to the cowherd in miles
+\end{itemize}
+
+Relation
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  $a^2+b^2 = c^2$
+\end{itemize}
+
+Known values
+
+\begin{itemize}
+\item
+  $a = 2$ miles
+\item
+  $b = 3$ miles/hour $*2/3$ hours = 2 miles
+\item
+  $c = \sqrt{2^2+2^2} = \sqrt{8}$ miles
+\item
+  $\frac{da}{dt} = -10$ miles per hour
+\item
+  $\frac{db}{dt} = 3$ miles per hour
+\end{itemize}
+
+Want to know?
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  $\frac{dc}{dt}$
+\end{itemize}
+
+Differentiate
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  $2a\frac{da}{dt} + 2b\frac{db}{dt} = 2c\frac{dc}{dt}$
+\end{itemize}
+
+Plugging in: \begin{align*}
+2(2)\left(-10\right) + 2(2)\left(3\right) &= 2(\sqrt{8})\frac{dc}{dt} \\
+\frac{dc}{dt} &= \frac{-40+12}{2\sqrt{8}} \\
+&= -\frac{14}{\sqrt{8}} \\
+&= -\frac{7}{\sqrt{2}}
+\end{align*} So the cowherd is closing on the cow at a rate of
+$\frac{7}{\sqrt{2}} \simeq 4.95$ miles per hour.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{The cowherd is approaching the cow at $0$ miles per hour.}
+\choice[correct]{The cowherd is approaching the cow at $\frac{7}{\sqrt{2}}$ miles per
+hour.}
+\choice{The cowherd is approaching the cow at $\frac{7}{2}$ miles per hour.}
+\choice{The cowherd is approaching the cow at $\frac{13}{\sqrt{2}}$ miles per
+hour.}
+\choice{The cowherd is approaching the cow at $\frac{11}{\sqrt{8}}$ miles per
+hour.}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

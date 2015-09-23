@@ -1,0 +1,46 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14574v1}
+\begin{document}
+
+\begin{exercise}
+
+Find the limit \[\lim_{x \to 0} \frac{1}{x}- \csc(3x).\]
+
+
+\begin{hint}
+This is a L'Hopital's Rule question because when you attempt to naively
+calculate the limit the result is $\infty-\infty$.
+\end{hint}
+
+
+\begin{hint}
+First, try to evaluate the limit directly.
+\[\lim_{x\to 0} \frac{1}{x} - \csc(3x) = \infty-\infty.\] Since this is
+an indeterminate form, we can apply L'Hopital's rule after rewriting the
+problem: \begin{align*}
+\lim_{x\to 0} \frac{1}{x}-\csc(3x) &= \lim_{x\to 0} \frac{\sin(3x)-x}{x\sin(3x)} \left( = \frac{0}{0}\right)\\
+&=  \lim_{x\to 0} \frac{3\cos(3x)-1}{\sin(3x)+3x\cos(3x)} \left( =\frac{0}{0}\right) \\
+&= DNE
+\end{align*} The limit does not exist because we have
+\[\lim_{x\to 0^+} \frac{3\cos(3x)-1}{\sin(3x)+3x\cos(3x)} = \frac{2}{0^+} = \infty\]
+and
+\[\lim_{x\to 0^-} \frac{3\cos(3x)-1}{\sin(3x)+3x\cos(3x)} = \frac{2}{0^-} = -\infty\]
+where I have used $0^+$ to denote a limit which approaches zero from the
+positive side only and $0^-$ to denote a limit which approaches zero
+from the negative side only.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$16$}
+\choice{$-\infty$}
+\choice[correct]{DNE}
+\choice{$\infty$}
+\choice{$0$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

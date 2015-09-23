@@ -1,0 +1,38 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14226v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the derivative of \[g(x) = x^2\cos(x).\]
+
+
+\begin{hint}
+This is a product rule question. You need to use
+\[\frac{d}{dx}\left(f(x)g(x)\right) = f'(x)g(x)+f(x)g'(x)\] to solve it.
+\end{hint}
+
+
+\begin{hint}
+Using the product rule,
+\[\frac{d}{dx}\left(f(x)g(x)\right) = f'(x)g(x)+f(x)g'(x),\] we have
+\begin{align*} \frac{d}{dx}\left(x^2\cos(x)\right) &= \frac{d}{dx}(x^2)\cos(x)+x^2\left(\frac{d}{dx}\left(\cos(x)\right)\right) \\
+&= \left(2x\right)\cos(x) + x^2\left(-\sin(x)\right) \\
+&= \boxed{2x\cos(x)-x^2\sin(x)}
+\end{align*}
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$g'(x) = -2x\sin(x)+x^2\cos(x)$}
+\choice{$g'(x) = 2x\cos(x)+x^2\sin(x)$}
+\choice{$g'(x) = -2x\sin(x)$}
+\choice{$g'(x) = 2x\sin(x)$}
+\choice[correct]{$g'(x) = 2x\cos(x)-x^2\sin(x)$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

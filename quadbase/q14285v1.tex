@@ -1,0 +1,43 @@
+\documentclass{ximera}
+%\input{../preamble.tex}
+\author{Emma Smith Zbarsky}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14285v1}
+\begin{document}
+
+\begin{exercise}
+
+Calculate the first 6 derivatives with respect to $t$ of
+$f(t) = \cos(2t)$. Then use the pattern you found to compute the 301st
+derivative of $\cos(2t).$
+
+
+\begin{hint}
+This is a higher order derivative that relies on the fact that the
+derivatives of sine and cosine are cyclic of order 4.
+\end{hint}
+
+
+\begin{hint}
+\begin{align*}
+f'(t) &= -2\sin(2t) \\
+f''(t) &= -2^2\cos(2t) \\
+f'''(t) &= 2^3\sin(2t) \\
+f^{(4)}(t) &= 2^4\cos(2t) = 2^4 f(t)\\
+f^{(5)}(t) &= -2^5\sin(2t) = 2^4 f'(t) \\
+f^{(6)}(t) &= -2^6\cos(2t) = 2^4 f''(t) \\
+& \vdots \\
+f^{(301)}(t) &= 2^{300}f'(t) = 2^{300}(-2\sin(2t)) = -2^{301}\sin(2t)
+\end{align*} where we have used the fact that 300 is divisible by 4.
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$f^{(301)}(t) = -2^{301}\cos(2t)$}
+\choice{$f^{(301)}(t) = 2^{301}\sin(2t)$}
+\choice{$f^{(301)}(t) = 2^{301}\cos(2t)$}
+\choice[correct]{$f^{(301)}(t) = -2^{301}\sin(2t)$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}
