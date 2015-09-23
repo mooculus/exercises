@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     11514,        243]
-NotebookOptionsPosition[     11140,        225]
-NotebookOutlinePosition[     11498,        241]
-CellTagsIndexPosition[     11455,        238]
+NotebookDataLength[     12101,        252]
+NotebookOptionsPosition[     11729,        234]
+NotebookOutlinePosition[     12086,        250]
+CellTagsIndexPosition[     12043,        247]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,8 +21,7 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell[BoxData[{
- RowBox[{
-  RowBox[{"SeedRandom", "[", "1", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"SeedRandom", "[", "1", "]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"LaTeX", "[", "x_", "]"}], ":=", 
@@ -49,7 +48,10 @@ Cell[BoxData[{
          "x", ",", "z", ",", "t", ",", "n", ",", "k", ",", "w", ",", "u", ",",
            "v", ",", "\[Theta]", ",", "\[Psi]"}], "}"}], "]"}]}], ";", 
       "\[IndentingNewLine]", 
-      RowBox[{"aa", " ", "=", " ", 
+      RowBox[{"reg", "=", 
+       RowBox[{"Random", "[", "Integer", "]"}]}], ";", "\[IndentingNewLine]", 
+      
+      RowBox[{"aa", " ", ":=", " ", 
        RowBox[{"RandomChoice", "[", 
         RowBox[{"{", 
          RowBox[{
@@ -59,70 +61,77 @@ Cell[BoxData[{
           RowBox[{"-", "2"}], ",", 
           RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
           "5"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"offset", " ", "=", " ", 
-       RowBox[{"RandomChoice", "[", 
-        RowBox[{"Table", "[", 
-         RowBox[{"i", ",", 
-          RowBox[{"{", 
-           RowBox[{"i", ",", 
-            RowBox[{"Abs", "[", "aa", "]"}], ",", 
-            RowBox[{
-             RowBox[{"Abs", "[", "aa", "]"}], "+", "5"}]}], "}"}]}], "]"}], 
-        "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"ff", "=", 
+      RowBox[{"bb", ":=", " ", 
        RowBox[{"RandomChoice", "[", 
         RowBox[{"{", 
          RowBox[{
-          RowBox[{"Function", "[", 
-           RowBox[{"#", "^", "2"}], "]"}], ",", 
-          RowBox[{"Function", "[", 
-           RowBox[{"Sqrt", "[", 
-            RowBox[{"#", "+", "offset"}], "]"}], "]"}], ",", 
-          RowBox[{"Function", "[", 
-           RowBox[{"1", "/", 
-            RowBox[{"(", 
-             RowBox[{"#", "+", "offset"}], ")"}]}], "]"}]}], "}"}], "]"}]}], 
-      ";", "\[IndentingNewLine]", 
+          RowBox[{"-", "5"}], ",", 
+          RowBox[{"-", "4"}], ",", 
+          RowBox[{"-", "3"}], ",", 
+          RowBox[{"-", "2"}], ",", 
+          RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
+          "5"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"fNumerator", "[", "x_", "]"}], "=", 
+       RowBox[{"ff", "[", "x_", "]"}], "=", 
        RowBox[{
-        RowBox[{"ff", "[", "x", "]"}], "-", 
-        RowBox[{"ff", "[", "aa", "]"}]}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{"fDenominator", "[", "x_", "]"}], "=", 
-       RowBox[{"x", "-", "aa"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"answer", "=", 
-       RowBox[{"Limit", "[", 
-        RowBox[{
+        RowBox[{"aa", " ", "*", 
+         RowBox[{"E", "^", "x"}]}], " ", "+", 
+        RowBox[{"aa", "*", 
+         RowBox[{"Sin", "[", "x", "]"}]}], " ", "+", " ", 
+        RowBox[{"If", "[", 
          RowBox[{
-          RowBox[{"fNumerator", "[", "x", "]"}], "/", 
-          RowBox[{"fDenominator", "[", "x", "]"}]}], ",", 
-         RowBox[{"x", "\[Rule]", "aa"}]}], "]"}]}], ";", 
+          RowBox[{"reg", "\[Equal]", "1"}], ",", 
+          RowBox[{"aa", "*", 
+           RowBox[{"Surd", "[", 
+            RowBox[{"x", ",", "aa"}], "]"}]}], ",", 
+          RowBox[{"aa", "*", 
+           RowBox[{"x", "^", "aa"}]}]}], "]"}]}]}], ";", 
       "\[IndentingNewLine]", 
+      RowBox[{"pp", "=", 
+       RowBox[{"Abs", "[", "aa", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"answer", "=", 
+       RowBox[{"N", "[", 
+        RowBox[{
+         RowBox[{"ff", "'"}], "[", "pp", "]"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"switch", "=", 
+       RowBox[{"Random", "[", "Integer", "]"}]}], ";", "\[IndentingNewLine]", 
+      
       RowBox[{"StringJoin", "[", 
        RowBox[{
        "\"\<\\\\documentclass{ximera}\n\\\\input{preamble.tex}\n\
 \\\\author{Bart Snapp}\n\\\\license{Creative Commons 3.0 By-NC}\n\
-\\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Calculate limits of the \
-form zero over zero.}\n\\\\tag{limit}\n\\\\tag{indeterminate form}\nLet \
-$\>\"", ",", 
+\\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Use the definition of \
+the derivative to develop shortcut rules to find the derivatives of constants \
+and constant multiples.}\n\\\\outcome{Use the definition of the derivative to \
+develop shortcut rules to find the derivatives of powers of x.}\n\
+\\\\outcome{Use the definition of the derivative to develop shortcut rules to \
+find the derivatives of sums and differences of functions.}\n\
+\\\\outcome{Compute the derivative of polynomials.}\n\\\\outcome{State the \
+derivative of the natural exponential function.}\n\\\\outcome{State the \
+derivative of the sine function.}\n\\\\tag{derivative}\nLet $\>\"", ",", 
         RowBox[{"LaTeX", "[", "function", "]"}], ",", "\"\<(\>\"", ",", 
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<) = \>\"", ",", 
         RowBox[{"LaTeX", " ", "[", 
          RowBox[{"ff", "[", "variable", "]"}], "]"}], ",", 
-        "\"\<$. Compute\n\\n\\\\[\\n\\\\lim_{ \>\"", ",", 
-        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<\\\\to \>\"", ",", 
-        
-        RowBox[{"LaTeX", "[", "aa", "]"}], ",", "\"\< } \n\\\\frac{\>\"", ",",
-         " ", 
-        RowBox[{"LaTeX", "[", "function", "]"}], ",", "\"\<(\>\"", ",", 
-        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<)-\>\"", ",", " ", 
-        
-        RowBox[{"LaTeX", "[", "function", "]"}], ",", "\"\<(\>\"", ",", 
-        RowBox[{"LaTeX", "[", "aa", "]"}], ",", "\"\<)}{\>\"", ",", 
-        RowBox[{"LaTeX", "[", 
-         RowBox[{"variable", "-", "aa"}], "]"}], ",", 
-        "\"\<} \\\\begin{prompt}=\\\\answer{\>\"", ",", 
+        "\"\<$. Compute\n\\n\\\\[\\n\>\"", ",", "\n", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"switch", "\[Equal]", "1"}], ",", 
+          RowBox[{"StringJoin", "[", 
+           RowBox[{"\"\<\\\\eval{\\\\dd{\>\"", ",", 
+            RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<}\>\"", " ", 
+            ",", 
+            RowBox[{"LaTeX", "[", "function", "]"}], ",", "\"\<(\>\"", ",", 
+            RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<)}_{\>\"", ",", 
+            RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<=\>\"", ",", 
+            RowBox[{"LaTeX", "[", "pp", "]"}], ",", "\"\<}\>\""}], "]"}], ",",
+           "\[IndentingNewLine]", 
+          RowBox[{"StringJoin", "[", 
+           RowBox[{
+            RowBox[{"LaTeX", "[", "function", "]"}], ",", "\"\<'(\>\"", ",", 
+            RowBox[{"LaTeX", "[", "pp", "]"}], ",", "\"\<)\>\""}], "]"}]}], 
+         "]"}], ",", "\"\<\n\\\\begin{prompt}=\\\\answer{\>\"", ",", 
         RowBox[{"LaTeX", "[", "answer", "]"}], ",", 
         "\"\<}\\\\end{prompt}\n\\\\]\n\\\\end{exercise}\n\
 \\\\end{document}\>\""}], "]"}]}]}], "]"}]}], 
@@ -130,7 +139,7 @@ $\>\"", ",",
  RowBox[{"StringJoin", "[", 
   RowBox[{"Table", "[", 
    RowBox[{"code", ",", 
-    RowBox[{"{", "3", "}"}]}], "]"}], "]"}]}], "Input",
+    RowBox[{"{", "1", "}"}]}], "]"}], "]"}]}], "Input",
  CellChangeTimes->{{3.596822797404059*^9, 3.596822804542852*^9}, {
    3.5968826810601063`*^9, 3.5968826817983427`*^9}, {3.597068159626274*^9, 
    3.59706815983995*^9}, {3.598285044339224*^9, 3.598285051576729*^9}, {
@@ -175,34 +184,32 @@ $\>\"", ",",
    3.651751336366744*^9, 3.65175143675371*^9}, {3.651751470150696*^9, 
    3.651751476542153*^9}, {3.651751510523676*^9, 3.651751574566471*^9}, {
    3.651751612393427*^9, 3.651751700637144*^9}, 3.651751943286065*^9, {
-   3.651853859670145*^9, 3.651853861970173*^9}}],
+   3.651853859670145*^9, 3.651853861970173*^9}, {3.652006610308938*^9, 
+   3.652006922655108*^9}, {3.6520069767221537`*^9, 3.6520070325609903`*^9}, {
+   3.652007255620994*^9, 3.652007285283642*^9}, {3.65200732504454*^9, 
+   3.6520073581308107`*^9}, {3.652007634680707*^9, 3.652008119509358*^9}, {
+   3.652008251369646*^9, 3.652008257705995*^9}, {3.652009098930094*^9, 
+   3.652009099826725*^9}}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
 author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
-By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
-limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\nLet $s(x) = x^2$. Compute\\n\\n\\\\[\\n\\\\lim_{ x\\\\to -4 } \
-\\n\\\\frac{s(x)-s(-4)}{x+4} \
-\\\\begin{prompt}=\\\\answer{-8}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\\
-n\\\\end{document}\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
-author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
-By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
-limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\nLet $g(n) = \\\\sqrt{n+8}$. Compute\\n\\n\\\\[\\n\\\\lim_{ n\\\\to -5 \
-} \\n\\\\frac{g(n)-g(-5)}{n+5} \\\\begin{prompt}=\\\\answer{\\\\frac{1}{2 \
-\\\\sqrt{3}}}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\\\
-\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\
-\\\\license{Creative Commons 3.0 \
-By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
-limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\nLet $y(n) = \\\\sqrt{n+5}$. Compute\\n\\n\\\\[\\n\\\\lim_{ n\\\\to 5 \
-} \\n\\\\frac{y(n)-y(5)}{n-5} \\\\begin{prompt}=\\\\answer{\\\\frac{1}{2 \
-\\\\sqrt{10}}}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\
-\"\>"], "Output",
- CellChangeTimes->{{3.651751159034329*^9, 3.6517511811496763`*^9}, 
-   3.651751244794981*^9, 3.651751437593359*^9, 3.651751579442196*^9, {
-   3.651751679981646*^9, 3.6517517011732483`*^9}, 3.65175194658259*^9, 
-   3.6518538628622026`*^9, 3.651853997860139*^9, 3.6518540767313128`*^9}]
+By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use the \
+definition of the derivative to develop shortcut rules to find the \
+derivatives of constants and constant multiples.}\\n\\\\outcome{Use the \
+definition of the derivative to develop shortcut rules to find the \
+derivatives of powers of x.}\\n\\\\outcome{Use the definition of the \
+derivative to develop shortcut rules to find the derivatives of sums and \
+differences of functions.}\\n\\\\outcome{Compute the derivative of \
+polynomials.}\\n\\\\outcome{State the derivative of the natural exponential \
+function.}\\n\\\\outcome{State the derivative of the sine \
+function.}\\n\\\\tag{derivative}\\nLet $s(x) = -\\\\frac{3}{x^4}-4 e^x-5 \
+\\\\sin (x)$. \
+Compute\\n\\n\\\\[\\n\\\\eval{\\\\dd{x}s(x)}_{x=4}\\n\\\\begin{prompt}=\\\\\
+answer{-215.113}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{\
+document}\"\>"], "Output",
+ CellChangeTimes->{{3.652007901471291*^9, 3.652007938727149*^9}, {
+   3.6520080029548388`*^9, 3.6520080433053207`*^9}, 3.6520081213265953`*^9, {
+   3.652008255759882*^9, 3.652008258326585*^9}, 3.65200912277112*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -211,7 +218,7 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"Export", "[", 
      RowBox[{
-      RowBox[{"\"\<lessSimpleDerivativeLimit\>\"", "<>", 
+      RowBox[{"\"\<basicDerivativeRulesAtAPoint\>\"", "<>", 
        RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.tex\>\""}], ",", 
       "code", ",", "\"\<Text\>\""}], "]"}], ",", 
     RowBox[{"{", 
@@ -221,10 +228,12 @@ Cell[BoxData[
    3.6502435245708437`*^9}, {3.650244179818222*^9, 3.650244188522778*^9}, {
    3.650282208740053*^9, 3.6502822141316023`*^9}, {3.6502838089826202`*^9, 
    3.65028380955208*^9}, {3.650290325181723*^9, 3.650290330632143*^9}, 
-   3.650367769137933*^9, {3.6517517663368053`*^9, 3.651751767486525*^9}}]
+   3.650367769137933*^9, {3.6517517663368053`*^9, 3.651751767486525*^9}, {
+   3.652007304369194*^9, 3.65200731834723*^9}, {3.652008136003598*^9, 
+   3.6520081360937243`*^9}}]
 },
-WindowSize->{1024, 706},
-WindowMargins->{{-9, Automatic}, {Automatic, -8}},
+WindowSize->{1920, 1020},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
@@ -241,10 +250,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 7934, 155, 649, "Input"],
-Cell[8516, 179, 1803, 25, 1089, "Output"]
+Cell[579, 22, 8967, 169, 781, "Input"],
+Cell[9549, 193, 1255, 18, 473, "Output"]
 }, Open  ]],
-Cell[10334, 207, 802, 16, 32, "Input"]
+Cell[10819, 214, 906, 18, 32, "Input"]
 }
 ]
 *)
