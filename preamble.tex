@@ -8,6 +8,11 @@
 %\usepackage{mathtools} %% for pretty underbrace % Breaks Ximera
 \usepackage{multicol}
 
+\graphicspath{
+{./}
+{quadbase/}
+}
+
 
 \newcommand{\RR}{\mathbb R}
 \renewcommand{\d}{\,d}
@@ -44,14 +49,10 @@
 }
 
 
-
-\newcommand{\fullwidth}{}
-\newcommand{\normalwidth}{}
-
-
-
 %% makes a snazzy t-chart for evaluating functions
 \newenvironment{tchart}{\rowcolors{2}{}{background!90!textColor}\array}{\endarray}
+
+
 
 %%This is to help with formatting on future title pages.
 \newenvironment{sectionOutcomes}{}{} 
