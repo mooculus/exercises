@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     12101,        252]
-NotebookOptionsPosition[     11729,        234]
-NotebookOutlinePosition[     12086,        250]
-CellTagsIndexPosition[     12043,        247]
+NotebookDataLength[     12183,        253]
+NotebookOptionsPosition[     11811,        235]
+NotebookOutlinePosition[     12168,        251]
+CellTagsIndexPosition[     12125,        248]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -81,10 +81,10 @@ Cell[BoxData[{
         RowBox[{"If", "[", 
          RowBox[{
           RowBox[{"reg", "\[Equal]", "1"}], ",", 
-          RowBox[{"aa", "*", 
+          RowBox[{"bb", "*", 
            RowBox[{"Surd", "[", 
             RowBox[{"x", ",", "aa"}], "]"}]}], ",", 
-          RowBox[{"aa", "*", 
+          RowBox[{"bb", "*", 
            RowBox[{"x", "^", "aa"}]}]}], "]"}]}]}], ";", 
       "\[IndentingNewLine]", 
       RowBox[{"pp", "=", 
@@ -189,10 +189,10 @@ derivative of the sine function.}\n\\\\tag{derivative}\nLet $\>\"", ",",
    3.652007255620994*^9, 3.652007285283642*^9}, {3.65200732504454*^9, 
    3.6520073581308107`*^9}, {3.652007634680707*^9, 3.652008119509358*^9}, {
    3.652008251369646*^9, 3.652008257705995*^9}, {3.652009098930094*^9, 
-   3.652009099826725*^9}}],
+   3.652009099826725*^9}, {3.6520960860488977`*^9, 3.652096087794054*^9}}],
 
-Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\\\
-author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
+Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\
+\\author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use the \
 definition of the derivative to develop shortcut rules to find the \
 derivatives of constants and constant multiples.}\\n\\\\outcome{Use the \
@@ -209,7 +209,8 @@ answer{-215.113}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{\
 document}\"\>"], "Output",
  CellChangeTimes->{{3.652007901471291*^9, 3.652007938727149*^9}, {
    3.6520080029548388`*^9, 3.6520080433053207`*^9}, 3.6520081213265953`*^9, {
-   3.652008255759882*^9, 3.652008258326585*^9}, 3.65200912277112*^9}]
+   3.652008255759882*^9, 3.652008258326585*^9}, 3.65200912277112*^9, 
+   3.6520961024316053`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -250,10 +251,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 8967, 169, 781, "Input"],
-Cell[9549, 193, 1255, 18, 473, "Output"]
+Cell[579, 22, 9018, 169, 781, "Input"],
+Cell[9600, 193, 1286, 19, 473, "Output"]
 }, Open  ]],
-Cell[10819, 214, 906, 18, 32, "Input"]
+Cell[10901, 215, 906, 18, 32, "Input"]
 }
 ]
 *)

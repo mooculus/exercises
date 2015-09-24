@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     11514,        243]
-NotebookOptionsPosition[     11140,        225]
-NotebookOutlinePosition[     11498,        241]
-CellTagsIndexPosition[     11455,        238]
+NotebookDataLength[     11767,        256]
+NotebookOptionsPosition[     11395,        238]
+NotebookOutlinePosition[     11752,        254]
+CellTagsIndexPosition[     11709,        251]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -49,7 +49,13 @@ Cell[BoxData[{
          "x", ",", "z", ",", "t", ",", "n", ",", "k", ",", "w", ",", "u", ",",
            "v", ",", "\[Theta]", ",", "\[Psi]"}], "}"}], "]"}]}], ";", 
       "\[IndentingNewLine]", 
-      RowBox[{"aa", " ", "=", " ", 
+      RowBox[{"reg", "=", 
+       RowBox[{"Random", "[", "Integer", "]"}]}], ";", "\[IndentingNewLine]", 
+      
+      RowBox[{"switch", "=", 
+       RowBox[{"Random", "[", "Integer", "]"}]}], ";", "\[IndentingNewLine]", 
+      
+      RowBox[{"aa", " ", ":=", " ", 
        RowBox[{"RandomChoice", "[", 
         RowBox[{"{", 
          RowBox[{
@@ -59,78 +65,88 @@ Cell[BoxData[{
           RowBox[{"-", "2"}], ",", 
           RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
           "5"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"offset", " ", "=", " ", 
-       RowBox[{"RandomChoice", "[", 
-        RowBox[{"Table", "[", 
-         RowBox[{"i", ",", 
-          RowBox[{"{", 
-           RowBox[{"i", ",", 
-            RowBox[{"Abs", "[", "aa", "]"}], ",", 
-            RowBox[{
-             RowBox[{"Abs", "[", "aa", "]"}], "+", "5"}]}], "}"}]}], "]"}], 
-        "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"ff", "=", 
+      RowBox[{"bb", ":=", " ", 
        RowBox[{"RandomChoice", "[", 
         RowBox[{"{", 
          RowBox[{
-          RowBox[{"Function", "[", 
-           RowBox[{"#", "^", "2"}], "]"}], ",", 
-          RowBox[{"Function", "[", 
-           RowBox[{"Sqrt", "[", 
-            RowBox[{"#", "+", "offset"}], "]"}], "]"}], ",", 
-          RowBox[{"Function", "[", 
-           RowBox[{"1", "/", 
-            RowBox[{"(", 
-             RowBox[{"#", "+", "offset"}], ")"}]}], "]"}]}], "}"}], "]"}]}], 
-      ";", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{"fNumerator", "[", "x_", "]"}], "=", 
-       RowBox[{
-        RowBox[{"ff", "[", "x", "]"}], "-", 
-        RowBox[{"ff", "[", "aa", "]"}]}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{"fDenominator", "[", "x_", "]"}], "=", 
-       RowBox[{"x", "-", "aa"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"answer", "=", 
-       RowBox[{"Limit", "[", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"fNumerator", "[", "x", "]"}], "/", 
-          RowBox[{"fDenominator", "[", "x", "]"}]}], ",", 
-         RowBox[{"x", "\[Rule]", "aa"}]}], "]"}]}], ";", 
+          RowBox[{"-", "5"}], ",", 
+          RowBox[{"-", "4"}], ",", 
+          RowBox[{"-", "3"}], ",", 
+          RowBox[{"-", "2"}], ",", 
+          RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
+          "5"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"dd", ":=", " ", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", "4", ",", "5", ",", "6"}], "}"}], "]"}]}], ";", 
       "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"functionparts", "[", "x_", "]"}], ":=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"aa", " ", "*", 
+           RowBox[{"E", "^", "x"}]}], " ", ",", 
+          RowBox[{"aa", "*", 
+           RowBox[{"Sin", "[", "x", "]"}]}], ",", 
+          RowBox[{"aa", "*", 
+           RowBox[{"Surd", "[", 
+            RowBox[{"x", ",", "aa"}], "]"}]}], ",", 
+          RowBox[{"aa", "*", 
+           RowBox[{"x", "^", "aa"}]}]}], "}"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ff", "[", "x_", "]"}], "=", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"functionparts", "[", "x", "]"}], "+", 
+          RowBox[{"functionparts", "[", "x", "]"}]}], ")"}], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"functionparts", "[", "x", "]"}], "+", 
+          RowBox[{"functionparts", "[", "x", "]"}]}], ")"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"answer", "[", "x_", "]"}], "=", 
+       RowBox[{
+        RowBox[{"ff", "'"}], "[", "x", "]"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"StringJoin", "[", 
        RowBox[{
-       "\"\<\\\\documentclass{ximera}\n\\\\input{preamble.tex}\n\
+       "\"\<\\\\documentclass{ximera}\n\\\\input{../preamble.tex}\n\
 \\\\author{Bart Snapp}\n\\\\license{Creative Commons 3.0 By-NC}\n\
-\\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Calculate limits of the \
-form zero over zero.}\n\\\\tag{limit}\n\\\\tag{indeterminate form}\nLet \
-$\>\"", ",", 
+\\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Use the product rule to \
+calculate derivatives.}\n\\\\tag{derivative}\nLet $\>\"", ",", 
         RowBox[{"LaTeX", "[", "function", "]"}], ",", "\"\<(\>\"", ",", 
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<) = \>\"", ",", 
         RowBox[{"LaTeX", " ", "[", 
          RowBox[{"ff", "[", "variable", "]"}], "]"}], ",", 
-        "\"\<$. Compute\n\\n\\\\[\\n\\\\lim_{ \>\"", ",", 
-        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<\\\\to \>\"", ",", 
-        
-        RowBox[{"LaTeX", "[", "aa", "]"}], ",", "\"\< } \n\\\\frac{\>\"", ",",
-         " ", 
-        RowBox[{"LaTeX", "[", "function", "]"}], ",", "\"\<(\>\"", ",", 
-        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<)-\>\"", ",", " ", 
-        
-        RowBox[{"LaTeX", "[", "function", "]"}], ",", "\"\<(\>\"", ",", 
-        RowBox[{"LaTeX", "[", "aa", "]"}], ",", "\"\<)}{\>\"", ",", 
+        "\"\<$. Compute\n\\\\[\\n\>\"", ",", "\n", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"switch", "\[Equal]", "1"}], ",", 
+          RowBox[{"StringJoin", "[", 
+           RowBox[{"\"\<\\\\dd{\>\"", ",", 
+            RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<}\>\"", " ", 
+            ",", 
+            RowBox[{"LaTeX", "[", "function", "]"}], ",", "\"\<(\>\"", ",", 
+            RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<)\>\""}], 
+           "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"StringJoin", "[", 
+           RowBox[{
+            RowBox[{"LaTeX", "[", "function", "]"}], ",", "\"\<'(\>\"", ",", 
+            RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<)\>\""}], 
+           "]"}]}], "]"}], ",", "\"\<\n\\\\begin{prompt}=\\\\answer{\>\"", 
+        ",", 
         RowBox[{"LaTeX", "[", 
-         RowBox[{"variable", "-", "aa"}], "]"}], ",", 
-        "\"\<} \\\\begin{prompt}=\\\\answer{\>\"", ",", 
-        RowBox[{"LaTeX", "[", "answer", "]"}], ",", 
+         RowBox[{"answer", "[", "variable", "]"}], "]"}], ",", 
         "\"\<}\\\\end{prompt}\n\\\\]\n\\\\end{exercise}\n\
 \\\\end{document}\>\""}], "]"}]}]}], "]"}]}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"StringJoin", "[", 
   RowBox[{"Table", "[", 
    RowBox[{"code", ",", 
-    RowBox[{"{", "3", "}"}]}], "]"}], "]"}]}], "Input",
+    RowBox[{"{", "1", "}"}]}], "]"}], "]"}]}], "Input",
  CellChangeTimes->{{3.596822797404059*^9, 3.596822804542852*^9}, {
    3.5968826810601063`*^9, 3.5968826817983427`*^9}, {3.597068159626274*^9, 
    3.59706815983995*^9}, {3.598285044339224*^9, 3.598285051576729*^9}, {
@@ -167,42 +183,38 @@ $\>\"", ",",
    3.650286574040991*^9, 3.650286617773315*^9}, {3.6502901536527643`*^9, 
    3.650290159853923*^9}, {3.6502901912367363`*^9, 3.650290209932417*^9}, 
    3.65029027837704*^9, 3.650290316851048*^9, {3.650367741443675*^9, 
-   3.650367760016856*^9}, {3.651750486312187*^9, 3.651750527371437*^9}, {
-   3.651750584326807*^9, 3.651750772658411*^9}, {3.651750827431292*^9, 
-   3.651750888411705*^9}, {3.6517509707863493`*^9, 3.651750990745696*^9}, {
-   3.651751086481855*^9, 3.651751180375145*^9}, {3.651751214840308*^9, 
-   3.6517512427377367`*^9}, {3.65175127404713*^9, 3.651751276356863*^9}, {
-   3.651751336366744*^9, 3.65175143675371*^9}, {3.651751470150696*^9, 
-   3.651751476542153*^9}, {3.651751510523676*^9, 3.651751574566471*^9}, {
-   3.651751612393427*^9, 3.651751700637144*^9}, 3.651751943286065*^9, {
-   3.651853859670145*^9, 3.651853861970173*^9}}],
+   3.650367760016856*^9}, {3.652089988850504*^9, 3.652090039825307*^9}, {
+   3.652090071958444*^9, 3.652090073378819*^9}, {3.652090106033861*^9, 
+   3.652090140194867*^9}, {3.652090312900178*^9, 3.65209032352598*^9}, {
+   3.652091972097362*^9, 3.652092031848268*^9}, {3.652092073979226*^9, 
+   3.652092109781722*^9}, {3.6520921575160418`*^9, 3.652092180522048*^9}, 
+   3.652092210922797*^9, {3.652092301931728*^9, 3.65209230525797*^9}, {
+   3.6520957836032963`*^9, 3.652095786145383*^9}, {3.65209612534031*^9, 
+   3.6520961553845778`*^9}, {3.65209623282067*^9, 3.65209637549793*^9}, {
+   3.652096451995706*^9, 3.652096456994523*^9}, {3.652096517821944*^9, 
+   3.652096536766967*^9}, {3.65209682357541*^9, 3.652096834439345*^9}, {
+   3.652096867964349*^9, 3.6520968764024553`*^9}}],
 
-Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
-author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
-By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
-limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\nLet $s(x) = x^2$. Compute\\n\\n\\\\[\\n\\\\lim_{ x\\\\to -4 } \
-\\n\\\\frac{s(x)-s(-4)}{x+4} \
-\\\\begin{prompt}=\\\\answer{-8}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\\
-n\\\\end{document}\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
-author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
-By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
-limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\nLet $g(n) = \\\\sqrt{n+8}$. Compute\\n\\n\\\\[\\n\\\\lim_{ n\\\\to -5 \
-} \\n\\\\frac{g(n)-g(-5)}{n+5} \\\\begin{prompt}=\\\\answer{\\\\frac{1}{2 \
-\\\\sqrt{3}}}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\\\
-\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\
-\\\\license{Creative Commons 3.0 \
-By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
-limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
-form}\\nLet $y(n) = \\\\sqrt{n+5}$. Compute\\n\\n\\\\[\\n\\\\lim_{ n\\\\to 5 \
-} \\n\\\\frac{y(n)-y(5)}{n-5} \\\\begin{prompt}=\\\\answer{\\\\frac{1}{2 \
-\\\\sqrt{10}}}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\
-\"\>"], "Output",
- CellChangeTimes->{{3.651751159034329*^9, 3.6517511811496763`*^9}, 
-   3.651751244794981*^9, 3.651751437593359*^9, 3.651751579442196*^9, {
-   3.651751679981646*^9, 3.6517517011732483`*^9}, 3.65175194658259*^9, 
-   3.6518538628622026`*^9, 3.651853997860139*^9, 3.6518540767313128`*^9}]
+Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\
+\\author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
+By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use the \
+product rule to calculate derivatives.}\\n\\\\tag{derivative}\\nLet $s(x) = \
+-4 e^x \\\\left(\\\\frac{4}{x^2}-e^x\\\\right)$. \
+Compute\\n\\\\[\\n\\\\dd{x}s(x)\\n\\\\begin{prompt}=\\\\answer{-4 e^x \
+\\\\left(-\\\\frac{8}{x^3}-e^x\\\\right)-4 e^x \
+\\\\left(\\\\frac{4}{x^2}-e^x\\\\right)}\\\\end{prompt}\\n\\\\]\\n\\\\end{\
+exercise}\\n\\\\end{document}\"\>"], "Output",
+ CellChangeTimes->{
+  3.650283960389832*^9, {3.650285568714333*^9, 3.650285627067028*^9}, {
+   3.650286623394907*^9, 3.650286629992622*^9}, {3.65029016183368*^9, 
+   3.650290191947661*^9}, 3.650290278766733*^9, 3.65029032070225*^9, 
+   3.6502904096469803`*^9, 3.6503677649063597`*^9, {3.652090047898892*^9, 
+   3.652090074432976*^9}, {3.6520901297509747`*^9, 3.652090141838917*^9}, 
+   3.652090327076624*^9, {3.6520920142182913`*^9, 3.652092032638712*^9}, 
+   3.652092111123048*^9, {3.65209218223542*^9, 3.6520922117103033`*^9}, 
+   3.652092307387732*^9, {3.6520963590664062`*^9, 3.652096376378146*^9}, 
+   3.6520964599797173`*^9, {3.652096501654087*^9, 3.6520965378608418`*^9}, 
+   3.652096881430016*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -211,7 +223,7 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"Export", "[", 
      RowBox[{
-      RowBox[{"\"\<lessSimpleDerivativeLimit\>\"", "<>", 
+      RowBox[{"\"\<basicProductRule\>\"", "<>", 
        RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.tex\>\""}], ",", 
       "code", ",", "\"\<Text\>\""}], "]"}], ",", 
     RowBox[{"{", 
@@ -221,10 +233,11 @@ Cell[BoxData[
    3.6502435245708437`*^9}, {3.650244179818222*^9, 3.650244188522778*^9}, {
    3.650282208740053*^9, 3.6502822141316023`*^9}, {3.6502838089826202`*^9, 
    3.65028380955208*^9}, {3.650290325181723*^9, 3.650290330632143*^9}, 
-   3.650367769137933*^9, {3.6517517663368053`*^9, 3.651751767486525*^9}}]
+   3.650367769137933*^9, {3.6520922167714357`*^9, 3.652092217956059*^9}, {
+   3.652096577078129*^9, 3.652096606344545*^9}}]
 },
-WindowSize->{1024, 706},
-WindowMargins->{{-9, Automatic}, {Automatic, -8}},
+WindowSize->{1920, 1020},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
@@ -241,10 +254,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 7934, 155, 649, "Input"],
-Cell[8516, 179, 1803, 25, 1089, "Output"]
+Cell[579, 22, 8661, 173, 693, "Input"],
+Cell[9243, 197, 1290, 19, 341, "Output"]
 }, Open  ]],
-Cell[10334, 207, 802, 16, 32, "Input"]
+Cell[10548, 219, 843, 17, 32, "Input"]
 }
 ]
 *)

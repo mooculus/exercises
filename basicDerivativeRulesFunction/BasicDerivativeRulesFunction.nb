@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     12115,        252]
-NotebookOptionsPosition[     11743,        234]
-NotebookOutlinePosition[     12100,        250]
-CellTagsIndexPosition[     12057,        247]
+NotebookDataLength[     12219,        254]
+NotebookOptionsPosition[     11847,        236]
+NotebookOutlinePosition[     12204,        252]
+CellTagsIndexPosition[     12161,        249]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -81,10 +81,10 @@ Cell[BoxData[{
         RowBox[{"If", "[", 
          RowBox[{
           RowBox[{"reg", "\[Equal]", "1"}], ",", 
-          RowBox[{"aa", "*", 
+          RowBox[{"bb", "*", 
            RowBox[{"Surd", "[", 
             RowBox[{"x", ",", "aa"}], "]"}]}], ",", 
-          RowBox[{"aa", "*", 
+          RowBox[{"bb", "*", 
            RowBox[{"x", "^", "aa"}]}]}], "]"}]}]}], ";", 
       "\[IndentingNewLine]", 
       RowBox[{
@@ -187,10 +187,11 @@ derivative of the sine function.}\n\\\\tag{derivative}\nLet $\>\"", ",",
    3.6520073581308107`*^9}, {3.652007634680707*^9, 3.652008119509358*^9}, {
    3.652008251369646*^9, 3.652008257705995*^9}, {3.652008433114748*^9, 
    3.6520085251418962`*^9}, {3.652008766127294*^9, 3.6520088799018383`*^9}, {
-   3.652008915832361*^9, 3.6520089911326838`*^9}}],
+   3.652008915832361*^9, 3.6520089911326838`*^9}, {3.652095992479643*^9, 
+   3.652095994069861*^9}}],
 
-Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\\\
-author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
+Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\
+\\author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use the \
 definition of the derivative to develop shortcut rules to find the \
 derivatives of constants and constant multiples.}\\n\\\\outcome{Use the \
@@ -209,7 +210,8 @@ Compute\\n\\n\\\\[\\n\\\\dd{x}s(x)\\n\\\\begin{prompt}=\\\\answer{\\\\frac{12}\
  CellChangeTimes->{{3.652007901471291*^9, 3.652007938727149*^9}, {
    3.6520080029548388`*^9, 3.6520080433053207`*^9}, 3.6520081213265953`*^9, {
    3.652008255759882*^9, 3.652008258326585*^9}, 3.652008528323003*^9, {
-   3.6520090767582817`*^9, 3.6520090795147038`*^9}}]
+   3.6520090767582817`*^9, 3.6520090795147038`*^9}, 3.652095996281344*^9, 
+   3.652096065365096*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -232,8 +234,8 @@ Cell[BoxData[
    3.652007304369194*^9, 3.65200731834723*^9}, {3.652008136003598*^9, 
    3.6520081360937243`*^9}, {3.6520085532998857`*^9, 3.652008554255056*^9}}]
 },
-WindowSize->{1920, 1020},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{1920, 1047},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
@@ -250,10 +252,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 8863, 167, 759, "Input"],
-Cell[9445, 191, 1325, 20, 473, "Output"]
+Cell[579, 22, 8916, 168, 759, "Input"],
+Cell[9498, 192, 1376, 21, 473, "Output"]
 }, Open  ]],
-Cell[10785, 214, 954, 18, 32, "Input"]
+Cell[10889, 216, 954, 18, 32, "Input"]
 }
 ]
 *)
