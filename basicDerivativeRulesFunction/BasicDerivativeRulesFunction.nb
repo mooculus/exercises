@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     12219,        254]
-NotebookOptionsPosition[     11847,        236]
-NotebookOutlinePosition[     12204,        252]
-CellTagsIndexPosition[     12161,        249]
+NotebookDataLength[     12593,        262]
+NotebookOptionsPosition[     12220,        244]
+NotebookOutlinePosition[     12578,        260]
+CellTagsIndexPosition[     12535,        257]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -67,10 +67,19 @@ Cell[BoxData[{
          RowBox[{
           RowBox[{"-", "5"}], ",", 
           RowBox[{"-", "4"}], ",", 
-          RowBox[{"-", "3"}], ",", 
-          RowBox[{"-", "2"}], ",", 
-          RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
-          "5"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"-", "3"}], ",", "3", ",", "4", ",", "5"}], "}"}], "]"}]}], 
+      ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"rootThing", "[", "x_", "]"}], ":=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"aa", "*", 
+           RowBox[{"Surd", "[", 
+            RowBox[{"x", ",", "bb"}], "]"}]}], ",", 
+          RowBox[{"aa", "*", 
+           RowBox[{"Sqrt", "[", "x", "]"}]}]}], "}"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{"ff", "[", "x_", "]"}], "=", 
        RowBox[{
@@ -81,10 +90,8 @@ Cell[BoxData[{
         RowBox[{"If", "[", 
          RowBox[{
           RowBox[{"reg", "\[Equal]", "1"}], ",", 
-          RowBox[{"bb", "*", 
-           RowBox[{"Surd", "[", 
-            RowBox[{"x", ",", "aa"}], "]"}]}], ",", 
-          RowBox[{"bb", "*", 
+          RowBox[{"rootThing", "[", "x", "]"}], ",", 
+          RowBox[{"aa", "*", 
            RowBox[{"x", "^", "aa"}]}]}], "]"}]}]}], ";", 
       "\[IndentingNewLine]", 
       RowBox[{
@@ -188,7 +195,8 @@ derivative of the sine function.}\n\\\\tag{derivative}\nLet $\>\"", ",",
    3.652008251369646*^9, 3.652008257705995*^9}, {3.652008433114748*^9, 
    3.6520085251418962`*^9}, {3.652008766127294*^9, 3.6520088799018383`*^9}, {
    3.652008915832361*^9, 3.6520089911326838`*^9}, {3.652095992479643*^9, 
-   3.652095994069861*^9}}],
+   3.652095994069861*^9}, {3.652098886184071*^9, 3.6520989039857264`*^9}, {
+   3.652098980475011*^9, 3.652099027414052*^9}}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\
 \\author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
@@ -211,7 +219,7 @@ Compute\\n\\n\\\\[\\n\\\\dd{x}s(x)\\n\\\\begin{prompt}=\\\\answer{\\\\frac{12}\
    3.6520080029548388`*^9, 3.6520080433053207`*^9}, 3.6520081213265953`*^9, {
    3.652008255759882*^9, 3.652008258326585*^9}, 3.652008528323003*^9, {
    3.6520090767582817`*^9, 3.6520090795147038`*^9}, 3.652095996281344*^9, 
-   3.652096065365096*^9}]
+   3.652096065365096*^9, 3.65209902872991*^9, 3.65209915156568*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -234,8 +242,8 @@ Cell[BoxData[
    3.652007304369194*^9, 3.65200731834723*^9}, {3.652008136003598*^9, 
    3.6520081360937243`*^9}, {3.6520085532998857`*^9, 3.652008554255056*^9}}]
 },
-WindowSize->{1920, 1047},
-WindowMargins->{{Automatic, 0}, {0, Automatic}},
+WindowSize->{960, 1018},
+WindowMargins->{{-9, Automatic}, {Automatic, -8}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
@@ -252,10 +260,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 8916, 168, 759, "Input"],
-Cell[9498, 192, 1376, 21, 473, "Output"]
+Cell[579, 22, 9247, 176, 869, "Input"],
+Cell[9829, 200, 1418, 21, 539, "Output"]
 }, Open  ]],
-Cell[10889, 216, 954, 18, 32, "Input"]
+Cell[11262, 224, 954, 18, 32, "Input"]
 }
 ]
 *)

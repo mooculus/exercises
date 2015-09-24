@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     11767,        256]
-NotebookOptionsPosition[     11395,        238]
-NotebookOutlinePosition[     11752,        254]
-CellTagsIndexPosition[     11709,        251]
+NotebookDataLength[     12035,        259]
+NotebookOptionsPosition[     11663,        241]
+NotebookOutlinePosition[     12020,        257]
+CellTagsIndexPosition[     11977,        254]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -71,10 +71,8 @@ Cell[BoxData[{
          RowBox[{
           RowBox[{"-", "5"}], ",", 
           RowBox[{"-", "4"}], ",", 
-          RowBox[{"-", "3"}], ",", 
-          RowBox[{"-", "2"}], ",", 
-          RowBox[{"-", "1"}], ",", "1", ",", "2", ",", "3", ",", "4", ",", 
-          "5"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"-", "3"}], ",", "3", ",", "4", ",", "5"}], "}"}], "]"}]}], 
+      ";", "\[IndentingNewLine]", 
       RowBox[{"dd", ":=", " ", 
        RowBox[{"RandomChoice", "[", 
         RowBox[{"{", 
@@ -91,9 +89,11 @@ Cell[BoxData[{
            RowBox[{"Sin", "[", "x", "]"}]}], ",", 
           RowBox[{"aa", "*", 
            RowBox[{"Surd", "[", 
-            RowBox[{"x", ",", "aa"}], "]"}]}], ",", 
+            RowBox[{"x", ",", "bb"}], "]"}]}], ",", 
           RowBox[{"aa", "*", 
-           RowBox[{"x", "^", "aa"}]}]}], "}"}], "]"}]}], ";", 
+           RowBox[{"x", "^", "aa"}]}], ",", 
+          RowBox[{"aa", "*", 
+           RowBox[{"Sqrt", "[", "x", "]"}]}]}], "}"}], "]"}]}], ";", 
       "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{"ff", "[", "x_", "]"}], "=", 
@@ -193,17 +193,19 @@ calculate derivatives.}\n\\\\tag{derivative}\nLet $\>\"", ",",
    3.6520961553845778`*^9}, {3.65209623282067*^9, 3.65209637549793*^9}, {
    3.652096451995706*^9, 3.652096456994523*^9}, {3.652096517821944*^9, 
    3.652096536766967*^9}, {3.65209682357541*^9, 3.652096834439345*^9}, {
-   3.652096867964349*^9, 3.6520968764024553`*^9}}],
+   3.652096867964349*^9, 3.6520968764024553`*^9}, {3.652097464644061*^9, 
+   3.652097509653286*^9}, {3.652098837093717*^9, 3.6520988646485157`*^9}}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\
 \\author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use the \
 product rule to calculate derivatives.}\\n\\\\tag{derivative}\\nLet $s(x) = \
--4 e^x \\\\left(\\\\frac{4}{x^2}-e^x\\\\right)$. \
-Compute\\n\\\\[\\n\\\\dd{x}s(x)\\n\\\\begin{prompt}=\\\\answer{-4 e^x \
-\\\\left(-\\\\frac{8}{x^3}-e^x\\\\right)-4 e^x \
-\\\\left(\\\\frac{4}{x^2}-e^x\\\\right)}\\\\end{prompt}\\n\\\\]\\n\\\\end{\
-exercise}\\n\\\\end{document}\"\>"], "Output",
+-5 \\\\sqrt{x} \\\\left(3 \\\\sqrt[3]{x}-4 \\\\sqrt{x}\\\\right)$. Compute\\n\
+\\\\[\\n\\\\dd{x}s(x)\\n\\\\begin{prompt}=\\\\answer{-5 \\\\sqrt{x} \\\\left(\
+\\\\frac{1}{\\\\sqrt[3]{x}^2}-\\\\frac{2}{\\\\sqrt{x}}\\\\right)-\\\\frac{5 \
+\\\\left(3 \\\\sqrt[3]{x}-4 \\\\sqrt{x}\\\\right)}{2 \
+\\\\sqrt{x}}}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\"\
+\>"], "Output",
  CellChangeTimes->{
   3.650283960389832*^9, {3.650285568714333*^9, 3.650285627067028*^9}, {
    3.650286623394907*^9, 3.650286629992622*^9}, {3.65029016183368*^9, 
@@ -214,7 +216,8 @@ exercise}\\n\\\\end{document}\"\>"], "Output",
    3.652092111123048*^9, {3.65209218223542*^9, 3.6520922117103033`*^9}, 
    3.652092307387732*^9, {3.6520963590664062`*^9, 3.652096376378146*^9}, 
    3.6520964599797173`*^9, {3.652096501654087*^9, 3.6520965378608418`*^9}, 
-   3.652096881430016*^9}]
+   3.652096881430016*^9, 3.652097513961569*^9, 3.652097545984871*^9, 
+   3.652098866714429*^9, 3.652099178339778*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -254,10 +257,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 8661, 173, 693, "Input"],
-Cell[9243, 197, 1290, 19, 341, "Output"]
+Cell[579, 22, 8745, 174, 693, "Input"],
+Cell[9327, 198, 1474, 21, 341, "Output"]
 }, Open  ]],
-Cell[10548, 219, 843, 17, 32, "Input"]
+Cell[10816, 222, 843, 17, 32, "Input"]
 }
 ]
 *)
