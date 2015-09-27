@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     10194,        255]
-NotebookOptionsPosition[      9881,        240]
-NotebookOutlinePosition[     10216,        255]
-CellTagsIndexPosition[     10173,        252]
+NotebookDataLength[     10245,        256]
+NotebookOptionsPosition[      9932,        241]
+NotebookOutlinePosition[     10267,        256]
+CellTagsIndexPosition[     10224,        253]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,7 +21,7 @@ Notebook[{
 Cell[BoxData[{
  RowBox[{
   RowBox[{
-   RowBox[{"RandomSeed", "[", "1", "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"RandomSeed", "[", "101", "]"}], ";"}], "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{"Needs", "[", "\"\<PlotLegends`\>\"", "]"}], 
    "*)"}]}], "\[IndentingNewLine]", 
@@ -203,7 +203,8 @@ relationships between the function and its first and second derivatives.}\n\\\
    3.652348827488941*^9}, {3.6523488725556726`*^9, 3.6523489410349207`*^9}, {
    3.652349028166092*^9, 3.652349041463211*^9}, {3.652349074281086*^9, 
    3.652349074401146*^9}, {3.652349142105356*^9, 3.652349175420692*^9}, 
-   3.6523493871992817`*^9, {3.652349566085923*^9, 3.6523495890370398`*^9}}],
+   3.6523493871992817`*^9, {3.652349566085923*^9, 3.6523495890370398`*^9}, {
+   3.652350272056209*^9, 3.65235027214538*^9}}],
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.652349246299995*^9, 3.6523492470286837`*^9}}],
@@ -254,9 +255,9 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 7990, 185, 825, "Input"],
-Cell[8550, 207, 94, 1, 32, "Input"],
-Cell[8647, 210, 1230, 28, 105, "Input"]
+Cell[557, 20, 8041, 186, 825, "Input"],
+Cell[8601, 208, 94, 1, 32, "Input"],
+Cell[8698, 211, 1230, 28, 105, "Input"]
 }
 ]
 *)
