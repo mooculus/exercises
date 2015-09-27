@@ -1,0 +1,264 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     10194,        255]
+NotebookOptionsPosition[      9881,        240]
+NotebookOutlinePosition[     10216,        255]
+CellTagsIndexPosition[     10173,        252]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"RandomSeed", "[", "1", "]"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Needs", "[", "\"\<PlotLegends`\>\"", "]"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LaTeX", "[", "x_", "]"}], ":=", 
+   RowBox[{"ToString", "[", 
+    RowBox[{"TeXForm", "[", "x", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"code", "[", "i_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"kk", "=", 
+      RowBox[{"RandomChoice", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"1", "/", "3"}], ",", 
+         RowBox[{"1", "/", "2"}], ",", "1", ",", "2", ",", "3"}], "}"}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"denom", "[", "x_", "]"}], ":=", 
+      RowBox[{"RandomChoice", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"kk", "+", 
+          RowBox[{"x", "^", "2"}]}], ",", 
+         RowBox[{
+          RowBox[{"x", "^", "2"}], "+", 
+          RowBox[{"x", "^", "3"}], "+", "kk"}], ",", 
+         RowBox[{"kk", "+", 
+          RowBox[{"x", "^", "3"}]}]}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"wildFunction", "[", "x_", "]"}], "=", 
+      RowBox[{"RandomChoice", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Sin", "[", "x", "]"}], ",", 
+         RowBox[{"E", "^", 
+          RowBox[{"Sin", "[", "x", "]"}]}], ",", 
+         RowBox[{"E", "^", 
+          RowBox[{"Cos", "[", "x", "]"}]}], ",", 
+         RowBox[{"E", "^", 
+          RowBox[{"ArcTan", "[", "x", "]"}]}], ",", 
+         RowBox[{"2", "^", 
+          RowBox[{"Sin", "[", "x", "]"}]}], ",", 
+         RowBox[{"2", "^", 
+          RowBox[{"Cos", "[", "x", "]"}]}], ",", 
+         RowBox[{"2", "^", 
+          RowBox[{"ArcTan", "[", "x", "]"}]}]}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"boundingFunction", "[", "x_", "]"}], ":=", 
+      RowBox[{"RandomChoice", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Sin", "[", 
+           RowBox[{"kk", "*", "x"}], "]"}], "^", "2"}], ",", 
+         RowBox[{"x", "^", "2"}], ",", 
+         RowBox[{
+          RowBox[{"x", "^", "3"}], "*", 
+          RowBox[{"Sin", "[", 
+           RowBox[{"kk", "*", "x"}], "]"}]}]}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"f", "[", "x_", "]"}], "=", 
+      RowBox[{"RandomChoice", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"boundingFunction", "[", "x", "]"}], "*", 
+          RowBox[{"wildFunction", "[", 
+           RowBox[{"1", "/", 
+            RowBox[{"Surd", "[", 
+             RowBox[{"x", ",", "3"}], "]"}]}], "]"}]}], ",", 
+         RowBox[{
+          RowBox[{"boundingFunction", "[", "x", "]"}], "*", 
+          RowBox[{"wildFunction", "[", 
+           RowBox[{"1", "/", 
+            RowBox[{"Surd", "[", 
+             RowBox[{"x", ",", "3"}], "]"}]}], "]"}]}], ",", 
+         RowBox[{
+          RowBox[{"boundingFunction", "[", "x", "]"}], "/", 
+          RowBox[{"denom", "[", "x", "]"}]}], ",", 
+         RowBox[{
+          RowBox[{"boundingFunction", "[", "x", "]"}], "*", 
+          RowBox[{"wildFunction", "[", 
+           RowBox[{"1", "/", 
+            RowBox[{"Surd", "[", 
+             RowBox[{"x", ",", "3"}], "]"}]}], "]"}]}], ",", 
+         RowBox[{
+          RowBox[{"boundingFunction", "[", "x", "]"}], "*", 
+          RowBox[{"Erf", "[", 
+           RowBox[{"kk", "*", "x"}], "]"}]}]}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"switch", "=", 
+      RowBox[{"Random", "[", "Integer", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"fxns", "=", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"switch", "\[Equal]", "1"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"f", "[", "x", "]"}], ",", 
+          RowBox[{
+           RowBox[{"f", "'"}], "[", "x", "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"f", "'"}], "[", "x", "]"}], ",", 
+          RowBox[{"f", "[", "x", "]"}]}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"verify1", "=", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"switch", "\[Equal]", "1"}], ",", "\"\<[correct]\>\"", ",", 
+        "\"\<\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"verify2", "=", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"switch", "\[Equal]", "1"}], ",", "\"\<\>\"", ",", 
+        "\"\<[correct]\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"graph", "=", 
+      RowBox[{"Plot", "[", 
+       RowBox[{"fxns", ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", 
+          RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+        RowBox[{"Ticks", "\[Rule]", "False"}], ",", 
+        RowBox[{"PlotStyle", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"Thick", ",", "Black", ",", "Dashed"}], "}"}], " ", ",", 
+           RowBox[{"{", 
+            RowBox[{"Thick", ",", "Black"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"PlotLegends", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"TraditionalForm", "[", "f", "]"}], ",", 
+           RowBox[{"TraditionalForm", "[", "g", "]"}]}], "}"}]}]}], "]"}]}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"graph", ",", "\[IndentingNewLine]", 
+       RowBox[{"StringJoin", "[", 
+        RowBox[{
+        "\"\<\\\\documentclass{ximera}\n\\\\input{../preamble.tex}\n\
+\\\\author{Bart Snapp}\n\\\\license{Creative Commons 3.0 By-NC}\n\
+\\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Identify the \
+relationships between the function and its first and second derivatives.}\n\\\
+\\tag{derivative}\nHere we see a plot of $f$ and $g$. \n\\\\begin{image}\n\
+\\\\includegraphics[width=.5\\\\textwidth]{graphFandG\>\"", ",", 
+         RowBox[{"LaTeX", "[", "i", "]"}], ",", 
+         "\"\<.png}\n\\\\end{image}\nWhich of the following is correct?\n\
+\\\\begin{multipleChoice}\n\\\\choice\>\"", ",", "verify1", ",", 
+         "\"\<{$f'(x) = g(x)$}\n\\\\choice\>\"", ",", "verify2", ",", 
+         "\"\<{$g'(x) = f(x)$}\n\\\\end{multipleChoice}\n\\\\end{exercise}\n\
+\\\\end{document}\>\""}], "]"}]}], "}"}]}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.652345238333228*^9, 3.6523452457168083`*^9}, {
+   3.6523452809726467`*^9, 3.6523453338256273`*^9}, {3.652345424449148*^9, 
+   3.652345483029799*^9}, 3.6523455642218733`*^9, {3.652345676515373*^9, 
+   3.652345816811225*^9}, {3.652345867804785*^9, 3.652345871018894*^9}, {
+   3.652345901780657*^9, 3.652345902445451*^9}, {3.652345945273902*^9, 
+   3.652346030733322*^9}, 3.652346084971765*^9, {3.652346141236082*^9, 
+   3.652346290181327*^9}, {3.652346335398164*^9, 3.652346340486264*^9}, {
+   3.6523463861261663`*^9, 3.652346387465006*^9}, {3.652346423521185*^9, 
+   3.652346491770639*^9}, {3.652346528368967*^9, 3.6523466902598963`*^9}, {
+   3.652346880977273*^9, 3.652347051951643*^9}, {3.6523472456475058`*^9, 
+   3.652347309421502*^9}, {3.6523473618277197`*^9, 3.652347461287818*^9}, {
+   3.652347525846182*^9, 3.6523475425777607`*^9}, {3.652347634257369*^9, 
+   3.6523476496133413`*^9}, 3.652347700920463*^9, {3.6523480209596653`*^9, 
+   3.652348025147747*^9}, {3.652348062428413*^9, 3.652348064476071*^9}, {
+   3.6523480988686113`*^9, 3.652348125864584*^9}, {3.652348178496326*^9, 
+   3.6523484535910807`*^9}, {3.652348492389017*^9, 3.6523485160245447`*^9}, {
+   3.652348577270892*^9, 3.652348690152155*^9}, {3.652348744272311*^9, 
+   3.652348827488941*^9}, {3.6523488725556726`*^9, 3.6523489410349207`*^9}, {
+   3.652349028166092*^9, 3.652349041463211*^9}, {3.652349074281086*^9, 
+   3.652349074401146*^9}, {3.652349142105356*^9, 3.652349175420692*^9}, 
+   3.6523493871992817`*^9, {3.652349566085923*^9, 3.6523495890370398`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.652349246299995*^9, 3.6523492470286837`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Do", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"precode", "=", 
+       RowBox[{"code", "[", "i", "]"}]}], ";", "\t", "\[IndentingNewLine]", 
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{"\"\<plotOfFxnAndDeriv\>\"", "<>", 
+         RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.tex\>\""}], ",", 
+        RowBox[{"precode", "[", 
+         RowBox[{"[", "2", "]"}], "]"}], ",", "\"\<Text\>\""}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{"\"\<graphFandG\>\"", "<>", 
+         RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.png\>\""}], ",", 
+        RowBox[{"precode", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<PNG\>\"", ",", 
+        RowBox[{"ImageResolution", "\[Rule]", "200"}]}], "]"}]}], "}"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "12"}], "}"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.652347837567121*^9, 3.652347948885171*^9}, {
+  3.652349219899641*^9, 3.652349221250575*^9}, {3.652349311898711*^9, 
+  3.6523493137226562`*^9}, {3.6523497700549583`*^9, 3.652349777286221*^9}, {
+  3.652349824067274*^9, 3.652349824463776*^9}}]
+},
+WindowSize->{1366, 708},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 7990, 185, 825, "Input"],
+Cell[8550, 207, 94, 1, 32, "Input"],
+Cell[8647, 210, 1230, 28, 105, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
