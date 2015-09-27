@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     12035,        259]
-NotebookOptionsPosition[     11663,        241]
-NotebookOutlinePosition[     12020,        257]
-CellTagsIndexPosition[     11977,        254]
+NotebookDataLength[     12088,        260]
+NotebookOptionsPosition[     11717,        242]
+NotebookOutlinePosition[     12073,        258]
+CellTagsIndexPosition[     12030,        255]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -121,7 +121,7 @@ calculate derivatives.}\n\\\\tag{derivative}\nLet $\>\"", ",",
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<) = \>\"", ",", 
         RowBox[{"LaTeX", " ", "[", 
          RowBox[{"ff", "[", "variable", "]"}], "]"}], ",", 
-        "\"\<$. Compute\n\\\\[\\n\>\"", ",", "\n", 
+        "\"\<$. Compute:\n\\\\[\\n\>\"", ",", "\n", 
         RowBox[{"If", "[", 
          RowBox[{
           RowBox[{"switch", "\[Equal]", "1"}], ",", 
@@ -194,16 +194,17 @@ calculate derivatives.}\n\\\\tag{derivative}\nLet $\>\"", ",",
    3.652096451995706*^9, 3.652096456994523*^9}, {3.652096517821944*^9, 
    3.652096536766967*^9}, {3.65209682357541*^9, 3.652096834439345*^9}, {
    3.652096867964349*^9, 3.6520968764024553`*^9}, {3.652097464644061*^9, 
-   3.652097509653286*^9}, {3.652098837093717*^9, 3.6520988646485157`*^9}}],
+   3.652097509653286*^9}, {3.652098837093717*^9, 3.6520988646485157`*^9}, 
+   3.6523423933221416`*^9}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\
 \\author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use the \
 product rule to calculate derivatives.}\\n\\\\tag{derivative}\\nLet $s(x) = \
--5 \\\\sqrt{x} \\\\left(3 \\\\sqrt[3]{x}-4 \\\\sqrt{x}\\\\right)$. Compute\\n\
-\\\\[\\n\\\\dd{x}s(x)\\n\\\\begin{prompt}=\\\\answer{-5 \\\\sqrt{x} \\\\left(\
-\\\\frac{1}{\\\\sqrt[3]{x}^2}-\\\\frac{2}{\\\\sqrt{x}}\\\\right)-\\\\frac{5 \
-\\\\left(3 \\\\sqrt[3]{x}-4 \\\\sqrt{x}\\\\right)}{2 \
+-5 \\\\sqrt{x} \\\\left(3 \\\\sqrt[3]{x}-4 \\\\sqrt{x}\\\\right)$. \
+Compute:\\n\\\\[\\n\\\\dd{x}s(x)\\n\\\\begin{prompt}=\\\\answer{-5 \
+\\\\sqrt{x} \\\\left(\\\\frac{1}{\\\\sqrt[3]{x}^2}-\\\\frac{2}{\\\\sqrt{x}}\\\
+\\right)-\\\\frac{5 \\\\left(3 \\\\sqrt[3]{x}-4 \\\\sqrt{x}\\\\right)}{2 \
 \\\\sqrt{x}}}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\"\
 \>"], "Output",
  CellChangeTimes->{
@@ -217,7 +218,7 @@ product rule to calculate derivatives.}\\n\\\\tag{derivative}\\nLet $s(x) = \
    3.652092307387732*^9, {3.6520963590664062`*^9, 3.652096376378146*^9}, 
    3.6520964599797173`*^9, {3.652096501654087*^9, 3.6520965378608418`*^9}, 
    3.652096881430016*^9, 3.652097513961569*^9, 3.652097545984871*^9, 
-   3.652098866714429*^9, 3.652099178339778*^9}]
+   3.652098866714429*^9, 3.652099178339778*^9, 3.6523423954873047`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -239,7 +240,7 @@ Cell[BoxData[
    3.650367769137933*^9, {3.6520922167714357`*^9, 3.652092217956059*^9}, {
    3.652096577078129*^9, 3.652096606344545*^9}}]
 },
-WindowSize->{1920, 1020},
+WindowSize->{1366, 708},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
@@ -257,10 +258,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 8745, 174, 693, "Input"],
-Cell[9327, 198, 1474, 21, 341, "Output"]
+Cell[579, 22, 8774, 175, 693, "Input"],
+Cell[9356, 199, 1499, 21, 363, "Output"]
 }, Open  ]],
-Cell[10816, 222, 843, 17, 32, "Input"]
+Cell[10870, 223, 843, 17, 32, "Input"]
 }
 ]
 *)

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     11857,        258]
-NotebookOptionsPosition[     11487,        240]
-NotebookOutlinePosition[     11844,        256]
-CellTagsIndexPosition[     11801,        253]
+NotebookDataLength[     11906,        259]
+NotebookOptionsPosition[     11536,        241]
+NotebookOutlinePosition[     11892,        257]
+CellTagsIndexPosition[     11849,        254]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -127,7 +127,7 @@ to calculate derivatives.}\n\\\\tag{derivative}\nLet $\>\"", ",",
         ",", 
         RowBox[{"LaTeX", " ", "[", 
          RowBox[{"denom", "[", "variable", "]"}], "]"}], ",", 
-        "\"\<}$. Compute\n\\\\[\\n\>\"", ",", "\n", 
+        "\"\<}$. Compute:\n\\\\[\\n\>\"", ",", "\n", 
         RowBox[{"If", "[", 
          RowBox[{
           RowBox[{"switch", "\[Equal]", "1"}], ",", 
@@ -204,18 +204,19 @@ to calculate derivatives.}\n\\\\tag{derivative}\nLet $\>\"", ",",
    3.652097884302463*^9}, {3.6520980062765903`*^9, 3.652098105483179*^9}, {
    3.652098461837068*^9, 3.6520984866683064`*^9}, {3.652098631735475*^9, 
    3.652098658479958*^9}, {3.6520986975473824`*^9, 3.652098702195187*^9}, {
-   3.65209880511733*^9, 3.6520988056211042`*^9}}],
+   3.65209880511733*^9, 3.6520988056211042`*^9}, 3.652342432707159*^9}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\
 \\author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Use the \
 quotient rule to calculate derivatives.}\\n\\\\tag{derivative}\\nLet $s(x) = \
 \\\\frac{ -5 \\\\sqrt{x}}{-4 \\\\sqrt{x}}$. \
-Compute\\n\\\\[\\n\\\\dd{x}s(x)\\n\\\\begin{prompt}=\\\\answer{0}\\\\end{\
+Compute:\\n\\\\[\\n\\\\dd{x}s(x)\\n\\\\begin{prompt}=\\\\answer{0}\\\\end{\
 prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\"\>"], "Output",
  CellChangeTimes->{3.652097388076867*^9, 3.652097448501493*^9, 
   3.652097891001437*^9, 3.652098106667904*^9, 3.652098487402486*^9, 
-  3.652098703941717*^9, 3.652098806198093*^9, 3.6520992046036777`*^9}]
+  3.652098703941717*^9, 3.652098806198093*^9, 3.6520992046036777`*^9, 
+  3.652342471552322*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -238,7 +239,7 @@ Cell[BoxData[
    3.652096577078129*^9, 3.652096606344545*^9}, {3.65209726249224*^9, 
    3.652097265014572*^9}}]
 },
-WindowSize->{1920, 1020},
+WindowSize->{1366, 708},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
@@ -256,10 +257,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 9305, 184, 737, "Input"],
-Cell[9887, 208, 688, 9, 341, "Output"]
+Cell[579, 22, 9328, 184, 737, "Input"],
+Cell[9910, 208, 714, 10, 341, "Output"]
 }, Open  ]],
-Cell[10590, 220, 893, 18, 32, "Input"]
+Cell[10639, 221, 893, 18, 32, "Input"]
 }
 ]
 *)

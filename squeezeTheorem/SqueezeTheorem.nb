@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     16751,        355]
-NotebookOptionsPosition[     16335,        336]
-NotebookOutlinePosition[     16692,        352]
-CellTagsIndexPosition[     16649,        349]
+NotebookDataLength[     16613,        351]
+NotebookOptionsPosition[     16237,        333]
+NotebookOutlinePosition[     16594,        349]
+CellTagsIndexPosition[     16551,        346]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -24,16 +24,17 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"RandomSeed", "[", "9", "]"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"System`Convert`TeXFormDump`$TeXDelimiterReplacements", "=", 
-   RowBox[{"System`Convert`TeXFormDump`$TeXDelimiterReplacements", "/.", 
-    RowBox[{"{", 
-     RowBox[{
+  RowBox[{
+   RowBox[{"System`Convert`TeXFormDump`$TeXDelimiterReplacements", "=", 
+    RowBox[{"System`Convert`TeXFormDump`$TeXDelimiterReplacements", "/.", 
+     RowBox[{"{", 
       RowBox[{
-       RowBox[{"\"\<\\\\left| \>\"", "|", "\"\<\\\\right| \>\""}], "\[Rule]", 
-       "\"\<|\>\""}], ",", 
-      RowBox[{
-       RowBox[{"\"\<\\\\left\\\\| \>\"", "|", "\"\<\\\\right\\\\| \>\""}], 
-       "\[Rule]", "\"\<\\\\| \>\""}]}], "}"}]}]}], 
+       RowBox[{
+        RowBox[{"\"\<\\\\left| \>\"", "|", "\"\<\\\\right| \>\""}], 
+        "\[Rule]", "\"\<|\>\""}], ",", 
+       RowBox[{
+        RowBox[{"\"\<\\\\left\\\\| \>\"", "|", "\"\<\\\\right\\\\| \>\""}], 
+        "\[Rule]", "\"\<\\\\| \>\""}]}], "}"}]}]}], ";"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
@@ -261,11 +262,7 @@ Theorem:\n\\\\[\\n\\\\lim_{\>\"", ",",
    3.65029607804496*^9}, {3.650806363363018*^9, 3.650806392314749*^9}, {
    3.650806486693557*^9, 3.650806534854594*^9}, {3.650806672541168*^9, 
    3.650806672957444*^9}, {3.650807520790368*^9, 3.650807521824654*^9}, {
-   3.6508205697279367`*^9, 3.6508205713417597`*^9}}],
-
-Cell[BoxData["System`Convert`TeXFormDump`$TeXDelimiterReplacements"], "Output",
- CellChangeTimes->{{3.65080649123632*^9, 3.650806538175659*^9}, 
-   3.650806676534937*^9, 3.65080753564639*^9, 3.6508205810805063`*^9}],
+   3.6508205697279367`*^9, 3.6508205713417597`*^9}, 3.652189215971745*^9}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
 author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
@@ -273,49 +270,49 @@ By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\n\\\\outcome{\
 Understand the Squeeze Theorem and how it can be used to find limit \
 values.}\\n\\\\outcome{Calculate limits using the Squeeze \
 Theorem.}\\n\\\\tag{limit}\\n\\\\tag{squeeze \
-theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{w\\\\to 0} \\\\left(w \\\\sin \
-\\\\left(\\\\frac{\\\\pi }{w}\\\\right)\\\\right)\\n\\\\]\\nA good way to \
-compute this limit would be to use \\\\wordChoice{\\\\choice{limit \
-laws}\\\\choice{indeterminate forms}\\\\choice[correct]{the Squeeze \
-Theorem}\\\\choice{the Intermediate Value \
-Theorem}}.\\n\\\\begin{exercise}\\nList two functions $g$ and $h$ such \
-that\\n\\\\[\\ng(w)\\\\le w \\\\sin \\\\left(\\\\frac{\\\\pi }{w}\\\\right) \
-\\\\le h(w)\\n\\\\]\\nfor all $w$ on some interval containing \
-$w=0$.\\n\\\\[\\ng(w)=\\\\answer{-\\\\left| w\\\\right|}\\\\qquad h(w) \
-=\\\\answer{\\\\left| \
-w\\\\right|}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\\n\\\\lim_{w \\\
-\\to 0}-\\\\left| w\\\\right| = \\\\answer{0}\\\\qquad \\\\lim_{w\\\\to \
-0}\\\\left| w\\\\right| = \\\\answer{0}\\n\\\\]\\n\\\\begin{exercise}\\nBy \
-the Squeeze Theorem:\\n\\\\[\\n\\\\lim_{w\\\\to 0} \\\\left(w \\\\sin \
-\\\\left(\\\\frac{\\\\pi }{w}\\\\right)\\\\right) = \
-\\\\answer{0}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{\
-exercise}\\n\\\\end{exercise}\\n\\\\end{document}\\\\documentclass{ximera}\\n\
-\\\\input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\\\\license{Creative \
-Commons 3.0 \
+theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{v\\\\to 0} \\\\left(\\\\sqrt[3]{v} \
+e^{\\\\cos \\\\left(\\\\frac{\\\\pi }{v}\\\\right)}\\\\right)\\n\\\\]\\nA \
+good way to compute this limit would be to use \
+\\\\wordChoice{\\\\choice{limit laws}\\\\choice{indeterminate \
+forms}\\\\choice[correct]{the Squeeze Theorem}\\\\choice{the Intermediate \
+Value Theorem}}.\\n\\\\begin{exercise}\\nList two functions $g$ and $h$ such \
+that\\n\\\\[\\ng(v)\\\\le \\\\sqrt[3]{v} e^{\\\\cos \\\\left(\\\\frac{\\\\pi \
+}{v}\\\\right)} \\\\le h(v)\\n\\\\]\\nfor all $v$ on some interval containing \
+$v=0$.\\n\\\\[\\ng(v)=\\\\answer{\\\\frac{\\\\sqrt[3]{\\\\left| v\\\\right| \
+}}{e}}\\\\qquad h(v) =\\\\answer{e \\\\sqrt[3]{\\\\left| v\\\\right| \
+}}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\\n\\\\lim_{v \\\\to \
+0}\\\\frac{\\\\sqrt[3]{\\\\left| v\\\\right| }}{e} = \\\\answer{0}\\\\qquad \
+\\\\lim_{v\\\\to 0}e \\\\sqrt[3]{\\\\left| v\\\\right| } = \\\\answer{0}\\n\\\
+\\]\\n\\\\begin{exercise}\\nBy the Squeeze \
+Theorem:\\n\\\\[\\n\\\\lim_{v\\\\to 0} \\\\left(\\\\sqrt[3]{v} e^{\\\\cos \
+\\\\left(\\\\frac{\\\\pi }{v}\\\\right)}\\\\right) = \\\\answer{0}\\n\\\\]\\n\
+\\\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{exercise}\
+\\n\\\\end{document}\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
+author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\n\\\\outcome{\
 Understand the Squeeze Theorem and how it can be used to find limit \
 values.}\\n\\\\outcome{Calculate limits using the Squeeze \
 Theorem.}\\n\\\\tag{limit}\\n\\\\tag{squeeze \
-theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{k\\\\to 0} \\\\left(\\\\sqrt[3]{k} \
-2^{\\\\cos \\\\left(\\\\frac{1}{k}\\\\right)}\\\\right)\\n\\\\]\\nA good way \
-to compute this limit would be to use \\\\wordChoice{\\\\choice{limit laws}\\\
-\\choice{indeterminate forms}\\\\choice[correct]{the Squeeze \
+theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{w\\\\to 0} \\\\left(w^3 \\\\cos \\\
+\\left(\\\\frac{3}{w}\\\\right)\\\\right)\\n\\\\]\\nA good way to compute \
+this limit would be to use \\\\wordChoice{\\\\choice{limit \
+laws}\\\\choice{indeterminate forms}\\\\choice[correct]{the Squeeze \
 Theorem}\\\\choice{the Intermediate Value \
 Theorem}}.\\n\\\\begin{exercise}\\nList two functions $g$ and $h$ such \
-that\\n\\\\[\\ng(k)\\\\le \\\\sqrt[3]{k} 2^{\\\\cos \\\\left(\\\\frac{1}{k}\\\
-\\right)} \\\\le h(k)\\n\\\\]\\nfor all $k$ on some interval containing \
-$k=0$.\\n\\\\[\\ng(k)=\\\\answer{\\\\frac{\\\\sqrt[3]{\\\\left| k\\\\right| \
-}}{2}}\\\\qquad h(k) =\\\\answer{2 \\\\sqrt[3]{\\\\left| k\\\\right| \
-}}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\\n\\\\lim_{k \\\\to \
-0}\\\\frac{\\\\sqrt[3]{\\\\left| k\\\\right| }}{2} = \\\\answer{0}\\\\qquad \
-\\\\lim_{k\\\\to 0}2 \\\\sqrt[3]{\\\\left| k\\\\right| } = \\\\answer{0}\\n\\\
-\\]\\n\\\\begin{exercise}\\nBy the Squeeze \
-Theorem:\\n\\\\[\\n\\\\lim_{k\\\\to 0} \\\\left(\\\\sqrt[3]{k} 2^{\\\\cos \
-\\\\left(\\\\frac{1}{k}\\\\right)}\\\\right) = \
+that\\n\\\\[\\ng(w)\\\\le w^3 \\\\cos \\\\left(\\\\frac{3}{w}\\\\right) \
+\\\\le h(w)\\n\\\\]\\nfor all $w$ on some interval containing \
+$w=0$.\\n\\\\[\\ng(w)=\\\\answer{-\\\\left| w\\\\right| ^3}\\\\qquad h(w) =\\\
+\\answer{\\\\left| w\\\\right| \
+^3}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\\n\\\\lim_{w \\\\to \
+0}-\\\\left| w\\\\right| ^3 = \\\\answer{0}\\\\qquad \\\\lim_{w\\\\to \
+0}\\\\left| w\\\\right| ^3 = \\\\answer{0}\\n\\\\]\\n\\\\begin{exercise}\\nBy \
+the Squeeze Theorem:\\n\\\\[\\n\\\\lim_{w\\\\to 0} \\\\left(w^3 \\\\cos \
+\\\\left(\\\\frac{3}{w}\\\\right)\\\\right) = \
 \\\\answer{0}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{\
 exercise}\\n\\\\end{exercise}\\n\\\\end{document}\"\>"], "Output",
  CellChangeTimes->{{3.65080649123632*^9, 3.650806538175659*^9}, 
-   3.650806676534937*^9, 3.65080753564639*^9, 3.650820581246655*^9}]
+   3.650806676534937*^9, 3.65080753564639*^9, 3.6508205810805063`*^9, {
+   3.652189201196884*^9, 3.6521892178260593`*^9}}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -352,11 +349,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 11611, 241, 1289, "Input"],
-Cell[12193, 265, 215, 2, 32, "Output"],
-Cell[12411, 269, 3266, 48, 1793, "Output"]
+Cell[579, 22, 11661, 242, 1289, "Input"],
+Cell[12243, 266, 3336, 48, 1825, "Output"]
 }, Open  ]],
-Cell[15692, 320, 639, 14, 32, "Input"]
+Cell[15594, 317, 639, 14, 32, "Input"]
 }
 ]
 *)

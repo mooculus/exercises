@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     12492,        261]
-NotebookOptionsPosition[     12118,        243]
-NotebookOutlinePosition[     12477,        259]
-CellTagsIndexPosition[     12434,        256]
+NotebookDataLength[     12536,        261]
+NotebookOptionsPosition[     12164,        243]
+NotebookOutlinePosition[     12521,        259]
+CellTagsIndexPosition[     12478,        256]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -121,7 +121,7 @@ derivative of the sine function.}\n\\\\tag{derivative}\nLet $\>\"", ",",
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<) = \>\"", ",", 
         RowBox[{"LaTeX", " ", "[", 
          RowBox[{"ff", "[", "variable", "]"}], "]"}], ",", 
-        "\"\<$. Compute\n\\n\\\\[\\n\>\"", ",", "\n", 
+        "\"\<$. Compute:\n\\n\\\\[\\n\>\"", ",", "\n", 
         RowBox[{"If", "[", 
          RowBox[{
           RowBox[{"switch", "\[Equal]", "1"}], ",", 
@@ -197,7 +197,7 @@ derivative of the sine function.}\n\\\\tag{derivative}\nLet $\>\"", ",",
    3.6520073581308107`*^9}, {3.652007634680707*^9, 3.652008119509358*^9}, {
    3.652008251369646*^9, 3.652008257705995*^9}, {3.652009098930094*^9, 
    3.652009099826725*^9}, {3.6520960860488977`*^9, 3.652096087794054*^9}, {
-   3.652099068953353*^9, 3.6520990902439938`*^9}}],
+   3.652099068953353*^9, 3.6520990902439938`*^9}, 3.652342316682366*^9}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\
 \\author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
@@ -212,13 +212,13 @@ polynomials.}\\n\\\\outcome{State the derivative of the natural exponential \
 function.}\\n\\\\outcome{State the derivative of the sine \
 function.}\\n\\\\tag{derivative}\\nLet $s(x) = -\\\\frac{3}{x^4}-4 e^x-5 \
 \\\\sin (x)$. \
-Compute\\n\\n\\\\[\\n\\\\eval{\\\\dd{x}s(x)}_{x=4}\\n\\\\begin{prompt}=\\\\\
+Compute:\\n\\n\\\\[\\n\\\\eval{\\\\dd{x}s(x)}_{x=4}\\n\\\\begin{prompt}=\\\\\
 answer{-215.113}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{\
 document}\"\>"], "Output",
  CellChangeTimes->{{3.652007901471291*^9, 3.652007938727149*^9}, {
    3.6520080029548388`*^9, 3.6520080433053207`*^9}, 3.6520081213265953`*^9, {
    3.652008255759882*^9, 3.652008258326585*^9}, 3.65200912277112*^9, 
-   3.6520961024316053`*^9, 3.652099121590448*^9}]
+   3.6520961024316053`*^9, 3.652099121590448*^9, 3.652342321183455*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -241,8 +241,8 @@ Cell[BoxData[
    3.652007304369194*^9, 3.65200731834723*^9}, {3.652008136003598*^9, 
    3.6520081360937243`*^9}}]
 },
-WindowSize->{960, 1045},
-WindowMargins->{{Automatic, 949}, {-9, Automatic}},
+WindowSize->{960, 706},
+WindowMargins->{{-9, Automatic}, {Automatic, -8}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
@@ -259,10 +259,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 9303, 177, 891, "Input"],
-Cell[9885, 201, 1308, 19, 539, "Output"]
+Cell[579, 22, 9326, 177, 891, "Input"],
+Cell[9908, 201, 1331, 19, 539, "Output"]
 }, Open  ]],
-Cell[11208, 223, 906, 18, 32, "Input"]
+Cell[11254, 223, 906, 18, 32, "Input"]
 }
 ]
 *)
