@@ -1,0 +1,33 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+
+\outcome{Define linear approximation as an application of the tangent to a curve.}
+ \outcome{Find the linear approximation to a function at a point and use it to approximate the function value.}
+ \outcome{Identify when a linear approximation can be used.}
+
+\tag{derivative}
+
+Here is a cool idea for approximating $e^x$:
+
+We know that $e^x = \left(e^\frac{x}{n}\right)^n$, by a familiar law of exponentials.  For a fixed value of $x$, if $n$ is large enough, then $\frac{x}{n}$ will be very small.
+
+First use the linear approximation to $y=e^x$ at $x=0$ to give an approximation for $e^\frac{x}{n}$, and then use the idea above to leverage this into an approximtion of $e^x$.
+
+The approximation you recieve may be familiar to you!
+
+\begin{prompt}
+$$e^\frac{x}{n} \approx \answer{1+\frac{x}{n}}$$
+
+so
+
+$$
+e^x \approx \answer{(1+\frac{x}{n})^n}
+$$
+\end{prompt}
+
+\end{exercise}
+\end{document}
