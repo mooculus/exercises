@@ -19,7 +19,7 @@
 \tag{first derivative test}
 \tag{second derivative test}
 
-Find the absolute maximum of the area of a right triangle with a hypotenuse of length $1$. \[\answer{\frac{1}{4}}\]
+Find the absolute maximum of the area of a right triangle with a hypotenuse of length $1$. 
 \begin{hint}
 Recall that the area of a triangle, $A$, is given by $A=\frac{1}{2}bh$ where $b$ is the base of the triangle and $h$ is its height.
 \end{hint}
@@ -32,6 +32,8 @@ Since $r^2=r=1$ (since $r^2=1^2=1$) and $r^2=b^2+h^2$, we have that $b^2+h^2=1$.
 \begin{hint}
 Solving for $b$, we have that $b=\sqrt{1-h^2}$, so the area is now a function of $h$ alone as $A=\frac{1}{2}h\sqrt{1-h^2}$. Finding the critical points, we have that $\frac{d}{dh}(\frac{1}{2}h\sqrt{1-h^2})$ when $h=\pm\frac{1}{\sqrt{2}}$, but the height of a triangle is obviously positive, so $h=\frac{1}{\sqrt{2}}$. This is a maximum since the second derivative test tells us that $\left.\frac{d^2}{dh^2}(\frac{1}{2}h\sqrt{1-h^2})\right|_{h=1/\sqrt{2}}=-2$ which is less than $0$. By inspection, this is an absolute maximum. Hence, the area is maximized for $h=\frac{1}{\sqrt{2}}$ and, consequently, $b=\frac{1}{\sqrt{2}}$ with $A=\frac{1}{4}$.
 \end{hint}
-
+\begin{prompt}
+\[\answer{\frac{1}{4}}\]
+\end{prompt}
 \end{exercise}
 \end{document}
