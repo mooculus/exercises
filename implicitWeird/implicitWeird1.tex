@@ -27,22 +27,19 @@ Consider the curve  $y^2 = x^2(x+1)$, whose graph is given below:
           \addplot [very thick, penColor, smooth, samples=100, domain=(-2:2)] ({x^2-1},{x^3-x});
         \end{axis}
 \end{tikzpicture}
-%% \caption{A plot of $x^3+y^3 = 9xy$. While this is not a function of
-%%   $y$ in terms of $x$, the equation still defines a relation between
-%%   $x$ and $y$.}
 \end{image}
 
 Use implicit differentiation to write $\frac{dy}{dx}$ as a function of both $x$ and $y$.
 
-$$
+\[
 \frac{dy}{dx} = \answer{\frac{3x^2+2x}{2y}}
-$$
+\]
 
 The equation of the tangent line to this curve at the point $(3,6)$ is
 
-$$
+\[
 y = \answer{\frac{11}{4}(x-3)+6}
-$$
+\]
 
 A difficult point to analyze on this graph is the point $(0,0)$, since it looks like two intersecting lines there.  We would like to know the equation of these two "tangent lines".  Our formula for $\frac{dy}{dx}$ provides no help, initially, since we get $\frac{0}{0}$ when we plug $(0,0)$ into that formula.
 
@@ -52,15 +49,15 @@ We can solve for the "top part" of the curve as $y = \sqrt{x^2(x+1)}$.  The othe
 
 Using $y = \sqrt{x^2(x+1)}$, we see that for points in the first quadrant of the plane, we can write $\frac{dy}{dx}$ as a function of $x$ as
 
-$$
+\[
 \frac{dy}{dx} = \answer{\frac{3x^2+2x}{2\sqrt{x^2(x+1)}}}
-$$
+\]
 
 and
 
-$$
+\[
 \lim_{x \to 0^+} \frac{dy}{dx} = 1
-$$
+\]
 
 Thus equations of the two "tangent lines" are $y=x$ and $y=-x$.
 
