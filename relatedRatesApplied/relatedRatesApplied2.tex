@@ -1,0 +1,49 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+
+
+\begin{exercise}
+
+\outcome{Identify word problems as related rates problems.}
+\outcome{Solve related rates word problems.}
+\outcome{Translate word problems into mathematical expressions.}
+
+\tag{derivative}
+
+        		A colony of bacterial are growing in a petri dish.  They form a circular disk, which appears to be growing at a rate of $4$ square millimeters per hour.  When the radius of the disk is $3$ millimeters, at what rate is the radius growing?
+
+\begin{hint}
+	Let $A$ be the area of the disk, and $r$ be its radius.  Then
+
+\[
+A = \pi r^2
+\]
+\end{hint}
+
+\begin{hint}
+	Differentiating implicitly with respect to time, we have
+\[
+\frac{\d A}{\d t} = 2\pi r \frac{\d r}{\d t}
+\]
+\end{hint}
+
+\begin{hint}
+	At the time in question, we know $r = 3$, and $\frac{\d A}{\d t} = 3$.  So 
+
+\[
+3 = 2 \pi (3) \frac{\d r}{\d t}
+\]
+
+so $\frac{\d r}{\d t} = \frac{1}{2\pi}$
+\end{hint}
+
+\begin{prompt}
+	At this instant, the radius of this disk is growing at a rate of $\answer{\frac{1}{2\pi}}$ millimeters each second.
+\end{prompt}
+
+\end{exercise}
+
+\end{document}

@@ -1,0 +1,45 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+
+\begin{exercise}
+
+\outcome{Calculate derivatives of expressions with multiple variables implicitly.}
+
+\tag{derivative}
+
+Let $x$ and $y$ be functions of $t$ which satisfy the relation:
+
+y^2 = x^2(x-1)
+
+At a certain time $x = 2$, $y=-2$, and $\frac{\d x}{\d t} = 3$.  What is $\frac{\d y}{\d t}$ at this time?
+
+\begin{hint}
+	Differentiating implicitly with respect to $t$, we obtain:
+
+\[
+2y\frac{\d y}{\d t} = (2x+3x^2)\frac{\d x}{\d t}
+\]
+\end{hint}
+
+\begin{hint}
+	Subsituting what we know about these values at the time of interest, we have
+
+\[
+2(-2) \frac{\d y}{\d t} = (2(2)+3(2^2))(3)
+\]
+\end{hint}
+
+\begin{hint}
+	Solving this yields $\frac{\d y}{\d t} = -12$
+\end{hint}
+
+\begin{prompt}
+	$\frac{\d y}{\d t} = \answer{-12}$
+\end{prompt}
+
+\end{document}
+
+
