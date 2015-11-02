@@ -10,53 +10,48 @@
 
 \tag{derivative}
 
-Let $A$, $B$ and $C$ be functions of $t$ which satisfy the following two relations:
-
-\[
-\begin{cases}
-	A^2+BC = 7\\
-	ABC = 6 
-\end{cases}
-\]
-
-At a certain time, $A = 1$, $B=2$, $C=3$.  What is $\frac{\d A}{\d t}$ at this time?
+Let $A$, $B$ and $C$ be functions of $t$ which satisfy the following
+two relations:
+\begin{align*}
+	A^2+BC &= 7\\
+	ABC &= 6 
+\end{align*}
+At a certain time, $A = 1$, $B=2$, $C=3$.  What is $\dd[A]{t}$ at this
+time?
 
 \begin{warning}
-	This problem is either quite challenging, or "simple" depending on how you approach it.
+	This problem is either quite challenging, or ``simple''
+        depending on how you approach it.
 \end{warning}
 
 \begin{hint}
-	Manipulating the defininf set of inequalities a little bit, we can see that
-
+  Manipulating the equations a little bit, we can see that
 \[
 BC = 7-A^2
 \]
-
 so
-
 \[
 A(7-A^2) = 6
 \]
-
 Remember that this equation must hold for \textbf{all} times $t$.
 \end{hint}
 
 \begin{hint}
-	Differentiating this relation with respect to $t$, we obtain
-\[
-(7-3A^2)\frac{\d A}{\d t} = 0
+  Differentiating this relation with respect to $t$, we obtain
+  \[
+  (7-3A^2)\dd[A]{t} = 0
 \]
 \end{hint}
 
 
 \begin{hint}
-	Since $7-3(1^2) \neq 0 $, we can conclude that $\frac{\d A}{\d t} = 0$.
+  Since $7-3(1^2) \neq 0 $, we can conclude that $\dd[A]{t} = 0$.
 \end{hint}
 
 \begin{prompt}
-	\[
-\frac{\d A}{\d t} = \answer{0}
-	\]
+  \[
+  \dd[A]{t} = \answer{0}
+  \]
 \end{prompt}
 
 \end{exercise}
