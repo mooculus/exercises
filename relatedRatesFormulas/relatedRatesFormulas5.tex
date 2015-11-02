@@ -1,0 +1,60 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+
+\begin{exercise}
+
+\outcome{Calculate derivatives of expressions with multiple variables implicitly.}
+
+\tag{derivative}
+
+Let $A$, $B$ and $C$ be functions of $t$ which satisfy the following two relations:
+
+\[
+\begin{cases}
+	A^2+B^2+C^2 = 14 \\
+	ABC = 6 
+\end{cases}
+\]
+
+At a certain time, $A = 1$, $B=2$, $C=3$, $\frac{\d A}{\d t} = -1$.  What are $\frac{\d B}{\d t}$ and $\frac{\d C}{\d t}$ at this time? 
+
+\begin{hint}
+	Differentiating these equations implicity, we obtain
+\[
+\begin{cases}
+	2A\frac{\d A}{\d t}+2B\frac{\d B}{\d t}+2C \frac{\d C}{\d t} = 0\\
+	BC\frac{\d A}{\d t}+AC\frac{\d B}{\d t}+AB\frac{\d C}{\d t} = 0
+\end{cases}
+\]
+
+\end{hint}
+
+\begin{hint}
+	Substituting what is known about these quantities, we have
+
+\[
+\begin{cases}
+	2(1)(-1)+2(2)\frac{\d B}{\d t}+2(3) \frac{\d C}{\d t} = 0\\
+	(2)(3)(-1) +(1)(3)\frac{\d B}{\d t}+(1)(2)\frac{\d C}{\d t} = 0
+\end{cases}
+\]
+\end{hint}
+
+Solving this system of equations, we find that $\frac{\d B}{\d t} = \frac{16}{5} $ and $\frac{\d C}{\d t} = \frac{-9}{5}$
+
+
+\begin{prompt}
+	\begin{align*}
+	\frac{\d B}{\d t} &= \answer{\frac{16}{5} } \\
+	\frac{\d C}{\d t} &= \answer{\frac{-9}{5}}
+	\end{align*}
+\end{prompt}
+
+\end{exercise}
+
+\end{document}
+
+

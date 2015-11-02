@@ -1,0 +1,41 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+
+\begin{exercise}
+
+\outcome{Solve basic related rates word problems.}
+\outcome{Understand the process of solving related rates problems.}
+\outcome{Calculate derivatives of expressions with multiple variables implicitly.}
+
+\tag{derivative}
+
+A circle is expanding.  At time $t_0$, its radius is $2 \textrm{m}$, and is growing at a rate of $4 \frac{\textrm{m}}{\textrm{s}}$.  At what rate is its area growing at the time $t_0$?
+
+\begin{hint}
+	Let $A$ be the area, and $r$ be the radius.  Then
+
+	\[A = \pi r^2\]
+\end{hint}
+
+\begin{hint}
+	Differentiating with respect to time, we have
+
+	\[\frac{\d A}{\d t} = 2\pi r \frac{\d r}{\d t}\]
+\end{hint}
+
+\begin{hint}
+	So at time $t_0$,
+
+	\[ \left.\frac{\d A}{\d t}\right|_{t = t_0} = 2 \pi (2) (4) = 16 \pi \]
+\end{hint}
+
+\begin{prompt}
+	\[\left.\frac{\d A}{\d t}\right|_{t = t_0} = \answer{16\pi}\]
+\end{prompt}
+
+\end{exercise}
+
+\end{document}

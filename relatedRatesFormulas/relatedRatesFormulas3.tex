@@ -1,0 +1,46 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+
+\begin{exercise}
+
+\outcome{Calculate derivatives of expressions with multiple variables implicitly.}
+
+\tag{derivative}
+
+Let $H$ and $\theta$ be functions of $s$ which satisfy the following relation:
+
+\[
+\tan(\theta) = \frac{6}{H}
+\]
+
+At a certain value of $s$, say $s = s_0$, we have $\theta = \frac{\pi}{6}$, $H=3$, and $\left. \frac{\d H}{\d s}\right|_{s = s_0} = -2$.  What is $\left. \frac{\d \theta}{\d s} \right|_{s = s_0}$?
+\end{exercise}
+
+\begin{hint}
+	Differentiating implicitly with respect to $s$ we obtain
+
+\[
+	\sec^2(\theta) \frac{\d \theta}{\d s} = \frac{-6}{H^2} \frac{\d H}{\d t}
+\]
+\end{hint}
+
+\begin{hint}
+	So at $s  = s_0$, we have
+
+\[
+\sec^2(\frac{\pi}{6})\left. \frac{\d \theta}{\d s} \right|_{s = s_0} = \frac{-6}{3^2} (-2)
+\]
+\end{hint}
+
+\begin{hint}
+	Solving this, we find that $\left. \frac{\d \theta}{\d s} \right|_{s = s_0} = 1$
+\end{hint}
+
+\begin{prompt}
+	$\left. \frac{\d \theta}{\d s} \right|_{s = s_0} = \answer{1}$
+\end{prompt}
+
+\end{document}

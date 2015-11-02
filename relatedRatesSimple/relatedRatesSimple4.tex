@@ -1,0 +1,56 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+
+\begin{exercise}
+
+\outcome{Solve basic related rates word problems.}
+\outcome{Understand the process of solving related rates problems.}
+\outcome{Calculate derivatives of expressions with multiple variables implicitly.}
+
+\tag{derivative}
+
+An isoceles triangle has side lengths $r$, $r$ and $2$.  The angle between the sides of length $r$ is $\theta$.  If $r$ is increasing at a rate of $3 \frac{\textrm{units}}{\textrm{s}}$ when $r = 2$, then at what rate is the angle changing at that time?
+
+\begin{hint}
+	Draw a picture
+\end{hint}
+
+\begin{hint}
+	It should be clear from your picture that $r$ and $\theta$ satisfy the relation 
+
+\[\sin(\frac{\theta}{2}) = \frac{1}{r}\]
+\end{hint}
+
+\begin{hint}
+	Differentiating implicitly with respect to time, 
+
+\[
+	\frac{1}{2}\cos(\frac{\theta}{2}) \frac{\d \theta}{\d t} = \frac{-1}{r^2} \frac{\d r}{\d t}
+\]
+\end{hint}
+
+\begin{hint}
+	Note that at the time that $r = 2$, $\theta = \frac{\pi}{3}$, so
+
+	\[\frac{1}{2} \cos(\frac{\pi}{6}) \frac{\d \theta}{\d t} = \frac{-1}{4} (3)\]
+\end{hint}
+
+\begin{hint}
+	Solving this, we have
+\[
+	\frac{\d \theta}{\d t} =  \frac{-3}{\sqrt{3}}
+\]
+\end{hint}
+
+\begin{prompt}
+	\[
+	\frac{\d \theta}{\d t} =  \answer{\frac{-3}{\sqrt{3}}}
+	\]
+\end{prompt}
+
+\end{exercise}
+
+\end{document}
