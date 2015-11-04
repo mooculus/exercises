@@ -15,35 +15,75 @@
 
 \tag{related rates}
 
-Radar guns measure the rate of distance change between the gun and the object it is measuring. For instance, a reading of ``$55$mph'' means the object is moving away from the gun at a rate of $55$ miles per hour, whereas a measurement of ``$-25$mph'' would mean that the object is approaching the gun at a rate of $25$ miles per hour.
+Radar guns measure the rate of distance change between the gun and the
+object it is measuring. For instance, a reading of ``$55$mph'' means
+the object is moving away from the gun at a rate of $55$ miles per
+hour, whereas a measurement of ``$-25$mph'' would mean that the object
+is approaching the gun at a rate of $25$ miles per hour.
 
-If the radar gun is moving (say, attached to a police car) then radar readouts are only immediately understandable if the gun and the object it is measuring are moving along the same line. For instance, if a police officer is traveling $60$mph and measures the speed of a car ahead of him and gets a readout of $15$mph, he knows that the car ahead of him is moving away at a rate of $15$ miles an hour (i.e., the car's speed relative to him), meaning the car is traveling $75$mph.
+If the radar gun is moving (say, attached to a police car) then radar
+readouts are only immediately understandable if the gun and the object
+it is measuring are moving along the same line. For instance, if a
+police officer is traveling $60$mph and measures the speed of a car
+ahead of him and gets a readout of $15$mph, he knows that the car
+ahead of him is moving away at a rate of $15$ miles an hour (i.e., the
+car's speed relative to him), meaning the car is traveling $75$mph.
 
 
-Now, suppose an officer is driving due north and sees a car moving due west towards the intersection of their two roads.
+Now, suppose an officer is driving due north and sees a car moving due
+west towards the intersection of their two roads.
 
-What speed, $s$, is the other car traveling at in the following situations:
+What speed, $s$, is the other car traveling at in the following
+situations:
 \begin{enumerate}
-\item		The officer is traveling due north at $50$mph and is $1/2$ mile from the intersection while the other car is $1$ mile from the intersection, traveling west, and the officer's radar reading is $-80$mph? \[s = \answer{40\sqrt{5}-25}\]
-\item		The officer is traveling due north at $50$mph and is $1$ mile from the intersection while the other car is $1/2$ mile from the intersection, traveling west, and the officer's radar reading is $-80$mph? \[s = \answer{80\sqrt{5}-100}\]
+\item The officer is traveling due north at $50$mph and is $1/2$ mile
+  from the intersection while the other car is $1$ mile from the
+  intersection, traveling west, and the officer's radar reading is
+  $-80$mph? \begin{prompt}\[s = \answer{40\sqrt{5}-25}\]\end{prompt}
+\item The officer is traveling due north at $50$mph and is $1$ mile
+  from the intersection while the other car is $1/2$ mile from the
+  intersection, traveling west, and the officer's radar reading is
+  $-80$mph? \begin{prompt}\[s = \answer{80\sqrt{5}-100}\]\end{prompt}
 \end{enumerate}
 
 \begin{hint}
-Draw a picture and remember that \textbf{speed} is the absolute value of \textbf{velocity}. Recall that the radar gun measures the rate of change in the distance between the two cars. If $r(t)$ measures the distance between them as a function of time, then $r(t)$ is the hypotenuse of the right triangle formed between $x(t)$ (the function of time measuring the distance of the other car from the intersection of the roads) and $y(t)$ (the function of time measuring the distance of the police car from the intersection of the roads). 
+Draw a picture and remember that \textbf{speed} is the absolute value
+of \textbf{velocity}. Recall that the radar gun measures the rate of
+change in the distance between the two cars. If $r(t)$ measures the
+distance between them as a function of time, then $r(t)$ is the
+hypotenuse of the right triangle formed between $x(t)$ (the function
+of time measuring the distance of the other car from the intersection
+of the roads) and $y(t)$ (the function of time measuring the distance
+of the police car from the intersection of the roads).
 \end{hint}
 \begin{hint}
-The relative speed between the vehicles is given by $\frac{dr}{dt}$. If $r=\sqrt{x(t)^2+y(t)^2}$ where $x(t)$ is the position of the other car as a function of time and $y(t)$ is the position of the police car as a function of time, what is $\frac{dr}{dt}$? What are $x(t)$ and $x'(t)$? What are $y(t)$ and $y'(t)$? How does this help? 
+The relative speed between the vehicles is given by
+$\frac{dr}{dt}$. If $r=\sqrt{x(t)^2+y(t)^2}$ where $x(t)$ is the
+position of the other car as a function of time and $y(t)$ is the
+position of the police car as a function of time, what is
+$\frac{dr}{dt}$? What are $x(t)$ and $x'(t)$? What are $y(t)$ and
+$y'(t)$? How does this help?
 \end{hint}
 \begin{hint}
-By the chain rule, $\frac{dr}{dt}=\frac{x(t)\frac{dx}{dt}+y(t)\frac{dy}{dt}}{\sqrt{x(t)^2+y(t)^2}}$. What are $x(t)$,$x'(t)$, $y(t)$ and $y'(t)$ as functions of time?
+By the chain rule,
+$\frac{dr}{dt}=\frac{x(t)\frac{dx}{dt}+y(t)\frac{dy}{dt}}{\sqrt{x(t)^2+y(t)^2}}$. What
+are $x(t)$,$x'(t)$, $y(t)$ and $y'(t)$ as functions of time?
 \end{hint}
 \begin{hint}
-In the first scenario, we see that $x(t)=-st+1$, $\frac{dx}{dt}=-s$, $y(t)=50t-\frac{1}{2}$ and $\frac{dy}{dt}=50$ where $t$, for convenience, is time measured in hours. In the second scenario, we see that $x(t)=-st+\frac{1}{2}$, $\frac{dx}{dt}=-s$, $y(t)=50t-1$ and $\frac{dy}{dt}=50$ where $t$, for convenience, is measured in hours.
+In the first scenario, we see that $x(t)=-st+1$, $\frac{dx}{dt}=-s$,
+$y(t)=50t-\frac{1}{2}$ and $\frac{dy}{dt}=50$ where $t$, for
+convenience, is time measured in hours. In the second scenario, we see
+that $x(t)=-st+\frac{1}{2}$, $\frac{dx}{dt}=-s$, $y(t)=50t-1$ and
+$\frac{dy}{dt}=50$ where $t$, for convenience, is measured in hours.
 \end{hint}
 \begin{hint}
-In the first scenario, at $t=0$, when the radar makes its measurement, $\frac{dr}{dt}=\frac{2(-25-s)}{\sqrt{5}}$ which we know is equal to $-80$, hence, $s=40\sqrt{5}-25$.
+In the first scenario, at $t=0$, when the radar makes its measurement,
+$\frac{dr}{dt}=\frac{2(-25-s)}{\sqrt{5}}$ which we know is equal to
+$-80$, hence, $s=40\sqrt{5}-25$.
 
-In the second scenario, at $t=0$, when the radar makes its measurement, $\frac{dr}{dt}=\frac{-100-s}{\sqrt{5}}$ which we know is equal to $-80$, hence, $s=80\sqrt{5}-100$.
+In the second scenario, at $t=0$, when the radar makes its
+measurement, $\frac{dr}{dt}=\frac{-100-s}{\sqrt{5}}$ which we know is
+equal to $-80$, hence, $s=80\sqrt{5}-100$.
 \end{hint}
 \end{exercise}
 \end{document}
