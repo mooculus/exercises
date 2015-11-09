@@ -13,28 +13,22 @@
 \tag{derivative}
 
 Let $f$ be a function with $f(2) = 4$, and $f$ is a solution to the differential equation 
-
 \[
-
-\frac{\d y}{\d x} = y-x
-
+\dd[y]{x} = y-x
 \]
-
-Follow the following set of steps (Called ``Euler's method'') to approximate $f(2.3)$:
-	\begin{itemize}
-	\item Find an approximate value of $f(2.1)$ by using the linear approximation at $(2,4)$.  Call this approximation $y_1$, so $(2.1,y_1)$ is close to being on the graph of $f$.
-	\item Use the linear approximation at $(2.1,y_1)$ to approximate the value of $f(2.2)$.  Call this $y_2$, so that $(2.2,y_2)$ is appoximately on the curve.
-	\item Finally, use the linear approximation at $(2.2,y_2)$ to approximate the value of $f(2.3)$, which we call $y_3$.
-	\end{itemize}
-
+Follow the following set of steps (called ``Euler's method'') to approximate $f(2.3)$:
+\begin{itemize}
+\item Find an approximate value of $f(2.1)$ by using the linear approximation at $(2,4)$.  Call this approximation $y_1$, so $(2.1,y_1)$ is close to being on the graph of $f$.
+\item Use the linear approximation at $(2.1,y_1)$ to approximate the value of $f(2.2)$.  Call this $y_2$, so that $(2.2,y_2)$ is appoximately on the curve.
+\item Finally, use the linear approximation at $(2.2,y_2)$ to approximate the value of $f(2.3)$, which we call $y_3$.
+\end{itemize}
 This is an example of a ``numerical method'' for approximating a solution to a differential equation.
-
-\being{prompt}
-	\begin{align*}
-	y_1 = \answer{4.2}\\
-	y_2 = \answe{4.41}\\
-	y_3 = \answer{4.631}
-	\end{align*}
+\begin{prompt}
+\begin{align*}
+  y_1 &= \answer{4.2}\\
+  y_2 &= \answer{4.41}\\
+  y_3 &= \answer{4.631}
+\end{align*}
 \end{prompt}
 \end{exercise}
 \end{document}

@@ -13,27 +13,22 @@
 \tag{derivative}
 
 Let $f$ be a function with $f(0) = 1$, and $f$ is a solution to the differential equation 
-
 \[
-
-\frac{\d y}{\d x} = -x/y
-
+\dd[y]{x} = -x/y
 \]
-
-Follow the following set of steps (Called ``Euler's method'') to approximate $f(1)$:
-	\begin{itemize}
-	\item Find an approximate value of $f(\frac{1}{2})$ by using the linear approximation at $(0,1)$.  Call this approximation $y_1$, so $(\frac{1}{2},y_1)$ is close to being on the graph of $f$.
-	\item Use the linear approximation at $(\frac{1}{2}, y_1)$ to approximate the value of $f(1)$.  Call this $y_2$, so that $(1,y_2)$ is appoximately on the curve.
-	\end{itemize}
+Follow the following set of steps (called ``Euler's method'') to
+approximate $f(1)$:
+\begin{itemize}
+\item Find an approximate value of $f(\frac{1}{2})$ by using the linear approximation at $(0,1)$.  Call this approximation $y_1$, so $(\frac{1}{2},y_1)$ is close to being on the graph of $f$.
+\item Use the linear approximation at $(\frac{1}{2}, y_1)$ to approximate the value of $f(1)$.  Call this $y_2$, so that $(1,y_2)$ is appoximately on the curve.
+\end{itemize}
 
 This is an example of a ``numerical method'' for approximating a solution to a differential equation.
-
-\being{prompt}
+\begin{prompt}
 	\begin{align*}
-	y_1 = \answer{1}\\
-	y_2 = \answe{\frac{3}{4}}\\
+	y_1 &= \answer{1}\\
+	y_2 &= \answer{\frac{3}{4}}
 	\end{align*}
 \end{prompt}
-
 \end{exercise}
 \end{document}
