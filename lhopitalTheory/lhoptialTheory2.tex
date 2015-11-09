@@ -1,0 +1,41 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+
+\outcome{Recall how to find limits for forms that are not indeterminate.}
+\outcome{Define an indeterminate form.}
+\outcome{Determine if a form is indeterminate.}
+\outcome{Convert indeterminate forms to the form zero over zero or infinity over infinity.}
+\outcome{Define L’hopital’s Rule and identify when it can be used.}
+\outcome{Use L’hopital’s Rule to find limits.}
+
+\tag{derivative}
+
+Decide whether l'H\^{o}pital's rule immediatly applies to the following limit.  If it does not, explain why not.  Find the limit by any means necessary, or state that it does not exist. 
+
+\[
+\lim_{x \to \infty} \frac{x+\sin(x)}{\sqrt{x^2+1}}
+\]
+
+\begin{prompt}
+	Call the numerator $f(x)$ and the denominator $g(x)$.	
+
+	\begin{multipleChoice}
+	\choice{l'H\^{o}pital's rule applies}
+	\choice{l'H\^{o}pital's rule does not apply since the limit is not an indeterminate form }
+	\choice{l'H\^{o}pital's rule does not apply $g'(x)$ has zeros on every interval $(a, \infty)$ }
+	\choice[correct]{l'H\^{o}pital's rule does not apply because $\lim_{x \to \infty} \frac{f'(x)}{g'(x)}$ does not exist.}
+\end{multipleChoice}
+
+If the limit does not exist, write $DNE$.
+
+\[
+\lim_{x \to \infty} \frac{x+\sin(x)}{\sqrt{x^2+1}} = \answer{1}
+\]
+\end{prompt}
+
+\end{exercise}
+\end{document}
