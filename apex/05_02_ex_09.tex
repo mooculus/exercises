@@ -2,7 +2,7 @@
 
 \input{../preamble.tex}
 
-\author{Gregory Hartman \and Matthew Carr}
+\author{Gregory Hartman \and Bart Snapp}
 \license{Creative Commons 3.0 By-NC}
 \acknowledgement{https://github.com/APEXCalculus}
 
@@ -18,34 +18,30 @@
 \tag{integral}
 \tag{antiderivative}
 
-Consider the following graph of $y=x^2$.
+Consider the following graph of $y=\sqrt{4-(x-2)^2}$.
 \begin{image}
   \begin{tikzpicture}
     \begin{axis}[
         width=6in,
         height=3in,
-        xmin=-.5, xmax=2.5,ymin=-.5,ymax=4.5,
+        xmin=-.5, xmax=4.5,ymin=-.5,ymax=3.5,
         axis lines =center, xlabel=$x$, ylabel=$y$,
         every axis y label/.style={at=(current axis.above origin),anchor=south},
         every axis x label/.style={at=(current axis.right of origin),anchor=west},
         axis on top,
     ] 
-      \addplot [draw=none, fill=fillp,domain=0:2] {x^2} \closedcycle;
-      \addplot [thick,penColor,smooth,samples=40,domain=0:2] {x^2};
-      \draw [thick,dashed] (axis cs:1,0) -- (axis cs:1,1);
-
-      \draw (axis cs:1,3) node {$f(x)=x^2$};
-      \draw (axis cs:.7,.2) node {$1/3$};
-      \draw (axis cs:1.5,.5) node {$7/3$};
+      \addplot [penColor,very thick,samples=300,domain=0:4,smooth] {sqrt(4-(x-2)^2)};
     \end{axis}
   \end{tikzpicture}
 \end{image}
 Use geometry to compute the following definite integrals:
 \begin{enumerate}
-\item $\int_{0}^{2}5x^2\d x\begin{prompt}=\answer{\frac{40}{3}}\end{prompt}$
-\item $\int_{0}^{2}x^2+3\d x\begin{prompt}=\answer{\frac{26}{3}}\end{prompt}$
-\item $\int_{1}^{3}(x-1)^2\d x\begin{prompt}=\answer{\frac{8}{3}}\end{prompt}$
-\item $\int_{2}^{4}(x-2)^2+5\d x\begin{prompt}=\answer{\frac{38}{3}}\end{prompt}$
+\item $\int_{0}^{2} \sqrt{4-(x-2)^2}\d x\begin{prompt}=\answer{\pi}\end{prompt}$
+\item $\int_{4}^{2} \sqrt{4-(x-2)^2}\d x\begin{prompt}=\answer{-\pi}\end{prompt}$
+\item $\int_{0}^{4} \sqrt{4-(x-2)^2}\d x\begin{prompt}=\answer{2\pi}\end{prompt}$
+\item $\int_{0}^{4} 5\sqrt{4-(x-2)^2}\d x\begin{prompt}=\answer{10\pi}\end{prompt}$
 \end{enumerate}
+
+
 \end{exercise}
 \end{document}
