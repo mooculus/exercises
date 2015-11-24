@@ -1,0 +1,52 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+
+\outcome{Define accumulation functions.}
+\outcome{Calculate and evaluate accumulation functions.}
+\outcome{State the First Fundamental Theorem of Calculus.}
+\outcome{Take derivatives of accumulation functions using the First Fundamental Theorem of Calculus.}
+\outcome{Use accumulation functions to find information about the original function.}
+\outcome{Understand the relationship between the function and the derivative of its accumulation function.}
+
+\tag{integral}
+
+Usually we use the second fundamental theorem of calculus to compute definite integrals.  In other words, we turn a hard geometric problem (finding the area under a curve) into a relatively easy algebra problem (evaluating an antiderivative, and evaluating at the endpoints).
+
+In this problem we will turn a hard antiderivative problem into a relatively easy geometry problem using the first fundamental theorem of calculus.
+
+Using the picture below, find an algebraic expression for $\int_{-1}^x \sqrt{1-t^2} \d t$.  Verify that this is an antiderivative of $\sqrt{1-x^2}$ by taking the derivative.
+
+
+%BADBAD add a filled arc from (-1,0) to (0.5,sqrt(3)/2).  Label the two regions as A and B.
+
+\begin{image}
+  \begin{tikzpicture}
+    \begin{axis}[
+        width=5in,
+        height=3in,
+        xmin=-1.2, xmax=1.2,ymin=-0.2,ymax=1.2,domain=-2:2,
+        axis lines =center, xlabel=$x$, ylabel=$y$,
+        every axis y label/.style={at=(current axis.above origin),anchor=south},
+        every axis x label/.style={at=(current axis.right of origin),anchor=west},
+        axis on top,
+    ] 
+      \addplot [draw=none, fill=penColor2,domain=0:0.5] {1.732*x} \closedcycle;
+      \addplot [penColor,very thick,domain=0:pi] ({cos(x*360/2/pi)},{sin(x*360/2/pi)});
+  \end{axis}
+  \end{tikzpicture}
+\end{image}
+
+\begin{prompt}
+The area of region $A$, as a function of $x$, is $\answer{\pi - \arccos(x)}$
+
+The area of region $B$, as a function of $x$, is $\answer{\frac{1}{2}x \sqrt{1-x^2}}$
+
+So $\int_{-1}^x \sqrt{1-t^2} \d t = \answer{\pi - \arccos(x)+\frac{1}{2}x \sqrt{1-x^2}}$
+\end{prompt}
+
+\end{exercise}
+\end{document}
