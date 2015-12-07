@@ -1,0 +1,60 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+
+\tag{integral}
+
+The \textbf{Offset Logarithmic Intergral} function is defined by
+
+\[
+\mathrm{Li}(x) = \int_2^x \frac{1)}{\ln(t)} \d t
+\]
+
+This function is very important in Analytic Number Theory.  It turns out that $Li(x)$ is a very good approximation for the number of prime numbers less than $x$. However, it cannot be expressed as an elemenary function (you cannot write it down in terms of rational functions, trig functions, exponentials, etc without an integral).
+
+\begin{exercise}
+	What is $\lim_{x \to \infty} Li(x)$?  Explain how you know.
+	
+	\begin{prompt}
+	\[
+	\lim_{x \to \infty} Li(x) = \answer{\infty}
+	\]
+	\end{prompt}
+\end{exercise}
+
+
+Here is a table of values for $Si(x)$:
+
+\[
+\begin{array}{c|c}
+ x & \mathrm{Li}(x)\\ \hline
+3 &  1.118\\
+4 & 1.922\\
+5 & 2.589\\
+6 & 3.177\\
+7& 3.712\\
+8 & 4.209\\
+9 & 4.676
+\end{array}
+\]
+
+
+Using this table of values, evaluate the following definite integrals:
+
+\begin{exercise}
+	\[
+	\int_2^4 \frac{1}{\ln(3+t)} \d t \begin{prompt} = \answer{1.123} \end{prompt} 
+	\]
+\end{exercise}
+
+\begin{exercise}
+	\[
+	\int_2^3 \frac{t}{\ln(t)} \d t \begin{prompt} = \answer{2.754} \end{prompt} 
+	\]
+\end{exercise}
+
+\end{exercise}
+\end{document}

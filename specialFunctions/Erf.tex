@@ -1,0 +1,55 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+
+\tag{integral}
+
+The \textbf{Error function} is defined by
+
+\[
+\mathrm{Erf}(x) = \frac{2}{\sqrt{\pi}} \int_0^x e^{-t^2} \d t
+\]
+
+This function is very important in statistics, but cannot be expressed as an elemenary function (you cannot write it down in terms of rational functions, trig functions, exponentials, etc without an integral).
+
+\[
+\begin{array}{c|c}
+ x & \mathrm{Erf}(x)\\ \hline
+0.1 & 0.11246\\
+0.2 & 0.22270\\
+0.3 & 0.32863\\
+0.4 & 0.42839\\
+0.5 & 0.52050\\
+0.6 & 0.60386\\
+0.7 & 0.67780\\
+0.8 & 0.74210\\
+0.9 & 0.79691\\
+1.0 & 0.84270\\
+\end{array}
+\]
+
+Using this table of values, evaluate the following definite integrals:
+
+\begin{exercise}
+	\[
+	\frac{1}{\sqrt{\pi} }\int_\frac{1}{10}^\frac{1}{2} e^{-4t^2} \d t = \answer{0.155}
+	\]
+\end{exercise}
+
+\begin{exercise}
+	\[
+	\frac{1}{\sqrt{\pi}} \int_{-0.4}^{0.4} e^{-t^2} \d t = \answer{0.42839}
+	\]
+\end{exercise}
+
+\begin{exercise}
+	\[
+	 \int_{0.1}^{0.6} e^{-(t-0.2)^2} \d t = \answer{0.4793}
+	\]
+\end{exercise}
+
+\end{exercise}
+\end{document}
