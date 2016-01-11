@@ -1,0 +1,51 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\author{Carl Stitz \and Jeff Zeager \and Bart Snapp \and Matthew Carr}
+\license{CC-By-SA-NC}
+\acknowledgement{http://www.stitz-zeager.com/}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Find domain and range.}
+\outcome{Define and work with inverse functions.}
+\outcome{Determine where a function is positive or negative}
+\outcome{Find the intervals where a function is increasing or decreasing}
+
+\tag{domain}
+\tag{inverse}
+\tag{increasing}
+\tag{decreasing}
+
+In the next set of problems, use the graph of $y = f(x)$ given below
+to answer the question.
+
+\begin{image}
+  \begin{tikzpicture}
+  \begin{axis}[
+            xmin=-5, xmax=5, ymin=-5,ymax=5,    
+            unit vector ratio*=1 1 1,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            xtick={-5,...,5}, ytick={-5,...,5},
+            %xticklabels={-4,,-2,,0,,2,,4,,6}, yticklabels={,-2,,0,,2,,4,,6,,8,,10},
+            grid=major,width=4in,
+            grid style={dashed, gridColor},
+          ]
+          \addplot[color=penColor,very thick,smooth,domain=-1:1] {x^2-1};
+          \addplot[color=penColor,very thick] plot coordinates
+                  {(1,0) (2,3) (3,1)};
+          \addplot[color=penColor,very thick] plot coordinates
+                  {(-5,-5) (-4,0) (-3,4) (-2,2) (-1,0)};
+           
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+Restricting to the domain $[-3,0]$ compute $f^{-1}(3)$. \[f^{-1}(3)=\answer{-\frac{5}{2}}\]
+
+\end{exercise}
+\end{document}
