@@ -1,0 +1,54 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+
+
+\tag{integral}
+
+Find the area of the region bounded by the curves $y = x$ and $y = \frac{1}{2} x + 1$ in the first quadrant.
+
+\begin{hint}
+	First we find the point of intersectios.
+	
+	\begin{align*}
+	x &= \frac{1}{2}x+1\\
+	\frac{1}{2}x &=1\\
+	x &=2
+	\end{align*}
+\end{hint}
+
+\begin{hint}
+	$y = \frac{1}{2}x+1$ is greater than $y=x$ on the interval $[0,2]$
+\end{hint}
+
+\begin{hint}
+	Thus the area of this region is
+
+	\[
+	\int_0^2 (\frac{1}{2}x+1) - x \d x
+	\]
+\end{hint}
+
+\begin{hint}
+	\begin{align*}
+		\int_0^2 (\frac{1}{2}x+1) - x \d x &= \int_0^2 (\frac-{1}{2}x+1)  \d x\\
+		&= \eval{-\frac{1}{4}x^2+x}_0^2\\
+		&= 1
+	\end{align*}
+\end{hint}
+
+\begin{prompt}
+	\[
+		\textrm{Area} = \answer{1}
+	\]
+	
+	\begin{feedback}
+		Since this region is a triangle with base of length $1$ on the $y$-axis, and height $2$, one could also have calculated this area geometrically.
+	\end{feedback}
+\end{prompt}
+
+\end{exercise}
+\end{document}

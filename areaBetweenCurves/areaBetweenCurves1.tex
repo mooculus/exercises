@@ -1,0 +1,51 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+
+
+\tag{integral}
+
+Find the area of the region bounded by the curves $y = 1$ and $y =7+6x-x^2$.
+
+\begin{hint}
+	First we find the points of intersectios.
+	
+	\begin{align*}
+	7+6x-x^2 &= 1\\
+	x^2-6x-6 &=0\\
+	(x-2)(x-4) &=0\\
+	x &= 2 \textrm{ or  }4
+	\end{align*}
+\end{hint}
+
+\begin{hint}
+	By graphing the two functions, we can see that $y =7+6x-x^2$ is always greater than $1$ on the interval $[2,4]$.
+\end{hint}
+
+\begin{hint}
+	Thus the area of this region is
+
+	\[
+	\int_2^4 (7+6x-x^2) - 1 \d x
+	\]
+\end{hint}
+
+\begin{hint}
+	\begin{align*}
+		\int_2^4 (7+6x-x^2) - 1 \d x &= \int_2^4 6+6x-x^2 \d x\\
+		&= \eval{6x+3x^2-\frac{1}{3}x^3}_2^4\\
+		&= \frac{88}{3}
+	\end{align*}
+\end{hint}
+
+\begin{prompt}
+	\[
+		\textrm{Area} = \answer{\frac{88}{3}}
+	\]
+\end{prompt}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,112 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+
+
+\tag{integral}
+
+Find the area of the region bounded by the curves $y=x-2$ and $y=-x$, and $y = 4+2x-x^2$.
+
+\begin{hint}
+
+	First sketch a picture of the region
+
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-2:5, ymax=5,xmax=5,ymin=-2, xmin=-2,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+ 	   xtick={-1,1,3},
+            xticklabels={$a$,$b$,$c$}, 
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ]
+          \addplot [draw=none,fill=fillp,domain=-1:3] {4+2*x-x^2} \closedcycle;
+          \addplot [draw=none,fill=background,domain=-1:0] {-x} \closedcycle;
+          \addplot [draw=none,fill=background,domain=2:3] {x-2} \closedcycle;
+          \addplot [draw=none,fill=fillp,domain=0:1] {-x} \closedcycle;
+          \addplot [draw=none,fill=fillp,domain=1:2] {x-2} \closedcycle;
+          \addplot [draw=penColor,very thick,smooth] {-x};
+          \addplot [draw=penColor2,very thick,smooth] {x-2};
+          \addplot [draw=penColor3,very thick,smooth] {4+2*x-x^2};
+         
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+\end{hint}
+
+\begin{hint}
+	Next we find the $x$-coordinates of the relevant points of intersection.
+	
+	Let $a$ be the point of intersection between $y = -x$ and $y = 4+2x-x^2$, $b$ between $y=-x$ and $y=x-2$, and $c$ between $y=x-2$ and $y=4+2x-x^2$.
+
+	Then
+	
+\[	
+	\begin{cases}
+		-a = 4+2a-a^2\\
+		-b = b-2\\
+		c-2 = 4+2c-c^2
+	\end{cases}	
+\]
+
+\[	
+	\begin{cases}
+		0 = 4+3a-a^2\\
+		 0 = 2b-2\\
+		0= 6+c-c^2
+	\end{cases}	
+\]
+
+\[	
+	\begin{cases}
+		0 = (1+a)(4-a)\\
+		 b = 1\\
+		0= (3-c)(2+c)
+	\end{cases}	
+\]
+
+Thus $a=-1$,  $b = 1$, and $c = 3$ (make sure you understand why $a=4$ and $c=-2$ are not the correct intersections).
+\end{hint}
+
+
+\begin{hint}
+	Thus the area of this region is
+
+	\[
+	\int_{-1}^{1} (4+2x-x^2) - (-x) \d x + \int_{1}^{3} (4+2x-x^2) - (x-2) \d x
+	\]
+\end{hint}
+
+\begin{hint}
+	The first summand is
+
+	\begin{align*}
+		\int_{-1}^{1} (4+2x-x^2) - (-x) \d x &=  \int_{-1}^{1} (4+3x-x^2) \d x\\
+		&= \eval{4x+\frac{3}{2}x^2-\frac{1}{3}x^3}_{-1}^1\\
+		&= \frac{22}{3}
+	\end{align*}
+
+	The second summand is
+
+	\begin{align*}
+		\int_{1}^{3} (4+2x-x^2) - (x-2) \d x &= \int_{1}^{3} (6+x-x^2) \d x\\
+		&= \eval{6x+\frac{x^2}{2}-\frac{x^3}{3}}_1^3\\
+		&= \frac{22}{3}
+	\end{align*}
+
+	Note that these two area equal, which we could have also discovered by observing the symmetry of the figure about the line $x=1$.
+\end{hint}
+
+\begin{prompt}
+	\[
+		\textrm{Area} = \answer{\frac{44}{3}}
+	\]
+\end{prompt}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+
+
+\tag{integral}
+
+Find the area of the region bounded by two consecutive intersections of the curves $y=\sin(x)$ and $y = \cos(x)$.
+
+\begin{hint}
+	We can use any two consecutive intersections, but the first two positive intersections are convenient.
+
+	These occur at $x = \frac{\pi}{4}$ and $x = \frac{3\pi}{4}$
+\end{hint}
+
+\begin{hint}
+	$y = \sin(x)$ is greater than $y=\cos(x)$ on the interval $[\frac{\pi}{4},\frac{3\pi}{4}]$
+\end{hint}
+
+\begin{hint}
+	Thus the area of this region is
+
+	\[
+	\int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \sin(x) - \cos(x) \d x
+	\]
+\end{hint}
+
+\begin{hint}
+	\begin{align*}
+		\int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \sin(x) - \cos(x) \d x &=  -\eval{\cos(x)+\sin(x)}_{\frac{\pi}{4}}^{\frac{3\pi}{4}}  \d x\\
+		&=-(-\frac{2}{\sqrt{2}} - \frac{2}{\sqrt{2}})\\
+		&= \frac{4}{\sqrt{2}}
+	\end{align*}
+\end{hint}
+
+\begin{prompt}
+	\[
+		\textrm{Area} = \answer{\frac{4}{\sqrt{2}}}
+	\]
+\end{prompt}
+
+\end{exercise}
+\end{document}

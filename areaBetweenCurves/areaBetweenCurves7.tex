@@ -1,0 +1,75 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+
+
+\tag{integral}
+
+Find the area of the region bounded by the curves $y=\sqrt[3]{x}$ and $y=\frac{2}{7}(x-1)$ and the $x$-axis.  Try to solve this problem using horizontal rectangles, i.e. by integration with respect to $y$.
+
+\begin{hint}
+
+	First sketch a picture of the region
+
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=0:10, ymax=3,xmax=10,ymin=0, xmin=0,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+ 	   xtick={1,8},
+            xticklabels={$1$,$8$}, 
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ]
+         
+         \addplot [draw=none,fill=fillp,domain=0:8,samples=200] {x^(1/3)} \closedcycle;
+         \addplot [draw=none,fill=background,domain=1:8] {2*(x-1)/7} \closedcycle;
+          \addplot [draw=penColor,very thick,smooth] {2*(x-1)/7};
+          \addplot [draw=penColor2,very thick,smooth, samples=200] {x^(1/3)};
+	 \addplot [textColor,dashed] plot coordinates {(8,0) (8,5)};
+	 \addplot [textColor,dashed] plot coordinates {(0,2) (10,2)};
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+\end{hint}
+
+\begin{hint}
+Rather than using two different regions of integration, this problem is a great case opportunity to use horizontal rectangles.
+
+Solving for $x$, we can rewrite the curves as $x = y^3$ and $x = \frac{7y}{2}+1$.
+
+The curves intersect at the point $(8,2)$
+\end{hint}
+
+\begin{hint}
+	The area of this region is
+
+	\[
+	\int_{0}^{2} ( \frac{7y}{2}+1)-y^3 \d y
+	\]
+\end{hint}
+
+\begin{hint}
+
+
+	\begin{align*}
+		\int_{0}^{2} ( \frac{7y}{2}+1)-y^3 \d y &=  \eval{\frac{7y^2}{4}+y-\frac{y^4}{4}}_0^2\\
+		&= 7+2-4\\
+		&= 5
+	\end{align*}
+
+	
+\end{hint}
+
+\begin{prompt}
+	\[
+		\textrm{Area} = \answer{5}
+	\]
+\end{prompt}
+
+\end{exercise}
+\end{document}

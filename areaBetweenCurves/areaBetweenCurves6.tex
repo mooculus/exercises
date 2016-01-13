@@ -1,0 +1,78 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+
+
+\tag{integral}
+
+Find the area of the region bounded by the curves $y=\left| x-2 \right|$ and $y=1+\frac{e^x}{5}$ from $x=1$ to $x=3$.
+
+\begin{hint}
+
+	First sketch a picture of the region
+
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=0:4, ymax=5,xmax=4,ymin=0, xmin=0,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+ 	   xtick={1,2,3},
+            xticklabels={$1$,$2$,$3$}, 
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ]
+         
+         \addplot [draw=none,fill=fillp,domain=1:3] {1+e^x/5} \closedcycle;
+         \addplot [draw=none,fill=background,domain=1:3] {abs(x-2)} \closedcycle;
+          \addplot [draw=penColor,very thick,smooth] {abs(x-2)};
+          \addplot [draw=penColor2,very thick,smooth] {1+e^x/5};
+	 \addplot [textColor,dashed] plot coordinates {(1,0) (1,5)};
+	 \addplot [textColor,dashed] plot coordinates {(3,0) (3,5)};
+
+         
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+\end{hint}
+
+\begin{hint}
+	The area of this region is
+
+	\[
+	\int_{1}^{2} (1+\frac{e^x}{5}) - (-(x-2)) \d x + \int_{2}^{3} (1+\frac{e^x}{5}) - (x-2) \d x
+	\]
+\end{hint}
+
+\begin{hint}
+	The first summand is
+
+	\begin{align*}
+		\int_{1}^{2} (1+\frac{e^x}{5}) - (-(x-2)) \d x &=  \int_{1}^{2} (-1+x+\frac{e^x}{5}) \d x\\
+		&= \eval{-x+\frac{x^2}{2}+\frac{e^x}{5}}_1^2\\
+		&= (-2+2+\frac{e^2}{5})-(-1+\frac{1}{2}+\frac{e}{5})
+		&=\frac{1}{2}-\frac{e}{5}+\frac{e^2}{5}
+	\end{align*}
+
+	The second summand is
+
+	\begin{align*}
+		 \int_{2}^{3} (1+\frac{e^x}{5}) - (x-2) \d x &= \int_{1}^{3} (3-x+\frac{e^x}{5}) \d x\\
+		&= \eval{3x-\frac{x^2}{2}+\frac{e^x}{5}}_2^3\\
+		&= (9 - \frac{9}{2}+\frac{e^3}{5}) - (6-2+\frac{e^2}{5})
+	\end{align*}
+
+	Thus the total area is $1 - \frac{e}{5}+\frac{e^3}{5}$
+\end{hint}
+
+\begin{prompt}
+	\[
+		\textrm{Area} = \answer{1 - \frac{e}{5}+\frac{e^3}{5}}
+	\]
+\end{prompt}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,40 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+
+
+\tag{integral}
+
+Find the area of the region bounded by the vertical lines $x=0$ and $x=1$, and the curves $y = x^2+1$ and $y = x^3$.
+
+\begin{hint}
+	There are no intersection points between the curves on this interval, and $y = x^2+1$ is always above $y=x^3$ on this interval.
+\end{hint}
+
+
+\begin{hint}
+	Thus the area of this region is
+
+	\[
+	\int_{0}^{1} (x^2+1)-x^3 \d x
+	\]
+\end{hint}
+
+\begin{hint}
+	\begin{align*}
+		\int_{0}^{1} (x^2+1)-x^3 \d x &=  \eval{\frac{x^3}{3}+x-\frac{x^4}{4}}_0^1  \d x\\
+		&= \frac{13}{12}
+	\end{align*}
+\end{hint}
+
+\begin{prompt}
+	\[
+		\textrm{Area} = \answer{\frac{13}{12}}
+	\]
+\end{prompt}
+
+\end{exercise}
+\end{document}
