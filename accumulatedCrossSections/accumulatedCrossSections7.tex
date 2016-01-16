@@ -1,0 +1,45 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+
+\outcome{Identify cross sections.}
+\outcome{Use the disk method to compute volumes.}
+%\outcome{Use the washer method to compute volumes.}
+\outcome{Compute volumes of revolution around the $x$-axis.}
+%\outcome{Compute volumes of revolution around the $y$-axis.}
+%\outcome{Compute volumes of revolution around arbitrary lines.}
+
+\tag{integral}
+
+Consider the region bounded by the lines $y = \sin(x)$, $x=0$, $x=\pi$, and the $x$ axis .  What is the volume of the solid obtained by revolving this region about $x$ axis?
+
+It will be useful to recall that  $\sin^2(x) = \frac{1-\cos(2x)}{2}$
+
+\begin{hint}
+	Draw a picture!
+\end{hint}
+
+\begin{hint}
+	We can decompose the solid into infinitesmal disks with width $\d x$ and radius $\sin(x)$. The volume of each washer is $\pi \sin^2(x)\d x$.  Summing these volumes from $x=0$ to $x=\pi$, we obtain
+
+	\[
+	\textrm{Volume} = \int_0^\pi \pi \sin^2(x)\d x
+	\]
+\end{hint}
+
+
+\begin{hint}
+	Using the half angle reduction formula, and a substitution, we obtain that this evaluates to $\frac{\pi^2}{2}$
+\end{hint}
+
+\begin{prompt}
+	\[
+		\textrm{Volume} = \answer{\frac{\pi^2}{2}}
+	\]
+\end{prompt}
+
+\end{exercise}
+\end{document}

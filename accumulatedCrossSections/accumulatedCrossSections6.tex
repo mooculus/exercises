@@ -1,0 +1,47 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+
+\outcome{Identify cross sections.}
+%\outcome{Use the disk method to compute volumes.}
+\outcome{Use the washer method to compute volumes.}
+%\outcome{Compute volumes of revolution around the $x$-axis.}
+%\outcome{Compute volumes of revolution around the $y$-axis.}
+\outcome{Compute volumes of revolution around arbitrary lines.}
+
+\tag{integral}
+
+Consider the region bounded by the lines $y = x$ , $y=\frac{x}{2}$, $y=1$, and $y = 4$ .  What is the volume of the solid obtained by revolving this region about the line $x=-2$?
+
+\begin{hint}
+	Draw a picture!
+\end{hint}
+
+\begin{hint}
+	Solving for $x$, we have $x=y$ and $x = 2y$.
+\end{hint}
+
+\begin{hint}
+	We can decompose the solid into infinitesmal washers with width $\d y$, inner radius $y+2$ and outer radius $2y+2$. The volume of each washer is $\pi((2y+2)^2-(y+2)^2)\d y$.  Summing these volumes from $y=1$ to $y=4$, we obtain
+
+	\[
+	\textrm{Volume} = \int_1^4 \pi((2y+2)^2-(y+2)^2)\d y
+	\]
+\end{hint}
+
+
+\begin{hint}
+	By expanding this polynomial, we find that this evaluates to $93\pi$.
+\end{hint}
+
+\begin{prompt}
+	\[
+		\textrm{Volume} = \answer{93\pi}
+	\]
+\end{prompt}
+
+\end{exercise}
+\end{document}
