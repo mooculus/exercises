@@ -1,0 +1,61 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+
+\begin{exercise}
+
+\tag{integral}
+
+When $20 \unit{lb}$ of force are placed on a spring, it is $1 \unit{ft}$ long.  When $60 \unit{lb}$ are applied, the spring stretches to $2 \unit{ft}$ long.
+
+What is the natural length of the spring?
+
+How much work is done, in $\unit{ft - lb}$, to stretch the spring from $1 \unit{ft}$ to $3 \unit{ft}$? 
+
+\begin{hint}
+Let $L$ be the natural length of the spring, and $C$ be the spring constant.  
+
+Then, converting all of the units to feet, we know
+
+\[
+\begin{cases}
+20 \unit{lb} = C(1\unit{ft} - L)\\
+60 \unit{lb}= C(2 \unit{ft}- L)
+\end{cases}
+\]
+
+Solving this system of equations, we obtain
+
+\[
+\begin{cases}
+C = 40 \unit{lb}/\unit{ft}\\
+L = \frac{1}{2} \unit{ft}
+\end{cases}
+\]
+\end{hint}
+
+\begin{hint}
+	Letting $x$ be the distance that the spring is stretched beyond its natural length, we thus have that the force acting on the spring is $F(x) = 40x$.  The work done by stretching the spring an infinitesimal amount $\d x$ is $\d W = 40x\d x$.  Note that when the spring is $1 \unit{ft}$, $x = \frac{1}{2}$, and when the spring is $3 \unit{ft}$, $x$ is $\frac{5}{2}$.
+\end{hint}
+
+\begin{hint}
+Thus the work done by stretching the spring from its natural length to $1 \unit{ft}$ to $3 \unit{ft}$ is given by
+
+\begin{align*}
+\int_{\frac{1}{2}}^{\frac{5}{2}} 40 x \d x &= \eval{20x^2}_{\frac{1}{2}}^\frac{5}{2}\\
+	&=20(\frac{25}{4} - \frac{1}{4})\\
+	&=120
+\end{align*}
+\end{hint}
+
+\begin{prompt}
+	\[
+	\textrm{Work} = \answer{120} \unit{ft-lb}
+	\]
+\end{prompt}
+
+\end{exercise}
+\end{document}
+

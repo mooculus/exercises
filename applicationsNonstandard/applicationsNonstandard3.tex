@@ -1,0 +1,42 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+
+\begin{exercise}
+
+\tag{integral}
+
+The Van der Waals force between two atoms is proportional to $r^6$, where $r$ is the distance between them.  This force, while small, is responsible for many interesting phenomena, including the ability of geckos to cling to glass.
+
+Assume that two atoms obey $F(r) = \frac{Q}{r^6}$, where $r$ is the distance measured in nanometers ($\unit{nm}$).
+
+How much work is done, in nanoNewtons ($\unit{nN}$), by moving the atoms from a distance of  $3 \unit{nm}$ to $5 \unit{nm}$?
+
+\begin{hint}
+The work done by moving the atoms $\d x \unit{nm}$ when they are $x \unit{nm}$ apart is $\d W = \frac{c}{x^6} \d x$.
+\end{hint}
+
+\begin{hint}
+Accumulating these infinitesimal amounts of work from $x = 3$ to $x = 5$ yields
+
+\begin{align*}
+\textrm{Work} &=  \int_3^5 \frac{Q}{x^6} \d x\\
+	&= \eval{\frac{-Q}{7x^7}}_3^5\\
+	&=\frac{Q}{7(3^7)} - \frac{Q}{7(5)^5}\\
+	&\approx -0.0005860609 Q\\
+	&\approx 5.86 \times 10^{-4} Q
+\end{align*}
+\end{hint}
+
+\begin{prompt}
+	Express your answer is scientific notation, where the mantissa has two decimal places.
+	
+	\[
+	\textrm{Work} = \answer{5.84} \times 10^{\answer{4}} Q \unit{nN}
+	\]
+\end{prompt}
+
+\end{exercise}
+\end{document}

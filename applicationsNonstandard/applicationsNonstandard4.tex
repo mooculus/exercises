@@ -1,0 +1,50 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+
+\begin{exercise}
+
+\tag{integral}
+
+\begin{warning}
+This problem is quite hard, and will require significant creativity to solve.
+\end{warning}
+
+A chain is hanging over a cliff.  The density of the chain is variable:  at a depth of $x$ meters below the top of the cliff, the rope has a density of $x^2+1 \unit{kg}/\unit{m}$.  The total length of the chain is $6 \unit{m}$. Assume standard gravity is $9.8 \unit{m}/\unit{s}^2 $. How much work is done by raising the chain to the top of the cliff?
+
+\begin{hint}
+	Assume $y$ meters of the rope have already been pulled up.  We need to calculate the weight of the rope remaining.  Since the density of the rope is variable, we will need to calculate this using an integral.
+	
+	\begin{align*}
+		\textrm{Weight} &= \int_y^6 x^2+1 \d x\\
+			&= \eval{\frac{1}{3}x^3+x}_y^6\\
+			&= (72+6)-(\frac{1}{3}y^3+y)\\
+			&=78-y-\frac{y^3}{3}
+	\end{align*} 
+\end{hint}
+
+\begin{hint}
+	Thus the force on the chain is $(78-y-\frac{y^3}{3})g$, where $g$ is the gravitational constant.
+\end{hint}
+
+\begin{hint}
+	The work done by raising the chain a height of $\d y$ is thus $(78-y-\frac{y^3}{3})g \d y$.  We must accumulate these from $y=0$ to $y=6$.
+	
+	\begin{align*}
+	\textrm{Work} &= \int_0^6 (78-y-\frac{y^3}{3})g \d y\\	
+			&=g\eval{78y - \frac{y^2}{2} - \frac{y^4}{12}}_0^6\\
+			&= 342g\\
+			&=3351.6 \unit{N}
+	\end{align*}
+\end{hint}
+
+\begin{prompt}
+	\[
+	\textrm{Work} = \answer{3351.6} \unit{N}
+	\]
+\end{prompt}
+
+\end{exercise}
+\end{document}

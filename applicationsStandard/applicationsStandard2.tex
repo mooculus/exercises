@@ -1,0 +1,57 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+
+\begin{exercise}
+
+\tag{integral}
+
+Let $R$ be the region between by the curves $y = \sqrt{x}$, $y = x-6$ and the $x$-axis
+
+\begin{question}
+	Set up, but do not evaluate, an integral representing the area of $R$.
+	
+	\begin{prompt}
+		\textrm{Area} = \answer{\int_{0}^3 (y+6) - (y^2)   \d y}
+	\end{prompt}
+\end{question}
+
+\begin{question}
+	Generate a solid by revolving $R$ about the $y$ axis.  Set up, but do not evaluate, an integral representing the volume of this solid.
+	
+	\begin{prompt}
+		\textrm{Volume} = \answer{\answer{\int_{0}^3 \pi (y+6)^2 - \pi (y^2)^2   \d y}}
+	\end{prompt}
+\end{question}
+
+\begin{question}
+	Generate a solid by revolving $R$ about the line $y = -2$.  Set up, but do not evaluate, an integral representing the volume of this solid.
+	
+	\begin{prompt}
+		\textrm{Volume} = \answer{\int_{0}^3 2 \pi (y+2)((y+6) - y^2) \d y}
+	\end{prompt}
+\end{question}
+
+\begin{question}
+	Generate a solid whose base is $R$ and whose cross sections perpendicular to the $y$ axis are semicircles .   Set up, but do not evaluate, an integral representing the volume of this solid.
+	
+	\begin{prompt}
+		\textrm{Volume} = \answer{\int_{0}^3 \frac{\pi}{2} \left(\frac{(y+6) - y^2}{2}\right)^2 \d y}
+	\end{prompt}
+\end{question}
+
+\begin{question}
+	Set up, but do not evaluate, an expression involving integals which calculates the perimeter of $R$.
+	
+	\begin{prompt}
+		\textrm{Perimeter} = \answer{6+3\sqrt{2}+\int_0^3 \sqrt{1+(2y)^2}\d y}
+	\end{prompt}
+\end{question}
+
+
+
+\end{exercise}
+\end{document}
+

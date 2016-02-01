@@ -1,0 +1,39 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\author{Steven Gubkin}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+
+\begin{exercise}
+
+\tag{integral}
+
+A surface has is formed by revolving the curve $y = \frac{1}{x}$ from $x=1$ to $x=4$ about the $x$ -axis.  The $x$ axis is measuring distances in meters.  This surface has a variable density of $x^2 \unit{g}/\unit{m}^2$.  Set up and numerically evaluate an integral to find the mass of the surface in grams.  Report your answer to two decimal places.
+
+\begin{hint}
+	Accumulate the mass of infinitely many infinitesimal frustums.
+\end{hint}
+
+\begin{hint}
+	The area of the frustum based at $x$ and with width $dx$ is $2\pi \frac{1}{x} \sqrt{1+\left(\frac{\d}{\d x} x^{-1}\right)^2} \d x = 2\pi \frac{1}{x} \sqrt{1+\frac{1}{x^2}} \d x$
+\end{hint}
+
+\begin{hint}
+	Since the density of this frustum is $x^2$, the total mass of this frustum is $2 \pi x \sqrt{1+\frac{1}{x^2}} \d x$
+\end{hint}
+
+\begin{hint}
+	We need to accumulate these infinitesimal masses from $x=1$ to $x=4$, so the total mass is
+	
+	\[
+	\int_1^4 2 \pi x \sqrt{1+\frac{1}{x^2}} \d x \approx 51.18
+	\]
+\end{hint}
+
+\begin{prompt}
+	\[
+	\textrm{Total Mass} = \answer{51.18} \unit{g}
+	\]
+\end{prompt}
+\end{exercise}
+\end{document}
