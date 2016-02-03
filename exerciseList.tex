@@ -28,6 +28,25 @@
 \newtheorem{p}{}
 \renewenvironment{exercise}{\begin{p}}{\end{p}}
 
+
+\newtheoremstyle{problem2}{\topsep}{\topsep}%%% space between body and thm
+		{\upshape\hangindent=2em}                      %%% Thm body font
+		{2em}                              %%% Indent amount (empty = no indent)
+		{\bfseries}            %%% Thm head font
+		{)}                    %%% Punctuation after thm head
+		{ }                           %%% Space after thm head
+		{\thmnumber{#2}\thmnote{ \bfseries (#3)}}%%% Thm head spec
+\theoremstyle{problem2}
+\newtheorem{pp}{}
+\renewenvironment{question}{\begin{pp}}{\end{pp}}%% USES QUESTION AS SUBPROBLEM!
+
+\renewcommand\thepp{\alph{pp}}
+
+\renewenvironment{warning}{\begin{quote}}{\end{quote}}
+
+
+
+
 \usepackage{fullpage}
 \begin{document}
 
@@ -902,6 +921,24 @@
 \activity{accumulatedCrossSections/accumulatedCrossSections8.tex}
 
 
+\section{Applications of integration}
+
+\activity{applicationsStandard/applicationsStandard1.tex}
+\activity{applicationsStandard/applicationsStandard2.tex}
+\activity{applicationsStandard/applicationsStandard3.tex}
+\activity{applicationsStandard/applicationsStandard4.tex}
+\activity{applicationsStandard/applicationsStandard5.tex}
+
+
+\activity{applicationsNonstandard/applicationsNonstandard1.tex}
+\activity{applicationsNonstandard/applicationsNonstandard2.tex}
+\activity{applicationsNonstandard/applicationsNonstandard3.tex}
+\activity{applicationsNonstandard/applicationsNonstandard4.tex}
+\activity{applicationsNonstandard/applicationsNonstandard5.tex}
+\activity{applicationsNonstandard/applicationsNonstandard6.tex}
+
+
+
 
 
 \section{MSLC}
@@ -1619,7 +1656,36 @@
 \activity{apex/07_02_ex_09.tex}
 \activity{apex/07_02_ex_10.tex}
 \activity{apex/07_02_ex_11.tex}
-
+\activity{apex/07_02_ex_12a.tex}
+\activity{apex/07_02_ex_12b.tex}
+\activity{apex/07_02_ex_12c.tex}
+\activity{apex/07_02_ex_12d.tex}
+\activity{apex/07_02_ex_13a.tex}
+\activity{apex/07_02_ex_13b.tex}
+\activity{apex/07_02_ex_13c.tex}
+\activity{apex/07_02_ex_13d.tex}
+\activity{apex/07_02_ex_14a.tex}
+\activity{apex/07_02_ex_14b.tex}
+\activity{apex/07_02_ex_14c.tex}
+\activity{apex/07_02_ex_14d.tex}
+\activity{apex/07_02_ex_15a.tex}
+\activity{apex/07_04_ex_03.tex}
+\activity{apex/07_04_ex_04.tex}
+\activity{apex/07_04_ex_05.tex}
+\activity{apex/07_04_ex_06.tex}
+\activity{apex/07_04_ex_07.tex}
+\activity{apex/07_04_ex_08.tex}
+\activity{apex/07_04_ex_09.tex}
+\activity{apex/07_04_ex_11.tex}
+\activity{apex/07_04_ex_12.tex}
+\activity{apex/07_04_ex_13.tex}
+\activity{apex/07_04_ex_15.tex}
+\activity{apex/07_04_ex_17.tex}
+\activity{apex/07_04_ex_29.tex}
+\activity{apex/07_04_ex_30.tex}
+\activity{apex/07_04_ex_31.tex}
+\activity{apex/07_04_ex_32.tex}
+\activity{apex/07_04_ex_33.tex}
 
 
 \end{document}

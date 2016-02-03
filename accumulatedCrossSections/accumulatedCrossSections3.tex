@@ -15,37 +15,39 @@
 
 \tag{integral}
 
-Consider the region bounded by $y =\ln(x)$ , the $x$ axis, the $y$ axis, and the horizontal line $y=1$.  What is the volume of the solid obtained by revolving this region about the $y$ axis?
-
+Consider the region bounded by $y =\ln(x)$, the $x$-axis, the
+$y$-axis, and the horizontal line $y=1$.  What is the volume of the
+solid obtained by revolving this region about the $y$-axis?
 
 \begin{hint}
 	Draw a picture!
 \end{hint}
 
 \begin{hint}
-	Solving for $x$, we have $x = e^y$.  
+  Solving for $x$, we have $x = e^y$.  
 \end{hint}
 
 \begin{hint}
-	We can decompose the solid into infinitesmal disks with width $dy$ and radius $e^y$.  The volume of each washer is $\pi (e^y)^2\d y$.  Summing these volumes from $y=0$ to $y=1$, we obtain
-
-	\[
-	\textrm{Volume} = \int_0^1 \pi (e^y)^2\d y
-	\]
+  We can decompose the solid into infinitesmal disks with width $\d y$
+  and radius $e^y$.  The volume of each washer is $\pi (e^y)^2\d y$.
+  Summing these volumes from $y=0$ to $y=1$, we obtain
+  \[
+  \textrm{Volume} = \int_0^1 \pi (e^y)^2\d y
+  \]
 \end{hint}
 
 \begin{hint}
-	\begin{align*}
-		 \int_0^1 \pi (e^y)^2\d y &= \pi \int_0^1e^{2y}\d y \\
-			&=\frac{\pi}{2}\eval{e^{2y}}_0^1\\
-			&=\frac{pi}{2}(e^2-e)
-	\end{align*}
+  \begin{align*}
+    \int_0^1 \pi (e^y)^2\d y &= \pi \int_0^1e^{2y}\d y \\
+    &=\frac{\pi}{2}\eval{e^{2y}}_0^1\\
+    &=\frac{pi}{2}(e^2-e)
+  \end{align*}
 \end{hint}
 
 \begin{prompt}
-	\[
-		\textrm{Volume} = \answer{\frac{pi}{2}(e^2-e)}
-	\]
+  \[
+  \textrm{Volume} = \answer{\frac{pi}{2}(e^2-e)}
+  \]
 \end{prompt}
 
 \end{exercise}

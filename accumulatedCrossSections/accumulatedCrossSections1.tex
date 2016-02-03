@@ -14,45 +14,50 @@
 
 \tag{integral}
 
-Consider the region bounded by $y = \frac{5x}{2}-x^2$ and $y=\frac{x}{2}$.  What is the volume of the solid obtained by revolving this region about the $x$ axis?
+Consider the region bounded by $y = \frac{5x}{2}-x^2$ and
+$y=\frac{x}{2}$.  What is the volume of the solid obtained by
+revolving this region about the $x$-axis?
 
 \begin{hint}
-	First we find the points of intersectios.
-	
-	\begin{align*}
-	\frac{x}{2} &= \frac{5x}{2}-x^2\\
+  First we find the points of intersections:
+  \begin{align*}
+    \frac{x}{2} &= \frac{5x}{2}-x^2\\
 	0 &= 2x-x^2\\
 	0&= x(2-x)
 	\end{align*}
 
-	So the points of intersection are $x=0$ and $x=2$.
+  So the points of intersection are $x=0$ and $x=2$.
 \end{hint}
 
 \begin{hint}
-	By graphing the two functions, we can see that $\frac{5x}{2}-x^2$ is always greater than $\frac{x}{2}$ on the interval $[0,2]$.
+  By graphing the two functions, we can see that $\frac{5x}{2}-x^2$ is
+  always greater than $\frac{x}{2}$ on the interval $[0,2]$.
 \end{hint}
 
 \begin{hint}
-	We can decompose the solid into infinitesmal washers with width $dx$, inner radius $\frac{x}{2}$ and outer radius $\frac{5x}{2}-x^2$.  The volume of each washer is $\pi((\frac{5x}{2}-x^2)^2-(\frac{x}{2})^2)\d x$.  Summing these volumes from $x=0$ to $x=2$, we obtain
-
-	\[
-	\textrm{Volume} = \int_0^2 \pi((\frac{5x}{2}-x^2)^2-(\frac{x}{2})^2) \d x
-	\]
+  We can decompose the solid into infinitesmal washers with width
+  $\d x$, inner radius $\frac{x}{2}$ and outer radius
+  $\frac{5x}{2}-x^2$.  The volume of each washer is
+  $\pi((\frac{5x}{2}-x^2)^2-(\frac{x}{2})^2)\d x$.  Summing these
+  volumes from $x=0$ to $x=2$, we obtain
+  \[
+  \textrm{Volume} = \int_0^2 \pi((\frac{5x}{2}-x^2)^2-(\frac{x}{2})^2) \d x
+  \]
 \end{hint}
 
 \begin{hint}
-	\begin{align*}
-		\int_0^2 \pi((\frac{5x}{2}-x^2)^2-(\frac{x}{2})^2) \d x&= \pi \int_0^2 \pi(\frac{25x^2}{4}-5x^3+x^4)-(\frac{x^2}{4})) \d x\\
-		&=\pi \int_0^2 12x^2-5x^3+x^4 \d x\\
-		&= \eval{4x^3-\frac{5}{4}x^4+\frac{1}{5}x^5}_0^2\\
-		&=4(2^3)-\frac{5}{4}2^4+\frac{1}{5}2^5\\
-		&=\frac{92}{5}
-	\end{align*}
+  \begin{align*}
+    \int_0^2 \pi((\frac{5x}{2}-x^2)^2-(\frac{x}{2})^2) \d x&= \pi \int_0^2 \pi(\frac{25x^2}{4}-5x^3+x^4)-(\frac{x^2}{4})) \d x\\
+    &=\pi \int_0^2 12x^2-5x^3+x^4 \d x\\
+    &= \eval{4x^3-\frac{5}{4}x^4+\frac{1}{5}x^5}_0^2\\
+    &=4(2^3)-\frac{5}{4}2^4+\frac{1}{5}2^5\\
+    &=\frac{92}{5}
+  \end{align*}
 \end{hint}
 
 \begin{prompt}
-	\[
-		\textrm{Volume} = \answer{\frac{92}{5}}
+  \[
+	\textrm{Volume} = \answer{\frac{92}{5}}
 	\]
 \end{prompt}
 

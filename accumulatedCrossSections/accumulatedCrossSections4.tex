@@ -15,37 +15,39 @@
 
 \tag{integral}
 
-Consider the region bounded by $y =x^2$ and $y=4$.  A solid has this region as its base, and the cross sections of the solid when cut with planes parallel to the $yz$ plane are all squares.  What is the area of the solid?
+Consider the region bounded by $y =x^2$ and $y=4$.  A solid has this
+region as its base, and the cross sections of the solid when cut with
+planes parallel to the $(y,z)$-plane are all squares.  What is the area
+of the solid?
 
 
 \begin{hint}
-	Draw a picture!  Note that the intersections occur at $x= \pm 2$
+  Draw a picture!  Note that the intersections occur at $x= \pm 2$
 \end{hint}
 
 \begin{hint}
-	We can decompose the solid into square slabs with width $dx$ and side lengths $4-x^2$.  The volume of each slab is $(4-x^2)\d x$.  Summing these volumes from $x=-2$ to $x=2$, we obtain
-
+  We can decompose the solid into square slabs with width $\d x$ and
+  side lengths $4-x^2$.  The volume of each slab is $(4-x^2)\d x$.
+  Summing these volumes from $x=-2$ to $x=2$, we obtain
 	\[
 	\textrm{Volume} = \int_{-2}^{2} (4-x^2)^2\d x
 	\]
 \end{hint}
 
 \begin{hint}
-
-	First note that this function is even, so we may use symmetry to rewrite the integral as $2\int_{0}^{2} (4-x^2)^2\d x$
-
-	\begin{align*}
-		 2\int_{0}^{2} (4-x^2)^2\d x &=2 \int_{0}^{2} 16-8x^2+x^4 \d x \\
-			&=2 \eval{16x-\frac{8x^3}{3}+\frac{x^5}{5}}_0^2 \\
-			&=2(32-\frac{64}{3}+\frac{32}{5})\\
-			&=\frac{512}{15}
-	\end{align*}
+  First note that this function is even, so we may use symmetry to rewrite the integral as $2\int_{0}^{2} (4-x^2)^2\d x$
+  \begin{align*}
+    2\int_{0}^{2} (4-x^2)^2\d x &=2 \int_{0}^{2} 16-8x^2+x^4 \d x \\
+    &=2 \eval{16x-\frac{8x^3}{3}+\frac{x^5}{5}}_0^2 \\
+    &=2(32-\frac{64}{3}+\frac{32}{5})\\
+    &=\frac{512}{15}
+  \end{align*}
 \end{hint}
 
 \begin{prompt}
-	\[
-		\textrm{Volume} = \answer{\frac{512}{15}}
-	\]
+  \[
+  \textrm{Volume} = \answer{\frac{512}{15}}
+  \]
 \end{prompt}
 
 \end{exercise}
