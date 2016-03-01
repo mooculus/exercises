@@ -9,26 +9,32 @@
 \begin{document}
 \begin{exercise}
 
-\outcome{Compute basic antiderivatives.}
-\outcome{Use integral notation for both antiderivatives and definite integrals.}
+\outcome{Identify the functions required to transform the integral via integration by parts.}
+\outcome{Evaluate integrals using integration by parts, including multiple iterations.}
 \outcome{Undo the Chain Rule.}
 \outcome{Calculate indefinite integrals (antiderivatives) using basic substitution.}
-\outcome{Evaluate indefinite and definite integrals through a change of variables.}
-\outcome{Calculate indefinite and definite integrals requiring complicated substitutions.}
 
 \tag{antiderivatives}
 \tag{integral}
 \tag{substitution}
+\tag{integration by parts}
+
 
 %% BADBAD 
-%% Absolute Values?
+%% Absolute Values here? Integration by parts yields an \ln(x), not \ln|x| in the u*v term of 
+%% \int u dv == u*v-\int v du  ! ! ! I have changed it to \ln(x) on the principle that differentiating should yield the 
+%% integrand. With \ln|x|, one obtains (x-2)\ln|x|, not (x-2)\ln(x)
+
 
 
 
 Find the indefinite integral of $(x-2)\ln(x)$ with respect to $x$.
 
 \[
-\int (x-2)\ln(x)\d x=\answer{-\frac{x^2}{4}+\frac{1}{2}x^2\ln|x|+2x-2x\ln|x|+C}
+\int (x-2)\ln(x)\d x=
+\begin{prompt}
+\answer{-\frac{x^2}{4}+\frac{1}{2}x^2\ln(x)+2x-2x\ln(x)+C}
+\end{prompt}
 \]
 
 
