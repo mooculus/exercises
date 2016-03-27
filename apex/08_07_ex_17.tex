@@ -1,0 +1,35 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Determine the maximum error between a function and a given Taylor polynomial.}
+\outcome{Compute Taylor polynomials.}
+
+
+\tag{power series}
+\tag{taylor polynomial}
+
+
+
+Approximate $\sin 0.1$ using the Maclaurin polynomial of degree $3$ and determine a bound on the magnitude in the error of this approximation. (When finding the magnitude of the error, do not just give a large number; Taylor's theorem gives you a tighter estimate on the remainder in the form a specific inequality you should utilize.)
+
+\[
+\begin{prompt}
+\sin 0.1\approx\answer{\frac{599}{6000}}
+\end{prompt}
+\]
+\[
+\begin{prompt}
+\left|R_{3}(0.1)\right|\le\answer{\frac{1}{4!}\sin(0.1)\frac{1}{10^4}}
+\end{prompt}
+\]
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,33 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Determine the maximum error between a function and a given Taylor polynomial.}
+\outcome{Compute Taylor polynomials.}
+
+\tag{power series}
+\tag{taylor polynomial}
+
+
+
+Find the smallest integer $n$ such that the Maclaurin polynomial of degree $n$ of $f(x)=\cos x$ approximates $\cos \pi/3$ within $0.0001$ of the actual value. When finding the integer $n$, suppose that you do not know how to compute the value of $\cos x$, but that you know $|\cos x|\le 1$.
+
+\[
+\begin{prompt}
+n=\answer{6}
+\end{prompt}
+\]
+
+\begin{hint}
+The Maclaurin polynomial of $\cos x$ contains only even powers of $x$. Thus, the error between the Maclaurin polynomial of even degree say $m$ and the Maclaurin polynomial of odd degree $m+1$ must be the same because they are the same polynomial.
+\end{hint}
+
+\end{exercise}
+\end{document}
