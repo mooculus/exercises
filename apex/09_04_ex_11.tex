@@ -1,0 +1,49 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\begin{document}
+\begin{exercise}
+
+\outcome{Convert between polar and Cartesian coordinates.}
+\outcome{Use the Cartesian to polar method to plot polar graphs.}
+
+
+\tag{polar coordinates}
+
+
+Given the graph of a function in rectangular (Cartesian) coordinates below, find the equation representing the graph in polar coordinates subject to the correct restriction(s) on $\theta$ and $r$.
+
+ \begin{center}
+ \begin{tikzpicture}
+ \begin{axis}[ymin=-0.1, ymax=2.1,
+   axis lines=center, 
+   axis equal,
+   xlabel=$x$, 
+   ylabel=$y$,
+   every axis y label/.style={at=(current axis.above origin),anchor=south}, 
+   every axis x label/.style={at=(current axis.right of origin),anchor=west}, 
+    xticklabels={,,,,,$2$},
+    yticklabels={,,,,,$2$},
+    grid = major]
+  \addplot[penColor, samples=400,domain=0:pi/2,
+    data cs=polarrad,very thick] (\x,2);
+ \end{axis} 
+\end{tikzpicture}     
+\end{center} 
+
+\[
+r(\theta)\begin{prompt}=\answer{2}\end{prompt}
+\]
+subject to the restriction(s) that
+\[
+0\le\theta\le\begin{prompt}\answer{\frac{\pi}{2}}\end{prompt}
+\]
+
+      
+\end{exercise}
+\end{document}
