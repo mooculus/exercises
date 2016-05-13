@@ -57,24 +57,25 @@ $y$ ranges from $0$ to $\arctan(b)$.
 \end{hint}
 
 \begin{hint}
-	
-	\begin{align*}
-		\int_{0}^{\arctan(b)} b - \tan(y) \d y &=  \eval{b y + \ln(|\cos(y)|)}_0^{\arctan(b)}\\
-		&= b\arctan(b) + \ln(\cos(\arctan(b)))
-	\end{align*}
-
-This answer is fine for our purposes, but we could "simplify it" by observing that $\cos(\arctan(b)) = \frac{1}{\sqrt{1+b^2}}$.
-
+  
+  \begin{align*}
+    \int_{0}^{\arctan(b)} b - \tan(y) \d y &=  \eval{b y + \ln(|\cos(y)|)}_0^{\arctan(b)}\\
+    &= b\arctan(b) + \ln(\cos(\arctan(b)))
+  \end{align*}
+  This answer is fine for our purposes, but we could "simplify it" by observing that $\cos(\arctan(b)) = \frac{1}{\sqrt{1+b^2}}$.
 Using this fact, and properties of the logarithm, we can rewrite this answer as $b\arctan{b}-\frac{1}{2} \ln(1+b^2)$
-	
 \end{hint}
 
 \begin{prompt}
 	\[
-		\int_0^b \arctan(x) \d x = \answer{b\arctan{b}-\frac{1}{2} \ln(1+b^2)}
+	\int_0^b \arctan(x) \d x = \answer{b\arctan{b}-\frac{1}{2} \ln(1+b^2)}
 	\]
-
-	\feedback{You should check that this gives you an antiderivative of $\arctan$.  In other words, $\frac{d}{dx} x\arctan{x}-\frac{1}{2} \ln(1+x^2)$ should be equal to $\arctan{x}$ by the fundamental theorem of calculus.}
+	\begin{feedback}
+          You should check that this gives you an antiderivative of
+          $\arctan$.  In other words, $\frac{\d}{\d x}
+          x\arctan{x}-\frac{1}{2} \ln(1+x^2)$ should be equal to
+          $\arctan{x}$ by the fundamental theorem of calculus.
+        \end{feedback}
 \end{prompt}
 
 \end{exercise}
