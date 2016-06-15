@@ -1,0 +1,45 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\author{David Guichard \and Neal Koblitz \and H. Jerome Keisler \and Albert Scheller \and Barry Balof \and Mike Wills \and Matthew Carr}
+\license{CC-By-SA-NC}
+
+\acknowledgement{https://www.whitman.edu/mathematics/multivariable/}
+
+\begin{document}
+\begin{exercise}
+
+
+\outcome{Compute the derivative of a vector-valued function.}
+\outcome{Find the unit tangent vector of a vector-valued function.}
+
+
+\tag{curves}
+
+A bug is crawling along the spoke of a wheel that lies along a radius of the wheel. The bug is crawling at $1$ unit per second and the wheel is rotating at $1$ radian per second. Suppose the wheel lies in the $y-z$ plane with center at the origin, and at time $t$ = 0 the spoke lies along the positive $y$ axis and the bug is at the origin. Find a vector function $\vec{r}(t)$ for the position of the bug at time $t$, the velocity vector $\vec{r}'(t)$, the unit tangent $\vec{T}(t)$, and the speed of the bug $|\vec{r}'(t)|$. 
+
+\begin{prompt}
+\[
+\vec{r}(t)=\vector{\answer{0},\answer{t\cos(t)},\answer{t\sin(t)}}
+\]
+\end{prompt}
+\begin{prompt}
+\[
+\vec{r}'(t)=\vector{\answer{0},\answer{\cos(t)-t\sin(t)},\answer{\sin(t)+t\cos(t)}}
+\]
+\end{prompt}
+\begin{prompt}
+\[
+\vec{T}(t)=\vector{\answer{0},\answer{\frac{\cos(t)-t\sin(t)}{\sqrt{1+t^2}}},\answer{\frac{\sin(t)+t\cos(t)}{\sqrt{1+t^2}}}}
+\]
+\end{prompt}
+\begin{prompt}
+\[
+|\vec{r}'(t)|=\answer{\sqrt{1+t^2}}
+\]
+\end{prompt}
+
+
+\end{exercise}
+\end{document}
