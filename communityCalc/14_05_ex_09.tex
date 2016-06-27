@@ -1,0 +1,39 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\author{David Guichard \and Neal Koblitz \and H. Jerome Keisler \and Albert Scheller \and Barry Balof \and Mike Wills \and Matthew Carr}
+\license{CC-By-SA-NC}
+
+\acknowledgement{https://www.whitman.edu/mathematics/multivariable/}
+
+\begin{document}
+\begin{exercise}
+
+
+%% BADBAD no outcomes
+
+\tag{directional derivative}
+
+Suppose the temperature at $(x,y,z)$ is given by $T=xy+\sin(yz)$. In what direction should you go from the point $(1,1,1)$ to decrease the temperature as quickly as possible? Normalize your vector.
+
+\begin{prompt}
+\[
+\vector{\answer{-\frac{1}{\sqrt{2+2\cos(1)+2\cos^{2}(1)}}},\answer{-\frac{1+\cos(1)}{\sqrt{2+2\cos(1)+2\cos^{2}(1)}}},\answer{-\frac{\cos(1)}{\sqrt{2+2\cos(1)+2\cos^{2}(1)}}}}
+\]
+\end{prompt}
+
+
+What is the rate of change of temperature in this direction?
+
+
+\begin{prompt}
+\[
+\answer{-\sqrt{2+2\cos(1)+2\cos^{2}(1)}}
+\]
+\end{prompt}
+
+
+
+\end{exercise}
+\end{document}

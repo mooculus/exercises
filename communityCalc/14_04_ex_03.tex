@@ -1,0 +1,50 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\author{David Guichard \and Neal Koblitz \and H. Jerome Keisler \and Albert Scheller \and Barry Balof \and Mike Wills \and Matthew Carr}
+\license{CC-By-SA-NC}
+
+\acknowledgement{https://www.whitman.edu/mathematics/multivariable/}
+
+\begin{document}
+\begin{exercise}
+
+
+%% BADBAD no outcomes
+
+\tag{chain rule}
+
+Compute $\frac{\partial z}{\partial s}$ and $\frac{\partial z}{\partial t}$ for $z=x^2 y$ where $x$ and $y$ are functions of $s$ and $t$ with $x=\sin(st)$ and $y=t^2+s^2$ in two different ways.
+
+First, leave your answers in terms of $x$, $y$, $\frac{\partial x}{\partial s}$, $\frac{\partial x}{\partial t}$, $\frac{\partial y}{\partial s}$ and $\frac{\partial y}{\partial t}$.
+
+\begin{prompt}
+\[
+\frac{\partial z}{\partial s}=\answer{2xy\frac{\partial x}{\partial s}+x^2 \frac{\partial y}{\partial s}}
+\]
+\end{prompt}
+\begin{prompt}
+\[
+\frac{\partial z}{\partial t}=\answer{2xy\frac{\partial x}{\partial t}+x^2 \frac{\partial y}{\partial t}}
+\]
+\end{prompt}
+
+
+And then, leave your answers in terms of $s$ and $t$ alone.
+
+\begin{prompt}
+\[
+\frac{\partial z}{\partial s}=\answer{2t(s^2+t^2) \sin(st)\cos(st)+2s\sin^2(st)}
+\]
+\end{prompt}
+
+\begin{prompt}
+\[
+\frac{\partial z}{\partial t}=\answer{2s(s^2+t^2)\sin(st)\cos(st)+2t\sin^2(st)}
+\]
+\end{prompt}
+
+
+\end{exercise}
+\end{document}
