@@ -1,4 +1,4 @@
-
+\int_{\partial D}\vec{F}\dot\d\vec{r}
 \documentclass{ximera}
 
 \input{../preamble.tex}
@@ -14,15 +14,16 @@
 
 %% BADBAD no outcomes
 
-\tag{conservative vector fields}
+\tag{Divergence Theorem}
 
-Does there exist a function $F$ so that $\grad F(x,y,z)=\vector{yz,xz,xy}$? Write DNE if there exists no such $F$. 
+Let $S$ be the boundary of the cube described by $0\le x\le 1$, $0\le y\le 1$, $0\le z\le 1$. Let $\vec{F}(x,y,z)=\vector{2xy,3xy,z e^{x+y}}$. Compute $\iint_{S}\vec{F}\dot\vec{N}\d S$.
 
 \begin{prompt}
 \[
-F(x,y,z)=\answer{xyz}
+\iint_{S}\vec{F}\dot\vec{N}\d S=\answer{e^2-2e+7/2}
 \]
 \end{prompt}
+
 
 \end{exercise}
 \end{document}

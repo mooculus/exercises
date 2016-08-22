@@ -1,4 +1,4 @@
-
+\int_{\partial D}\vec{F}\dot\d\vec{r}
 \documentclass{ximera}
 
 \input{../preamble.tex}
@@ -14,15 +14,16 @@
 
 %% BADBAD no outcomes
 
-\tag{conservative vector fields}
+\tag{Divergence Theorem}
 
-Does there exist a function $F$ so that $\grad F(x,y,z)=\vector{yz,xz,xy}$? Write DNE if there exists no such $F$. 
+Let $S$ be the boundary of the volume described by $0\le x\le 1$, $0\le y\le x$, $0\le z\le x+y$. Let $\vec{F}(x,y,z)=\vector{x,2y,3z}$. Compute $\iint_{S}\vec{F}\dot\vec{N}\d S$.
 
 \begin{prompt}
 \[
-F(x,y,z)=\answer{xyz}
+\iint_{S}\vec{F}\dot\vec{N}\d S=\answer{3}
 \]
 \end{prompt}
+
 
 \end{exercise}
 \end{document}
