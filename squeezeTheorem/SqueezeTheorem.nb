@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     16613,        351]
-NotebookOptionsPosition[     16237,        333]
-NotebookOutlinePosition[     16594,        349]
-CellTagsIndexPosition[     16551,        346]
+NotebookDataLength[     17862,        375]
+NotebookOptionsPosition[     17482,        357]
+NotebookOutlinePosition[     17843,        373]
+CellTagsIndexPosition[     17800,        370]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -74,26 +74,8 @@ Cell[BoxData[{
       RowBox[{"wildFunction", "=", 
        RowBox[{"RandomChoice", "[", 
         RowBox[{"{", 
-         RowBox[{"Sin", ",", "Cos", ",", "ArcTan", ",", 
-          RowBox[{"Function", "[", 
-           RowBox[{"E", "^", 
-            RowBox[{"Sin", "[", "#", "]"}]}], "]"}], ",", 
-          RowBox[{"Function", "[", 
-           RowBox[{"E", "^", 
-            RowBox[{"Cos", "[", "#", "]"}]}], "]"}], ",", 
-          RowBox[{"Function", "[", 
-           RowBox[{"E", "^", 
-            RowBox[{"ArcTan", "[", "#", "]"}]}], "]"}], ",", 
-          RowBox[{"Function", "[", 
-           RowBox[{"2", "^", 
-            RowBox[{"Sin", "[", "#", "]"}]}], "]"}], ",", 
-          RowBox[{"Function", "[", 
-           RowBox[{"2", "^", 
-            RowBox[{"Cos", "[", "#", "]"}]}], "]"}], ",", 
-          RowBox[{"Function", "[", 
-           RowBox[{"2", "^", 
-            RowBox[{"ArcTan", "[", "#", "]"}]}], "]"}]}], "}"}], "]"}]}], ";",
-       "\[IndentingNewLine]", 
+         RowBox[{"Sin", ",", "Cos", ",", "ArcTan"}], "}"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
       RowBox[{"boundingFunction", "=", 
        RowBox[{"RandomChoice", "[", 
         RowBox[{"{", 
@@ -102,7 +84,7 @@ Cell[BoxData[{
           RowBox[{"Function", "[", 
            RowBox[{"#", "^", "2"}], "]"}], ",", 
           RowBox[{"Function", "[", 
-           RowBox[{"#", "^", "3"}], "]"}], ",", "Sqrt", ",", 
+           RowBox[{"#", "^", "3"}], "]"}], ",", 
           RowBox[{"Function", "[", 
            RowBox[{"#", "^", 
             RowBox[{"(", 
@@ -122,12 +104,22 @@ Cell[BoxData[{
           RowBox[{"-", "2"}], ",", 
           RowBox[{"-", "3"}], ",", "Pi", ",", "1", ",", "2", ",", "3"}], 
          "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"limitPoint", "=", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", 
+          RowBox[{"-", "2"}], ",", "0", ",", "0", ",", "0", ",", "1", ",", 
+          "3"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{"realFunction", "[", "x_", "]"}], "=", 
        RowBox[{
-        RowBox[{"boundingFunction", "[", "x", "]"}], "*", 
+        RowBox[{"boundingFunction", "[", 
+         RowBox[{"x", "-", "limitPoint"}], "]"}], "*", 
         RowBox[{"wildFunction", "[", 
-         RowBox[{"konstant", "/", "x"}], "]"}]}]}], ";", 
+         RowBox[{"konstant", "/", 
+          RowBox[{"(", 
+           RowBox[{"x", "-", "limitPoint"}], ")"}]}], "]"}]}]}], ";", 
       "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{"upperFunction", "[", "x_", "]"}], "=", 
@@ -135,27 +127,32 @@ Cell[BoxData[{
         RowBox[{"Rationalize", "[", 
          RowBox[{"MaxValue", "[", 
           RowBox[{
-           RowBox[{"wildFunction", "[", "x", "]"}], ",", "x"}], "]"}], "]"}], 
-        
+           RowBox[{"wildFunction", "[", 
+            RowBox[{"x", "-", "limitPoint"}], "]"}], ",", "x"}], "]"}], "]"}], 
         RowBox[{"Abs", "[", 
-         RowBox[{"boundingFunction", "[", "x", "]"}], "]"}]}]}], ";", 
+         RowBox[{"boundingFunction", "[", 
+          RowBox[{"x", "-", "limitPoint"}], "]"}], "]"}]}]}], ";", 
       "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{"lowerFunction", "[", "x_", "]"}], "=", 
        RowBox[{
         RowBox[{"Rationalize", "[", 
-         RowBox[{"MinValue", "[", 
-          RowBox[{
-           RowBox[{"wildFunction", "[", "x", "]"}], ",", "x"}], "]"}], "]"}], 
-        
+         RowBox[{"-", 
+          RowBox[{"MaxValue", "[", 
+           RowBox[{
+            RowBox[{"wildFunction", "[", 
+             RowBox[{"x", "-", "limitPoint"}], "]"}], ",", "x"}], "]"}]}], 
+         "]"}], 
         RowBox[{"Abs", "[", 
-         RowBox[{"boundingFunction", "[", "x", "]"}], "]"}]}]}], ";", 
+         RowBox[{"boundingFunction", "[", 
+          RowBox[{"x", "-", "limitPoint"}], "]"}], "]"}]}]}], ";", 
       "\[IndentingNewLine]", 
       RowBox[{"answer", "=", 
        RowBox[{"Limit", "[", 
         RowBox[{
          RowBox[{"realFunction", "[", "x", "]"}], ",", 
-         RowBox[{"x", "\[Rule]", "0"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"x", "\[Rule]", "limitPoint"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
       RowBox[{"StringJoin", "[", 
        RowBox[{
        "\"\<\\\\documentclass{ximera}\n\\\\input{preamble.tex}\n\
@@ -164,8 +161,10 @@ Cell[BoxData[{
 Squeeze Theorem and how it can be used to find limit values.}\n\
 \\\\outcome{Calculate limits using the Squeeze Theorem.}\n\\\\tag{limit}\n\
 \\\\tag{squeeze theorem}\n\nConsider:\n\\\\[\\n\\\\lim_{\>\"", ",", 
-        RowBox[{"LaTeX", "[", "variable", "]"}], ",", 
-        "\"\<\\\\to 0} \\\\left(\>\"", ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<\\\\to \>\"", ",", 
+        
+        RowBox[{"LaTeX", "[", "limitPoint", "]"}], ",", "\"\<} \\\\left(\>\"",
+         ",", 
         RowBox[{"LaTeX", "[", 
          RowBox[{"realFunction", "[", "variable", "]"}], "]"}], ",", 
         "\"\<\\\\right)\n\\\\]\nA good way to compute this limit would be to \
@@ -180,9 +179,14 @@ that\n\\\\[\ng(\>\"", ",",
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", 
         "\"\<)\n\\\\]\nfor all $\>\"", ",", 
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", 
-        "\"\<$ on some interval containing $\>\"", ",", 
-        RowBox[{"LaTeX", "[", "variable", "]"}], ",", 
-        "\"\<=0$.\n\\\\[\ng(\>\"", ",", 
+        "\"\<$ except for $\>\"", ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<=\\\\answer{\>\"", 
+        ",", 
+        RowBox[{"LaTeX", "[", "limitPoint", "]"}], ",", 
+        "\"\<}$ on some interval containing $\>\"", ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<=\>\"", ",", 
+        RowBox[{"LaTeX", "[", "limitPoint", "]"}], ",", 
+        "\"\<$.\n\\\\[\ng(\>\"", ",", 
         RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<)=\\\\answer{\>\"",
          ",", 
         RowBox[{"LaTeX", "[", 
@@ -194,19 +198,26 @@ that\n\\\\[\ng(\>\"", ",",
          RowBox[{"upperFunction", "[", "variable", "]"}], "]"}], ",", 
         "\"\<}\n\\\\]\n\\\\begin{exercise}\nCompute:\n\\\\[\n\\\\lim_{\>\"", 
         ",", 
-        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\< \\\\to 0}\>\"", 
-        ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\< \\\\to \>\"", ",", 
+        RowBox[{"LaTeX", "[", "limitPoint", "]"}], ",", "\"\<}\>\"", ",", 
         RowBox[{"LaTeX", "[", 
          RowBox[{"lowerFunction", "[", "variable", "]"}], "]"}], ",", 
-        "\"\< = \\\\answer{0}\\\\qquad \\\\lim_{\>\"", ",", 
-        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<\\\\to 0}\>\"", 
-        ",", 
+        "\"\< = \\\\answer{\>\"", ",", 
+        RowBox[{"LaTeX", "[", "answer", "]"}], ",", 
+        "\"\<}\\\\qquad \\\\lim_{\>\"", ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<\\\\to \>\"", ",", 
+        
+        RowBox[{"LaTeX", "[", "limitPoint", "]"}], ",", "\"\<}\>\"", ",", 
         RowBox[{"LaTeX", "[", 
          RowBox[{"upperFunction", "[", "variable", "]"}], "]"}], ",", 
-        "\"\< = \\\\answer{0}\n\\\\]\n\\\\begin{exercise}\nBy the Squeeze \
-Theorem:\n\\\\[\\n\\\\lim_{\>\"", ",", 
-        RowBox[{"LaTeX", "[", "variable", "]"}], ",", 
-        "\"\<\\\\to 0} \\\\left(\>\"", ",", 
+        "\"\< = \\\\answer{\>\"", ",", 
+        RowBox[{"LaTeX", "[", "answer", "]"}], ",", 
+        "\"\<}\n\\\\]\n\\\\begin{exercise}\nBy the Squeeze Theorem:\n\\\\[\\n\
+\\\\lim_{\>\"", ",", 
+        RowBox[{"LaTeX", "[", "variable", "]"}], ",", "\"\<\\\\to \>\"", ",", 
+        
+        RowBox[{"LaTeX", "[", "limitPoint", "]"}], ",", "\"\<} \\\\left(\>\"",
+         ",", 
         RowBox[{"LaTeX", "[", 
          RowBox[{"realFunction", "[", "variable", "]"}], "]"}], ",", 
         "\"\<\\\\right) = \\\\answer{\>\"", ",", 
@@ -262,7 +273,13 @@ Theorem:\n\\\\[\\n\\\\lim_{\>\"", ",",
    3.65029607804496*^9}, {3.650806363363018*^9, 3.650806392314749*^9}, {
    3.650806486693557*^9, 3.650806534854594*^9}, {3.650806672541168*^9, 
    3.650806672957444*^9}, {3.650807520790368*^9, 3.650807521824654*^9}, {
-   3.6508205697279367`*^9, 3.6508205713417597`*^9}, 3.652189215971745*^9}],
+   3.6508205697279367`*^9, 3.6508205713417597`*^9}, 3.652189215971745*^9, {
+   3.6816351578389473`*^9, 3.6816351841093807`*^9}, {3.6816352388523903`*^9, 
+   3.681635445173195*^9}, {3.681635483797323*^9, 3.68163554230193*^9}, {
+   3.681635970803288*^9, 3.681635971139162*^9}, {3.681636004481916*^9, 
+   3.681636005600979*^9}, {3.6816361414091673`*^9, 3.681636258078553*^9}, {
+   3.6816363618772287`*^9, 3.68163637997171*^9}, {3.68163644363962*^9, 
+   3.681636449612537*^9}}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
 author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
@@ -270,49 +287,56 @@ By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\n\\\\outcome{\
 Understand the Squeeze Theorem and how it can be used to find limit \
 values.}\\n\\\\outcome{Calculate limits using the Squeeze \
 Theorem.}\\n\\\\tag{limit}\\n\\\\tag{squeeze \
-theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{v\\\\to 0} \\\\left(\\\\sqrt[3]{v} \
-e^{\\\\cos \\\\left(\\\\frac{\\\\pi }{v}\\\\right)}\\\\right)\\n\\\\]\\nA \
-good way to compute this limit would be to use \
-\\\\wordChoice{\\\\choice{limit laws}\\\\choice{indeterminate \
-forms}\\\\choice[correct]{the Squeeze Theorem}\\\\choice{the Intermediate \
-Value Theorem}}.\\n\\\\begin{exercise}\\nList two functions $g$ and $h$ such \
-that\\n\\\\[\\ng(v)\\\\le \\\\sqrt[3]{v} e^{\\\\cos \\\\left(\\\\frac{\\\\pi \
-}{v}\\\\right)} \\\\le h(v)\\n\\\\]\\nfor all $v$ on some interval containing \
-$v=0$.\\n\\\\[\\ng(v)=\\\\answer{\\\\frac{\\\\sqrt[3]{\\\\left| v\\\\right| \
-}}{e}}\\\\qquad h(v) =\\\\answer{e \\\\sqrt[3]{\\\\left| v\\\\right| \
-}}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\\n\\\\lim_{v \\\\to \
-0}\\\\frac{\\\\sqrt[3]{\\\\left| v\\\\right| }}{e} = \\\\answer{0}\\\\qquad \
-\\\\lim_{v\\\\to 0}e \\\\sqrt[3]{\\\\left| v\\\\right| } = \\\\answer{0}\\n\\\
-\\]\\n\\\\begin{exercise}\\nBy the Squeeze \
-Theorem:\\n\\\\[\\n\\\\lim_{v\\\\to 0} \\\\left(\\\\sqrt[3]{v} e^{\\\\cos \
-\\\\left(\\\\frac{\\\\pi }{v}\\\\right)}\\\\right) = \\\\answer{0}\\n\\\\]\\n\
-\\\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{exercise}\
-\\n\\\\end{document}\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
-author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
+theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{t\\\\to -2} \\\\left(-(t+2)^2 \
+\\\\sin \\\\left(\\\\frac{3}{t+2}\\\\right)\\\\right)\\n\\\\]\\nA good way to \
+compute this limit would be to use \\\\wordChoice{\\\\choice{limit \
+laws}\\\\choice{indeterminate forms}\\\\choice[correct]{the Squeeze \
+Theorem}\\\\choice{the Intermediate Value \
+Theorem}}.\\n\\\\begin{exercise}\\nList two functions $g$ and $h$ such \
+that\\n\\\\[\\ng(t)\\\\le -(t+2)^2 \\\\sin \
+\\\\left(\\\\frac{3}{t+2}\\\\right) \\\\le h(t)\\n\\\\]\\nfor all $t$ except \
+for $t=\\\\answer{-2}$ on some interval containing \
+$t=-2$.\\n\\\\[\\ng(t)=\\\\answer{\\\\sin \\\\left(2+\\\\frac{1}{2} (5 \\\\pi \
+-4)\\\\right) \\\\left(-\\\\left| t+2\\\\right| ^2\\\\right)}\\\\qquad h(t) =\
+\\\\answer{\\\\sin \\\\left(2+\\\\frac{1}{2} (5 \\\\pi -4)\\\\right) \
+\\\\left| t+2\\\\right| \
+^2}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\\n\\\\lim_{t \\\\to \
+-2}\\\\sin \\\\left(2+\\\\frac{1}{2} (5 \\\\pi -4)\\\\right) \
+\\\\left(-\\\\left| t+2\\\\right| ^2\\\\right) = \\\\answer{0}\\\\qquad \
+\\\\lim_{t\\\\to -2}\\\\sin \\\\left(2+\\\\frac{1}{2} (5 \\\\pi -4)\\\\right) \
+\\\\left| t+2\\\\right| ^2 = \\\\answer{0}\\n\\\\]\\n\\\\begin{exercise}\\nBy \
+the Squeeze Theorem:\\n\\\\[\\n\\\\lim_{t\\\\to -2} \\\\left(-(t+2)^2 \\\\sin \
+\\\\left(\\\\frac{3}{t+2}\\\\right)\\\\right) = \
+\\\\answer{0}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{\
+exercise}\\n\\\\end{exercise}\\n\\\\end{document}\\\\documentclass{ximera}\\n\
+\\\\input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\\\\license{Creative \
+Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\n\\\\outcome{\
 Understand the Squeeze Theorem and how it can be used to find limit \
 values.}\\n\\\\outcome{Calculate limits using the Squeeze \
 Theorem.}\\n\\\\tag{limit}\\n\\\\tag{squeeze \
-theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{w\\\\to 0} \\\\left(w^3 \\\\cos \\\
-\\left(\\\\frac{3}{w}\\\\right)\\\\right)\\n\\\\]\\nA good way to compute \
+theorem}\\n\\nConsider:\\n\\\\[\\n\\\\lim_{x\\\\to -1} \
+\\\\left(\\\\sqrt[3]{x+1} \\\\cos \
+\\\\left(\\\\frac{1}{x+1}\\\\right)\\\\right)\\n\\\\]\\nA good way to compute \
 this limit would be to use \\\\wordChoice{\\\\choice{limit \
 laws}\\\\choice{indeterminate forms}\\\\choice[correct]{the Squeeze \
 Theorem}\\\\choice{the Intermediate Value \
 Theorem}}.\\n\\\\begin{exercise}\\nList two functions $g$ and $h$ such \
-that\\n\\\\[\\ng(w)\\\\le w^3 \\\\cos \\\\left(\\\\frac{3}{w}\\\\right) \
-\\\\le h(w)\\n\\\\]\\nfor all $w$ on some interval containing \
-$w=0$.\\n\\\\[\\ng(w)=\\\\answer{-\\\\left| w\\\\right| ^3}\\\\qquad h(w) =\\\
-\\answer{\\\\left| w\\\\right| \
-^3}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\\n\\\\lim_{w \\\\to \
-0}-\\\\left| w\\\\right| ^3 = \\\\answer{0}\\\\qquad \\\\lim_{w\\\\to \
-0}\\\\left| w\\\\right| ^3 = \\\\answer{0}\\n\\\\]\\n\\\\begin{exercise}\\nBy \
-the Squeeze Theorem:\\n\\\\[\\n\\\\lim_{w\\\\to 0} \\\\left(w^3 \\\\cos \
-\\\\left(\\\\frac{3}{w}\\\\right)\\\\right) = \
+that\\n\\\\[\\ng(x)\\\\le \\\\sqrt[3]{x+1} \\\\cos \
+\\\\left(\\\\frac{1}{x+1}\\\\right) \\\\le h(x)\\n\\\\]\\nfor all $x$ except \
+for $x=\\\\answer{-1}$ on some interval containing \
+$x=-1$.\\n\\\\[\\ng(x)=\\\\answer{-\\\\sqrt[3]{\\\\left| x+1\\\\right| \
+}}\\\\qquad h(x) =\\\\answer{\\\\sqrt[3]{\\\\left| x+1\\\\right| \
+}}\\n\\\\]\\n\\\\begin{exercise}\\nCompute:\\n\\\\[\\n\\\\lim_{x \\\\to \
+-1}-\\\\sqrt[3]{\\\\left| x+1\\\\right| } = \\\\answer{0}\\\\qquad \\\\lim_{x\
+\\\\to -1}\\\\sqrt[3]{\\\\left| x+1\\\\right| } = \
+\\\\answer{0}\\n\\\\]\\n\\\\begin{exercise}\\nBy the Squeeze Theorem:\\n\\\\[\
+\\n\\\\lim_{x\\\\to -1} \\\\left(\\\\sqrt[3]{x+1} \\\\cos \
+\\\\left(\\\\frac{1}{x+1}\\\\right)\\\\right) = \
 \\\\answer{0}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{exercise}\\n\\\\end{\
 exercise}\\n\\\\end{exercise}\\n\\\\end{document}\"\>"], "Output",
- CellChangeTimes->{{3.65080649123632*^9, 3.650806538175659*^9}, 
-   3.650806676534937*^9, 3.65080753564639*^9, 3.6508205810805063`*^9, {
-   3.652189201196884*^9, 3.6521892178260593`*^9}}]
+ CellChangeTimes->{{3.681636224605088*^9, 3.681636228796198*^9}, 
+   3.681636267310597*^9, 3.681636380741336*^9, 3.6816364528367567`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -331,8 +355,8 @@ Cell[BoxData[
    3.6502435245708437`*^9}, {3.650244179818222*^9, 3.650244188522778*^9}, {
    3.650295579974926*^9, 3.650295584369331*^9}, 3.650326111149954*^9}]
 },
-WindowSize->{1920, 1047},
-WindowMargins->{{Automatic, 0}, {0, Automatic}},
+WindowSize->{1440, 777},
+WindowMargins->{{Automatic, -262}, {-26, Automatic}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
@@ -349,10 +373,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 11661, 242, 1289, "Input"],
-Cell[12243, 266, 3336, 48, 1825, "Output"]
+Cell[579, 22, 12609, 259, 1421, "Input"],
+Cell[13191, 283, 3633, 55, 1913, "Output"]
 }, Open  ]],
-Cell[15594, 317, 639, 14, 32, "Input"]
+Cell[16839, 341, 639, 14, 32, "Input"]
 }
 ]
 *)

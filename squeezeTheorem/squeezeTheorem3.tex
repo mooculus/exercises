@@ -12,27 +12,27 @@
 
 Consider:
 \[
-\lim_{z\to 0} \left(\sqrt{z} 2^{\sin \left(\frac{3}{z}\right)}\right)
+\lim_{w\to 0} \left(-\sin \left(\frac{1}{w}\right) \sin (w)\right)
 \]
 A good way to compute this limit would be to use \wordChoice{\choice{limit laws}\choice{indeterminate forms}\choice[correct]{the Squeeze Theorem}\choice{the Intermediate Value Theorem}}.
 \begin{exercise}
 List two functions $g$ and $h$ such that
 \[
-g(z)\le \sqrt{z} 2^{\sin \left(\frac{3}{z}\right)} \le h(z)
+g(w)\le -\sin \left(\frac{1}{w}\right) \sin (w) \le h(w)
 \]
-for all $z$ on some interval containing $z=0$.
+for all $w$ except for $w=\answer{0}$ on some interval containing $w=0$.
 \[
-g(z)=\answer{\frac{\sqrt{\left| z\right| }}{2}}\qquad h(z) =\answer{2 \sqrt{\left| z\right| }}
+g(w)=\answer{-\left| \sin (w)\right|}\qquad h(w) =\answer{\left| \sin (w)\right|}
 \]
 \begin{exercise}
 Compute:
 \[
-\lim_{z \to 0}\frac{\sqrt{\left| z\right| }}{2} = \answer{0}\qquad \lim_{z\to 0}2 \sqrt{\left| z\right| } = \answer{0}
+\lim_{w \to 0}-\left| \sin (w)\right| = \answer{0}\qquad \lim_{w\to 0}\left| \sin (w)\right| = \answer{0}
 \]
 \begin{exercise}
 By the Squeeze Theorem:
 \[
-\lim_{z\to 0} \left(\sqrt{z} 2^{\sin \left(\frac{3}{z}\right)}\right) = \answer{0}
+\lim_{w\to 0} \left(-\sin \left(\frac{1}{w}\right) \sin (w)\right) = \answer{0}
 \]
 \end{exercise}
 \end{exercise}

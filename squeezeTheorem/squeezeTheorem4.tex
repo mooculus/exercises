@@ -12,27 +12,27 @@
 
 Consider:
 \[
-\lim_{x\to 0} \left(\sqrt[3]{x} e^{\sin \left(\frac{1}{x}\right)}\right)
+\lim_{z\to -1} \left(\sin (z+1) \left(-\tan ^{-1}\left(\frac{3}{z+1}\right)\right)\right)
 \]
 A good way to compute this limit would be to use \wordChoice{\choice{limit laws}\choice{indeterminate forms}\choice[correct]{the Squeeze Theorem}\choice{the Intermediate Value Theorem}}.
 \begin{exercise}
 List two functions $g$ and $h$ such that
 \[
-g(x)\le \sqrt[3]{x} e^{\sin \left(\frac{1}{x}\right)} \le h(x)
+g(z)\le \sin (z+1) \left(-\tan ^{-1}\left(\frac{3}{z+1}\right)\right) \le h(z)
 \]
-for all $x$ on some interval containing $x=0$.
+for all $z$ except for $z=\answer{-1}$ on some interval containing $z=-1$.
 \[
-g(x)=\answer{\frac{\sqrt[3]{\left| x\right| }}{e}}\qquad h(x) =\answer{e \sqrt[3]{\left| x\right| }}
+g(z)=\answer{-\frac{1}{2} \pi  \left| \sin (z+1)\right|}\qquad h(z) =\answer{\frac{1}{2} \pi  \left| \sin (z+1)\right|}
 \]
 \begin{exercise}
 Compute:
 \[
-\lim_{x \to 0}\frac{\sqrt[3]{\left| x\right| }}{e} = \answer{0}\qquad \lim_{x\to 0}e \sqrt[3]{\left| x\right| } = \answer{0}
+\lim_{z \to -1}-\frac{1}{2} \pi  \left| \sin (z+1)\right| = \answer{0}\qquad \lim_{z\to -1}\frac{1}{2} \pi  \left| \sin (z+1)\right| = \answer{0}
 \]
 \begin{exercise}
 By the Squeeze Theorem:
 \[
-\lim_{x\to 0} \left(\sqrt[3]{x} e^{\sin \left(\frac{1}{x}\right)}\right) = \answer{0}
+\lim_{z\to -1} \left(\sin (z+1) \left(-\tan ^{-1}\left(\frac{3}{z+1}\right)\right)\right) = \answer{0}
 \]
 \end{exercise}
 \end{exercise}
