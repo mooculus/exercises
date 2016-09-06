@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12288,        261]
-NotebookOptionsPosition[     11938,        244]
-NotebookOutlinePosition[     12274,        259]
-CellTagsIndexPosition[     12231,        256]
+NotebookDataLength[     12322,        260]
+NotebookOptionsPosition[     11972,        243]
+NotebookOutlinePosition[     12308,        258]
+CellTagsIndexPosition[     12265,        255]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -45,8 +45,7 @@ Cell[BoxData[{
         RowBox[{"{", 
          RowBox[{
          "x", ",", "z", ",", "t", ",", "n", ",", "k", ",", "w", ",", "u", ",",
-           "v", ",", "\[Theta]", ",", "\[Psi]"}], "}"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
+           "v", ",", "\[Theta]"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"r1", " ", "=", " ", 
        RowBox[{"RandomChoice", "[", 
         RowBox[{"{", 
@@ -119,7 +118,7 @@ Cell[BoxData[{
         RowBox[{"r2", "-", "r3"}]]}], ";", "\[IndentingNewLine]", 
       RowBox[{"StringJoin", "[", 
        RowBox[{
-       "\"\<\\\\documentclass{ximera}\n\\\\input{preamble.tex}\n\
+       "\"\<\\\\documentclass{ximera}\n\\\\input{../preamble.tex}\n\
 \\\\author{Matthew Carr}\n\\\\license{Creative Commons 3.0 By-NC}\n\
 \\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Calculate limits using \
 the limit laws.}\n\\\\tag{limit}\n\\\\tag{limit laws}\nSuppose that \
@@ -206,22 +205,22 @@ $\\\\lim_{\>\"", ",",
    3.651068008159754*^9, 3.6510680702203827`*^9}, {3.651068136521688*^9, 
    3.651068163402722*^9}, 3.651081706261181*^9, 3.651081919043344*^9, {
    3.651251047248242*^9, 3.651251047452368*^9}, {3.651251204205819*^9, 
-   3.65125123123971*^9}}],
+   3.65125123123971*^9}, {3.682167841435136*^9, 3.682167857588125*^9}}],
 
-Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
-author{Matthew Carr}\\n\\\\license{Creative Commons 3.0 \
+Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\
+\\author{Matthew Carr}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
 limits using the limit laws.}\\n\\\\tag{limit}\\n\\\\tag{limit \
-laws}\\nSuppose that $\\\\lim_{w\\\\to-3}G(w)=-3$, \
-$\\\\lim_{w\\\\to-3}r(w)=2$, and $\\\\lim_{w\\\\to-3}b(w)=-3$. Compute the \
-limit\\n\\n\\\\[\\n\\\\lim_{w\\\\to -3 } \
-\\\\frac{G(w)}{r(w)-b(w)}\\\\begin{prompt} = \
-\\\\answer{-\\\\frac{3}{5}}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\\
-end{document}\"\>"], "Output",
+laws}\\nSuppose that $\\\\lim_{v\\\\to1}Y(v)=5$, $\\\\lim_{v\\\\to1}y(v)=-1$, \
+and $\\\\lim_{v\\\\to1}p(v)=-2$. Compute the \
+limit\\n\\n\\\\[\\n\\\\lim_{v\\\\to 1 } \
+\\\\frac{Y(v)}{y(v)-p(v)}\\\\begin{prompt} = \
+\\\\answer{5}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\"\
+\>"], "Output",
  CellChangeTimes->{
   3.651081732968299*^9, {3.651081922022501*^9, 3.651081926075066*^9}, 
    3.651250978783822*^9, {3.651251048794347*^9, 3.6512510795603027`*^9}, {
-   3.651251222965067*^9, 3.651251232071877*^9}}]
+   3.651251222965067*^9, 3.651251232071877*^9}, 3.682167862574307*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -259,10 +258,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 9763, 186, 728, "Input"],
-Cell[10346, 210, 822, 13, 363, "Output"]
+Cell[580, 22, 9790, 185, 728, "Input"],
+Cell[10373, 209, 829, 13, 363, "Output"]
 }, Open  ]],
-Cell[11183, 226, 751, 16, 32, "Input"]
+Cell[11217, 225, 751, 16, 32, "Input"]
 }
 ]
 *)
