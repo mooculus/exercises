@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     15787,        336]
-NotebookOptionsPosition[     15412,        318]
-NotebookOutlinePosition[     15769,        334]
-CellTagsIndexPosition[     15726,        331]
+NotebookDataLength[     15860,        337]
+NotebookOptionsPosition[     15485,        319]
+NotebookOutlinePosition[     15842,        335]
+CellTagsIndexPosition[     15799,        332]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -193,7 +193,7 @@ asymptotes}\\n\\\\choice{There are no vertical asymptotes}\n\
                 "\"\<}\\\\qquad\\\\text{and}\\\\qquad x=\\\\answer{\>\"", ",", 
                 RowBox[{"LaTeX", "[", "rmax", "]"}]}], "]"}], ",", 
               RowBox[{"StringJoin", "[", 
-               RowBox[{"\"\<y=\\\\answer{\>\"", ",", 
+               RowBox[{"\"\<x=\\\\answer{\>\"", ",", 
                 RowBox[{"If", "[", 
                  RowBox[{
                   RowBox[{
@@ -271,7 +271,8 @@ asymptotes}\\n\\\\choice[correct]{There are no vertical asymptotes}\n\
    3.650735230619482*^9, 3.6507353553041487`*^9}, {3.650735389555341*^9, 
    3.650735410389805*^9}, 3.6507354646999197`*^9, {3.650735635525419*^9, 
    3.65073566981103*^9}, {3.650791669340588*^9, 3.6507917088128567`*^9}, {
-   3.650820353527526*^9, 3.650820358891511*^9}}],
+   3.650820353527526*^9, 3.650820358891511*^9}, {3.682082098346239*^9, 
+   3.6820821325065613`*^9}}],
 
 Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
 author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
@@ -292,7 +293,7 @@ exercise}\\n\\\\end{document}\"\>"], "Output",
    3.6507353073657084`*^9}, 3.6507353565119553`*^9, 3.650735415274826*^9, {
    3.650735465144868*^9, 3.650735469456723*^9}, 3.650735688383263*^9, 
    3.650735795324771*^9, 3.6507917153919*^9, 3.65082033822755*^9, {
-   3.650820376505252*^9, 3.6508203846144047`*^9}}]
+   3.650820376505252*^9, 3.6508203846144047`*^9}, 3.68208213943746*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -334,10 +335,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 12529, 251, 1089, "Input"],
-Cell[13111, 275, 1311, 19, 605, "Output"]
+Cell[579, 22, 12581, 252, 1089, "Input"],
+Cell[13163, 276, 1332, 19, 605, "Output"]
 }, Open  ]],
-Cell[14437, 297, 971, 19, 32, "Input"]
+Cell[14510, 298, 971, 19, 32, "Input"]
 }
 ]
 *)
