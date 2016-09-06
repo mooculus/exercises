@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     12806,        272]
-NotebookOptionsPosition[     12435,        254]
-NotebookOutlinePosition[     12791,        270]
-CellTagsIndexPosition[     12748,        267]
+NotebookDataLength[     12865,        271]
+NotebookOptionsPosition[     12491,        253]
+NotebookOutlinePosition[     12850,        269]
+CellTagsIndexPosition[     12807,        266]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -47,8 +47,7 @@ Cell[BoxData[{
         RowBox[{"{", 
          RowBox[{
          "x", ",", "z", ",", "t", ",", "n", ",", "k", ",", "w", ",", "u", ",",
-           "v", ",", "\[Theta]", ",", "\[Psi]"}], "}"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
+           "v", ",", "\[Theta]"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"r1", " ", "=", " ", 
        RowBox[{"RandomChoice", "[", 
         RowBox[{"{", 
@@ -116,7 +115,7 @@ Cell[BoxData[{
       "\[IndentingNewLine]", 
       RowBox[{"StringJoin", "[", 
        RowBox[{
-       "\"\<\\\\documentclass{ximera}\n\\\\input{preamble.tex}\n\
+       "\"\<\\\\documentclass{ximera}\n\\\\input{../preamble.tex}\n\
 \\\\author{Bart Snapp}\n\\\\license{Creative Commons 3.0 By-NC}\n\
 \\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Define a vertical \
 asymptote.}\n\\\\outcome{Calculate limits of the form number over zero.}\n\
@@ -196,10 +195,10 @@ $\\\\lim_{\>\"", ",",
    3.650536344701562*^9, 3.650536354051857*^9}, {3.650536477244413*^9, 
    3.65053657595501*^9}, {3.6505368111813107`*^9, 3.6505368474948063`*^9}, {
    3.6505379469628267`*^9, 3.6505379691952972`*^9}, {3.650538002322048*^9, 
-   3.650538213138442*^9}}],
+   3.650538213138442*^9}, {3.682167967558305*^9, 3.6821679724802094`*^9}}],
 
-Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
-author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
+Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\
+\\author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Define a \
 vertical asymptote.}\\n\\\\outcome{Calculate limits of the form number over \
 zero.}\\n\\\\outcome{Calculate limits of the form zero over \
@@ -230,7 +229,7 @@ $\\\\lim_{x\\\\to -4 } f(x) \\\\begin{prompt} = \
    3.6505361766875887`*^9, 3.65053627326681*^9}, {3.650536303625404*^9, 
    3.650536310592106*^9}, {3.6505363545372753`*^9, 3.650536383703253*^9}, {
    3.650536483338769*^9, 3.650536579835219*^9}, 3.650536848651194*^9, {
-   3.650538059287725*^9, 3.6505382140975227`*^9}}]
+   3.650538059287725*^9, 3.6505382140975227`*^9}, 3.6821679753539124`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -253,7 +252,7 @@ Cell[BoxData[
   3.650535698947804*^9}, {3.650538226863647*^9, 3.650538252152872*^9}}]
 },
 WindowSize->{1366, 708},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowMargins->{{-10, Automatic}, {Automatic, -8}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
@@ -270,10 +269,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 8720, 176, 869, "Input"],
-Cell[9302, 200, 2250, 32, 495, "Output"]
+Cell[579, 22, 8749, 175, 869, "Input"],
+Cell[9331, 199, 2277, 32, 495, "Output"]
 }, Open  ]],
-Cell[11567, 235, 864, 17, 32, "Input"]
+Cell[11623, 234, 864, 17, 32, "Input"]
 }
 ]
 *)
