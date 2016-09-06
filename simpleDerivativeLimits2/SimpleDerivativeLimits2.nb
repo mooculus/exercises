@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     11588,        245]
-NotebookOptionsPosition[     11214,        227]
-NotebookOutlinePosition[     11572,        243]
-CellTagsIndexPosition[     11529,        240]
+NotebookDataLength[     11651,        245]
+NotebookOptionsPosition[     11276,        227]
+NotebookOutlinePosition[     11635,        243]
+CellTagsIndexPosition[     11592,        240]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -47,8 +47,7 @@ Cell[BoxData[{
         RowBox[{"{", 
          RowBox[{
          "x", ",", "z", ",", "t", ",", "n", ",", "k", ",", "w", ",", "u", ",",
-           "v", ",", "\[Theta]", ",", "\[Psi]"}], "}"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
+           "v", ",", "\[Theta]"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"aa", " ", "=", " ", 
        RowBox[{"RandomChoice", "[", 
         RowBox[{"{", 
@@ -101,7 +100,7 @@ Cell[BoxData[{
       "\[IndentingNewLine]", 
       RowBox[{"StringJoin", "[", 
        RowBox[{
-       "\"\<\\\\documentclass{ximera}\n\\\\input{preamble.tex}\n\
+       "\"\<\\\\documentclass{ximera}\n\\\\input{../preamble.tex}\n\
 \\\\author{Bart Snapp}\n\\\\license{Creative Commons 3.0 By-NC}\n\
 \\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Calculate limits of the \
 form zero over zero.}\n\\\\tag{limit}\n\\\\tag{indeterminate form}\nLet \
@@ -175,24 +174,25 @@ $\>\"", ",",
    3.651751336366744*^9, 3.65175143675371*^9}, {3.651751470150696*^9, 
    3.651751476542153*^9}, {3.651751510523676*^9, 3.651751574566471*^9}, {
    3.651751612393427*^9, 3.651751700637144*^9}, 3.651751943286065*^9, {
-   3.651853859670145*^9, 3.651853861970173*^9}}],
+   3.651853859670145*^9, 3.651853861970173*^9}, {3.682168099437038*^9, 
+   3.682168104181234*^9}}],
 
-Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
-author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
+Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\
+\\author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
 limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
 form}\\nLet $s(x) = x^2$. Compute\\n\\n\\\\[\\n\\\\lim_{ x\\\\to -4 } \
 \\n\\\\frac{s(x)-s(-4)}{x+4} \
 \\\\begin{prompt}=\\\\answer{-8}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\\
-n\\\\end{document}\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
-author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
+n\\\\end{document}\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\
+\\author{Bart Snapp}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
 limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
 form}\\nLet $g(n) = \\\\sqrt{n+8}$. Compute\\n\\n\\\\[\\n\\\\lim_{ n\\\\to -5 \
 } \\n\\\\frac{g(n)-g(-5)}{n+5} \\\\begin{prompt}=\\\\answer{\\\\frac{1}{2 \
 \\\\sqrt{3}}}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{document}\\\
-\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\author{Bart Snapp}\\n\
-\\\\license{Creative Commons 3.0 \
+\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\\author{Bart Snapp}\
+\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
 limits of the form zero over zero.}\\n\\\\tag{limit}\\n\\\\tag{indeterminate \
 form}\\nLet $y(n) = \\\\sqrt{n+5}$. Compute\\n\\n\\\\[\\n\\\\lim_{ n\\\\to 5 \
@@ -203,7 +203,7 @@ form}\\nLet $y(n) = \\\\sqrt{n+5}$. Compute\\n\\n\\\\[\\n\\\\lim_{ n\\\\to 5 \
    3.651751244794981*^9, 3.651751437593359*^9, 3.651751579442196*^9, {
    3.651751679981646*^9, 3.6517517011732483`*^9}, 3.65175194658259*^9, 
    3.6518538628622026`*^9, 3.651853997860139*^9, 3.6518540767313128`*^9, 
-   3.652093530279911*^9}]
+   3.652093530279911*^9, 3.682168108743519*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -226,7 +226,7 @@ Cell[BoxData[
    3.652093534455542*^9, 3.652093547593484*^9}}]
 },
 WindowSize->{1024, 706},
-WindowMargins->{{-9, Automatic}, {Automatic, -8}},
+WindowMargins->{{-10, Automatic}, {Automatic, -8}},
 ShowSelection->True,
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
@@ -243,10 +243,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 7934, 155, 649, "Input"],
-Cell[8516, 179, 1829, 26, 1089, "Output"]
+Cell[579, 22, 7965, 155, 649, "Input"],
+Cell[8547, 179, 1860, 26, 1089, "Output"]
 }, Open  ]],
-Cell[10360, 208, 850, 17, 32, "Input"]
+Cell[10422, 208, 850, 17, 32, "Input"]
 }
 ]
 *)
