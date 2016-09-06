@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13713,        295]
-NotebookOptionsPosition[     13363,        278]
-NotebookOutlinePosition[     13698,        293]
-CellTagsIndexPosition[     13655,        290]
+NotebookDataLength[     13747,        294]
+NotebookOptionsPosition[     13394,        277]
+NotebookOutlinePosition[     13732,        292]
+CellTagsIndexPosition[     13689,        289]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -147,7 +147,7 @@ Cell[BoxData[{
       "\[IndentingNewLine]", 
       RowBox[{"StringJoin", "[", 
        RowBox[{
-       "\"\<\\\\documentclass{ximera}\n\\\\input{preamble.tex}\n\
+       "\"\<\\\\documentclass{ximera}\n\\\\input{../preamble.tex}\n\
 \\\\author{Matthew Carr}\n\\\\license{Creative Commons 3.0 By-NC}\n\
 \\\\begin{document}\n\\\\begin{exercise}\n\\\\outcome{Calculate limits using \
 the limit laws.}\n\\\\tag{limit}\n\\\\tag{limit laws}\nSuppose that \
@@ -247,20 +247,19 @@ $\\\\lim_{\>\"", ",",
    3.651073288600987*^9}, {3.651073325705171*^9, 3.6510733264162807`*^9}, {
    3.651073370958062*^9, 3.6510733711972303`*^9}, {3.651073413583395*^9, 
    3.651073415612197*^9}, {3.651073445854258*^9, 3.651073448141893*^9}, 
-   3.651081182023801*^9}],
+   3.651081182023801*^9, {3.682167913905387*^9, 3.682167914054201*^9}}],
 
-Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{preamble.tex}\\n\\\\\
-author{Matthew Carr}\\n\\\\license{Creative Commons 3.0 \
+Cell[BoxData["\<\"\\\\documentclass{ximera}\\n\\\\input{../preamble.tex}\\n\\\
+\\author{Matthew Carr}\\n\\\\license{Creative Commons 3.0 \
 By-NC}\\n\\\\begin{document}\\n\\\\begin{exercise}\\n\\\\outcome{Calculate \
 limits using the limit laws.}\\n\\\\tag{limit}\\n\\\\tag{limit \
-laws}\\nSuppose that $\\\\lim_{\\\\psi\\\\to4}P(\\\\psi)=-1$ and $\\\\lim_{\\\
-\\psi\\\\to4}P(\\\\psi)=-5$. Compute the \
-limit\\n\\n\\\\[\\n\\\\lim_{\\\\psi\\\\to 4 } \
-\\\\sqrt[2]{P(\\\\psi)P(\\\\psi)-5}\\\\begin{prompt} = \
-\\\\answer{\\\\sqrt{2}}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{\
+laws}\\nSuppose that $\\\\lim_{k\\\\to3}f(k)=3$ and \
+$\\\\lim_{k\\\\to3}F(k)=4$. Compute the limit\\n\\n\\\\[\\n\\\\lim_{k\\\\to 3 \
+} \\\\sqrt[2]{f(k)F(k)+4}\\\\begin{prompt} = \
+\\\\answer{\\\\sqrt{10}}\\\\end{prompt}\\n\\\\]\\n\\\\end{exercise}\\n\\\\end{\
 document}\"\>"], "Output",
  CellChangeTimes->{3.651081139804494*^9, 3.651081182646319*^9, 
-  3.651081547191504*^9}]
+  3.651081547191504*^9, 3.6821679189651403`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -277,7 +276,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.651081520903022*^9, 3.6510815433073053`*^9}}]
 },
 WindowSize->{1366, 708},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowMargins->{{-10, Automatic}, {Automatic, -8}},
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
 ]
@@ -293,10 +292,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 11644, 227, 803, "Input"],
-Cell[12227, 251, 699, 11, 363, "Output"]
+Cell[580, 22, 11693, 227, 803, "Input"],
+Cell[12276, 251, 681, 10, 363, "Output"]
 }, Open  ]],
-Cell[12941, 265, 418, 11, 32, "Input"]
+Cell[12972, 264, 418, 11, 32, "Input"]
 }
 ]
 *)
